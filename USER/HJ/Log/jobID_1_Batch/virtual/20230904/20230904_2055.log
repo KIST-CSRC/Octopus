@@ -1,0 +1,2 @@
+2023-09-04 20:55:25,942 - jobID_1_Batch::INFO -- [JobExecution] : [jobID=1] Algorithm, model : Automatic
+2023-09-04 20:57:10,115 - jobID_1_Batch::INFO -- [JobExecution] : ######### Cycle start #########

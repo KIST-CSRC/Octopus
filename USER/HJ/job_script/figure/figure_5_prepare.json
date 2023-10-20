@@ -1,0 +1,57 @@
+{
+    "metadata" : 
+    {
+        "subject":"figure_5_prepare",
+        "group":"KIST_CSRC",
+        "logLevel":"DEBUG"
+    },
+    "algorithm":
+    {
+        "model":"Automatic",
+        "totalExperimentNum":2,
+        "inputParams":[
+            {
+                "AddSolution=AgNO3_Concentration" : 0.0125,
+                "AddSolution=AgNO3_Volume" : 1000,
+                "AddSolution=AgNO3_Injectionrate" : 100
+            },
+            {
+                "AddSolution=AgNO3_Concentration" : 0.0125,
+                "AddSolution=AgNO3_Volume" : 1000,
+                "AddSolution=AgNO3_Injectionrate" : 100
+            }
+        ]
+    },
+    "process":
+    {
+        "Synthesis":{
+            "BatchSynthesis":{
+                "fixedParams":
+                {
+                    "BatchSynthesis=Sequence":["AddSolution_NaBH4","Stir","Heat", "Mix", "AddSolution_AgNO3", "React"],
+
+                    "AddSolution=NaBH4_Concentration" : 0.01,
+                    "AddSolution=NaBH4_Volume" : 3000,
+                    "AddSolution=NaBH4_Injectionrate" : 100,
+
+                    "Stir=StirRate":1000,
+                    "Heat=Temperature":25,
+                    "Mix=Time":300,
+                    "React=Time":3600
+                }
+            },
+            "FlowSynthesis":{}
+        },
+        "Preprocess":{
+            "Washing":{},
+            "Ink":{}
+        },
+        "Characterization":{
+            "UV":{}
+        },
+        "Evaluation":{
+            "RDE":{},
+            "Electrode":{}
+        }
+    }
+}

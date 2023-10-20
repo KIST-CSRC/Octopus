@@ -1,0 +1,166 @@
+2023-09-11 19:22:20,772 - JobServer::INFO -- [ResourceManager] : receive information of BatchSynthesis
+2023-09-11 19:22:26,801 - JobServer::INFO -- [ResourceManager] : receive information of UV-Vis
+[JobServer] Server on at :5555.
+[JobServer] Waiting...
+2023-09-11 19:22:28,675 - JobServer::INFO -- [JobServer] : ('127.0.0.1', 39402) is connected.
+2023-09-11 19:22:30,675 - JobServer::INFO -- [JobServer] : login status:login success, username:HJ
+2023-09-11 19:22:49,924 - figure_5_add::INFO -- [JobExecution] : [jobID=0] Algorithm, model : Automatic
+2023-09-11 19:22:49,939 - JobServer::INFO -- [JobServer] : HJ ('127.0.0.1', 39402): qsub?HJ?figure/figure_5_add?{'metadata': {'subject': 'figure_5_add', 'group': 'KIST_CSRC', 'logLevel': 'DEBUG'}, 'algorithm': {'model': 'Automatic', 'totalExperimentNum': 2, 'inputParams': [{'AddSolution=AgNO3_Concentration': 1250, 'AddSolution=AgNO3_Volume': 1000, 'AddSolution=AgNO3_Injectionrate': 100}, {'AddSolution=AgNO3_Concentration': 1250, 'AddSolution=AgNO3_Volume': 1000, 'AddSolution=AgNO3_Injectionrate': 100}]}, 'process': {'Synthesis': {'BatchSynthesis': {'fixedParams': {'BatchSynthesis=Sequence': ['AddSolution_Citrate', 'AddSolution_H2O2', 'AddSolution_NaBH4', 'Stir', 'Heat', 'Mix', 'AddSolution_AgNO3', 'React'], 'AddSolution=H2O2_Concentration': 375, 'AddSolution=H2O2_Volume': 1100, 'AddSolution=H2O2_Injectionrate': 100, 'AddSolution=Citrate_Concentration': 20, 'AddSolution=Citrate_Volume': 1100, 'AddSolution=Citrate_Injectionrate': 100, 'AddSolution=NaBH4_Concentration': 10, 'AddSolution=NaBH4_Volume': 3000, 'AddSolution=NaBH4_Injectionrate': 100, 'Stir=StirRate': 1000, 'Heat=Temperature': 25, 'Mix=Time': 300, 'React=Time': 3600}}, 'FlowSynthesis': {}}, 'Preprocess': {'Washing': {}, 'Ink': {}}, 'Characterization': {'UV': {}}, 'Evaluation': {'RDE': {}, 'Electrode': {}}}}?real
+2023-09-11 19:22:49,939 - figure_5_add::INFO -- [JobExecution] : ######### Cycle start #########
+2023-09-11 19:22:49,960 - figure_5_add::INFO -- [Automatic] : total experiments=2
+2023-09-11 19:22:49,970 - figure_5_add::INFO -- [Automatic [0]] : next_point 0: {'AddSolution=AgNO3_Concentration': 1250, 'AddSolution=AgNO3_Volume': 1000, 'AddSolution=AgNO3_Injectionrate': 100}
+2023-09-11 19:22:49,981 - figure_5_add::INFO -- [Automatic [1]] : next_point 1: {'AddSolution=AgNO3_Concentration': 1250, 'AddSolution=AgNO3_Volume': 1000, 'AddSolution=AgNO3_Injectionrate': 100}
+2023-09-11 19:22:50,033 - figure_5_add::INFO -- [ProcessGenerator] : Allocate all of process based on job script!
+2023-09-11 19:22:50,034 - figure_5_add::INFO -- [JobExecution] : ######### [figure_5_add-HJ] Experiment 2 is running #########
+2023-09-11 19:22:50,181 - figure_5_add::INFO -- [TaskScheduler] : check location: {'BatchSynthesis': {'Stirrer': ['?', '?', '?', '?', '?', '?', '?', '?'], 'vialHolder': ['?', '?', '?', '?', '?', '?', '?', '?']}, 'UV': {'vialHolder': ['?', '?', '?', '?', '?', '?', '?', '?']}}
+2023-09-11 19:22:50,187 - figure_5_add::INFO -- [TaskScheduler] : BatchSynthesis is started, allocate location: {'Stirrer': [0, 1], 'vialHolder': [0, 1]}
+2023-09-11 19:22:50,187 - figure_5_add::INFO -- [TaskScheduler] : check location after allocation: {'BatchSynthesis': {'Stirrer': [0, 0, '?', '?', '?', '?', '?', '?'], 'vialHolder': [0, 0, '?', '?', '?', '?', '?', '?']}, 'UV': {'vialHolder': ['?', '?', '?', '?', '?', '?', '?', '?']}}
+2023-09-11 19:22:53,265 - figure_5_add::DEBUG -- [Batch] : storage_empty_to_stirrer is started.
+2023-09-11 19:22:53,276 - figure_5_add::DEBUG -- [Batch] : vial_num_list: [0, 1]
+2023-09-11 19:22:53,286 - figure_5_add::DEBUG -- [Batch] : line_num_list: [0, 0]
+2023-09-11 19:22:53,296 - figure_5_add::DEBUG -- [Batch] : vialHolder_list: [0, 1]
+2023-09-11 19:22:53,307 - figure_5_add::DEBUG -- [Batch] : Start Robot Queue : storage_empty_to_stirrer is started.
+2023-09-11 19:22:53,312 - figure_5_add::DEBUG -- [LA] : move center-->Start!
+2023-09-11 19:23:02,763 - figure_5_add::DEBUG -- [LA] : move center-->Done!
+2023-09-11 19:23:03,825 - figure_5_add::DEBUG -- [STORAGE] : open-->Start!
+2023-09-11 19:23:15,199 - figure_5_add::DEBUG -- [STORAGE] : open-->Done!
+2023-09-11 19:23:18,262 - figure_5_add::DEBUG -- [DS_B] : prepare container-->Start!
+2023-09-11 19:23:50,295 - figure_5_add::DEBUG -- [DS_B] : prepare container-->Done!
+2023-09-11 19:23:50,296 - figure_5_add::DEBUG -- [Batch] : Finish Robot Queue : storage_empty_to_stirrer is done.
+2023-09-11 19:23:54,467 - figure_5_add::DEBUG -- [Batch] : storage_empty_to_stirrer is started.
+2023-09-11 19:23:54,478 - figure_5_add::DEBUG -- [Batch] : Start Robot Queue : storage_empty_to_stirrer is started.
+2023-09-11 19:23:54,488 - figure_5_add::DEBUG -- [LA] : move center-->Start!
+2023-09-11 19:23:56,836 - figure_5_add::DEBUG -- [LA] : move center-->Done!
+2023-09-11 19:23:57,894 - figure_5_add::DEBUG -- [STORAGE] : open-->Start!
+2023-09-11 19:24:09,405 - figure_5_add::DEBUG -- [STORAGE] : open-->Done!
+2023-09-11 19:24:12,469 - figure_5_add::DEBUG -- [DS_B] : prepare container-->Start!
+2023-09-11 19:24:43,075 - figure_5_add::DEBUG -- [DS_B] : prepare container-->Done!
+2023-09-11 19:24:43,081 - figure_5_add::DEBUG -- [Batch] : Finish Robot Queue : storage_empty_to_stirrer is done.
+2023-09-11 19:24:47,172 - figure_5_add::DEBUG -- [LA] : move down-->Start!
+2023-09-11 19:24:58,647 - figure_5_add::DEBUG -- [LA] : move down-->Done!
+2023-09-11 19:24:58,658 - figure_5_add::DEBUG -- [Batch] : Start Injection Queue --> Citrate,20mM,1100μL,100μL/s
+2023-09-11 19:24:58,668 - figure_5_add::DEBUG -- [PUMP] : prepare solution-->Start!
+2023-09-11 19:25:01,720 - figure_5_abs::INFO -- [JobExecution] : [jobID=1] Algorithm, model : Automatic
+2023-09-11 19:25:01,731 - JobServer::INFO -- [JobServer] : HJ ('127.0.0.1', 39402): qsub?HJ?figure/figure_5_abs?{'metadata': {'subject': 'figure_5_abs', 'group': 'KIST_CSRC', 'logLevel': 'DEBUG'}, 'algorithm': {'model': 'Automatic', 'totalExperimentNum': 2, 'inputParams': []}, 'process': {'Synthesis': {'BatchSynthesis': {}, 'FlowSynthesis': {}}, 'Preprocess': {'Washing': {}, 'Ink': {}}, 'Characterization': {'UV': {'fixedParams': {'UV=Sequence': ['GetAbs'], 'UV=Hyperparameter_WavelengthMin': 300, 'UV=Hyperparameter_WavelengthMax': 849, 'UV=Hyperparameter_BoxCarSize': 10, 'UV=Hyperparameter_Prominence': 0.01, 'UV=Hyperparameter_PeakWidth': 20}}}, 'Evaluation': {'RDE': {}, 'Electrode': {}}}}?real
+2023-09-11 19:25:01,731 - figure_5_abs::INFO -- [JobExecution] : ######### Cycle start #########
+2023-09-11 19:25:01,731 - figure_5_abs::INFO -- [Automatic] : total experiments=2
+2023-09-11 19:25:01,732 - figure_5_abs::INFO -- [ProcessGenerator] : Allocate all of process based on job script!
+2023-09-11 19:25:01,732 - figure_5_abs::INFO -- [JobExecution] : ######### [figure_5_abs-HJ] Experiment 2 is running #########
+2023-09-11 19:25:01,760 - figure_5_abs::INFO -- [TaskScheduler] : check location: {'BatchSynthesis': {'Stirrer': [0, 0, '?', '?', '?', '?', '?', '?'], 'vialHolder': [0, 0, '?', '?', '?', '?', '?', '?']}, 'UV': {'vialHolder': ['?', '?', '?', '?', '?', '?', '?', '?']}}
+2023-09-11 19:25:01,760 - figure_5_abs::INFO -- [TaskScheduler] : UV is started, allocate location: {'vialHolder': [0, 1]}
+2023-09-11 19:25:01,761 - figure_5_abs::INFO -- [TaskScheduler] : check location after allocation: {'BatchSynthesis': {'Stirrer': [0, 0, '?', '?', '?', '?', '?', '?'], 'vialHolder': [0, 0, '?', '?', '?', '?', '?', '?']}, 'UV': {'vialHolder': [1, 1, '?', '?', '?', '?', '?', '?']}}
+2023-09-11 19:25:02,425 - figure_5_add::DEBUG -- [PUMP] : prepare solution-->Done!
+2023-09-11 19:25:02,425 - figure_5_add::DEBUG -- [LA] : move up-->Start!
+2023-09-11 19:25:04,764 - figure_5_abs::DEBUG -- [UV-Vis] : Trasfer colloid NP to UV vialholder
+2023-09-11 19:25:04,764 - figure_5_abs::DEBUG -- [UV-Vis] : Prepare UV-VIS container
+2023-09-11 19:25:04,764 - figure_5_abs::DEBUG -- [DS_B] : cuvette_storage_to_cuvette_holder-->Start!
+2023-09-11 19:25:05,757 - figure_5_add::DEBUG -- [LA] : move up-->Done!
+2023-09-11 19:25:05,757 - figure_5_add::DEBUG -- [LA] : move center-->Start!
+2023-09-11 19:25:16,121 - figure_5_add::DEBUG -- [LA] : move center-->Done!
+2023-09-11 19:25:17,122 - figure_5_add::DEBUG -- [Batch] : Finish Injection Queue
+2023-09-11 19:25:20,127 - figure_5_add::DEBUG -- [LA] : move down-->Start!
+2023-09-11 19:25:28,333 - figure_5_abs::DEBUG -- [DS_B] : cuvette_storage_to_cuvette_holder-->Done!
+2023-09-11 19:25:28,334 - figure_5_abs::DEBUG -- [DS_B] : cuvette_holder_to_UV-->Start!
+2023-09-11 19:25:31,230 - figure_5_add::DEBUG -- [LA] : move down-->Done!
+2023-09-11 19:25:31,230 - figure_5_add::DEBUG -- [Batch] : Start Injection Queue --> Citrate,20mM,1100μL,100μL/s
+2023-09-11 19:25:31,230 - figure_5_add::DEBUG -- [PUMP] : prepare solution-->Start!
+2023-09-11 19:25:34,901 - figure_5_add::DEBUG -- [PUMP] : prepare solution-->Done!
+2023-09-11 19:25:34,901 - figure_5_add::DEBUG -- [LA] : move up-->Start!
+2023-09-11 19:25:38,229 - figure_5_add::DEBUG -- [LA] : move up-->Done!
+2023-09-11 19:25:38,229 - figure_5_add::DEBUG -- [LA] : move center-->Start!
+2023-09-11 19:25:47,995 - figure_5_add::DEBUG -- [LA] : move center-->Done!
+2023-09-11 19:25:48,997 - figure_5_add::DEBUG -- [Batch] : Finish Injection Queue
+2023-09-11 19:25:49,918 - figure_5_abs::DEBUG -- [DS_B] : cuvette_holder_to_UV-->Done!
+2023-09-11 19:25:51,922 - figure_5_abs::DEBUG -- [DS_B] : UV-VIS Characterization-->Start!
+2023-09-11 19:25:52,001 - figure_5_add::DEBUG -- [LA] : move down-->Start!
+2023-09-11 19:25:58,660 - figure_5_abs::DEBUG -- [DS_B] : UV-VIS Characterization-->Done!
+2023-09-11 19:25:58,660 - figure_5_abs::DEBUG -- [DS_B] : Cuvette2ExtractSolution-->Start!
+2023-09-11 19:25:58,660 - figure_5_abs::DEBUG -- [UV-Vis] : Start UV sample preparation
+2023-09-11 19:26:03,482 - figure_5_add::DEBUG -- [LA] : move down-->Done!
+2023-09-11 19:26:03,483 - figure_5_add::DEBUG -- [Batch] : Start Injection Queue --> H2O2,375mM,1100μL,100μL/s
+2023-09-11 19:26:03,483 - figure_5_add::DEBUG -- [PUMP] : prepare solution-->Start!
+2023-09-11 19:26:07,317 - figure_5_add::DEBUG -- [PUMP] : prepare solution-->Done!
+2023-09-11 19:26:07,317 - figure_5_add::DEBUG -- [LA] : move up-->Start!
+2023-09-11 19:26:10,667 - figure_5_add::DEBUG -- [LA] : move up-->Done!
+2023-09-11 19:26:10,667 - figure_5_add::DEBUG -- [LA] : move center-->Start!
+2023-09-11 19:26:21,030 - figure_5_add::DEBUG -- [LA] : move center-->Done!
+2023-09-11 19:26:22,032 - figure_5_add::DEBUG -- [Batch] : Finish Injection Queue
+2023-09-11 19:26:25,036 - figure_5_add::DEBUG -- [LA] : move down-->Start!
+2023-09-11 19:26:35,933 - figure_5_add::DEBUG -- [LA] : move down-->Done!
+2023-09-11 19:26:35,933 - figure_5_add::DEBUG -- [Batch] : Start Injection Queue --> H2O2,375mM,1100μL,100μL/s
+2023-09-11 19:26:35,933 - figure_5_add::DEBUG -- [PUMP] : prepare solution-->Start!
+2023-09-11 19:26:39,658 - figure_5_add::DEBUG -- [PUMP] : prepare solution-->Done!
+2023-09-11 19:26:39,659 - figure_5_add::DEBUG -- [LA] : move up-->Start!
+2023-09-11 19:26:42,941 - figure_5_add::DEBUG -- [LA] : move up-->Done!
+2023-09-11 19:26:42,941 - figure_5_add::DEBUG -- [LA] : move center-->Start!
+2023-09-11 19:26:52,645 - figure_5_add::DEBUG -- [LA] : move center-->Done!
+2023-09-11 19:26:53,648 - figure_5_add::DEBUG -- [Batch] : Finish Injection Queue
+2023-09-11 19:26:56,652 - figure_5_add::DEBUG -- [LA] : move down-->Start!
+2023-09-11 19:27:08,200 - figure_5_add::DEBUG -- [LA] : move down-->Done!
+2023-09-11 19:27:08,200 - figure_5_add::DEBUG -- [Batch] : Start Injection Queue --> NaBH4,10mM,3000μL,100μL/s
+2023-09-11 19:27:08,200 - figure_5_add::DEBUG -- [PUMP] : prepare solution-->Start!
+2023-09-11 19:27:12,131 - figure_5_add::DEBUG -- [PUMP] : prepare solution-->Done!
+2023-09-11 19:27:12,132 - figure_5_add::DEBUG -- [LA] : move up-->Start!
+2023-09-11 19:27:15,454 - figure_5_add::DEBUG -- [LA] : move up-->Done!
+2023-09-11 19:27:15,454 - figure_5_add::DEBUG -- [LA] : move center-->Start!
+2023-09-11 19:27:19,894 - figure_5_abs::DEBUG -- [UV-Vis] : Finish UV sample preparation
+2023-09-11 19:27:19,894 - figure_5_abs::DEBUG -- [DS_B] : Cuvette2ExtractSolution-->Done!
+2023-09-11 19:27:19,895 - figure_5_abs::DEBUG -- [UV-Vis] : Start UV-VIS Characterization
+2023-09-11 19:27:19,895 - figure_5_abs::DEBUG -- [DS_B] : UV-VIS Characterization-->Start!
+2023-09-11 19:27:25,879 - figure_5_add::DEBUG -- [LA] : move center-->Done!
+2023-09-11 19:27:26,605 - figure_5_abs::DEBUG -- [DS_B] : UV-VIS Characterization-->Done!
+2023-09-11 19:27:26,881 - figure_5_add::DEBUG -- [Batch] : Finish Injection Queue
+2023-09-11 19:27:28,608 - figure_5_abs::DEBUG -- [DS_B] : UV_to_cuvette_storage-->Start!
+2023-09-11 19:27:29,886 - figure_5_add::DEBUG -- [LA] : move down-->Start!
+2023-09-11 19:27:40,805 - figure_5_add::DEBUG -- [LA] : move down-->Done!
+2023-09-11 19:27:40,805 - figure_5_add::DEBUG -- [Batch] : Start Injection Queue --> NaBH4,10mM,3000μL,100μL/s
+2023-09-11 19:27:40,805 - figure_5_add::DEBUG -- [PUMP] : prepare solution-->Start!
+2023-09-11 19:27:44,796 - figure_5_add::DEBUG -- [PUMP] : prepare solution-->Done!
+2023-09-11 19:27:44,797 - figure_5_add::DEBUG -- [LA] : move up-->Start!
+2023-09-11 19:27:48,201 - figure_5_add::DEBUG -- [LA] : move up-->Done!
+2023-09-11 19:27:48,201 - figure_5_add::DEBUG -- [LA] : move center-->Start!
+2023-09-11 19:27:50,846 - figure_5_abs::DEBUG -- [DS_B] : UV_to_cuvette_storage-->Done!
+2023-09-11 19:27:50,853 - figure_5_abs::DEBUG -- [UV-Vis] : 0 result : OrderedDict([('lambdamax', 441.721747), ('intensity', 0.02352848596368539), ('FWHM', 23.133894999999995)])
+2023-09-11 19:27:50,853 - figure_5_abs::DEBUG -- [UV-Vis] : Finish UV-VIS Characterization
+2023-09-11 19:27:54,860 - figure_5_abs::DEBUG -- [UV-Vis] : Trasfer colloid NP to UV vialholder
+2023-09-11 19:27:54,860 - figure_5_abs::DEBUG -- [UV-Vis] : Prepare UV-VIS container
+2023-09-11 19:27:54,860 - figure_5_abs::DEBUG -- [DS_B] : cuvette_storage_to_cuvette_holder-->Start!
+2023-09-11 19:27:57,999 - figure_5_add::DEBUG -- [LA] : move center-->Done!
+2023-09-11 19:27:59,001 - figure_5_add::DEBUG -- [Batch] : Finish Injection Queue
+2023-09-11 19:27:59,001 - figure_5_add::DEBUG -- [Batch] : Start Stir Queue 0 (Stirrer)
+2023-09-11 19:28:01,546 - figure_5_add::DEBUG -- [Batch] : Start Stir Queue 1 (Stirrer)
+2023-09-11 19:28:03,877 - figure_5_add::DEBUG -- [Batch] : Finish Stir Queue 0 (Stirrer)
+2023-09-11 19:28:03,877 - figure_5_add::DEBUG -- [Batch] : Finish Stir Queue 1 (Stirrer)
+2023-09-11 19:28:03,878 - figure_5_add::DEBUG -- [Batch] : Start Heat Queue 0 (Stirrer)
+2023-09-11 19:28:06,035 - figure_5_add::DEBUG -- [Batch] : Start Heat Queue 1 (Stirrer)
+2023-09-11 19:28:08,410 - figure_5_add::DEBUG -- [Batch] : Finish Heat Queue 0 (Stirrer)
+2023-09-11 19:28:08,410 - figure_5_add::DEBUG -- [Batch] : Finish Heat Queue 1 (Stirrer)
+2023-09-11 19:28:08,410 - figure_5_add::DEBUG -- [Batch] : Start Mix:300s
+2023-09-11 19:28:08,411 - figure_5_add::DEBUG -- [Batch] : Start Mix:300s
+2023-09-11 19:28:16,697 - figure_5_abs::DEBUG -- [DS_B] : cuvette_storage_to_cuvette_holder-->Done!
+2023-09-11 19:28:16,697 - figure_5_abs::DEBUG -- [DS_B] : cuvette_holder_to_UV-->Start!
+2023-09-11 19:28:38,297 - figure_5_abs::DEBUG -- [DS_B] : cuvette_holder_to_UV-->Done!
+2023-09-11 19:28:40,302 - figure_5_abs::DEBUG -- [DS_B] : UV-VIS Characterization-->Start!
+2023-09-11 19:28:47,027 - figure_5_abs::DEBUG -- [DS_B] : UV-VIS Characterization-->Done!
+2023-09-11 19:28:47,027 - figure_5_abs::DEBUG -- [DS_B] : Cuvette2ExtractSolution-->Start!
+2023-09-11 19:28:47,027 - figure_5_abs::DEBUG -- [UV-Vis] : Start UV sample preparation
+2023-09-11 19:29:48,179 - JobServer::INFO -- [JobServer] : HJ ('127.0.0.1', 39402): qstat
+2023-09-11 19:30:08,270 - figure_5_abs::DEBUG -- [UV-Vis] : Finish UV sample preparation
+2023-09-11 19:30:08,270 - figure_5_abs::DEBUG -- [DS_B] : Cuvette2ExtractSolution-->Done!
+2023-09-11 19:30:08,271 - figure_5_abs::DEBUG -- [UV-Vis] : Start UV-VIS Characterization
+2023-09-11 19:30:08,271 - figure_5_abs::DEBUG -- [DS_B] : UV-VIS Characterization-->Start!
+2023-09-11 19:30:14,986 - figure_5_abs::DEBUG -- [DS_B] : UV-VIS Characterization-->Done!
+2023-09-11 19:30:16,990 - figure_5_abs::DEBUG -- [DS_B] : UV_to_cuvette_storage-->Start!
+2023-09-11 19:30:39,090 - figure_5_abs::DEBUG -- [DS_B] : UV_to_cuvette_storage-->Done!
+2023-09-11 19:30:39,105 - figure_5_abs::DEBUG -- [UV-Vis] : 1 result : OrderedDict([('lambdamax', 691.396882), ('intensity', 0.02136966927339388), ('FWHM', 33.929126999999994)])
+2023-09-11 19:30:39,105 - figure_5_abs::DEBUG -- [UV-Vis] : Finish UV-VIS Characterization
+2023-09-11 19:30:43,112 - figure_5_abs::DEBUG -- [RobotArm] : Start Robot Queue : Batch motion (vialholder_UV_to_storage_filled) is started.
+2023-09-11 19:30:43,112 - figure_5_abs::DEBUG -- [RobotArm] : vial_num_list:[0, 1]
+2023-09-11 19:30:43,112 - figure_5_abs::DEBUG -- [RobotArm] : line_num_list:[0, 0]
+2023-09-11 19:30:43,112 - figure_5_abs::DEBUG -- [RobotArm] : vialHolder_list:[0, 1]
+2023-09-11 19:31:31,495 - figure_5_abs::DEBUG -- [RobotArm] : Finish Robot Queue : Batch motion (vialholder_UV_to_storage_filled) is done.
+2023-09-11 19:31:31,496 - figure_5_abs::DEBUG -- [RobotArm] : Start Robot Queue : Batch motion (vialholder_UV_to_storage_filled) is started.
+2023-09-11 19:32:19,070 - figure_5_abs::DEBUG -- [RobotArm] : Finish Robot Queue : Batch motion (vialholder_UV_to_storage_filled) is done.
+2023-09-11 19:32:20,072 - figure_5_abs::INFO -- [TaskScheduler] : UV is finished, location: {'vialHolder': ['?', '?', '?', '?', '?', '?', '?', '?']}
+2023-09-11 19:32:20,072 - figure_5_abs::INFO -- [TaskScheduler] : refresh location: {'BatchSynthesis': {'Stirrer': [0, 0, '?', '?', '?', '?', '?', '?'], 'vialHolder': [0, 0, '?', '?', '?', '?', '?', '?']}, 'UV': {'vialHolder': ['?', '?', '?', '?', '?', '?', '?', '?']}}
+2023-09-11 19:32:20,099 - figure_5_abs::INFO -- [JobExecution] : ######### [figure_5_abs-HJ] Experiment 2 is done #########

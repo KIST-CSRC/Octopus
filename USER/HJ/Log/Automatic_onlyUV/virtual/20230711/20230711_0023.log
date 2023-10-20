@@ -1,0 +1,23 @@
+2023-07-11 00:23:19,559 - Automatic_onlyUV::INFO -- [JobExecution] : [jobID=0] Algorithm, model : Automatic
+2023-07-11 00:23:19,565 - Automatic_onlyUV::INFO -- [JobExecution] : ######### Cycle start #########
+2023-07-11 00:23:19,580 - Automatic_onlyUV::INFO -- [Automatic] : total experiments=2
+2023-07-11 00:23:19,617 - Automatic_onlyUV::INFO -- [RecipeGenerator] : Allocate all of process based on job script!
+2023-07-11 00:23:19,627 - Automatic_onlyUV::INFO -- [JobExecution] : ######### Experiment 2 is running #########
+2023-07-11 00:23:19,658 - Automatic_onlyUV::INFO -- [TaskScheduler] : check location: {'BatchSynthesis': {'Stirrer': ['?', '?', '?', '?', '?', '?', '?', '?', '?', '?', '?', '?', '?', '?', '?', '?'], 'vialHolder': ['?', '?', '?', '?', '?', '?', '?', '?']}, 'UV': {'vialHolder': ['?', '?', '?', '?', '?', '?', '?', '?']}}
+2023-07-11 00:23:19,673 - Automatic_onlyUV::INFO -- [TaskScheduler] : UV allocate location: {'vialHolder': [0, 1]}
+2023-07-11 00:23:21,773 - Automatic_onlyUV::INFO -- [UV] : Prepare UV-VIS container
+2023-07-11 00:23:35,478 - Automatic_onlyUV::INFO -- [UV] : Start UV-VIS Characterization
+2023-07-11 00:23:44,555 - Automatic_onlyUV::INFO -- [UV] : 0 result : OrderedDict([('lambdamax', 670.16678), ('intensity', 0.020413291989026198), ('FWHM', 9.380886000000032)])
+2023-07-11 00:23:44,565 - Automatic_onlyUV::INFO -- [UV] : Finish UV-VIS Characterization
+2023-07-11 00:23:46,714 - Automatic_onlyUV::INFO -- [UV] : Prepare UV-VIS container
+2023-07-11 00:24:00,330 - Automatic_onlyUV::INFO -- [UV] : Start UV-VIS Characterization
+2023-07-11 00:24:09,351 - Automatic_onlyUV::INFO -- [UV] : 1 result : OrderedDict([('lambdamax', 399.719542), ('intensity', 0.017680607875747593), ('FWHM', 35.648270999999966)])
+2023-07-11 00:24:09,362 - Automatic_onlyUV::INFO -- [UV] : Finish UV-VIS Characterization
+2023-07-11 00:24:11,502 - Automatic_onlyUV::INFO -- [RobotArm] : Start Robot Queue : Batch motion (holder_to_storage_filled) is started.
+2023-07-11 00:24:11,513 - Automatic_onlyUV::INFO -- [RobotArm] : vial_num_list:[0, 1]
+2023-07-11 00:24:11,523 - Automatic_onlyUV::INFO -- [RobotArm] : line_num_list:[0, 0]
+2023-07-11 00:24:11,533 - Automatic_onlyUV::INFO -- [RobotArm] : vialHolder_list:[0, 1]
+2023-07-11 00:24:20,154 - Automatic_onlyUV::INFO -- [RobotArm] : Finish Robot Queue : Batch motion (holder_to_storage_filled) is done.
+2023-07-11 00:24:20,165 - Automatic_onlyUV::INFO -- [RobotArm] : Start Robot Queue : Batch motion (holder_to_storage_filled) is started.
+2023-07-11 00:24:26,875 - Automatic_onlyUV::INFO -- [RobotArm] : Finish Robot Queue : Batch motion (holder_to_storage_filled) is done.
+2023-07-11 00:24:26,926 - Automatic_onlyUV::INFO -- [TaskScheduler] : refresh location: {'BatchSynthesis': {'Stirrer': ['?', '?', '?', '?', '?', '?', '?', '?', '?', '?', '?', '?', '?', '?', '?', '?'], 'vialHolder': ['?', '?', '?', '?', '?', '?', '?', '?']}, 'UV': {'vialHolder': ['?', '?', '?', '?', '?', '?', '?', '?']}}

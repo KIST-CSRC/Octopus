@@ -1,0 +1,7 @@
+2023-09-18 14:42:29,413 - JobClient::INFO -- [HJ] : request to submit job : USER/HJ/job_script/figure/job_id_0.json
+2023-09-18 14:42:29,413 - JobClient::INFO -- [Client] : path error : [Errno 2] No such file or directory: 'USER/HJ/job_script/figure/job_id_0.json'
+2023-09-18 14:42:57,613 - JobClient::INFO -- [HJ] : request to submit job : USER/HJ/job_script/figure/jobid_0.json
+2023-09-18 14:42:57,663 - JobClient::INFO -- [HJ] : succeed to submit job, userName:HJ, jobID:0
+2023-09-18 14:43:05,693 - JobClient::INFO -- [HJ] : request to check job status
+2023-09-18 14:43:05,698 - JobClient::INFO -- [HJ] : succeed to check job status
+2023-09-18 14:43:31,503 - JobClient::INFO -- [HJ] : request to hold job (jobID:0)

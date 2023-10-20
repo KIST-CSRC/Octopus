@@ -1,0 +1,8 @@
+2023-09-04 19:41:46,596 - Automatic_synthesis_UV::INFO -- [JobExecution] : [jobID=1] Algorithm, model : Automatic
+2023-09-04 19:42:54,032 - Automatic_synthesis_UV::INFO -- [JobExecution] : ######### Cycle start #########
+2023-09-04 19:42:54,043 - Automatic_synthesis_UV::INFO -- [Automatic] : total experiments=0
+2023-09-04 19:42:54,043 - Automatic_synthesis_UV::INFO -- [Automatic [0]] : next_point 0: {'AddSolution=AgNO3_Concentration': 0.0125, 'AddSolution=AgNO3_Volume': 4000, 'AddSolution=AgNO3_Injectionrate': 100}
+2023-09-04 19:42:54,053 - Automatic_synthesis_UV::INFO -- [ProcessGenerator] : Allocate all of process based on job script!
+2023-09-04 19:42:54,063 - Automatic_synthesis_UV::INFO -- [JobExecution] : ######### [Automatic_synthesis_UV-HJ] Experiment 0 is running #########
+2023-09-04 19:42:54,109 - Automatic_synthesis_UV::INFO -- [TaskScheduler] : refresh location: {'BatchSynthesis': {'Stirrer': ['?', '?', '?', '?', '?', '?', '?', '?'], 'vialHolder': ['?', '?', '?', '?', '?', '?', '?', '?']}, 'UV': {'vialHolder': ['?', '?', '?', '?', '?', '?', '?', '?']}}
+2023-09-04 19:42:54,119 - Automatic_synthesis_UV::INFO -- [JobExecution] : ######### [Automatic_synthesis_UV-HJ] Experiment 0 is done #########

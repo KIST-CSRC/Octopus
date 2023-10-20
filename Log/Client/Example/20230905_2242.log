@@ -1,0 +1,27 @@
+2023-09-05 22:42:49,793 - JobClient::INFO -- [HJ] : request to submit job : USER/HJ/job_script/figure/jobid_1.json
+2023-09-05 22:42:49,850 - JobClient::INFO -- [HJ] : succeed to submit job, userName:HJ, jobID:0
+2023-09-05 22:42:53,403 - JobClient::INFO -- [HJ] : request to check job status
+2023-09-05 22:42:53,406 - JobClient::INFO -- [HJ] : succeed to check job status
+2023-09-05 22:43:03,996 - JobClient::INFO -- [HJ] : request to submit job : USER/HJ/job_script/figure/jobid_9.json
+2023-09-05 22:43:04,001 - JobClient::INFO -- [HJ] : succeed to submit job, userName:HJ, jobID:1
+2023-09-05 22:43:09,108 - JobClient::INFO -- [HJ] : request to check job status
+2023-09-05 22:43:09,111 - JobClient::INFO -- [HJ] : succeed to check job status
+2023-09-05 22:43:20,517 - JobClient::INFO -- [HJ] : request to submit job : USER/HJ/job_script/figure/jobid_1.json
+2023-09-05 22:43:20,520 - JobClient::INFO -- [HJ] : succeed to submit job, userName:HJ, jobID:2
+2023-09-05 22:43:29,372 - JobClient::INFO -- [HJ] : request to check job status
+2023-09-05 22:43:29,376 - JobClient::INFO -- [HJ] : succeed to check job status
+2023-09-05 22:44:52,366 - JobClient::INFO -- [HJ] : request to check job status
+2023-09-05 22:44:52,370 - JobClient::INFO -- [HJ] : succeed to check job status
+2023-09-05 22:46:13,504 - JobClient::INFO -- [HJ] : request to check job status
+2023-09-05 22:46:13,508 - JobClient::INFO -- [HJ] : succeed to check job status
+2023-09-05 22:46:15,865 - JobClient::INFO -- [HJ] : request to check job status
+2023-09-05 22:46:15,868 - JobClient::INFO -- [HJ] : succeed to check job status
+2023-09-05 22:46:17,895 - JobClient::INFO -- [HJ] : request to check job status
+2023-09-05 22:46:17,896 - JobClient::INFO -- [HJ] : succeed to check job status
+2023-09-05 22:46:22,793 - JobClient::INFO -- [HJ] : request to check job status
+2023-09-05 22:46:22,796 - JobClient::INFO -- [HJ] : succeed to check job status
+2023-09-05 22:46:27,449 - JobClient::INFO -- [HJ] : request to check job status
+2023-09-05 22:46:27,452 - JobClient::INFO -- [HJ] : succeed to check job status
+2023-09-05 22:46:47,009 - JobClient::INFO -- [HJ] : request to check job status
+2023-09-05 22:46:47,012 - JobClient::INFO -- [HJ] : succeed to check job status
+2023-09-05 22:46:55,578 - JobClient::INFO -- [HJ] : request to hold job (jobID:1)

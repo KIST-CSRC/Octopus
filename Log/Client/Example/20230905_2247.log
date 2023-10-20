@@ -1,0 +1,4 @@
+2023-09-05 22:47:18,522 - JobClient::INFO -- [HJ] : request to check job status
+2023-09-05 22:47:18,525 - JobClient::INFO -- [HJ] : succeed to check job status
+2023-09-05 22:47:38,451 - JobClient::INFO -- [HJ] : request to check job status
+2023-09-05 22:47:38,453 - JobClient::INFO -- [HJ] : succeed to check job status

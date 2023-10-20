@@ -1,0 +1,13 @@
+2023-09-04 21:09:21,360 - jobID_5_Batch::INFO -- [JobExecution] : [jobID=5] Algorithm, model : Automatic
+2023-09-04 21:18:22,334 - jobID_5_Batch::INFO -- [JobExecution] : ######### Cycle start #########
+2023-09-04 21:18:22,334 - jobID_5_Batch::INFO -- [Automatic] : total experiments=2
+2023-09-04 21:18:22,334 - jobID_5_Batch::INFO -- [Automatic [0]] : next_point 0: {'AddSolution=AgNO3_Concentration': 1250, 'AddSolution=AgNO3_Volume': 2000, 'AddSolution=AgNO3_Injectionrate': 200}
+2023-09-04 21:18:22,334 - jobID_5_Batch::INFO -- [Automatic [1]] : next_point 1: {'AddSolution=AgNO3_Concentration': 1250, 'AddSolution=AgNO3_Volume': 2400, 'AddSolution=AgNO3_Injectionrate': 200}
+2023-09-04 21:18:22,351 - jobID_5_Batch::INFO -- [ProcessGenerator] : Allocate all of process based on job script!
+2023-09-04 21:18:22,352 - jobID_5_Batch::INFO -- [JobExecution] : ######### [jobID_5_Batch-HJ] Experiment 2 is running #########
+2023-09-04 21:18:22,354 - jobID_5_Batch::INFO -- [TaskScheduler] : check location: {'BatchSynthesis': {'Stirrer': ['?', '?', '?', '?', '?', '?', '?', '?'], 'vialHolder': ['?', '?', '?', '?', '?', '?', '?', '?']}, 'UV': {'vialHolder': [4, 4, 4, 4, 4, 4, '?', '?']}}
+2023-09-04 21:18:22,354 - jobID_5_Batch::INFO -- [TaskScheduler] : BatchSynthesis is started, allocate location: {'Stirrer': [0, 1], 'vialHolder': [0, 1]}
+2023-09-04 21:18:22,355 - jobID_5_Batch::INFO -- [TaskScheduler] : check location after allocation: {'BatchSynthesis': {'Stirrer': [5, 5, '?', '?', '?', '?', '?', '?'], 'vialHolder': [5, 5, '?', '?', '?', '?', '?', '?']}, 'UV': {'vialHolder': [4, 4, 4, 4, 4, 4, '?', '?']}}
+2023-09-04 21:22:56,388 - jobID_5_Batch::INFO -- [TaskScheduler] : BatchSynthesis is finished, location: {'Stirrer': ['?', '?', '?', '?', '?', '?', '?', '?'], 'vialHolder': ['?', '?', '?', '?', '?', '?', '?', '?']}
+2023-09-04 21:22:56,398 - jobID_5_Batch::INFO -- [TaskScheduler] : refresh location: {'BatchSynthesis': {'Stirrer': ['?', '?', '?', '?', '?', '?', '?', '?'], 'vialHolder': ['?', '?', '?', '?', '?', '?', '?', '?']}, 'UV': {'vialHolder': ['?', '?', '?', '?', '?', '?', '?', '?']}}
+2023-09-04 21:22:56,522 - jobID_5_Batch::INFO -- [JobExecution] : ######### [jobID_5_Batch-HJ] Experiment 2 is done #########

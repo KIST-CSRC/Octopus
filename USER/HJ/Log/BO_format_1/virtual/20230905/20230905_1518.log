@@ -1,0 +1,4 @@
+2023-09-05 15:18:34,838 - BO_format_1::INFO -- [JobExecution] : [jobID=0] Algorithm, model : BayesianOptimization
+2023-09-05 15:18:34,848 - BO_format_1::INFO -- [JobExecution] : ######### Cycle start #########
+2023-09-05 15:18:34,859 - BO_format_1::INFO -- [BayesianOptimization] : batchSize=1
+2023-09-05 15:18:34,868 - BO_format_1::INFO -- [Algorithm [0]] : next_point 0: {'AddSolution=AgNO3_Concentration': 300, 'AddSolution=AgNO3_Volume': 800, 'AddSolution=AgNO3_Injectionrate': 100}

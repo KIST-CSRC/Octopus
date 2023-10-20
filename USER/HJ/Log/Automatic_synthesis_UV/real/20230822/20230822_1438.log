@@ -1,0 +1,16 @@
+2023-08-22 14:38:56,083 - Automatic_synthesis_UV::INFO -- [JobExecution] : [jobID=0] Algorithm, model : Automatic
+2023-08-22 14:38:56,088 - Automatic_synthesis_UV::INFO -- [JobExecution] : ######### Cycle start #########
+2023-08-22 14:38:56,088 - Automatic_synthesis_UV::INFO -- [Automatic] : total experiments=1
+2023-08-22 14:38:56,093 - Automatic_synthesis_UV::INFO -- [Automatic [0]] : next_point 0: {'AddSolution=AgNO3_Concentration': 0.0125, 'AddSolution=AgNO3_Volume': 3000, 'AddSolution=AgNO3_Injectionrate': 200}
+2023-08-22 14:38:56,115 - Automatic_synthesis_UV::INFO -- [ProcessGenerator] : Allocate all of process based on job script!
+2023-08-22 14:38:56,125 - Automatic_synthesis_UV::INFO -- [JobExecution] : ######### [Automatic_synthesis_UV-HJ] Experiment 1 is running #########
+2023-08-22 14:38:56,270 - Automatic_synthesis_UV::INFO -- [TaskScheduler] : check location: {'BatchSynthesis': {'Stirrer': ['?', '?', '?', '?', '?', '?', '?', '?'], 'vialHolder': ['?', '?', '?', '?', '?', '?', '?', '?']}, 'UV': {'vialHolder': ['?', '?', '?', '?', '?', '?', '?', '?']}}
+2023-08-22 14:38:56,280 - Automatic_synthesis_UV::INFO -- [TaskScheduler] : BatchSynthesis is started, allocate location: {'Stirrer': [0], 'vialHolder': [0]}
+2023-08-22 14:38:56,290 - Automatic_synthesis_UV::INFO -- [TaskScheduler] : check location after allocation: {'BatchSynthesis': {'Stirrer': [0, '?', '?', '?', '?', '?', '?', '?'], 'vialHolder': [0, '?', '?', '?', '?', '?', '?', '?']}, 'UV': {'vialHolder': ['?', '?', '?', '?', '?', '?', '?', '?']}}
+2023-08-22 14:49:02,966 - Automatic_synthesis_UV::INFO -- [TaskScheduler] : BatchSynthesis is finished, location: {'Stirrer': ['?', '?', '?', '?', '?', '?', '?', '?'], 'vialHolder': ['?', '?', '?', '?', '?', '?', '?', '?']}
+2023-08-22 14:49:02,976 - Automatic_synthesis_UV::INFO -- [TaskScheduler] : UV is started, allocate location: {'vialHolder': [0]}
+2023-08-22 14:49:02,986 - Automatic_synthesis_UV::INFO -- [TaskScheduler] : check location after allocation: {'BatchSynthesis': {'Stirrer': ['?', '?', '?', '?', '?', '?', '?', '?'], 'vialHolder': ['?', '?', '?', '?', '?', '?', '?', '?']}, 'UV': {'vialHolder': [0, '?', '?', '?', '?', '?', '?', '?']}}
+2023-08-22 14:52:33,017 - Automatic_synthesis_UV::INFO -- [RobotArm] : Start Robot Queue : Batch motion (vialholder_Characterization_to_storage_filled) is started.
+2023-08-22 14:52:33,069 - Automatic_synthesis_UV::INFO -- [TaskScheduler] : UV is finished, location: {'vialHolder': ['?', '?', '?', '?', '?', '?', '?', '?']}
+2023-08-22 14:52:33,079 - Automatic_synthesis_UV::INFO -- [TaskScheduler] : refresh location: {'BatchSynthesis': {'Stirrer': ['?', '?', '?', '?', '?', '?', '?', '?'], 'vialHolder': ['?', '?', '?', '?', '?', '?', '?', '?']}, 'UV': {'vialHolder': ['?', '?', '?', '?', '?', '?', '?', '?']}}
+2023-08-22 14:52:33,179 - Automatic_synthesis_UV::INFO -- [JobExecution] : ######### [Automatic_synthesis_UV-HJ] Experiment 1 is done #########

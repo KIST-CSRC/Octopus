@@ -1,0 +1,96 @@
+2023-09-04 20:05:14,334 - BO_format_1::INFO -- [JobExecution] : [jobID=0] Algorithm, model : BayesianOptimization
+2023-09-04 20:05:14,345 - BO_format_1::INFO -- [JobExecution] : ######### Cycle start #########
+2023-09-04 20:05:14,345 - BO_format_1::INFO -- [BayesianOptimization] : batchSize=1
+2023-09-04 20:05:14,355 - BO_format_1::INFO -- [Algorithm [0]] : next_point 0: {'AddSolution=AgNO3_Concentration': 250, 'AddSolution=AgNO3_Volume': 1100, 'AddSolution=AgNO3_Injectionrate': 100}
+2023-09-04 20:05:14,397 - BO_format_1::INFO -- [ProcessGenerator] : Allocate all of process based on job script!
+2023-09-04 20:05:14,407 - BO_format_1::INFO -- [JobExecution] : ######### [BO_format_1-HJ] Cycle 1/1 is running #########
+2023-09-04 20:05:14,443 - BO_format_1::INFO -- [TaskScheduler] : check location: {'BatchSynthesis': {'Stirrer': ['?', '?', '?', '?', '?', '?', '?', '?'], 'vialHolder': ['?', '?', '?', '?', '?', '?', '?', '?']}, 'UV': {'vialHolder': ['?', '?', '?', '?', '?', '?', '?', '?']}}
+2023-09-04 20:05:14,453 - BO_format_1::INFO -- [TaskScheduler] : BatchSynthesis is started, allocate location: {'Stirrer': [0], 'vialHolder': [0]}
+2023-09-04 20:05:14,463 - BO_format_1::INFO -- [TaskScheduler] : check location after allocation: {'BatchSynthesis': {'Stirrer': [0, '?', '?', '?', '?', '?', '?', '?'], 'vialHolder': [0, '?', '?', '?', '?', '?', '?', '?']}, 'UV': {'vialHolder': ['?', '?', '?', '?', '?', '?', '?', '?']}}
+2023-09-04 20:05:16,563 - BO_format_1::DEBUG -- [Batch] : storage_empty_to_stirrer is started.
+2023-09-04 20:05:16,573 - BO_format_1::DEBUG -- [Batch] : vial_num_list: [0]
+2023-09-04 20:05:16,584 - BO_format_1::DEBUG -- [Batch] : line_num_list: [0]
+2023-09-04 20:05:16,589 - BO_format_1::DEBUG -- [Batch] : vialHolder_list: [0]
+2023-09-04 20:05:16,599 - BO_format_1::DEBUG -- [Batch] : Start Robot Queue : storage_empty_to_stirrer is started.
+2023-09-04 20:05:16,609 - BO_format_1::DEBUG -- [LA] : move center-->Start!
+2023-09-04 20:05:17,766 - BO_format_1::DEBUG -- [LA] : move center-->Done!
+2023-09-04 20:05:17,812 - BO_format_1::DEBUG -- [STORAGE] : open-->Start!
+2023-09-04 20:05:21,028 - BO_format_1::DEBUG -- [STORAGE] : open-->Done!
+2023-09-04 20:05:23,086 - BO_format_1::DEBUG -- [DS_B] : prepare container-->Start!
+2023-09-04 20:05:25,306 - BO_format_1::DEBUG -- [DS_B] : prepare container-->Done!
+2023-09-04 20:05:25,316 - BO_format_1::DEBUG -- [Batch] : Finish Robot Queue : storage_empty_to_stirrer is done.
+2023-09-04 20:05:27,446 - BO_format_1::DEBUG -- [Batch] : Prepare Injection Queue --> NaBH4,0.01mM,500uL,200uL/s
+2023-09-04 20:05:27,457 - BO_format_1::DEBUG -- [PUMP] : prepare solution-->Start!
+2023-09-04 20:05:27,467 - BO_format_1::DEBUG -- [PUMP] : prepare solution-->Done!
+2023-09-04 20:05:27,520 - BO_format_1::DEBUG -- [LA] : move down-->Start!
+2023-09-04 20:05:28,578 - BO_format_1::DEBUG -- [LA] : move down-->Done!
+2023-09-04 20:05:28,629 - BO_format_1::DEBUG -- [Batch] : Start Injection Queue --> NaBH4,0.01mM,100μL,200μL/s
+2023-09-04 20:05:28,639 - BO_format_1::DEBUG -- [PUMP] : prepare solution-->Start!
+2023-09-04 20:05:32,549 - BO_format_1::DEBUG -- [PUMP] : prepare solution-->Done!
+2023-09-04 20:05:32,610 - BO_format_1::DEBUG -- [LA] : move up-->Start!
+2023-09-04 20:05:33,683 - BO_format_1::DEBUG -- [LA] : move up-->Done!
+2023-09-04 20:05:33,729 - BO_format_1::DEBUG -- [LA] : move center-->Start!
+2023-09-04 20:05:34,786 - BO_format_1::DEBUG -- [LA] : move center-->Done!
+2023-09-04 20:05:34,797 - BO_format_1::DEBUG -- [Batch] : Finish Injection Queue
+2023-09-04 20:05:34,853 - BO_format_1::DEBUG -- [Batch] : Start Stir Queue 0 (Stirrer)
+2023-09-04 20:05:36,569 - BO_format_1::DEBUG -- [Batch] : Finish Stir Queue 0 (Stirrer)
+2023-09-04 20:05:36,579 - BO_format_1::DEBUG -- [Batch] : Start Heat Queue 0 (Stirrer)
+2023-09-04 20:05:38,154 - BO_format_1::DEBUG -- [Batch] : Finish Heat Queue 0 (Stirrer)
+2023-09-04 20:05:38,170 - BO_format_1::DEBUG -- [Batch] : Start Wait:1s
+2023-09-04 20:05:38,180 - BO_format_1::DEBUG -- [Batch] : check Wait:1s
+2023-09-04 20:05:38,190 - BO_format_1::DEBUG -- [Batch] : Finish Wait:1s
+2023-09-04 20:05:40,269 - BO_format_1::DEBUG -- [Batch] : Prepare Injection Queue --> AgNO3,250mM,500uL,200uL/s
+2023-09-04 20:05:40,279 - BO_format_1::DEBUG -- [PUMP] : prepare solution-->Start!
+2023-09-04 20:05:40,289 - BO_format_1::DEBUG -- [PUMP] : prepare solution-->Done!
+2023-09-04 20:05:40,317 - BO_format_1::DEBUG -- [LA] : move down-->Start!
+2023-09-04 20:05:41,422 - BO_format_1::DEBUG -- [LA] : move down-->Done!
+2023-09-04 20:05:41,468 - BO_format_1::DEBUG -- [Batch] : Start Injection Queue --> AgNO3,250mM,1100μL,100μL/s
+2023-09-04 20:05:41,479 - BO_format_1::DEBUG -- [PUMP] : prepare solution-->Start!
+2023-09-04 20:05:45,303 - BO_format_1::DEBUG -- [PUMP] : prepare solution-->Done!
+2023-09-04 20:05:45,344 - BO_format_1::DEBUG -- [LA] : move up-->Start!
+2023-09-04 20:05:46,442 - BO_format_1::DEBUG -- [LA] : move up-->Done!
+2023-09-04 20:05:46,488 - BO_format_1::DEBUG -- [LA] : move center-->Start!
+2023-09-04 20:05:47,692 - BO_format_1::DEBUG -- [LA] : move center-->Done!
+2023-09-04 20:05:47,703 - BO_format_1::DEBUG -- [Batch] : Finish Injection Queue
+2023-09-04 20:05:47,764 - BO_format_1::DEBUG -- [Batch] : Start React:1s
+2023-09-04 20:05:57,789 - BO_format_1::DEBUG -- [Batch] : check React:1s
+2023-09-04 20:05:59,848 - BO_format_1::DEBUG -- [LA] : move center-->Start!
+2023-09-04 20:06:01,022 - BO_format_1::DEBUG -- [LA] : move center-->Done!
+2023-09-04 20:06:01,058 - BO_format_1::DEBUG -- [DS_B] : stirrer_to_holder-->Start!
+2023-09-04 20:06:03,173 - BO_format_1::DEBUG -- [DS_B] : stirrer_to_holder-->Done!
+2023-09-04 20:06:03,183 - BO_format_1::DEBUG -- [Batch] : Finish React:1s
+2023-09-04 20:06:03,244 - BO_format_1::INFO -- [TaskScheduler] : BatchSynthesis is finished, location: {'Stirrer': ['?', '?', '?', '?', '?', '?', '?', '?'], 'vialHolder': ['?', '?', '?', '?', '?', '?', '?', '?']}
+2023-09-04 20:06:03,255 - BO_format_1::INFO -- [TaskScheduler] : UV is started, allocate location: {'vialHolder': [0]}
+2023-09-04 20:06:03,265 - BO_format_1::INFO -- [TaskScheduler] : check location after allocation: {'BatchSynthesis': {'Stirrer': ['?', '?', '?', '?', '?', '?', '?', '?'], 'vialHolder': ['?', '?', '?', '?', '?', '?', '?', '?']}, 'UV': {'vialHolder': [0, '?', '?', '?', '?', '?', '?', '?']}}
+2023-09-04 20:06:05,364 - BO_format_1::DEBUG -- [UV-Vis] : Trasfer colloid NP to UV vialholder
+2023-09-04 20:06:05,375 - BO_format_1::DEBUG -- [DS_B] : vialholder_batchsynthesis_to_vialholder_UV-->Start!
+2023-09-04 20:06:07,598 - BO_format_1::DEBUG -- [DS_B] : vialholder_batchsynthesis_to_vialholder_UV-->Done!
+2023-09-04 20:06:07,608 - BO_format_1::DEBUG -- [UV-Vis] : Prepare UV-VIS container
+2023-09-04 20:06:07,619 - BO_format_1::DEBUG -- [DS_B] : cuvette_storage_to_cuvette_holder-->Start!
+2023-09-04 20:06:09,789 - BO_format_1::DEBUG -- [DS_B] : cuvette_storage_to_cuvette_holder-->Done!
+2023-09-04 20:06:09,851 - BO_format_1::DEBUG -- [DS_B] : cuvette_holder_to_UV-->Start!
+2023-09-04 20:06:11,995 - BO_format_1::DEBUG -- [DS_B] : cuvette_holder_to_UV-->Done!
+2023-09-04 20:06:12,067 - BO_format_1::DEBUG -- [DS_B] : UV-VIS Characterization-->Start!
+2023-09-04 20:06:18,808 - BO_format_1::DEBUG -- [DS_B] : UV-VIS Characterization-->Done!
+2023-09-04 20:06:18,865 - BO_format_1::DEBUG -- [DS_B] : Cuvette2ExtractSolution-->Start!
+2023-09-04 20:06:18,875 - BO_format_1::DEBUG -- [UV-Vis] : Start UV sample preparation
+2023-09-04 20:06:20,990 - BO_format_1::DEBUG -- [UV-Vis] : Finish UV sample preparation
+2023-09-04 20:06:21,000 - BO_format_1::DEBUG -- [DS_B] : Cuvette2ExtractSolution-->Done!
+2023-09-04 20:06:21,067 - BO_format_1::DEBUG -- [UV-Vis] : Start UV-VIS Characterization
+2023-09-04 20:06:21,077 - BO_format_1::DEBUG -- [DS_B] : UV-VIS Characterization-->Start!
+2023-09-04 20:06:27,818 - BO_format_1::DEBUG -- [DS_B] : UV-VIS Characterization-->Done!
+2023-09-04 20:06:27,880 - BO_format_1::DEBUG -- [DS_B] : UV_to_cuvette_storage-->Start!
+2023-09-04 20:06:29,971 - BO_format_1::DEBUG -- [DS_B] : UV_to_cuvette_storage-->Done!
+2023-09-04 20:06:30,041 - BO_format_1::DEBUG -- [UV-Vis] : 0 result : OrderedDict([('lambdamax', 571.451607), ('intensity', 0.022840805928705358), ('FWHM', 26.170206000000007)])
+2023-09-04 20:06:30,051 - BO_format_1::DEBUG -- [UV-Vis] : Finish UV-VIS Characterization
+2023-09-04 20:06:32,207 - BO_format_1::DEBUG -- [RobotArm] : Start Robot Queue : Batch motion (vialholder_UV_to_storage_filled) is started.
+2023-09-04 20:06:32,218 - BO_format_1::DEBUG -- [RobotArm] : vial_num_list:[0]
+2023-09-04 20:06:32,228 - BO_format_1::DEBUG -- [RobotArm] : line_num_list:[0]
+2023-09-04 20:06:32,238 - BO_format_1::DEBUG -- [RobotArm] : vialHolder_list:[0]
+2023-09-04 20:06:48,087 - BO_format_1::DEBUG -- [RobotArm] : Finish Robot Queue : Batch motion (vialholder_UV_to_storage_filled) is done.
+2023-09-04 20:06:48,128 - BO_format_1::INFO -- [TaskScheduler] : UV is finished, location: {'vialHolder': ['?', '?', '?', '?', '?', '?', '?', '?']}
+2023-09-04 20:06:48,139 - BO_format_1::INFO -- [TaskScheduler] : refresh location: {'BatchSynthesis': {'Stirrer': ['?', '?', '?', '?', '?', '?', '?', '?'], 'vialHolder': ['?', '?', '?', '?', '?', '?', '?', '?']}, 'UV': {'vialHolder': ['?', '?', '?', '?', '?', '?', '?', '?']}}
+2023-09-04 20:06:48,187 - BO_format_1::INFO -- [Algorithm] : 0 optimal_value : -0.07485948915020241
+2023-09-04 20:06:48,389 - BO_format_1::INFO -- [JobExecution] : ######### [BO_format_1-HJ] Cycle 1/1 is done #########
+2023-09-04 20:06:48,415 - BO_format_1::INFO -- [Algorithm] : Save our model object, filename=20230904_200648_1_obj
+2023-09-04 20:06:48,475 - BO_format_1::INFO -- [JobExecution] : ######### [BO_format_1-HJ] All Cycle is done #########

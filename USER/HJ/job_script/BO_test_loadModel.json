@@ -1,0 +1,59 @@
+{
+    "metadata" : 
+    {
+        "subject":"BO_format_2",
+        "group":"KIST_CSRC",
+        "logLevel":"INFO",
+        "todayIterNum":1
+    },
+    "algorithm":
+    {
+        "model":"PreviousModel",
+        "modelPath":""
+    },
+    "process":
+    {
+        "Synthesis":{
+            "BatchSynthesis":
+            {
+                "fixedParams":
+                {
+                    "BatchSynthesis=Sequence":["AddSolution_Citrate","AddSolution_H2O2", "AddSolution_NaBH4","Stir","Heat","Wait", "AddSolution_AgNO3", "React"],
+
+                    "AddSolution=H2O2_Concentration" : 0.375,
+                    "AddSolution=H2O2_Volume" : 1200,
+                    "AddSolution=H2O2_Injectionrate" : 200,
+                    "AddSolution=Citrate_Concentration" : 0.02,
+                    "AddSolution=Citrate_Volume" : 1200,
+                    "AddSolution=Citrate_Injectionrate" : 200,
+                    "AddSolution=NaBH4_Concentration" : 0.01,
+                    "AddSolution=NaBH4_Volume" : 3000,
+                    "AddSolution=NaBH4_Injectionrate" : 200,
+
+                    "Stir=StirRate":800,
+                    "Heat=Temperature":25,
+                    "Wait=Time":1,
+                    "React=Time":1
+                }
+            },
+            "FlowSynthesis":{}
+        },
+        "Preprocess":{
+            "Washing":{},
+            "Ink":{}
+        },
+        "Characterization":{
+            "UV":
+            {
+                "fixedParams":
+                {
+                    "UV=Sequence":["GetAbs"]
+                }
+            }
+        },
+        "Evaluation":{
+            "RDE":{},
+            "Electrode":{}
+        }
+    }
+}

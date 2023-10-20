@@ -1,0 +1,18 @@
+2023-09-04 21:08:48,870 - jobID_0_AI::INFO -- [JobExecution] : [jobID=1] Algorithm, model : BayesianOptimization
+2023-09-04 21:12:23,476 - jobID_0_AI::INFO -- [JobExecution] : ######### Cycle start #########
+2023-09-04 21:12:23,476 - jobID_0_AI::INFO -- [BayesianOptimization] : batchSize=1
+2023-09-04 21:12:23,480 - jobID_0_AI::INFO -- [Algorithm [0]] : next_point 0: {'AddSolution=AgNO3_Concentration': 225, 'AddSolution=AgNO3_Volume': 450, 'AddSolution=AgNO3_Injectionrate': 50}
+2023-09-04 21:12:23,481 - jobID_0_AI::INFO -- [ProcessGenerator] : Allocate all of process based on job script!
+2023-09-04 21:12:23,481 - jobID_0_AI::INFO -- [JobExecution] : ######### [jobID_0_AI-HJ] Cycle 1/1 is running #########
+2023-09-04 21:12:23,481 - jobID_0_AI::INFO -- [TaskScheduler] : check location: {'BatchSynthesis': {'Stirrer': ['?', '?', '?', '?', '?', '?', '?', '?'], 'vialHolder': ['?', '?', '?', '?', '?', '?', '?', '?']}, 'UV': {'vialHolder': ['?', '?', '?', '?', '?', '?', '?', '?']}}
+2023-09-04 21:12:23,481 - jobID_0_AI::INFO -- [TaskScheduler] : BatchSynthesis is started, allocate location: {'Stirrer': [0], 'vialHolder': [0]}
+2023-09-04 21:12:23,482 - jobID_0_AI::INFO -- [TaskScheduler] : check location after allocation: {'BatchSynthesis': {'Stirrer': [1, '?', '?', '?', '?', '?', '?', '?'], 'vialHolder': [1, '?', '?', '?', '?', '?', '?', '?']}, 'UV': {'vialHolder': ['?', '?', '?', '?', '?', '?', '?', '?']}}
+2023-09-04 21:14:26,525 - jobID_0_AI::INFO -- [TaskScheduler] : BatchSynthesis is finished, location: {'Stirrer': ['?', '?', '?', '?', '?', '?', '?', '?'], 'vialHolder': ['?', '?', '?', '?', '?', '?', '?', '?']}
+2023-09-04 21:14:26,525 - jobID_0_AI::INFO -- [TaskScheduler] : UV is started, allocate location: {'vialHolder': [4]}
+2023-09-04 21:14:26,526 - jobID_0_AI::INFO -- [TaskScheduler] : check location after allocation: {'BatchSynthesis': {'Stirrer': ['?', '?', '?', '?', '?', '?', '?', '?'], 'vialHolder': ['?', '?', '?', '?', '?', '?', '?', '?']}, 'UV': {'vialHolder': [2, 2, 2, 2, 1, '?', '?', '?']}}
+2023-09-04 21:15:37,505 - jobID_0_AI::INFO -- [TaskScheduler] : UV is finished, location: {'vialHolder': ['?', '?', '?', '?', '?', '?', '?', '?']}
+2023-09-04 21:15:37,510 - jobID_0_AI::INFO -- [TaskScheduler] : refresh location: {'BatchSynthesis': {'Stirrer': ['?', '?', '?', '?', '?', '?', '?', '?'], 'vialHolder': ['?', '?', '?', '?', '?', '?', '?', '?']}, 'UV': {'vialHolder': ['?', '?', '?', '?', '?', '?', '?', '?']}}
+2023-09-04 21:15:37,553 - jobID_0_AI::INFO -- [Algorithm] : 0 optimal_value : -0.14113480798399541
+2023-09-04 21:15:37,713 - jobID_0_AI::INFO -- [JobExecution] : ######### [jobID_0_AI-HJ] Cycle 1/1 is done #########
+2023-09-04 21:15:37,770 - jobID_0_AI::INFO -- [Algorithm] : Save our model object, filename=20230904_211537_1_obj
+2023-09-04 21:15:37,830 - jobID_0_AI::INFO -- [JobExecution] : ######### [jobID_0_AI-HJ] All Cycle is done #########

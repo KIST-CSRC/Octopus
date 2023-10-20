@@ -1,0 +1,53 @@
+{
+	"TELEGRAM": 
+	[
+		{
+			"TELEGRAM_USER_ID": "your telegram chat ID number",
+			"TELEGRAM_USER_TOKEN": "your telegram token"
+		}
+	],
+	"FACEBOOK_MESSENGER": 
+	[
+		{
+			"FACEBOOK_MESSENGER_USER_ID": "your facebook ID, phone number",
+			"FACEBOOK_MESSENGER_USER_PWD": "your facebook token",
+			"FACEBOOK_MESSENGER_TOKEN": "your facebook token"
+		}
+	],
+	"KAKAOTALK": 
+	[
+		{
+			"KAKAOTALK_TARGET_URL": "https://kapi.kakao.com/v2/api/talk/memo/default/send",
+			"KAKAOTALK_access_token": "your kakaotalk access token",
+			"KAKAOTALK_token_type": "bearer",
+			"KAKAOTALK_refresh_token": "your kakaotalk refresh token",
+			"KAKAOTALK_expires_in": "your kakaotalk expires_in number",
+			"KAKAOTALK_scope": "talk_message",
+			"KAKAOTALK_refresh_token_expires_in": 5,
+			"KAKAOTALK_rest_api_key": "your kakaotalk rest api key",
+			"KAKAOTALK_TOKEN_URL": "your kakaotalk token url"
+		}
+	],
+	"LINE": 
+	[
+		{
+			"LINE_TARGET_URL": "https://notify-api.line.me/api/notify",
+			"LINE_USER_TOKEN": "your_token"
+		}
+	],
+	"MAIL": 
+	[
+		{
+			"MAIL_GMAIL_USER_ID": "your email id",
+			"MAIL_GMAIL_USER_PWD": "your 2nd pwd, ex) gmail:2nd pwd"
+		}
+	],
+	"DOORAY":
+	[
+		{
+			"DOORAY_TARGET_URL" : "",
+			"DOORAY_SAFETY_SYSTEM" : "",
+			"DOORAY_USER_TOKEN" : ""
+		}
+	]
+}

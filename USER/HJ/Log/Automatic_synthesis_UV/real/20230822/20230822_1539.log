@@ -1,0 +1,12 @@
+2023-08-22 15:39:22,180 - Automatic_synthesis_UV::INFO -- [JobExecution] : [jobID=0] Algorithm, model : Automatic
+2023-08-22 15:39:22,186 - Automatic_synthesis_UV::INFO -- [JobExecution] : ######### Cycle start #########
+2023-08-22 15:39:22,191 - Automatic_synthesis_UV::INFO -- [Automatic] : total experiments=1
+2023-08-22 15:39:22,191 - Automatic_synthesis_UV::INFO -- [Automatic [0]] : next_point 0: {'AddSolution=AgNO3_Concentration': 0.0125, 'AddSolution=AgNO3_Volume': 4000, 'AddSolution=AgNO3_Injectionrate': 100}
+2023-08-22 15:39:22,212 - Automatic_synthesis_UV::INFO -- [ProcessGenerator] : Allocate all of process based on job script!
+2023-08-22 15:39:22,222 - Automatic_synthesis_UV::INFO -- [JobExecution] : ######### [Automatic_synthesis_UV-HJ] Experiment 1 is running #########
+2023-08-22 15:39:22,335 - Automatic_synthesis_UV::INFO -- [TaskScheduler] : check location: {'BatchSynthesis': {'Stirrer': ['?', '?', '?', '?', '?', '?', '?', '?'], 'vialHolder': ['?', '?', '?', '?', '?', '?', '?', '?']}, 'UV': {'vialHolder': ['?', '?', '?', '?', '?', '?', '?', '?']}}
+2023-08-22 15:39:22,340 - Automatic_synthesis_UV::INFO -- [TaskScheduler] : BatchSynthesis is started, allocate location: {'Stirrer': [0], 'vialHolder': [0]}
+2023-08-22 15:39:22,340 - Automatic_synthesis_UV::INFO -- [TaskScheduler] : check location after allocation: {'BatchSynthesis': {'Stirrer': [0, '?', '?', '?', '?', '?', '?', '?'], 'vialHolder': [0, '?', '?', '?', '?', '?', '?', '?']}, 'UV': {'vialHolder': ['?', '?', '?', '?', '?', '?', '?', '?']}}
+2023-08-22 15:44:53,931 - Automatic_synthesis_UV::INFO -- [TaskScheduler] : BatchSynthesis is finished, location: {'Stirrer': ['?', '?', '?', '?', '?', '?', '?', '?'], 'vialHolder': ['?', '?', '?', '?', '?', '?', '?', '?']}
+2023-08-22 15:44:53,942 - Automatic_synthesis_UV::INFO -- [TaskScheduler] : UV is started, allocate location: {'vialHolder': [0]}
+2023-08-22 15:44:53,952 - Automatic_synthesis_UV::INFO -- [TaskScheduler] : check location after allocation: {'BatchSynthesis': {'Stirrer': ['?', '?', '?', '?', '?', '?', '?', '?'], 'vialHolder': ['?', '?', '?', '?', '?', '?', '?', '?']}, 'UV': {'vialHolder': [0, '?', '?', '?', '?', '?', '?', '?']}}

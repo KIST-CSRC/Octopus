@@ -1,0 +1,16 @@
+2023-09-12 11:25:42,615 - figure_5_add::INFO -- [JobExecution] : [jobID=0] Algorithm, model : Automatic
+2023-09-12 11:25:42,620 - figure_5_add::INFO -- [JobExecution] : ######### Cycle start #########
+2023-09-12 11:25:42,635 - figure_5_add::INFO -- [Automatic] : total experiments=2
+2023-09-12 11:25:42,646 - figure_5_add::INFO -- [Automatic [0]] : next_point 0: {'AddSolution=AgNO3_Concentration': 0.125, 'AddSolution=AgNO3_Volume': 1000, 'AddSolution=AgNO3_Injectionrate': 100}
+2023-09-12 11:25:42,656 - figure_5_add::INFO -- [Automatic [1]] : next_point 1: {'AddSolution=AgNO3_Concentration': 0.125, 'AddSolution=AgNO3_Volume': 1000, 'AddSolution=AgNO3_Injectionrate': 100}
+2023-09-12 11:25:42,718 - figure_5_add::INFO -- [ProcessGenerator] : Allocate all of process based on job script!
+2023-09-12 11:25:42,729 - figure_5_add::INFO -- [JobExecution] : ######### [figure_5_add-HJ] Experiment 2 is running #########
+2023-09-12 11:25:42,982 - figure_5_add::INFO -- [TaskScheduler] : check location: {'BatchSynthesis': {'Stirrer': ['?', '?', '?', '?', '?', '?', '?', '?'], 'vialHolder': ['?', '?', '?', '?', '?', '?', '?', '?']}, 'UV': {'vialHolder': ['?', '?', '?', '?', '?', '?', '?', '?']}}
+2023-09-12 11:25:42,987 - figure_5_add::INFO -- [TaskScheduler] : BatchSynthesis is started, allocate location: {'Stirrer': [0, 1], 'vialHolder': [0, 1]}
+2023-09-12 11:25:42,987 - figure_5_add::INFO -- [TaskScheduler] : check location after allocation: {'BatchSynthesis': {'Stirrer': [0, 0, '?', '?', '?', '?', '?', '?'], 'vialHolder': [0, 0, '?', '?', '?', '?', '?', '?']}, 'UV': {'vialHolder': ['?', '?', '?', '?', '?', '?', '?', '?']}}
+2023-09-12 11:25:46,071 - figure_5_add::DEBUG -- [Batch] : storage_empty_to_stirrer is started.
+2023-09-12 11:25:46,081 - figure_5_add::DEBUG -- [Batch] : vial_num_list: [0, 1]
+2023-09-12 11:25:46,086 - figure_5_add::DEBUG -- [Batch] : line_num_list: [0, 0]
+2023-09-12 11:25:46,086 - figure_5_add::DEBUG -- [Batch] : vialHolder_list: [0, 1]
+2023-09-12 11:25:46,086 - figure_5_add::DEBUG -- [Batch] : Start Robot Queue : storage_empty_to_stirrer is started.
+2023-09-12 11:25:46,086 - figure_5_add::DEBUG -- [LA] : move center-->Start!

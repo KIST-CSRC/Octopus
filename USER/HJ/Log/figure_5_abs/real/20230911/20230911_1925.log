@@ -1,0 +1,56 @@
+2023-09-11 19:25:01,720 - figure_5_abs::INFO -- [JobExecution] : [jobID=1] Algorithm, model : Automatic
+2023-09-11 19:25:01,731 - figure_5_abs::INFO -- [JobExecution] : ######### Cycle start #########
+2023-09-11 19:25:01,731 - figure_5_abs::INFO -- [Automatic] : total experiments=2
+2023-09-11 19:25:01,732 - figure_5_abs::INFO -- [ProcessGenerator] : Allocate all of process based on job script!
+2023-09-11 19:25:01,732 - figure_5_abs::INFO -- [JobExecution] : ######### [figure_5_abs-HJ] Experiment 2 is running #########
+2023-09-11 19:25:01,760 - figure_5_abs::INFO -- [TaskScheduler] : check location: {'BatchSynthesis': {'Stirrer': [0, 0, '?', '?', '?', '?', '?', '?'], 'vialHolder': [0, 0, '?', '?', '?', '?', '?', '?']}, 'UV': {'vialHolder': ['?', '?', '?', '?', '?', '?', '?', '?']}}
+2023-09-11 19:25:01,760 - figure_5_abs::INFO -- [TaskScheduler] : UV is started, allocate location: {'vialHolder': [0, 1]}
+2023-09-11 19:25:01,761 - figure_5_abs::INFO -- [TaskScheduler] : check location after allocation: {'BatchSynthesis': {'Stirrer': [0, 0, '?', '?', '?', '?', '?', '?'], 'vialHolder': [0, 0, '?', '?', '?', '?', '?', '?']}, 'UV': {'vialHolder': [1, 1, '?', '?', '?', '?', '?', '?']}}
+2023-09-11 19:25:04,764 - figure_5_abs::DEBUG -- [UV-Vis] : Trasfer colloid NP to UV vialholder
+2023-09-11 19:25:04,764 - figure_5_abs::DEBUG -- [UV-Vis] : Prepare UV-VIS container
+2023-09-11 19:25:04,764 - figure_5_abs::DEBUG -- [DS_B] : cuvette_storage_to_cuvette_holder-->Start!
+2023-09-11 19:25:28,333 - figure_5_abs::DEBUG -- [DS_B] : cuvette_storage_to_cuvette_holder-->Done!
+2023-09-11 19:25:28,334 - figure_5_abs::DEBUG -- [DS_B] : cuvette_holder_to_UV-->Start!
+2023-09-11 19:25:49,918 - figure_5_abs::DEBUG -- [DS_B] : cuvette_holder_to_UV-->Done!
+2023-09-11 19:25:51,922 - figure_5_abs::DEBUG -- [DS_B] : UV-VIS Characterization-->Start!
+2023-09-11 19:25:58,660 - figure_5_abs::DEBUG -- [DS_B] : UV-VIS Characterization-->Done!
+2023-09-11 19:25:58,660 - figure_5_abs::DEBUG -- [DS_B] : Cuvette2ExtractSolution-->Start!
+2023-09-11 19:25:58,660 - figure_5_abs::DEBUG -- [UV-Vis] : Start UV sample preparation
+2023-09-11 19:27:19,894 - figure_5_abs::DEBUG -- [UV-Vis] : Finish UV sample preparation
+2023-09-11 19:27:19,894 - figure_5_abs::DEBUG -- [DS_B] : Cuvette2ExtractSolution-->Done!
+2023-09-11 19:27:19,895 - figure_5_abs::DEBUG -- [UV-Vis] : Start UV-VIS Characterization
+2023-09-11 19:27:19,895 - figure_5_abs::DEBUG -- [DS_B] : UV-VIS Characterization-->Start!
+2023-09-11 19:27:26,605 - figure_5_abs::DEBUG -- [DS_B] : UV-VIS Characterization-->Done!
+2023-09-11 19:27:28,608 - figure_5_abs::DEBUG -- [DS_B] : UV_to_cuvette_storage-->Start!
+2023-09-11 19:27:50,846 - figure_5_abs::DEBUG -- [DS_B] : UV_to_cuvette_storage-->Done!
+2023-09-11 19:27:50,853 - figure_5_abs::DEBUG -- [UV-Vis] : 0 result : OrderedDict([('lambdamax', 441.721747), ('intensity', 0.02352848596368539), ('FWHM', 23.133894999999995)])
+2023-09-11 19:27:50,853 - figure_5_abs::DEBUG -- [UV-Vis] : Finish UV-VIS Characterization
+2023-09-11 19:27:54,860 - figure_5_abs::DEBUG -- [UV-Vis] : Trasfer colloid NP to UV vialholder
+2023-09-11 19:27:54,860 - figure_5_abs::DEBUG -- [UV-Vis] : Prepare UV-VIS container
+2023-09-11 19:27:54,860 - figure_5_abs::DEBUG -- [DS_B] : cuvette_storage_to_cuvette_holder-->Start!
+2023-09-11 19:28:16,697 - figure_5_abs::DEBUG -- [DS_B] : cuvette_storage_to_cuvette_holder-->Done!
+2023-09-11 19:28:16,697 - figure_5_abs::DEBUG -- [DS_B] : cuvette_holder_to_UV-->Start!
+2023-09-11 19:28:38,297 - figure_5_abs::DEBUG -- [DS_B] : cuvette_holder_to_UV-->Done!
+2023-09-11 19:28:40,302 - figure_5_abs::DEBUG -- [DS_B] : UV-VIS Characterization-->Start!
+2023-09-11 19:28:47,027 - figure_5_abs::DEBUG -- [DS_B] : UV-VIS Characterization-->Done!
+2023-09-11 19:28:47,027 - figure_5_abs::DEBUG -- [DS_B] : Cuvette2ExtractSolution-->Start!
+2023-09-11 19:28:47,027 - figure_5_abs::DEBUG -- [UV-Vis] : Start UV sample preparation
+2023-09-11 19:30:08,270 - figure_5_abs::DEBUG -- [UV-Vis] : Finish UV sample preparation
+2023-09-11 19:30:08,270 - figure_5_abs::DEBUG -- [DS_B] : Cuvette2ExtractSolution-->Done!
+2023-09-11 19:30:08,271 - figure_5_abs::DEBUG -- [UV-Vis] : Start UV-VIS Characterization
+2023-09-11 19:30:08,271 - figure_5_abs::DEBUG -- [DS_B] : UV-VIS Characterization-->Start!
+2023-09-11 19:30:14,986 - figure_5_abs::DEBUG -- [DS_B] : UV-VIS Characterization-->Done!
+2023-09-11 19:30:16,990 - figure_5_abs::DEBUG -- [DS_B] : UV_to_cuvette_storage-->Start!
+2023-09-11 19:30:39,090 - figure_5_abs::DEBUG -- [DS_B] : UV_to_cuvette_storage-->Done!
+2023-09-11 19:30:39,105 - figure_5_abs::DEBUG -- [UV-Vis] : 1 result : OrderedDict([('lambdamax', 691.396882), ('intensity', 0.02136966927339388), ('FWHM', 33.929126999999994)])
+2023-09-11 19:30:39,105 - figure_5_abs::DEBUG -- [UV-Vis] : Finish UV-VIS Characterization
+2023-09-11 19:30:43,112 - figure_5_abs::DEBUG -- [RobotArm] : Start Robot Queue : Batch motion (vialholder_UV_to_storage_filled) is started.
+2023-09-11 19:30:43,112 - figure_5_abs::DEBUG -- [RobotArm] : vial_num_list:[0, 1]
+2023-09-11 19:30:43,112 - figure_5_abs::DEBUG -- [RobotArm] : line_num_list:[0, 0]
+2023-09-11 19:30:43,112 - figure_5_abs::DEBUG -- [RobotArm] : vialHolder_list:[0, 1]
+2023-09-11 19:31:31,495 - figure_5_abs::DEBUG -- [RobotArm] : Finish Robot Queue : Batch motion (vialholder_UV_to_storage_filled) is done.
+2023-09-11 19:31:31,496 - figure_5_abs::DEBUG -- [RobotArm] : Start Robot Queue : Batch motion (vialholder_UV_to_storage_filled) is started.
+2023-09-11 19:32:19,070 - figure_5_abs::DEBUG -- [RobotArm] : Finish Robot Queue : Batch motion (vialholder_UV_to_storage_filled) is done.
+2023-09-11 19:32:20,072 - figure_5_abs::INFO -- [TaskScheduler] : UV is finished, location: {'vialHolder': ['?', '?', '?', '?', '?', '?', '?', '?']}
+2023-09-11 19:32:20,072 - figure_5_abs::INFO -- [TaskScheduler] : refresh location: {'BatchSynthesis': {'Stirrer': [0, 0, '?', '?', '?', '?', '?', '?'], 'vialHolder': [0, 0, '?', '?', '?', '?', '?', '?']}, 'UV': {'vialHolder': ['?', '?', '?', '?', '?', '?', '?', '?']}}
+2023-09-11 19:32:20,099 - figure_5_abs::INFO -- [JobExecution] : ######### [figure_5_abs-HJ] Experiment 2 is done #########

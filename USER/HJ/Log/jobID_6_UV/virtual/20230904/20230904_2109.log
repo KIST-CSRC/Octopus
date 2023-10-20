@@ -1,0 +1,11 @@
+2023-09-04 21:09:25,580 - jobID_6_UV::INFO -- [JobExecution] : [jobID=6] Algorithm, model : Automatic
+2023-09-04 21:22:56,557 - jobID_6_UV::INFO -- [JobExecution] : ######### Cycle start #########
+2023-09-04 21:22:56,568 - jobID_6_UV::INFO -- [Automatic] : total experiments=8
+2023-09-04 21:22:56,697 - jobID_6_UV::INFO -- [ProcessGenerator] : Allocate all of process based on job script!
+2023-09-04 21:22:56,702 - jobID_6_UV::INFO -- [JobExecution] : ######### [jobID_6_UV-HJ] Experiment 8 is running #########
+2023-09-04 21:22:56,728 - jobID_6_UV::INFO -- [TaskScheduler] : check location: {'BatchSynthesis': {'Stirrer': ['?', '?', '?', '?', '?', '?', '?', '?'], 'vialHolder': ['?', '?', '?', '?', '?', '?', '?', '?']}, 'UV': {'vialHolder': ['?', '?', '?', '?', '?', '?', '?', '?']}}
+2023-09-04 21:22:56,738 - jobID_6_UV::INFO -- [TaskScheduler] : UV is started, allocate location: {'vialHolder': [0, 1, 2, 3, 4, 5, 6, 7]}
+2023-09-04 21:22:56,744 - jobID_6_UV::INFO -- [TaskScheduler] : check location after allocation: {'BatchSynthesis': {'Stirrer': ['?', '?', '?', '?', '?', '?', '?', '?'], 'vialHolder': ['?', '?', '?', '?', '?', '?', '?', '?']}, 'UV': {'vialHolder': [6, 6, 6, 6, 6, 6, 6, 6]}}
+2023-09-04 21:27:11,554 - jobID_6_UV::INFO -- [TaskScheduler] : UV is finished, location: {'vialHolder': ['?', '?', '?', '?', '?', '?', '?', '?']}
+2023-09-04 21:27:11,565 - jobID_6_UV::INFO -- [TaskScheduler] : refresh location: {'BatchSynthesis': {'Stirrer': ['?', '?', '?', '?', '?', '?', '?', '?'], 'vialHolder': ['?', '?', '?', '?', '?', '?', '?', '?']}, 'UV': {'vialHolder': ['?', '?', '?', '?', '?', '?', '?', '?']}}
+2023-09-04 21:27:11,899 - jobID_6_UV::INFO -- [JobExecution] : ######### [jobID_6_UV-HJ] Experiment 8 is done #########

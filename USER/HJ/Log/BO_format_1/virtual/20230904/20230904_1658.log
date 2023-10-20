@@ -1,0 +1,6 @@
+2023-09-04 16:58:12,924 - BO_format_1::INFO -- [JobExecution] : [jobID=0] Algorithm, model : BayesianOptimization
+2023-09-04 16:58:12,935 - BO_format_1::INFO -- [JobExecution] : ######### Cycle start #########
+2023-09-04 16:58:12,950 - BO_format_1::INFO -- [BayesianOptimization] : batchSize=1
+2023-09-04 16:58:12,954 - BO_format_1::INFO -- [Algorithm [0]] : next_point 0: {'AddSolution=AgNO3_Concentration': 350, 'AddSolution=AgNO3_Volume': 200, 'AddSolution=AgNO3_Injectionrate': 50}
+2023-09-04 16:58:12,995 - BO_format_1::INFO -- [ProcessGenerator] : Allocate all of process based on job script!
+2023-09-04 16:58:13,006 - BO_format_1::INFO -- [JobExecution] : ######### [BO_format_1-HJ] Cycle 1/1 is running #########

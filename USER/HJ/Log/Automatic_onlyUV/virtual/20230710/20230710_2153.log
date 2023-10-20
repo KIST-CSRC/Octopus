@@ -1,0 +1,5 @@
+2023-07-10 21:53:01,138 - Automatic_onlyUV::INFO -- [JobExecution] : [jobID=1] Algorithm, model : Automatic
+2023-07-10 21:53:01,149 - Automatic_onlyUV::INFO -- [JobExecution] : ######### Cycle start #########
+2023-07-10 21:53:01,149 - Automatic_onlyUV::INFO -- [Automatic] : total experiments=0
+2023-07-10 21:53:01,149 - Automatic_onlyUV::INFO -- [RecipeGenerator] : Allocate all of process based on job script!
+2023-07-10 21:53:01,149 - Automatic_onlyUV::INFO -- [JobExecution] : ######### Experiment 0 is running #########

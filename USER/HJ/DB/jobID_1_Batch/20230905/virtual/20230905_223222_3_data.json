@@ -1,0 +1,264 @@
+{
+     "metadata": {
+          "subject": "jobID_1_Batch",
+          "group": "KIST_CSRC",
+          "logLevel": "DEBUG",
+          "userName": "HJ",
+          "modeType": "virtual",
+          "jobID": 1,
+          "jobFileName": "figure/jobid_1",
+          "jobStatus": "TaskScheduler-->schedule all task:4",
+          "temperature": 25,
+          "humidity": "68%",
+          "jobSubmitTime": "2023-09-05 22:25:23",
+          "jobStartTime": "2023-09-05 22:32:22",
+          "jobWaitingTime(sec)": 200.67,
+          "jobFinishTime": "2023-09-05 22:32:22",
+          "jobTurnAroundTime(sec)": 218.76,
+          "jobDelayTimeList": [
+               "2023-09-05 22:32:07~2023-09-05 22:32:13",
+               "2023-09-05 22:32:07~2023-09-05 22:32:17",
+               "2023-09-05 22:32:07~2023-09-05 22:32:17"
+          ],
+          "jobDelayTime(sec)": 26.05,
+          "experimentIdx": 3
+     },
+     "algorithm": {
+          "model": "Automatic",
+          "totalExperimentNum": 4,
+          "inputParams": [
+               {
+                    "AddSolution=AgNO3_Concentration": 1250,
+                    "AddSolution=AgNO3_Volume": 2000,
+                    "AddSolution=AgNO3_Injectionrate": 200
+               },
+               {
+                    "AddSolution=AgNO3_Concentration": 1250,
+                    "AddSolution=AgNO3_Volume": 2000,
+                    "AddSolution=AgNO3_Injectionrate": 200
+               },
+               {
+                    "AddSolution=AgNO3_Concentration": 1250,
+                    "AddSolution=AgNO3_Volume": 2000,
+                    "AddSolution=AgNO3_Injectionrate": 200
+               },
+               {
+                    "AddSolution=AgNO3_Concentration": 1250,
+                    "AddSolution=AgNO3_Volume": 2000,
+                    "AddSolution=AgNO3_Injectionrate": 200
+               }
+          ]
+     },
+     "process": {
+          "Synthesis": [
+               {
+                    "Module": "BatchSynthesis",
+                    "Data": [
+                         {
+                              "Task": "PrepareContainer",
+                              "Data": {
+                                   "From": "storage_empty",
+                                   "To": "stirrer",
+                                   "Container": "Vial",
+                                   "Device": {
+                                        "Id": "dsr01",
+                                        "Model": "m0609",
+                                        "NETWORK": "192.168.137.100",
+                                        "WorkRange": 900
+                                   }
+                              }
+                         },
+                         {
+                              "Task": "AddSolution",
+                              "Data": {
+                                   "Solution": "Citrate",
+                                   "Volume": {
+                                        "Value": 1200,
+                                        "Dimension": "\u03bcL"
+                                   },
+                                   "Concentration": {
+                                        "Value": 20,
+                                        "Dimension": "mM"
+                                   },
+                                   "Injectionrate": {
+                                        "Value": 200,
+                                        "Dimension": "\u03bcL/s"
+                                   },
+                                   "Device": {
+                                        "SolutionType": "CA",
+                                        "PumpAddress": 4,
+                                        "PumpUsbAddr": "/dev/ttyPUMP1",
+                                        "Resolution": 1814000,
+                                        "Concentration": 0.04,
+                                        "SyringeVolume": 5000,
+                                        "DeviceName": "CavroCentris"
+                                   }
+                              }
+                         },
+                         {
+                              "Task": "AddSolution",
+                              "Data": {
+                                   "Solution": "H2O2",
+                                   "Volume": {
+                                        "Value": 1200,
+                                        "Dimension": "\u03bcL"
+                                   },
+                                   "Concentration": {
+                                        "Value": 375,
+                                        "Dimension": "mM"
+                                   },
+                                   "Injectionrate": {
+                                        "Value": 200,
+                                        "Dimension": "\u03bcL/s"
+                                   },
+                                   "Device": {
+                                        "SolutionType": "Oxidant",
+                                        "PumpAddress": 3,
+                                        "PumpUsbAddr": "/dev/ttyPUMP1",
+                                        "Resolution": 1814000,
+                                        "Concentration": 0.375,
+                                        "Density": 1.45,
+                                        "MolarMass": 34.0147,
+                                        "SyringeVolume": 5000,
+                                        "DeviceName": "CavroCentris"
+                                   }
+                              }
+                         },
+                         {
+                              "Task": "AddSolution",
+                              "Data": {
+                                   "Solution": "NaBH4",
+                                   "Volume": {
+                                        "Value": 3000,
+                                        "Dimension": "\u03bcL"
+                                   },
+                                   "Concentration": {
+                                        "Value": 10,
+                                        "Dimension": "mM"
+                                   },
+                                   "Injectionrate": {
+                                        "Value": 200,
+                                        "Dimension": "\u03bcL/s"
+                                   },
+                                   "Device": {
+                                        "SolutionType": "Reductant",
+                                        "PumpAddress": 2,
+                                        "PumpUsbAddr": "/dev/ttyPUMP2",
+                                        "Resolution": 1814000,
+                                        "Concentration": 0.01,
+                                        "SyringeVolume": 5000,
+                                        "DeviceName": "CavroCentris"
+                                   }
+                              }
+                         },
+                         {
+                              "Task": "Stir",
+                              "Data": {
+                                   "StirRate": {
+                                        "Value": 1000,
+                                        "Dimension": "rpm"
+                                   },
+                                   "Device": {
+                                        "Stirrer_0": {
+                                             "Port": "COM5",
+                                             "DeviceName": "IKA_RET_0",
+                                             "Temperature": 25
+                                        }
+                                   }
+                              }
+                         },
+                         {
+                              "Task": "Heat",
+                              "Data": {
+                                   "Temperature": {
+                                        "Value": 25,
+                                        "Dimension": "\u00baC"
+                                   },
+                                   "Device": {
+                                        "Stirrer_0": {
+                                             "Port": "COM5",
+                                             "DeviceName": "IKA_RET_0",
+                                             "Temperature": 25
+                                        }
+                                   }
+                              }
+                         },
+                         {
+                              "Task": "Mix",
+                              "Data": {
+                                   "Time": {
+                                        "Value": 300,
+                                        "Dimension": "sec"
+                                   },
+                                   "Device": {
+                                        "Stirrer_0": {
+                                             "Port": "COM5",
+                                             "DeviceName": "IKA_RET_0",
+                                             "Temperature": 25
+                                        }
+                                   }
+                              }
+                         },
+                         {
+                              "Task": "AddSolution",
+                              "Data": {
+                                   "Solution": "AgNO3",
+                                   "Volume": {
+                                        "Value": 2000,
+                                        "Dimension": "\u03bcL"
+                                   },
+                                   "Concentration": {
+                                        "Value": 1250,
+                                        "Dimension": "mM"
+                                   },
+                                   "Injectionrate": {
+                                        "Value": 200,
+                                        "Dimension": "\u03bcL/s"
+                                   },
+                                   "Device": {
+                                        "SolutionType": "Metal",
+                                        "PumpAddress": 1,
+                                        "PumpUsbAddr": "/dev/ttyPUMP2",
+                                        "Resolution": 1814000,
+                                        "Concentration": 0.0125,
+                                        "SyringeVolume": 5000,
+                                        "DeviceName": "CavroCentris"
+                                   }
+                              }
+                         },
+                         {
+                              "Task": "React",
+                              "Data": {
+                                   "Time": {
+                                        "Value": 2400,
+                                        "Dimension": "sec"
+                                   },
+                                   "Device": {
+                                        "Stirrer_0": {
+                                             "Port": "COM5",
+                                             "DeviceName": "IKA_RET_0",
+                                             "Temperature": 25
+                                        }
+                                   }
+                              }
+                         },
+                         {
+                              "Task": "MoveContainer",
+                              "Data": {
+                                   "From": "vialholder_BatchSynthesis",
+                                   "To": "storage_filled",
+                                   "Container": "Vial",
+                                   "Device": {
+                                        "Id": "dsr01",
+                                        "Model": "m0609",
+                                        "NETWORK": "192.168.137.100",
+                                        "WorkRange": 900
+                                   }
+                              }
+                         }
+                    ]
+               }
+          ]
+     },
+     "result": {}
+}

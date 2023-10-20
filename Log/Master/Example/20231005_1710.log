@@ -1,0 +1,4 @@
+2023-10-05 17:10:39,222 - Master::INFO -- [ResourceManager] : receive information of BatchSynthesis
+2023-10-05 17:10:45,245 - Master::INFO -- [ResourceManager] : receive information of UV-Vis
+2023-10-05 17:10:51,307 - Master::INFO -- [Master] : ('127.0.0.1', 41180) is connected.
+2023-10-05 17:34:10,540 - Master::INFO -- [Master] : login status:login success, username:HJ

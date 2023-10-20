@@ -1,0 +1,43 @@
+{
+    "metadata" : 
+    {
+        "subject":"jobID_8_UV",
+        "group":"KIST_CSRC",
+        "logLevel":"DEBUG"
+    },
+    "algorithm":
+    {
+        "model":"Automatic",
+        "totalExperimentNum":4,
+        "inputParams":[]
+    },
+    "process":
+    {
+        "Synthesis":{
+            "BatchSynthesis":{},
+            "FlowSynthesis":{}
+        },
+        "Preprocess":{
+            "Washing":{},
+            "Ink":{}
+        },
+        "Characterization":{
+            "UV":
+            {
+                "fixedParams":
+                {
+                    "UV=Sequence":["GetAbs"],
+                    "UV=Hyperparameter_WavelengthMin":300, 
+                    "UV=Hyperparameter_WavelengthMax":849, 
+                    "UV=Hyperparameter_BoxCarSize":10, 
+                    "UV=Hyperparameter_Prominence":0.01, 
+                    "UV=Hyperparameter_PeakWidth":20
+                }
+            }
+        },
+        "Evaluation":{
+            "RDE":{},
+            "Electrode":{}
+        }
+    }
+}

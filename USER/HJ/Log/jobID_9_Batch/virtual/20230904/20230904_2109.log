@@ -1,0 +1,15 @@
+2023-09-04 21:09:37,442 - jobID_9_Batch::INFO -- [JobExecution] : [jobID=9] Algorithm, model : Automatic
+2023-09-04 21:32:42,540 - jobID_9_Batch::INFO -- [JobExecution] : ######### Cycle start #########
+2023-09-04 21:32:42,540 - jobID_9_Batch::INFO -- [Automatic] : total experiments=4
+2023-09-04 21:32:42,540 - jobID_9_Batch::INFO -- [Automatic [0]] : next_point 0: {'AddSolution=AgNO3_Volume': 1600}
+2023-09-04 21:32:42,546 - jobID_9_Batch::INFO -- [Automatic [1]] : next_point 1: {'AddSolution=AgNO3_Volume': 2000}
+2023-09-04 21:32:42,546 - jobID_9_Batch::INFO -- [Automatic [2]] : next_point 2: {'AddSolution=AgNO3_Volume': 2400}
+2023-09-04 21:32:42,546 - jobID_9_Batch::INFO -- [Automatic [3]] : next_point 3: {'AddSolution=AgNO3_Volume': 3000}
+2023-09-04 21:32:42,583 - jobID_9_Batch::INFO -- [ProcessGenerator] : Allocate all of process based on job script!
+2023-09-04 21:32:42,583 - jobID_9_Batch::INFO -- [JobExecution] : ######### [jobID_9_Batch-HJ] Experiment 4 is running #########
+2023-09-04 21:32:42,589 - jobID_9_Batch::INFO -- [TaskScheduler] : check location: {'BatchSynthesis': {'Stirrer': ['?', '?', '?', '?', '?', '?', '?', '?'], 'vialHolder': ['?', '?', '?', '?', '?', '?', '?', '?']}, 'UV': {'vialHolder': ['?', '?', '?', '?', '?', '?', '?', '?']}}
+2023-09-04 21:32:42,589 - jobID_9_Batch::INFO -- [TaskScheduler] : BatchSynthesis is started, allocate location: {'Stirrer': [0, 1, 2, 3], 'vialHolder': [0, 1, 2, 3]}
+2023-09-04 21:32:42,589 - jobID_9_Batch::INFO -- [TaskScheduler] : check location after allocation: {'BatchSynthesis': {'Stirrer': [9, 9, 9, 9, '?', '?', '?', '?'], 'vialHolder': [9, 9, 9, 9, '?', '?', '?', '?']}, 'UV': {'vialHolder': ['?', '?', '?', '?', '?', '?', '?', '?']}}
+2023-09-04 21:35:14,838 - jobID_9_Batch::INFO -- [TaskScheduler] : BatchSynthesis is finished, location: {'Stirrer': ['?', '?', '?', '?', '?', '?', '?', '?'], 'vialHolder': ['?', '?', '?', '?', '?', '?', '?', '?']}
+2023-09-04 21:35:14,848 - jobID_9_Batch::INFO -- [TaskScheduler] : refresh location: {'BatchSynthesis': {'Stirrer': ['?', '?', '?', '?', '?', '?', '?', '?'], 'vialHolder': ['?', '?', '?', '?', '?', '?', '?', '?']}, 'UV': {'vialHolder': ['?', '?', '?', '?', '?', '?', '?', '?']}}
+2023-09-04 21:35:14,998 - jobID_9_Batch::INFO -- [JobExecution] : ######### [jobID_9_Batch-HJ] Experiment 4 is done #########

@@ -1,0 +1,4 @@
+2023-09-05 23:23:29,753 - JobClient::INFO -- [HJ] : request to submit job : USER/HJ/job_script/figure/jobid_9.json
+2023-09-05 23:23:29,765 - JobClient::INFO -- [HJ] : succeed to submit job, userName:HJ, jobID:0
+2023-09-05 23:24:04,347 - JobClient::INFO -- [HJ] : request to submit job : USER/HJ/job_script/figure/jobid_1.json
+2023-09-05 23:24:04,348 - JobClient::INFO -- [HJ] : succeed to submit job, userName:HJ, jobID:1

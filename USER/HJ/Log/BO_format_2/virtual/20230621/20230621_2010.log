@@ -1,0 +1,137 @@
+2023-06-21 20:10:18,259 - BO_format_2::INFO -- [JobExecution] : [jobID=1] Algorithm, model : BayesianOptimization, batchSize : 4
+2023-06-21 20:10:18,264 - BO_format_2::INFO -- [JobExecution] : ######### Cycle start #########
+2023-06-21 20:10:18,264 - BO_format_2::INFO -- [Algorithm] : utility_type=ucb, iter_num=0, batchSize=4
+2023-06-21 20:10:18,265 - BO_format_2::INFO -- [Algorithm [0]] : next_point 0: {'AddSolution=AgNO3_Concentration': 0, 'AddSolution=AgNO3_Volume': 750, 'AddSolution=AgNO3_Injectionrate': 150}
+2023-06-21 20:10:18,265 - BO_format_2::INFO -- [Algorithm [1]] : next_point 1: {'AddSolution=AgNO3_Concentration': 0, 'AddSolution=AgNO3_Volume': 800, 'AddSolution=AgNO3_Injectionrate': 100}
+2023-06-21 20:10:18,265 - BO_format_2::INFO -- [Algorithm [2]] : next_point 2: {'AddSolution=AgNO3_Concentration': 0, 'AddSolution=AgNO3_Volume': 1150, 'AddSolution=AgNO3_Injectionrate': 150}
+2023-06-21 20:10:18,265 - BO_format_2::INFO -- [Algorithm [3]] : next_point 3: {'AddSolution=AgNO3_Concentration': 0, 'AddSolution=AgNO3_Volume': 650, 'AddSolution=AgNO3_Injectionrate': 150}
+2023-06-21 20:10:18,268 - BO_format_2::INFO -- [JobExecution] : ######### Cycle 1/1 is running #########
+2023-06-21 20:10:18,268 - BO_format_2::INFO -- [Batch] : Start Robot Queue : Batch motion (storage_empty_to_stirrer) is started.
+2023-06-21 20:10:23,132 - BO_format_2::INFO -- [Batch] : vial_num_list: [4, 5, 6, 7]
+2023-06-21 20:10:23,132 - BO_format_2::INFO -- [Batch] : line_num_list: [0, 0, 0, 0]
+2023-06-21 20:10:23,132 - BO_format_2::INFO -- [Batch] : vialHolder_list: [0, 1, 2, 3]
+2023-06-21 20:10:29,475 - BO_format_2::INFO -- [Batch] : Finish Robot Queue : Batch motion (storage_empty_to_stirrer) is done.
+2023-06-21 20:10:29,486 - BO_format_2::INFO -- [Batch] : Start Robot Queue : Batch motion (storage_empty_to_stirrer) is started.
+2023-06-21 20:10:43,994 - BO_format_2::INFO -- [Batch] : Finish Robot Queue : Batch motion (storage_empty_to_stirrer) is done.
+2023-06-21 20:10:44,004 - BO_format_2::INFO -- [Batch] : Start Robot Queue : Batch motion (storage_empty_to_stirrer) is started.
+2023-06-21 20:10:59,242 - BO_format_2::INFO -- [Batch] : Finish Robot Queue : Batch motion (storage_empty_to_stirrer) is done.
+2023-06-21 20:10:59,252 - BO_format_2::INFO -- [Batch] : Start Robot Queue : Batch motion (storage_empty_to_stirrer) is started.
+2023-06-21 20:11:14,098 - BO_format_2::INFO -- [Batch] : Finish Robot Queue : Batch motion (storage_empty_to_stirrer) is done.
+2023-06-21 20:11:14,099 - BO_format_2::INFO -- [Batch] : Prepare Injection Queue (LA, Pump)
+2023-06-21 20:11:16,541 - BO_format_2::INFO -- [Batch] : Start Injection Queue (LA, Pump)
+2023-06-21 20:11:22,294 - BO_format_2::INFO -- [Batch] : Finish Injection Queue (LA, Pump)
+2023-06-21 20:11:24,296 - BO_format_2::INFO -- [Batch] : Prepare Injection Queue (LA, Pump)
+2023-06-21 20:11:26,719 - BO_format_2::INFO -- [Batch] : Start Injection Queue (LA, Pump)
+2023-06-21 20:11:32,534 - BO_format_2::INFO -- [Batch] : Finish Injection Queue (LA, Pump)
+2023-06-21 20:11:34,537 - BO_format_2::INFO -- [Batch] : Prepare Injection Queue (LA, Pump)
+2023-06-21 20:11:37,173 - BO_format_2::INFO -- [Batch] : Start Injection Queue (LA, Pump)
+2023-06-21 20:11:42,770 - BO_format_2::INFO -- [Batch] : Finish Injection Queue (LA, Pump)
+2023-06-21 20:11:44,772 - BO_format_2::INFO -- [Batch] : Prepare Injection Queue (LA, Pump)
+2023-06-21 20:11:47,146 - BO_format_2::INFO -- [Batch] : Start Injection Queue (LA, Pump)
+2023-06-21 20:11:53,379 - BO_format_2::INFO -- [Batch] : Finish Injection Queue (LA, Pump)
+2023-06-21 20:11:55,382 - BO_format_2::INFO -- [Batch] : Prepare Injection Queue (LA, Pump)
+2023-06-21 20:11:57,887 - BO_format_2::INFO -- [Batch] : Start Injection Queue (LA, Pump)
+2023-06-21 20:12:03,536 - BO_format_2::INFO -- [Batch] : Finish Injection Queue (LA, Pump)
+2023-06-21 20:12:05,539 - BO_format_2::INFO -- [Batch] : Prepare Injection Queue (LA, Pump)
+2023-06-21 20:12:07,862 - BO_format_2::INFO -- [Batch] : Start Injection Queue (LA, Pump)
+2023-06-21 20:12:13,653 - BO_format_2::INFO -- [Batch] : Finish Injection Queue (LA, Pump)
+2023-06-21 20:12:20,572 - BO_format_2::INFO -- [Batch] : Prepare Injection Queue (LA, Pump)
+2023-06-21 20:12:23,113 - BO_format_2::INFO -- [Batch] : Start Injection Queue (LA, Pump)
+2023-06-21 20:12:29,068 - BO_format_2::INFO -- [Batch] : Finish Injection Queue (LA, Pump)
+2023-06-21 20:12:35,731 - BO_format_2::INFO -- [Batch] : Prepare Injection Queue (LA, Pump)
+2023-06-21 20:12:38,124 - BO_format_2::INFO -- [Batch] : Start Injection Queue (LA, Pump)
+2023-06-21 20:12:43,833 - BO_format_2::INFO -- [Batch] : Finish Injection Queue (LA, Pump)
+2023-06-21 20:14:13,931 - BO_format_2::INFO -- [Batch] : Prepare Injection Queue (LA, Pump)
+2023-06-21 20:14:16,413 - BO_format_2::INFO -- [Batch] : Start Injection Queue (LA, Pump)
+2023-06-21 20:14:22,308 - BO_format_2::INFO -- [Batch] : Finish Injection Queue (LA, Pump)
+2023-06-21 20:14:24,320 - BO_format_2::INFO -- [Batch] : Prepare Injection Queue (LA, Pump)
+2023-06-21 20:14:26,712 - BO_format_2::INFO -- [Batch] : Start Injection Queue (LA, Pump)
+2023-06-21 20:14:32,538 - BO_format_2::INFO -- [Batch] : Finish Injection Queue (LA, Pump)
+2023-06-21 20:14:34,555 - BO_format_2::INFO -- [Batch] : Prepare Injection Queue (LA, Pump)
+2023-06-21 20:14:36,941 - BO_format_2::INFO -- [Batch] : Start Injection Queue (LA, Pump)
+2023-06-21 20:14:42,726 - BO_format_2::INFO -- [Batch] : Finish Injection Queue (LA, Pump)
+2023-06-21 20:14:44,738 - BO_format_2::INFO -- [Batch] : Prepare Injection Queue (LA, Pump)
+2023-06-21 20:14:47,151 - BO_format_2::INFO -- [Batch] : Start Injection Queue (LA, Pump)
+2023-06-21 20:14:52,854 - BO_format_2::INFO -- [Batch] : Finish Injection Queue (LA, Pump)
+2023-06-21 20:14:54,867 - BO_format_2::INFO -- [Batch] : Start Stir Queue 0 (Stirrer)
+2023-06-21 20:14:56,100 - BO_format_2::INFO -- [Batch] : Start Stir Queue 1 (Stirrer)
+2023-06-21 20:14:57,130 - BO_format_2::INFO -- [Batch] : Start Stir Queue 2 (Stirrer)
+2023-06-21 20:14:58,353 - BO_format_2::INFO -- [Batch] : Start Stir Queue 3 (Stirrer)
+2023-06-21 20:14:59,518 - BO_format_2::INFO -- [Batch] : Finish Stir Queue 0 (Stirrer)
+2023-06-21 20:14:59,523 - BO_format_2::INFO -- [Batch] : Finish Stir Queue 1 (Stirrer)
+2023-06-21 20:14:59,523 - BO_format_2::INFO -- [Batch] : Finish Stir Queue 2 (Stirrer)
+2023-06-21 20:14:59,539 - BO_format_2::INFO -- [Batch] : Finish Stir Queue 3 (Stirrer)
+2023-06-21 20:14:59,549 - BO_format_2::INFO -- [Batch] : Start Heat Queue (Stirrer)
+2023-06-21 20:15:00,717 - BO_format_2::INFO -- [Batch] : Start Heat Queue (Stirrer)
+2023-06-21 20:15:01,801 - BO_format_2::INFO -- [Batch] : Start Heat Queue (Stirrer)
+2023-06-21 20:15:02,929 - BO_format_2::INFO -- [Batch] : Start Heat Queue (Stirrer)
+2023-06-21 20:15:04,106 - BO_format_2::INFO -- [Batch] : Finish Heat Queue 0 (Stirrer)
+2023-06-21 20:15:04,116 - BO_format_2::INFO -- [Batch] : Finish Heat Queue 1 (Stirrer)
+2023-06-21 20:15:04,121 - BO_format_2::INFO -- [Batch] : Finish Heat Queue 2 (Stirrer)
+2023-06-21 20:15:04,121 - BO_format_2::INFO -- [Batch] : Finish Heat Queue 3 (Stirrer)
+2023-06-21 20:15:04,127 - BO_format_2::INFO -- [Batch] : Start Wait:1s
+2023-06-21 20:15:04,137 - BO_format_2::INFO -- [Batch] : Start Wait:1s
+2023-06-21 20:15:04,142 - BO_format_2::INFO -- [Batch] : check Wait:1s
+2023-06-21 20:15:04,148 - BO_format_2::INFO -- [Batch] : Start Wait:1s
+2023-06-21 20:15:04,158 - BO_format_2::INFO -- [Batch] : Start Wait:1s
+2023-06-21 20:15:04,163 - BO_format_2::INFO -- [Batch] : check Wait:1s
+2023-06-21 20:15:04,168 - BO_format_2::INFO -- [Batch] : Finish Wait:1s
+2023-06-21 20:15:04,179 - BO_format_2::INFO -- [Batch] : check Wait:1s
+2023-06-21 20:15:04,189 - BO_format_2::INFO -- [Batch] : check Wait:1s
+2023-06-21 20:15:04,199 - BO_format_2::INFO -- [Batch] : Finish Wait:1s
+2023-06-21 20:15:04,225 - BO_format_2::INFO -- [Batch] : Finish Wait:1s
+2023-06-21 20:15:04,230 - BO_format_2::INFO -- [Batch] : Finish Wait:1s
+2023-06-21 20:15:04,266 - BO_format_2::INFO -- [Batch] : Prepare Injection Queue (LA, Pump)
+2023-06-21 20:15:06,705 - BO_format_2::INFO -- [Batch] : Start Injection Queue (LA, Pump)
+2023-06-21 20:15:12,513 - BO_format_2::INFO -- [Batch] : Finish Injection Queue (LA, Pump)
+2023-06-21 20:15:14,531 - BO_format_2::INFO -- [Batch] : Prepare Injection Queue (LA, Pump)
+2023-06-21 20:15:16,963 - BO_format_2::INFO -- [Batch] : Start Injection Queue (LA, Pump)
+2023-06-21 20:15:23,014 - BO_format_2::INFO -- [Batch] : Finish Injection Queue (LA, Pump)
+2023-06-21 20:15:25,030 - BO_format_2::INFO -- [Batch] : Prepare Injection Queue (LA, Pump)
+2023-06-21 20:15:27,534 - BO_format_2::INFO -- [Batch] : Start Injection Queue (LA, Pump)
+2023-06-21 20:15:33,590 - BO_format_2::INFO -- [Batch] : Finish Injection Queue (LA, Pump)
+2023-06-21 20:15:35,608 - BO_format_2::INFO -- [Batch] : Prepare Injection Queue (LA, Pump)
+2023-06-21 20:15:38,107 - BO_format_2::INFO -- [Batch] : Start Injection Queue (LA, Pump)
+2023-06-21 20:15:43,972 - BO_format_2::INFO -- [Batch] : Finish Injection Queue (LA, Pump)
+2023-06-21 20:15:45,994 - BO_format_2::INFO -- [Batch] : Start React:1s
+2023-06-21 20:15:46,000 - BO_format_2::INFO -- [Batch] : Start React:1s
+2023-06-21 20:15:46,005 - BO_format_2::INFO -- [Batch] : Start React:1s
+2023-06-21 20:15:46,015 - BO_format_2::INFO -- [Batch] : Start React:1s
+2023-06-21 20:16:46,014 - BO_format_2::INFO -- [Batch] : check React:1s
+2023-06-21 20:16:46,058 - BO_format_2::INFO -- [Batch] : check React:1s
+2023-06-21 20:16:46,068 - BO_format_2::INFO -- [Batch] : check React:1s
+2023-06-21 20:16:46,109 - BO_format_2::INFO -- [Batch] : check React:1s
+2023-06-21 20:16:49,373 - BO_format_2::INFO -- [Batch] : Finish React:1s
+2023-06-21 20:16:52,938 - BO_format_2::INFO -- [Batch] : Finish React:1s
+2023-06-21 20:16:56,158 - BO_format_2::INFO -- [Batch] : Finish React:1s
+2023-06-21 20:16:59,720 - BO_format_2::INFO -- [Batch] : Finish React:1s
+2023-06-21 20:16:59,736 - BO_format_2::INFO -- [UV] : Start UV Characterization
+2023-06-21 20:17:21,768 - BO_format_2::INFO -- [UV] : 0 result : OrderedDict([('lambdamax', 637.883752), ('intensity', 0.019241558129958834), ('FWHM', 9.202327999999966)])
+2023-06-21 20:17:21,773 - BO_format_2::INFO -- [UV] : Finish UV Characterization
+2023-06-21 20:17:21,783 - BO_format_2::INFO -- [UV] : Start UV Characterization
+2023-06-21 20:17:44,013 - BO_format_2::INFO -- [UV] : 1 result : OrderedDict([('lambdamax', 515.220795), ('intensity', 0.02266124076841616), ('FWHM', 10.756494999999973)])
+2023-06-21 20:17:44,023 - BO_format_2::INFO -- [UV] : Finish UV Characterization
+2023-06-21 20:17:44,033 - BO_format_2::INFO -- [UV] : Start UV Characterization
+2023-06-21 20:18:06,182 - BO_format_2::INFO -- [UV] : 2 result : OrderedDict([('lambdamax', 758.26755), ('intensity', 0.021241340109677646), ('FWHM', 13.878150000000005)])
+2023-06-21 20:18:06,192 - BO_format_2::INFO -- [UV] : Finish UV Characterization
+2023-06-21 20:18:06,203 - BO_format_2::INFO -- [UV] : Start UV Characterization
+2023-06-21 20:18:28,277 - BO_format_2::INFO -- [UV] : 3 result : OrderedDict([('lambdamax', 683.061719), ('intensity', 0.02193518492108605), ('FWHM', 8.352139999999963)])
+2023-06-21 20:18:28,287 - BO_format_2::INFO -- [UV] : Finish UV Characterization
+2023-06-21 20:18:28,298 - BO_format_2::INFO -- [RobotArm] : Start Robot Queue : Batch motion (holder_to_storage_filled) is started.
+2023-06-21 20:18:28,308 - BO_format_2::INFO -- [RobotArm] : vial_num_list:[12, 13, 14, 15]
+2023-06-21 20:18:28,318 - BO_format_2::INFO -- [RobotArm] : line_num_list:[0, 0, 0, 0]
+2023-06-21 20:18:28,329 - BO_format_2::INFO -- [RobotArm] : vialHolder_list:[0, 1, 2, 3]
+2023-06-21 20:18:36,773 - BO_format_2::INFO -- [RobotArm] : Finish Robot Queue : Batch motion (holder_to_storage_filled) is done.
+2023-06-21 20:18:36,784 - BO_format_2::INFO -- [RobotArm] : Start Robot Queue : Batch motion (holder_to_storage_filled) is started.
+2023-06-21 20:18:40,146 - BO_format_2::INFO -- [RobotArm] : Finish Robot Queue : Batch motion (holder_to_storage_filled) is done.
+2023-06-21 20:18:40,157 - BO_format_2::INFO -- [RobotArm] : Start Robot Queue : Batch motion (holder_to_storage_filled) is started.
+2023-06-21 20:18:43,492 - BO_format_2::INFO -- [RobotArm] : Finish Robot Queue : Batch motion (holder_to_storage_filled) is done.
+2023-06-21 20:18:43,502 - BO_format_2::INFO -- [RobotArm] : Start Robot Queue : Batch motion (holder_to_storage_filled) is started.
+2023-06-21 20:18:50,125 - BO_format_2::INFO -- [RobotArm] : Finish Robot Queue : Batch motion (holder_to_storage_filled) is done.
+2023-06-21 20:18:50,239 - BO_format_2::INFO -- [Algorithm] : 0 optimal_value : -0.27996867075157883
+2023-06-21 20:18:50,245 - BO_format_2::INFO -- [Algorithm] : 1 optimal_value : -0.25673070000837056
+2023-06-21 20:18:50,250 - BO_format_2::INFO -- [Algorithm] : 2 optimal_value : -0.6712224247121782
+2023-06-21 20:18:50,250 - BO_format_2::INFO -- [Algorithm] : 3 optimal_value : -0.42652136139684343
+2023-06-21 20:18:50,260 - BO_format_2::INFO -- [JobExecution] : ######### Cycle 1/1 is done #########
+2023-06-21 20:18:50,317 - BO_format_2::INFO -- [Algorithm] : Save our model object, filename=20230621_2010_multi3_0_obj
+2023-06-21 20:18:50,322 - BO_format_2::INFO -- [JobExecution] : ######### All Cycle is done #########

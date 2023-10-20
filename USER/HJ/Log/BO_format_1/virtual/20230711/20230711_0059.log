@@ -1,0 +1,44 @@
+2023-07-11 00:59:28,002 - BO_format_1::INFO -- [JobExecution] : [jobID=0] Algorithm, model : BayesianOptimization
+2023-07-11 00:59:28,018 - BO_format_1::INFO -- [JobExecution] : ######### Cycle start #########
+2023-07-11 00:59:28,023 - BO_format_1::INFO -- [BayesianOptimization] : batchSize=6
+2023-07-11 00:59:28,029 - BO_format_1::INFO -- [Algorithm [0]] : next_point 0: {'AddSolution=AgNO3_Concentration': 0, 'AddSolution=AgNO3_Volume': 750, 'AddSolution=AgNO3_Injectionrate': 150}
+2023-07-11 00:59:28,039 - BO_format_1::INFO -- [Algorithm [1]] : next_point 1: {'AddSolution=AgNO3_Concentration': 0, 'AddSolution=AgNO3_Volume': 800, 'AddSolution=AgNO3_Injectionrate': 100}
+2023-07-11 00:59:28,049 - BO_format_1::INFO -- [Algorithm [2]] : next_point 2: {'AddSolution=AgNO3_Concentration': 0, 'AddSolution=AgNO3_Volume': 1150, 'AddSolution=AgNO3_Injectionrate': 150}
+2023-07-11 00:59:28,059 - BO_format_1::INFO -- [Algorithm [3]] : next_point 3: {'AddSolution=AgNO3_Concentration': 0, 'AddSolution=AgNO3_Volume': 650, 'AddSolution=AgNO3_Injectionrate': 150}
+2023-07-11 00:59:28,070 - BO_format_1::INFO -- [Algorithm [4]] : next_point 4: {'AddSolution=AgNO3_Concentration': 0, 'AddSolution=AgNO3_Volume': 150, 'AddSolution=AgNO3_Injectionrate': 150}
+2023-07-11 00:59:28,080 - BO_format_1::INFO -- [Algorithm [5]] : next_point 5: {'AddSolution=AgNO3_Concentration': 0, 'AddSolution=AgNO3_Volume': 1000, 'AddSolution=AgNO3_Injectionrate': 50}
+2023-07-11 00:59:28,227 - BO_format_1::INFO -- [RecipeGenerator] : Allocate all of process based on job script!
+2023-07-11 00:59:28,232 - BO_format_1::INFO -- [JobExecution] : ######### Cycle 1/1 is running #########
+2023-07-11 00:59:28,289 - BO_format_1::INFO -- [TaskScheduler] : check location: {'BatchSynthesis': {'Stirrer': ['?', '?', '?', '?', '?', '?', '?', '?', '?', '?', '?', '?', '?', '?', '?', '?'], 'vialHolder': ['?', '?', '?', '?', '?', '?', '?', '?']}, 'UV': {'vialHolder': ['?', '?', '?', '?', '?', '?', '?', '?']}}
+2023-07-11 00:59:28,299 - BO_format_1::INFO -- [TaskScheduler] : BatchSynthesis allocate location: {'Stirrer': [0, 1, 2, 3, 4, 5, 6, 7], 'vialHolder': [0, 1, 2, 3, 4, 5, 6, 7]}
+2023-07-11 00:59:28,304 - BO_format_1::INFO -- [TaskScheduler] : check location after allocation: {'BatchSynthesis': {'Stirrer': [0, 0, 0, 0, 0, 0, 0, 0, '?', '?', '?', '?', '?', '?', '?', '?'], 'vialHolder': [0, 0, 0, 0, 0, 0, 0, 0]}, 'UV': {'vialHolder': ['?', '?', '?', '?', '?', '?', '?', '?']}}
+2023-07-11 00:59:30,404 - BO_format_1::INFO -- [Batch] : storage_empty_to_stirrer is started.
+2023-07-11 00:59:30,414 - BO_format_1::INFO -- [Batch] : vial_num_list: [0, 1, 2, 3, 4, 5, 6, 7]
+2023-07-11 00:59:30,425 - BO_format_1::INFO -- [Batch] : line_num_list: [0, 0, 0, 0, 0, 0, 0, 0]
+2023-07-11 00:59:30,435 - BO_format_1::INFO -- [Batch] : vialHolder_list: [0, 1, 2, 3, 4, 5, 6, 7]
+2023-07-11 00:59:30,445 - BO_format_1::INFO -- [Batch] : Start Robot Queue : storage_empty_to_stirrer is started.
+2023-07-11 00:59:37,039 - BO_format_1::INFO -- [Batch] : Finish Robot Queue : storage_empty_to_stirrer is done.
+2023-07-11 00:59:39,160 - BO_format_1::INFO -- [Batch] : storage_empty_to_stirrer is started.
+2023-07-11 00:59:39,171 - BO_format_1::INFO -- [Batch] : Start Robot Queue : storage_empty_to_stirrer is started.
+2023-07-11 00:59:45,776 - BO_format_1::INFO -- [Batch] : Finish Robot Queue : storage_empty_to_stirrer is done.
+2023-07-11 00:59:47,902 - BO_format_1::INFO -- [Batch] : storage_empty_to_stirrer is started.
+2023-07-11 00:59:47,912 - BO_format_1::INFO -- [Batch] : Start Robot Queue : storage_empty_to_stirrer is started.
+2023-07-11 00:59:54,887 - BO_format_1::INFO -- [Batch] : Finish Robot Queue : storage_empty_to_stirrer is done.
+2023-07-11 00:59:57,022 - BO_format_1::INFO -- [Batch] : storage_empty_to_stirrer is started.
+2023-07-11 00:59:57,033 - BO_format_1::INFO -- [Batch] : Start Robot Queue : storage_empty_to_stirrer is started.
+2023-07-11 01:00:03,504 - BO_format_1::INFO -- [Batch] : Finish Robot Queue : storage_empty_to_stirrer is done.
+2023-07-11 01:00:05,640 - BO_format_1::INFO -- [Batch] : storage_empty_to_stirrer is started.
+2023-07-11 01:00:05,650 - BO_format_1::INFO -- [Batch] : Start Robot Queue : storage_empty_to_stirrer is started.
+2023-07-11 01:00:12,303 - BO_format_1::INFO -- [Batch] : Finish Robot Queue : storage_empty_to_stirrer is done.
+2023-07-11 01:00:14,439 - BO_format_1::INFO -- [Batch] : storage_empty_to_stirrer is started.
+2023-07-11 01:00:14,449 - BO_format_1::INFO -- [Batch] : Start Robot Queue : storage_empty_to_stirrer is started.
+2023-07-11 01:00:21,131 - BO_format_1::INFO -- [Batch] : Finish Robot Queue : storage_empty_to_stirrer is done.
+2023-07-11 01:00:23,267 - BO_format_1::INFO -- [Batch] : storage_empty_to_stirrer is started.
+2023-07-11 01:00:23,277 - BO_format_1::INFO -- [Batch] : Start Robot Queue : storage_empty_to_stirrer is started.
+2023-07-11 01:00:30,120 - BO_format_1::INFO -- [Batch] : Finish Robot Queue : storage_empty_to_stirrer is done.
+2023-07-11 01:00:32,266 - BO_format_1::INFO -- [Batch] : storage_empty_to_stirrer is started.
+2023-07-11 01:00:32,276 - BO_format_1::INFO -- [Batch] : Start Robot Queue : storage_empty_to_stirrer is started.
+2023-07-11 01:00:39,140 - BO_format_1::INFO -- [Batch] : Finish Robot Queue : storage_empty_to_stirrer is done.
+2023-07-11 01:00:41,260 - BO_format_1::INFO -- [Batch] : Prepare Injection Queue --> Citrate,0.02mM,5000uL,200uL/s
+2023-07-11 01:00:45,480 - BO_format_1::INFO -- [Batch] : Start Injection Queue --> Citrate,0.02mM,1200μL,200μL/s
+2023-07-11 01:00:50,829 - BO_format_1::INFO -- [Batch] : Finish Injection Queue

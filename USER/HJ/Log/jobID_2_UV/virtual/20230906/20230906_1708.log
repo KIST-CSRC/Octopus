@@ -1,0 +1,80 @@
+2023-09-06 17:08:12,992 - jobID_2_UV::INFO -- [JobExecution] : [jobID=1] Algorithm, model : Automatic
+2023-09-06 17:08:13,003 - jobID_2_UV::INFO -- [JobExecution] : ######### Cycle start #########
+2023-09-06 17:08:13,003 - jobID_2_UV::INFO -- [Automatic] : total experiments=4
+2023-09-06 17:08:13,004 - jobID_2_UV::INFO -- [ProcessGenerator] : Allocate all of process based on job script!
+2023-09-06 17:08:13,004 - jobID_2_UV::INFO -- [JobExecution] : ######### [jobID_2_UV-HJ] Experiment 4 is running #########
+2023-09-06 17:08:13,005 - jobID_2_UV::INFO -- [TaskScheduler] : check location: {'BatchSynthesis': {'Stirrer': [0, 0, 0, 0, '?', '?', '?', '?'], 'vialHolder': [0, 0, 0, 0, '?', '?', '?', '?']}, 'UV': {'vialHolder': ['?', '?', '?', '?', '?', '?', '?', '?']}}
+2023-09-06 17:08:13,005 - jobID_2_UV::INFO -- [TaskScheduler] : UV is started, allocate location: {'vialHolder': [0, 1, 2, 3]}
+2023-09-06 17:08:13,005 - jobID_2_UV::INFO -- [TaskScheduler] : check location after allocation: {'BatchSynthesis': {'Stirrer': [0, 0, 0, 0, '?', '?', '?', '?'], 'vialHolder': [0, 0, 0, 0, '?', '?', '?', '?']}, 'UV': {'vialHolder': [1, 1, 1, 1, '?', '?', '?', '?']}}
+2023-09-06 17:08:22,019 - jobID_2_UV::DEBUG -- [UV-Vis] : Trasfer colloid NP to UV vialholder
+2023-09-06 17:08:22,019 - jobID_2_UV::DEBUG -- [DS_B] : vialholder_batchsynthesis_to_vialholder_UV-->Start!
+2023-09-06 17:08:24,195 - jobID_2_UV::DEBUG -- [DS_B] : vialholder_batchsynthesis_to_vialholder_UV-->Done!
+2023-09-06 17:08:24,195 - jobID_2_UV::DEBUG -- [UV-Vis] : Prepare UV-VIS container
+2023-09-06 17:08:24,195 - jobID_2_UV::DEBUG -- [DS_B] : cuvette_storage_to_cuvette_holder-->Start!
+2023-09-06 17:08:26,295 - jobID_2_UV::DEBUG -- [DS_B] : cuvette_storage_to_cuvette_holder-->Done!
+2023-09-06 17:08:26,296 - jobID_2_UV::DEBUG -- [DS_B] : cuvette_holder_to_UV-->Start!
+2023-09-06 17:08:28,430 - jobID_2_UV::DEBUG -- [DS_B] : cuvette_holder_to_UV-->Done!
+2023-09-06 17:08:30,434 - jobID_2_UV::DEBUG -- [DS_B] : UV-VIS Characterization-->Start!
+2023-09-06 17:08:37,125 - jobID_2_UV::DEBUG -- [DS_B] : UV-VIS Characterization-->Done!
+2023-09-06 17:08:37,125 - jobID_2_UV::DEBUG -- [DS_B] : Cuvette2ExtractSolution-->Start!
+2023-09-06 17:08:37,125 - jobID_2_UV::DEBUG -- [UV-Vis] : Start UV sample preparation
+2023-09-06 17:08:48,139 - jobID_2_UV::DEBUG -- [UV-Vis] : Finish UV sample preparation
+2023-09-06 17:08:48,139 - jobID_2_UV::DEBUG -- [DS_B] : Cuvette2ExtractSolution-->Done!
+2023-09-06 17:08:48,139 - jobID_2_UV::DEBUG -- [UV-Vis] : Start UV-VIS Characterization
+2023-09-06 17:08:48,139 - jobID_2_UV::DEBUG -- [DS_B] : UV-VIS Characterization-->Start!
+2023-09-06 17:08:54,833 - jobID_2_UV::DEBUG -- [DS_B] : UV-VIS Characterization-->Done!
+2023-09-06 17:08:56,837 - jobID_2_UV::DEBUG -- [DS_B] : UV_to_cuvette_storage-->Start!
+2023-09-06 17:08:58,981 - jobID_2_UV::DEBUG -- [DS_B] : UV_to_cuvette_storage-->Done!
+2023-09-06 17:08:58,988 - jobID_2_UV::DEBUG -- [UV-Vis] : 0 result : OrderedDict([('lambdamax', 498.17007), ('intensity', 0.017870835194285478), ('FWHM', 12.580194000000006)])
+2023-09-06 17:08:58,988 - jobID_2_UV::DEBUG -- [UV-Vis] : Finish UV-VIS Characterization
+2023-09-06 17:09:02,996 - jobID_2_UV::DEBUG -- [UV-Vis] : Trasfer colloid NP to UV vialholder
+2023-09-06 17:09:02,996 - jobID_2_UV::DEBUG -- [DS_B] : vialholder_batchsynthesis_to_vialholder_UV-->Start!
+2023-09-06 17:09:05,217 - jobID_2_UV::DEBUG -- [DS_B] : vialholder_batchsynthesis_to_vialholder_UV-->Done!
+2023-09-06 17:09:05,217 - jobID_2_UV::DEBUG -- [UV-Vis] : Prepare UV-VIS container
+2023-09-06 17:09:05,217 - jobID_2_UV::DEBUG -- [DS_B] : cuvette_storage_to_cuvette_holder-->Start!
+2023-09-06 17:09:07,274 - jobID_2_UV::DEBUG -- [DS_B] : cuvette_storage_to_cuvette_holder-->Done!
+2023-09-06 17:09:07,274 - jobID_2_UV::DEBUG -- [DS_B] : cuvette_holder_to_UV-->Start!
+2023-09-06 17:09:09,385 - jobID_2_UV::DEBUG -- [DS_B] : cuvette_holder_to_UV-->Done!
+2023-09-06 17:09:11,389 - jobID_2_UV::DEBUG -- [DS_B] : UV-VIS Characterization-->Start!
+2023-09-06 17:09:18,089 - jobID_2_UV::DEBUG -- [DS_B] : UV-VIS Characterization-->Done!
+2023-09-06 17:09:18,089 - jobID_2_UV::DEBUG -- [DS_B] : Cuvette2ExtractSolution-->Start!
+2023-09-06 17:09:18,089 - jobID_2_UV::DEBUG -- [UV-Vis] : Start UV sample preparation
+2023-09-06 17:09:29,094 - jobID_2_UV::DEBUG -- [UV-Vis] : Finish UV sample preparation
+2023-09-06 17:09:29,094 - jobID_2_UV::DEBUG -- [DS_B] : Cuvette2ExtractSolution-->Done!
+2023-09-06 17:09:29,095 - jobID_2_UV::DEBUG -- [UV-Vis] : Start UV-VIS Characterization
+2023-09-06 17:09:29,095 - jobID_2_UV::DEBUG -- [DS_B] : UV-VIS Characterization-->Start!
+2023-09-06 17:09:35,794 - jobID_2_UV::DEBUG -- [DS_B] : UV-VIS Characterization-->Done!
+2023-09-06 17:09:37,798 - jobID_2_UV::DEBUG -- [DS_B] : UV_to_cuvette_storage-->Start!
+2023-09-06 17:09:40,111 - jobID_2_UV::DEBUG -- [DS_B] : UV_to_cuvette_storage-->Done!
+2023-09-06 17:09:40,126 - jobID_2_UV::DEBUG -- [UV-Vis] : 1 result : OrderedDict([('lambdamax', 653.927241), ('intensity', 0.023107230460979934), ('FWHM', 11.095386000000076)])
+2023-09-06 17:09:40,126 - jobID_2_UV::DEBUG -- [UV-Vis] : Finish UV-VIS Characterization
+2023-09-06 17:09:44,132 - jobID_2_UV::DEBUG -- [UV-Vis] : Trasfer colloid NP to UV vialholder
+2023-09-06 17:09:44,132 - jobID_2_UV::DEBUG -- [DS_B] : vialholder_batchsynthesis_to_vialholder_UV-->Start!
+2023-09-06 17:09:46,292 - jobID_2_UV::DEBUG -- [DS_B] : vialholder_batchsynthesis_to_vialholder_UV-->Done!
+2023-09-06 17:09:46,293 - jobID_2_UV::DEBUG -- [UV-Vis] : Prepare UV-VIS container
+2023-09-06 17:09:46,293 - jobID_2_UV::DEBUG -- [DS_B] : cuvette_storage_to_cuvette_holder-->Start!
+2023-09-06 17:09:48,542 - jobID_2_UV::DEBUG -- [DS_B] : cuvette_storage_to_cuvette_holder-->Done!
+2023-09-06 17:09:48,542 - jobID_2_UV::DEBUG -- [DS_B] : cuvette_holder_to_UV-->Start!
+2023-09-06 17:09:50,721 - jobID_2_UV::DEBUG -- [DS_B] : cuvette_holder_to_UV-->Done!
+2023-09-06 17:09:52,726 - jobID_2_UV::DEBUG -- [DS_B] : UV-VIS Characterization-->Start!
+2023-09-06 17:09:59,420 - jobID_2_UV::DEBUG -- [DS_B] : UV-VIS Characterization-->Done!
+2023-09-06 17:09:59,420 - jobID_2_UV::DEBUG -- [DS_B] : Cuvette2ExtractSolution-->Start!
+2023-09-06 17:09:59,420 - jobID_2_UV::DEBUG -- [UV-Vis] : Start UV sample preparation
+2023-09-06 17:10:10,427 - jobID_2_UV::DEBUG -- [UV-Vis] : Finish UV sample preparation
+2023-09-06 17:10:10,428 - jobID_2_UV::DEBUG -- [DS_B] : Cuvette2ExtractSolution-->Done!
+2023-09-06 17:10:10,428 - jobID_2_UV::DEBUG -- [UV-Vis] : Start UV-VIS Characterization
+2023-09-06 17:10:10,428 - jobID_2_UV::DEBUG -- [DS_B] : UV-VIS Characterization-->Start!
+2023-09-06 17:10:17,135 - jobID_2_UV::DEBUG -- [DS_B] : UV-VIS Characterization-->Done!
+2023-09-06 17:10:19,140 - jobID_2_UV::DEBUG -- [DS_B] : UV_to_cuvette_storage-->Start!
+2023-09-06 17:10:21,288 - jobID_2_UV::DEBUG -- [DS_B] : UV_to_cuvette_storage-->Done!
+2023-09-06 17:10:21,304 - jobID_2_UV::DEBUG -- [UV-Vis] : 2 result : OrderedDict([('lambdamax', 601.746356), ('intensity', 0.017739197588308428), ('FWHM', 23.7935940000001)])
+2023-09-06 17:10:21,305 - jobID_2_UV::DEBUG -- [UV-Vis] : Finish UV-VIS Characterization
+2023-09-06 17:10:25,312 - jobID_2_UV::DEBUG -- [UV-Vis] : Trasfer colloid NP to UV vialholder
+2023-09-06 17:10:25,312 - jobID_2_UV::DEBUG -- [DS_B] : vialholder_batchsynthesis_to_vialholder_UV-->Start!
+2023-09-06 17:10:27,483 - jobID_2_UV::DEBUG -- [DS_B] : vialholder_batchsynthesis_to_vialholder_UV-->Done!
+2023-09-06 17:10:27,484 - jobID_2_UV::DEBUG -- [UV-Vis] : Prepare UV-VIS container
+2023-09-06 17:10:27,484 - jobID_2_UV::DEBUG -- [DS_B] : cuvette_storage_to_cuvette_holder-->Start!
+2023-09-06 17:10:29,563 - jobID_2_UV::DEBUG -- [DS_B] : cuvette_storage_to_cuvette_holder-->Done!
+2023-09-06 17:10:29,563 - jobID_2_UV::DEBUG -- [DS_B] : cuvette_holder_to_UV-->Start!
+2023-09-06 17:10:31,675 - jobID_2_UV::DEBUG -- [DS_B] : cuvette_holder_to_UV-->Done!
+2023-09-06 17:10:33,680 - jobID_2_UV::DEBUG -- [DS_B] : UV-VIS Characterization-->Start!

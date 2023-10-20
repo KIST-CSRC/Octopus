@@ -1,0 +1,70 @@
+2023-10-05 17:35:45,858 - seq_task_1::INFO -- [JobExecution] : [jobID=1] Algorithm, model : Automatic
+2023-10-05 17:36:10,800 - seq_task_1::INFO -- [JobExecution] : ######### Cycle start #########
+2023-10-05 17:36:10,800 - seq_task_1::INFO -- [Automatic] : total experiments=1
+2023-10-05 17:36:10,800 - seq_task_1::INFO -- [Automatic [0]] : next_point 0: {'AddSolution=AgNO3_Concentration': 1250, 'AddSolution=AgNO3_Volume': 2000, 'AddSolution=AgNO3_Injectionrate': 200}
+2023-10-05 17:36:10,801 - seq_task_1::INFO -- [ProcessGenerator] : Allocate all of process based on job script!
+2023-10-05 17:36:10,801 - seq_task_1::INFO -- [JobExecution] : ######### [seq_task_1-HJ] Experiment 1 is running #########
+2023-10-05 17:36:10,802 - seq_task_1::INFO -- [TaskScheduler] : check location: {'BatchSynthesis': {'Stirrer': [0, '?', '?', '?', '?', '?', '?', '?'], 'vialHolder': [0, '?', '?', '?', '?', '?', '?', '?']}, 'UV': {'vialHolder': ['?', '?', '?', '?', '?', '?', '?', '?']}}
+2023-10-05 17:36:10,802 - seq_task_1::INFO -- [TaskScheduler] : BatchSynthesis is started, allocate location: {'Stirrer': [1], 'vialHolder': [1]}
+2023-10-05 17:36:10,802 - seq_task_1::INFO -- [TaskScheduler] : check location after allocation: {'BatchSynthesis': {'Stirrer': [0, 1, '?', '?', '?', '?', '?', '?'], 'vialHolder': [0, 1, '?', '?', '?', '?', '?', '?']}, 'UV': {'vialHolder': ['?', '?', '?', '?', '?', '?', '?', '?']}}
+2023-10-05 17:36:13,808 - seq_task_1::DEBUG -- [Batch] : storage_empty_to_stirrer is started.
+2023-10-05 17:36:13,808 - seq_task_1::DEBUG -- [Batch] : vial_num_list: [1]
+2023-10-05 17:36:13,808 - seq_task_1::DEBUG -- [Batch] : line_num_list: [0]
+2023-10-05 17:36:13,809 - seq_task_1::DEBUG -- [Batch] : vialHolder_list: [1]
+2023-10-05 17:36:13,809 - seq_task_1::DEBUG -- [Batch] : Start Robot Queue : storage_empty_to_stirrer is started.
+2023-10-05 17:36:13,809 - seq_task_1::DEBUG -- [LA] : move center-->Start!
+2023-10-05 17:36:14,835 - seq_task_1::DEBUG -- [LA] : move center-->Done!
+2023-10-05 17:36:15,838 - seq_task_1::DEBUG -- [STORAGE] : open-->Start!
+2023-10-05 17:36:18,982 - seq_task_1::DEBUG -- [STORAGE] : open-->Done!
+2023-10-05 17:36:21,987 - seq_task_1::DEBUG -- [DS_B] : prepare container-->Start!
+2023-10-05 17:36:24,148 - seq_task_1::DEBUG -- [DS_B] : prepare container-->Done!
+2023-10-05 17:36:24,148 - seq_task_1::DEBUG -- [Batch] : Finish Robot Queue : storage_empty_to_stirrer is done.
+2023-10-05 17:36:28,155 - seq_task_1::DEBUG -- [LA] : move down-->Start!
+2023-10-05 17:36:29,279 - seq_task_1::DEBUG -- [LA] : move down-->Done!
+2023-10-05 17:36:29,279 - seq_task_1::DEBUG -- [Batch] : Start Injection Queue --> NaBH4,10mM,3000μL,200μL/s
+2023-10-05 17:36:29,279 - seq_task_1::DEBUG -- [PUMP] : prepare solution-->Start!
+2023-10-05 17:36:32,978 - seq_task_1::DEBUG -- [PUMP] : prepare solution-->Done!
+2023-10-05 17:36:32,978 - seq_task_1::DEBUG -- [LA] : move up-->Start!
+2023-10-05 17:36:34,037 - seq_task_1::DEBUG -- [LA] : move up-->Done!
+2023-10-05 17:36:34,037 - seq_task_1::DEBUG -- [LA] : move center-->Start!
+2023-10-05 17:36:35,149 - seq_task_1::DEBUG -- [LA] : move center-->Done!
+2023-10-05 17:36:36,150 - seq_task_1::DEBUG -- [Batch] : Finish Injection Queue
+2023-10-05 17:36:39,155 - seq_task_1::DEBUG -- [LA] : move down-->Start!
+2023-10-05 17:36:40,180 - seq_task_1::DEBUG -- [LA] : move down-->Done!
+2023-10-05 17:36:40,180 - seq_task_1::DEBUG -- [Batch] : Start Injection Queue --> Citrate,20mM,1200μL,200μL/s
+2023-10-05 17:36:40,180 - seq_task_1::DEBUG -- [PUMP] : prepare solution-->Start!
+2023-10-05 17:36:43,943 - seq_task_1::DEBUG -- [PUMP] : prepare solution-->Done!
+2023-10-05 17:36:43,944 - seq_task_1::DEBUG -- [LA] : move up-->Start!
+2023-10-05 17:36:45,022 - seq_task_1::DEBUG -- [LA] : move up-->Done!
+2023-10-05 17:36:45,023 - seq_task_1::DEBUG -- [LA] : move center-->Start!
+2023-10-05 17:36:46,147 - seq_task_1::DEBUG -- [LA] : move center-->Done!
+2023-10-05 17:36:47,184 - seq_task_1::DEBUG -- [Batch] : Finish Injection Queue
+2023-10-05 17:36:50,233 - seq_task_1::DEBUG -- [LA] : move down-->Start!
+2023-10-05 17:36:51,294 - seq_task_1::DEBUG -- [LA] : move down-->Done!
+2023-10-05 17:36:51,304 - seq_task_1::DEBUG -- [Batch] : Start Injection Queue --> AgNO3,1250mM,2000μL,200μL/s
+2023-10-05 17:36:51,314 - seq_task_1::DEBUG -- [PUMP] : prepare solution-->Start!
+2023-10-05 17:36:55,093 - seq_task_1::DEBUG -- [PUMP] : prepare solution-->Done!
+2023-10-05 17:36:55,103 - seq_task_1::DEBUG -- [LA] : move up-->Start!
+2023-10-05 17:36:56,211 - seq_task_1::DEBUG -- [LA] : move up-->Done!
+2023-10-05 17:36:56,221 - seq_task_1::DEBUG -- [LA] : move center-->Start!
+2023-10-05 17:36:57,277 - seq_task_1::DEBUG -- [LA] : move center-->Done!
+2023-10-05 17:36:58,314 - seq_task_1::DEBUG -- [Batch] : Finish Injection Queue
+2023-10-05 17:36:58,325 - seq_task_1::DEBUG -- [Batch] : Start Stir Queue 0 (Stirrer)
+2023-10-05 17:36:59,839 - seq_task_1::DEBUG -- [Batch] : Finish Stir Queue 0 (Stirrer)
+2023-10-05 17:36:59,849 - seq_task_1::DEBUG -- [Batch] : Start Heat Queue 0 (Stirrer)
+2023-10-05 17:37:01,288 - seq_task_1::DEBUG -- [Batch] : Finish Heat Queue 0 (Stirrer)
+2023-10-05 17:37:01,304 - seq_task_1::DEBUG -- [Batch] : Start Mix:300s
+2023-10-05 17:37:01,314 - seq_task_1::DEBUG -- [Batch] : check Mix:300s
+2023-10-05 17:37:01,324 - seq_task_1::DEBUG -- [Batch] : Finish Mix:300s
+2023-10-05 17:37:04,379 - seq_task_1::DEBUG -- [LA] : move down-->Start!
+2023-10-05 17:37:05,491 - seq_task_1::DEBUG -- [LA] : move down-->Done!
+2023-10-05 17:37:05,502 - seq_task_1::DEBUG -- [Batch] : Start Injection Queue --> H2O2,375mM,1200μL,200μL/s
+2023-10-05 17:37:05,512 - seq_task_1::DEBUG -- [PUMP] : prepare solution-->Start!
+2023-10-05 17:37:09,219 - seq_task_1::DEBUG -- [PUMP] : prepare solution-->Done!
+2023-10-05 17:37:09,229 - seq_task_1::DEBUG -- [LA] : move up-->Start!
+2023-10-05 17:37:10,334 - seq_task_1::DEBUG -- [LA] : move up-->Done!
+2023-10-05 17:37:10,344 - seq_task_1::DEBUG -- [LA] : move center-->Start!
+2023-10-05 17:37:11,466 - seq_task_1::DEBUG -- [LA] : move center-->Done!
+2023-10-05 17:37:12,503 - seq_task_1::DEBUG -- [Batch] : Finish Injection Queue
+2023-10-05 17:37:12,518 - seq_task_1::DEBUG -- [Batch] : Start React:2400s
+2023-10-05 17:37:22,529 - seq_task_1::DEBUG -- [Batch] : check React:2400s

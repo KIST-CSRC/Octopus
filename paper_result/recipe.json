@@ -1,0 +1,266 @@
+{
+    "Synthesis": [
+         {
+              "Module": "BatchSynthesis",
+              "Data": [
+                   {
+                        "Task": "PrepareContainer",
+                        "Data": {
+                             "From": "storage_empty",
+                             "To": "stirrer",
+                             "Container": "Vial",
+                             "Device": {
+                                  "Id": "dsr01",
+                                  "Model": "m0609",
+                                  "NETWORK": "192.168.137.100",
+                                  "WorkRange": 900
+                             }
+                        }
+                   },
+                   {
+                        "Task": "AddSolution",
+                        "Data": {
+                             "Solution": "Citrate",
+                             "Volume": {
+                                  "Value": 1200,
+                                  "Dimension": "\u03bcL"
+                             },
+                             "Concentration": {
+                                  "Value": 20,
+                                  "Dimension": "mM"
+                             },
+                             "Injectionrate": {
+                                  "Value": 200,
+                                  "Dimension": "\u03bcL/s"
+                             },
+                             "Device": {
+                                  "SolutionType": "CA",
+                                  "PumpAddress": 4,
+                                  "PumpUsbAddr": "/dev/ttyPUMP1",
+                                  "Resolution": 1814000,
+                                  "Concentration": 0.04,
+                                  "SyringeVolume": 5000,
+                                  "DeviceName": "CavroCentris"
+                             }
+                        }
+                   },
+                   {
+                        "Task": "AddSolution",
+                        "Data": {
+                             "Solution": "H2O2",
+                             "Volume": {
+                                  "Value": 1200,
+                                  "Dimension": "\u03bcL"
+                             },
+                             "Concentration": {
+                                  "Value": 375,
+                                  "Dimension": "mM"
+                             },
+                             "Injectionrate": {
+                                  "Value": 200,
+                                  "Dimension": "\u03bcL/s"
+                             },
+                             "Device": {
+                                  "SolutionType": "Oxidant",
+                                  "PumpAddress": 3,
+                                  "PumpUsbAddr": "/dev/ttyPUMP1",
+                                  "Resolution": 1814000,
+                                  "Concentration": 0.375,
+                                  "Density": 1.45,
+                                  "MolarMass": 34.0147,
+                                  "SyringeVolume": 5000,
+                                  "DeviceName": "CavroCentris"
+                             }
+                        }
+                   },
+                   {
+                        "Task": "AddSolution",
+                        "Data": {
+                             "Solution": "NaBH4",
+                             "Volume": {
+                                  "Value": 3000,
+                                  "Dimension": "\u03bcL"
+                             },
+                             "Concentration": {
+                                  "Value": 10,
+                                  "Dimension": "mM"
+                             },
+                             "Injectionrate": {
+                                  "Value": 200,
+                                  "Dimension": "\u03bcL/s"
+                             },
+                             "Device": {
+                                  "SolutionType": "Reductant",
+                                  "PumpAddress": 2,
+                                  "PumpUsbAddr": "/dev/ttyPUMP2",
+                                  "Resolution": 1814000,
+                                  "Concentration": 0.01,
+                                  "SyringeVolume": 5000,
+                                  "DeviceName": "CavroCentris"
+                             }
+                        }
+                   },
+                   {
+                        "Task": "Stir",
+                        "Data": {
+                             "StirRate": {
+                                  "Value": 1000,
+                                  "Dimension": "rpm"
+                             },
+                             "Device": {
+                                  "Stirrer_0": {
+                                       "Port": "COM5",
+                                       "DeviceName": "IKA_RET_0",
+                                       "Temperature": 25
+                                  }
+                             }
+                        }
+                   },
+                   {
+                        "Task": "Heat",
+                        "Data": {
+                             "Temperature": {
+                                  "Value": 25,
+                                  "Dimension": "\u00baC"
+                             },
+                             "Device": {
+                                  "Stirrer_0": {
+                                       "Port": "COM5",
+                                       "DeviceName": "IKA_RET_0",
+                                       "Temperature": 25
+                                  }
+                             }
+                        }
+                   },
+                   {
+                        "Task": "Mix",
+                        "Data": {
+                             "Time": {
+                                  "Value": 300,
+                                  "Dimension": "sec"
+                             },
+                             "Device": {
+                                  "Stirrer_0": {
+                                       "Port": "COM5",
+                                       "DeviceName": "IKA_RET_0",
+                                       "Temperature": 25
+                                  }
+                             }
+                        }
+                   },
+                   {
+                        "Task": "AddSolution",
+                        "Data": {
+                             "Solution": "AgNO3",
+                             "Volume": {
+                                  "Value": 300,
+                                  "Dimension": "\u03bcL"
+                             },
+                             "Concentration": {
+                                  "Value": 1250,
+                                  "Dimension": "mM"
+                             },
+                             "Injectionrate": {
+                                  "Value": 150,
+                                  "Dimension": "\u03bcL/s"
+                             },
+                             "Device": {
+                                  "SolutionType": "Metal",
+                                  "PumpAddress": 1,
+                                  "PumpUsbAddr": "/dev/ttyPUMP2",
+                                  "Resolution": 1814000,
+                                  "Concentration": 0.0125,
+                                  "SyringeVolume": 5000,
+                                  "DeviceName": "CavroCentris"
+                             }
+                        }
+                   },
+                   {
+                        "Task": "React",
+                        "Data": {
+                             "Time": {
+                                  "Value": 7200,
+                                  "Dimension": "sec"
+                             },
+                             "Device": {
+                                  "Stirrer_0": {
+                                       "Port": "COM5",
+                                       "DeviceName": "IKA_RET_0",
+                                       "Temperature": 25
+                                  }
+                             }
+                        }
+                   }
+              ]
+         }
+    ],
+    "Characterization": [
+         {
+              "Module": "UV",
+              "Data": [
+                   {
+                        "Task": "GetAbs",
+                        "Data": {
+                             "Device": {
+                                  "Spectrometer": {
+                                       "DeviceName": "USB2000+",
+                                       "DetectionRange": "200-850nm",
+                                       "Solvent": {
+                                            "Solution": "H2O",
+                                            "Value": 2000,
+                                            "Dimension": "\u03bcL"
+                                       }
+                                  },
+                                  "LightSource": {
+                                       "DeviceName": "DH-2000-BAL",
+                                       "DetectionRange": "210-2500nm",
+                                       "Lamp": "deuterium(25W) and halogen lamps(20W)"
+                                  }
+                             },
+                             "Hyperparameter": {
+                                  "WavelengthMin": {
+                                       "Description": "WavelengthMin=300 (int): slice wavlength section depending on wavelength_min and wavelength_max",
+                                       "Value": 300,
+                                       "Dimension": "nm"
+                                  },
+                                  "WavelengthMax": {
+                                       "Description": "WavelengthMax=849 (int): slice wavlength section depending on wavelength_min and wavelength_max",
+                                       "Value": 849,
+                                       "Dimension": "nm"
+                                  },
+                                  "BoxCarSize": {
+                                       "Description": "BoxCarSize=10 (int): smooth strength",
+                                       "Value": 10,
+                                       "Dimension": "None"
+                                  },
+                                  "Prominence": {
+                                       "Description": "Prominence=0.01 (float): minimum peak Intensity for detection",
+                                       "Value": 0.01,
+                                       "Dimension": "None"
+                                  },
+                                  "PeakWidth": {
+                                       "Description": "PeakWidth=20 (int): minumum peak width for detection",
+                                       "Value": 20,
+                                       "Dimension": "nm"
+                                  }
+                             }
+                        }
+                   },
+                   {
+                        "Task": "MoveContainer",
+                        "Data": {
+                             "From": "vialholder_UV",
+                             "To": "storage_filled",
+                             "Container": "Vial",
+                             "Device": {
+                                  "Id": "dsr01",
+                                  "Model": "m0609",
+                                  "NETWORK": "192.168.137.100",
+                                  "WorkRange": 900
+                             }
+                        }
+                   }
+              ]
+         }
+    ]
+}

@@ -1,0 +1,8 @@
+2023-09-12 11:05:04,954 - JobClient::INFO -- [HJ] : request to submit job : USER/HJ/job_script/figure/figure_5_add.json
+2023-09-12 11:05:05,007 - JobClient::INFO -- [HJ] : succeed to submit job, userName:HJ, jobID:0
+2023-09-12 11:06:10,804 - JobClient::INFO -- [HJ] : request to check job status
+2023-09-12 11:06:10,810 - JobClient::INFO -- [HJ] : succeed to check job status
+2023-09-12 11:07:05,502 - JobClient::INFO -- [HJ] : request to submit job : USER/HJ/job_script/figure/figure_5_prepare.json
+2023-09-12 11:07:05,559 - JobClient::INFO -- [HJ] : succeed to submit job, userName:HJ, jobID:1
+2023-09-12 11:07:09,606 - JobClient::INFO -- [HJ] : request to check job status
+2023-09-12 11:07:09,611 - JobClient::INFO -- [HJ] : succeed to check job status

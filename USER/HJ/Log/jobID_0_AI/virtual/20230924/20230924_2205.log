@@ -1,0 +1,19 @@
+2023-09-24 22:05:55,695 - jobID_0_AI::INFO -- [JobExecution] : [jobID=0] Algorithm, model : BayesianOptimization
+2023-09-24 22:05:55,696 - jobID_0_AI::INFO -- [JobExecution] : ######### Cycle start #########
+2023-09-24 22:05:55,696 - jobID_0_AI::INFO -- [BayesianOptimization] : batchSize=6
+2023-09-24 22:05:55,706 - jobID_0_AI::INFO -- [Algorithm [0]] : next_point 0: {'AddSolution=AgNO3_Concentration': 25, 'AddSolution=AgNO3_Volume': 100, 'AddSolution=AgNO3_Injectionrate': 50}
+2023-09-24 22:05:55,706 - jobID_0_AI::INFO -- [Algorithm [1]] : next_point 1: {'AddSolution=AgNO3_Concentration': 225, 'AddSolution=AgNO3_Volume': 650, 'AddSolution=AgNO3_Injectionrate': 150}
+2023-09-24 22:05:55,711 - jobID_0_AI::INFO -- [Algorithm [2]] : next_point 2: {'AddSolution=AgNO3_Concentration': 150, 'AddSolution=AgNO3_Volume': 900, 'AddSolution=AgNO3_Injectionrate': 50}
+2023-09-24 22:05:55,721 - jobID_0_AI::INFO -- [Algorithm [3]] : next_point 3: {'AddSolution=AgNO3_Concentration': 350, 'AddSolution=AgNO3_Volume': 1100, 'AddSolution=AgNO3_Injectionrate': 150}
+2023-09-24 22:05:55,732 - jobID_0_AI::INFO -- [Algorithm [4]] : next_point 4: {'AddSolution=AgNO3_Concentration': 300, 'AddSolution=AgNO3_Volume': 400, 'AddSolution=AgNO3_Injectionrate': 100}
+2023-09-24 22:05:55,742 - jobID_0_AI::INFO -- [Algorithm [5]] : next_point 5: {'AddSolution=AgNO3_Concentration': 125, 'AddSolution=AgNO3_Volume': 500, 'AddSolution=AgNO3_Injectionrate': 100}
+2023-09-24 22:05:55,787 - jobID_0_AI::INFO -- [ProcessGenerator] : Allocate all of process based on job script!
+2023-09-24 22:05:55,792 - jobID_0_AI::INFO -- [JobExecution] : ######### [jobID_0_AI-HJ] Cycle 1/3 is running #########
+2023-09-24 22:05:55,813 - jobID_0_AI::INFO -- [TaskScheduler] : check location: {'BatchSynthesis': {'Stirrer': ['?', '?', '?', '?', '?', '?', '?', '?'], 'vialHolder': ['?', '?', '?', '?', '?', '?', '?', '?']}, 'UV': {'vialHolder': ['?', '?', '?', '?', '?', '?', '?', '?']}}
+2023-09-24 22:05:55,823 - jobID_0_AI::INFO -- [TaskScheduler] : BatchSynthesis is started, allocate location: {'Stirrer': [0, 1, 2, 3, 4, 5], 'vialHolder': [0, 1, 2, 3, 4, 5]}
+2023-09-24 22:05:55,834 - jobID_0_AI::INFO -- [TaskScheduler] : check location after allocation: {'BatchSynthesis': {'Stirrer': [0, 0, 0, 0, 0, 0, '?', '?'], 'vialHolder': [0, 0, 0, 0, 0, 0, '?', '?']}, 'UV': {'vialHolder': ['?', '?', '?', '?', '?', '?', '?', '?']}}
+2023-09-24 22:05:58,939 - jobID_0_AI::DEBUG -- [Batch] : storage_empty_to_stirrer is started.
+2023-09-24 22:05:58,950 - jobID_0_AI::DEBUG -- [Batch] : vial_num_list: [0, 1, 2, 3, 4, 5]
+2023-09-24 22:05:58,960 - jobID_0_AI::DEBUG -- [Batch] : line_num_list: [0, 0, 0, 0, 0, 0]
+2023-09-24 22:05:58,970 - jobID_0_AI::DEBUG -- [Batch] : vialHolder_list: [0, 1, 2, 3, 4, 5]
+2023-09-24 22:05:58,980 - jobID_0_AI::DEBUG -- [Batch] : Start Robot Queue : storage_empty_to_stirrer is started.

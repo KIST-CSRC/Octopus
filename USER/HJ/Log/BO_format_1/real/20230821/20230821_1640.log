@@ -1,0 +1,8 @@
+2023-08-21 16:40:29,331 - BO_format_1::INFO -- [JobExecution] : [jobID=0] Algorithm, model : BayesianOptimization
+2023-08-21 16:40:29,331 - BO_format_1::INFO -- [JobExecution] : ######### Cycle start #########
+2023-08-21 16:40:29,331 - BO_format_1::INFO -- [BayesianOptimization] : batchSize=1
+2023-08-21 16:40:29,356 - BO_format_1::INFO -- [Algorithm [0]] : next_point 0: {'AddSolution=AgNO3_Concentration': 275, 'AddSolution=AgNO3_Volume': 100, 'AddSolution=AgNO3_Injectionrate': 50}
+2023-08-21 16:40:29,392 - BO_format_1::INFO -- [ProcessGenerator] : Allocate all of process based on job script!
+2023-08-21 16:40:29,392 - BO_format_1::INFO -- [JobExecution] : ######### [BO_format_1-HJ] Cycle 1/1 is running #########
+2023-08-21 16:40:29,546 - BO_format_1::INFO -- [TaskScheduler] : check location: {'BatchSynthesis': {'Stirrer': ['?', '?', '?', '?', '?', '?', '?', '?'], 'vialHolder': ['?', '?', '?', '?', '?', '?', '?', '?']}, 'UV': {'vialHolder': ['?', '?', '?', '?', '?', '?', '?', '?']}}
+2023-08-21 16:40:29,557 - BO_format_1::INFO -- [TaskScheduler] : refresh location: {'BatchSynthesis': {'Stirrer': ['?', '?', '?', '?', '?', '?', '?', '?'], 'vialHolder': ['?', '?', '?', '?', '?', '?', '?', '?']}, 'UV': {'vialHolder': ['?', '?', '?', '?', '?', '?', '?', '?']}}

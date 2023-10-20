@@ -1,0 +1,71 @@
+{
+    "metadata" : 
+    {
+        "subject":"jobID_9_Batch",
+        "group":"KIST_CSRC",
+        "logLevel":"DEBUG"
+    },
+    "algorithm":
+    {
+        "model":"Automatic",
+        "totalExperimentNum":6,
+        "inputParams":[
+            {
+                "AddSolution=AgNO3_Volume" : 1600
+            },
+            {
+                "AddSolution=AgNO3_Volume" : 2000
+            },
+            {
+                "AddSolution=AgNO3_Volume" : 2400
+            },
+            {
+                "AddSolution=AgNO3_Volume" : 3000
+            }
+            ,
+            {
+                "AddSolution=AgNO3_Volume" : 3000
+            }
+            ,
+            {
+                "AddSolution=AgNO3_Volume" : 3000
+            }
+        ]
+    },
+    "process":
+    {
+        "Synthesis":{
+            "BatchSynthesis":{
+                "fixedParams":
+                {
+
+                    "BatchSynthesis=Sequence":["AddSolution_NaBH4","Stir","Heat","Mix", "AddSolution_AgNO3", "React"],
+
+                    "AddSolution=AgNO3_Concentration" : 1250,
+                    "AddSolution=AgNO3_Injectionrate" : 200,
+
+                    "AddSolution=NaBH4_Concentration" : 10,
+                    "AddSolution=NaBH4_Volume" : 1800,
+                    "AddSolution=NaBH4_Injectionrate" : 200,
+
+                    "Stir=StirRate":1000,
+                    "Heat=Temperature":25,
+                    "Mix=Time":300,
+                    "React=Time":1200
+                }
+            },
+            "FlowSynthesis":{}
+        },
+        "Preprocess":{
+            "Washing":{},
+            "Ink":{}
+        },
+        "Characterization":{
+            "UV":{}
+        },
+        "Evaluation":{
+            "RDE":{},
+            "Electrode":{}
+        }
+    }
+}

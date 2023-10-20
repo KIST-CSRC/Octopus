@@ -1,0 +1,92 @@
+2023-07-02 21:48:50,604 - BO_format_2::INFO -- [JobExecution] : [jobID=1] Algorithm, model : BayesianOptimization, batchSize : 4
+2023-07-02 21:48:50,614 - BO_format_2::INFO -- [JobExecution] : ######### Cycle start #########
+2023-07-02 21:48:50,615 - BO_format_2::INFO -- [Algorithm] : utility_type=ucb, iter_num=0, batchSize=4
+2023-07-02 21:48:50,615 - BO_format_2::INFO -- [Algorithm [0]] : next_point 0: {'AddSolution=AgNO3_Concentration': 0, 'AddSolution=AgNO3_Volume': 750, 'AddSolution=AgNO3_Injectionrate': 150}
+2023-07-02 21:48:50,615 - BO_format_2::INFO -- [Algorithm [1]] : next_point 1: {'AddSolution=AgNO3_Concentration': 0, 'AddSolution=AgNO3_Volume': 800, 'AddSolution=AgNO3_Injectionrate': 100}
+2023-07-02 21:48:50,615 - BO_format_2::INFO -- [Algorithm [2]] : next_point 2: {'AddSolution=AgNO3_Concentration': 0, 'AddSolution=AgNO3_Volume': 1150, 'AddSolution=AgNO3_Injectionrate': 150}
+2023-07-02 21:48:50,615 - BO_format_2::INFO -- [Algorithm [3]] : next_point 3: {'AddSolution=AgNO3_Concentration': 0, 'AddSolution=AgNO3_Volume': 650, 'AddSolution=AgNO3_Injectionrate': 150}
+2023-07-02 21:48:50,618 - BO_format_2::INFO -- [RecipeGenerator] : Allocate all of process based on job script!
+2023-07-02 21:48:50,618 - BO_format_2::INFO -- [JobExecution] : ######### Cycle 1/1 is running #########
+2023-07-02 21:48:50,618 - BO_format_2::INFO -- [TaskScheduler] : check location: {'BatchSynthesis': {'Stirrer': [0, 0, 0, 0, '?', '?', '?', '?', '?', '?', '?', '?', '?', '?', '?', '?'], 'vialHolder': [0, 0, 0, 0, '?', '?', '?', '?']}, 'UV': {'vialHolder': [0, 0, 0, 0, '?', '?', '?', '?']}}
+2023-07-02 21:48:50,618 - BO_format_2::INFO -- [TaskScheduler] : BatchSynthesis allocate location: {'Stirrer': [4, 5, 6, 7], 'vialHolder': [4, 5, 6, 7]}
+2023-07-02 21:48:50,618 - BO_format_2::INFO -- [Batch] : Start Robot Queue : Batch motion (storage_empty_to_stirrer) is started.
+2023-07-02 21:48:54,772 - BO_format_2::INFO -- [Batch] : vial_num_list: [4, 5, 6, 7]
+2023-07-02 21:48:54,772 - BO_format_2::INFO -- [Batch] : line_num_list: [0, 0, 0, 0]
+2023-07-02 21:48:54,772 - BO_format_2::INFO -- [Batch] : vialHolder_list: [4, 5, 6, 7]
+2023-07-02 21:49:01,222 - BO_format_2::INFO -- [Batch] : Finish Robot Queue : Batch motion (storage_empty_to_stirrer) is done.
+2023-07-02 21:49:01,223 - BO_format_2::INFO -- [Batch] : Start Robot Queue : Batch motion (storage_empty_to_stirrer) is started.
+2023-07-02 21:49:16,940 - BO_format_2::INFO -- [Batch] : Finish Robot Queue : Batch motion (storage_empty_to_stirrer) is done.
+2023-07-02 21:49:16,940 - BO_format_2::INFO -- [Batch] : Start Robot Queue : Batch motion (storage_empty_to_stirrer) is started.
+2023-07-02 21:49:23,875 - BO_format_2::INFO -- [Batch] : Finish Robot Queue : Batch motion (storage_empty_to_stirrer) is done.
+2023-07-02 21:49:23,876 - BO_format_2::INFO -- [Batch] : Start Robot Queue : Batch motion (storage_empty_to_stirrer) is started.
+2023-07-02 21:49:30,362 - BO_format_2::INFO -- [Batch] : Finish Robot Queue : Batch motion (storage_empty_to_stirrer) is done.
+2023-07-02 21:49:36,645 - BO_format_2::INFO -- [Batch] : Prepare Injection Queue --> Citrate,0.02mM,5000uL,200uL/s
+2023-07-02 21:49:40,866 - BO_format_2::INFO -- [Batch] : Start Injection Queue --> Citrate,0.02mM,1200μL,200μL/s
+2023-07-02 21:49:46,265 - BO_format_2::INFO -- [Batch] : Finish Injection Queue
+2023-07-02 21:49:55,720 - BO_format_2::INFO -- [Batch] : Prepare Injection Queue --> Citrate,0.02mM,5000uL,200uL/s
+2023-07-02 21:49:59,799 - BO_format_2::INFO -- [Batch] : Start Injection Queue --> Citrate,0.02mM,1200μL,200μL/s
+2023-07-02 21:50:05,120 - BO_format_2::INFO -- [Batch] : Finish Injection Queue
+2023-07-02 21:50:14,602 - BO_format_2::INFO -- [Batch] : Prepare Injection Queue --> Citrate,0.02mM,5000uL,200uL/s
+2023-07-02 21:50:18,618 - BO_format_2::INFO -- [Batch] : Start Injection Queue --> Citrate,0.02mM,1200μL,200μL/s
+2023-07-02 21:50:24,069 - BO_format_2::INFO -- [Batch] : Finish Injection Queue
+2023-07-02 21:50:33,069 - BO_format_2::INFO -- [Batch] : Prepare Injection Queue --> Citrate,0.02mM,5000uL,200uL/s
+2023-07-02 21:50:37,380 - BO_format_2::INFO -- [Batch] : Start Injection Queue --> Citrate,0.02mM,1200μL,200μL/s
+2023-07-02 21:50:42,839 - BO_format_2::INFO -- [Batch] : Finish Injection Queue
+2023-07-02 21:50:52,384 - BO_format_2::INFO -- [Batch] : Prepare Injection Queue --> H2O2,0.375mM,5000uL,200uL/s
+2023-07-02 21:50:56,732 - BO_format_2::INFO -- [Batch] : Start Injection Queue --> H2O2,0.375mM,1200μL,200μL/s
+2023-07-02 21:51:02,083 - BO_format_2::INFO -- [Batch] : Finish Injection Queue
+2023-07-02 21:51:11,533 - BO_format_2::INFO -- [Batch] : Prepare Injection Queue --> H2O2,0.375mM,5000uL,200uL/s
+2023-07-02 21:51:15,740 - BO_format_2::INFO -- [Batch] : Start Injection Queue --> H2O2,0.375mM,1200μL,200μL/s
+2023-07-02 21:51:21,268 - BO_format_2::INFO -- [Batch] : Finish Injection Queue
+2023-07-02 21:51:30,819 - BO_format_2::INFO -- [Batch] : Prepare Injection Queue --> H2O2,0.375mM,5000uL,200uL/s
+2023-07-02 21:51:35,060 - BO_format_2::INFO -- [Batch] : Start Injection Queue --> H2O2,0.375mM,1200μL,200μL/s
+2023-07-02 21:51:40,442 - BO_format_2::INFO -- [Batch] : Finish Injection Queue
+2023-07-02 21:51:50,019 - BO_format_2::INFO -- [Batch] : Prepare Injection Queue --> H2O2,0.375mM,5000uL,200uL/s
+2023-07-02 21:51:54,067 - BO_format_2::INFO -- [Batch] : Start Injection Queue --> H2O2,0.375mM,1200μL,200μL/s
+2023-07-02 21:51:59,368 - BO_format_2::INFO -- [Batch] : Finish Injection Queue
+2023-07-02 21:52:08,987 - BO_format_2::INFO -- [Batch] : Prepare Injection Queue --> NaBH4,0.01mM,5000uL,200uL/s
+2023-07-02 21:52:13,272 - BO_format_2::INFO -- [Batch] : Start Injection Queue --> NaBH4,0.01mM,3000μL,200μL/s
+2023-07-02 21:52:18,680 - BO_format_2::INFO -- [Batch] : Finish Injection Queue
+2023-07-02 21:52:28,863 - BO_format_2::INFO -- [Batch] : Prepare Injection Queue --> NaBH4,0.01mM,5000uL,200uL/s
+2023-07-02 21:52:33,094 - BO_format_2::INFO -- [Batch] : Start Injection Queue --> NaBH4,0.01mM,3000μL,200μL/s
+2023-07-02 21:52:38,226 - BO_format_2::INFO -- [Batch] : Finish Injection Queue
+2023-07-02 21:52:47,465 - BO_format_2::INFO -- [Batch] : Prepare Injection Queue --> NaBH4,0.01mM,5000uL,200uL/s
+2023-07-02 21:52:51,510 - BO_format_2::INFO -- [Batch] : Start Injection Queue --> NaBH4,0.01mM,3000μL,200μL/s
+2023-07-02 21:52:57,088 - BO_format_2::INFO -- [Batch] : Finish Injection Queue
+2023-07-02 21:53:06,642 - BO_format_2::INFO -- [Batch] : Prepare Injection Queue --> NaBH4,0.01mM,5000uL,200uL/s
+2023-07-02 21:53:10,708 - BO_format_2::INFO -- [Batch] : Start Injection Queue --> NaBH4,0.01mM,3000μL,200μL/s
+2023-07-02 21:53:15,938 - BO_format_2::INFO -- [Batch] : Finish Injection Queue
+2023-07-02 21:53:16,939 - BO_format_2::INFO -- [Batch] : Start Stir Queue 0 (Stirrer)
+2023-07-02 21:53:18,006 - BO_format_2::INFO -- [Batch] : Start Stir Queue 1 (Stirrer)
+2023-07-02 21:53:19,120 - BO_format_2::INFO -- [Batch] : Start Stir Queue 2 (Stirrer)
+2023-07-02 21:53:20,258 - BO_format_2::INFO -- [Batch] : Start Stir Queue 3 (Stirrer)
+2023-07-02 21:53:21,361 - BO_format_2::INFO -- [Batch] : Finish Stir Queue 0 (Stirrer)
+2023-07-02 21:53:21,361 - BO_format_2::INFO -- [Batch] : Finish Stir Queue 1 (Stirrer)
+2023-07-02 21:53:21,361 - BO_format_2::INFO -- [Batch] : Finish Stir Queue 2 (Stirrer)
+2023-07-02 21:53:21,362 - BO_format_2::INFO -- [Batch] : Finish Stir Queue 3 (Stirrer)
+2023-07-02 21:53:21,362 - BO_format_2::INFO -- [Batch] : Start Heat Queue 0 (Stirrer)
+2023-07-02 21:53:22,475 - BO_format_2::INFO -- [Batch] : Start Heat Queue 1 (Stirrer)
+2023-07-02 21:53:23,541 - BO_format_2::INFO -- [Batch] : Start Heat Queue 2 (Stirrer)
+2023-07-02 21:53:24,638 - BO_format_2::INFO -- [Batch] : Start Heat Queue 3 (Stirrer)
+2023-07-02 21:53:25,817 - BO_format_2::INFO -- [Batch] : Finish Heat Queue 0 (Stirrer)
+2023-07-02 21:53:25,817 - BO_format_2::INFO -- [Batch] : Finish Heat Queue 1 (Stirrer)
+2023-07-02 21:53:25,817 - BO_format_2::INFO -- [Batch] : Finish Heat Queue 2 (Stirrer)
+2023-07-02 21:53:25,817 - BO_format_2::INFO -- [Batch] : Finish Heat Queue 3 (Stirrer)
+2023-07-02 21:53:25,818 - BO_format_2::INFO -- [Batch] : Start Wait:1s
+2023-07-02 21:53:25,818 - BO_format_2::INFO -- [Batch] : check Wait:1s
+2023-07-02 21:53:25,819 - BO_format_2::INFO -- [Batch] : Finish Wait:1s
+2023-07-02 21:53:25,819 - BO_format_2::INFO -- [Batch] : Start Wait:1s
+2023-07-02 21:53:25,820 - BO_format_2::INFO -- [Batch] : Start Wait:1s
+2023-07-02 21:53:25,820 - BO_format_2::INFO -- [Batch] : Start Wait:1s
+2023-07-02 21:53:25,821 - BO_format_2::INFO -- [Batch] : check Wait:1s
+2023-07-02 21:53:25,822 - BO_format_2::INFO -- [Batch] : check Wait:1s
+2023-07-02 21:53:25,822 - BO_format_2::INFO -- [Batch] : check Wait:1s
+2023-07-02 21:53:25,822 - BO_format_2::INFO -- [Batch] : Finish Wait:1s
+2023-07-02 21:53:25,823 - BO_format_2::INFO -- [Batch] : Finish Wait:1s
+2023-07-02 21:53:25,823 - BO_format_2::INFO -- [Batch] : Finish Wait:1s
+2023-07-02 21:53:25,827 - BO_format_2::INFO -- [Batch] : Prepare Injection Queue --> AgNO3,0mM,5000uL,200uL/s
+2023-07-02 21:53:29,857 - BO_format_2::INFO -- [Batch] : Start Injection Queue --> AgNO3,0mM,750μL,150μL/s
+2023-07-02 21:53:35,406 - BO_format_2::INFO -- [Batch] : Finish Injection Queue
+2023-07-02 21:53:36,411 - BO_format_2::INFO -- [Batch] : Prepare Injection Queue --> AgNO3,0mM,5000uL,200uL/s
+2023-07-02 21:53:40,518 - BO_format_2::INFO -- [Batch] : Start Injection Queue --> AgNO3,0mM,800μL,100μL/s
+2023-07-02 21:53:45,702 - BO_format_2::INFO -- [Batch] : Finish Injection Queue

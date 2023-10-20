@@ -1,0 +1,291 @@
+2023-09-06 16:37:32,331 - jobID_1_Batch::INFO -- [JobExecution] : [jobID=0] Algorithm, model : Automatic
+2023-09-06 16:37:32,337 - jobID_1_Batch::INFO -- [JobExecution] : ######### Cycle start #########
+2023-09-06 16:37:32,347 - jobID_1_Batch::INFO -- [Automatic] : total experiments=4
+2023-09-06 16:37:32,357 - jobID_1_Batch::INFO -- [Automatic [0]] : next_point 0: {'AddSolution=AgNO3_Concentration': 1250, 'AddSolution=AgNO3_Volume': 2000, 'AddSolution=AgNO3_Injectionrate': 200}
+2023-09-06 16:37:32,367 - jobID_1_Batch::INFO -- [Automatic [1]] : next_point 1: {'AddSolution=AgNO3_Concentration': 1250, 'AddSolution=AgNO3_Volume': 2000, 'AddSolution=AgNO3_Injectionrate': 200}
+2023-09-06 16:37:32,378 - jobID_1_Batch::INFO -- [Automatic [2]] : next_point 2: {'AddSolution=AgNO3_Concentration': 1250, 'AddSolution=AgNO3_Volume': 2000, 'AddSolution=AgNO3_Injectionrate': 200}
+2023-09-06 16:37:32,383 - jobID_1_Batch::INFO -- [Automatic [3]] : next_point 3: {'AddSolution=AgNO3_Concentration': 1250, 'AddSolution=AgNO3_Volume': 2000, 'AddSolution=AgNO3_Injectionrate': 200}
+2023-09-06 16:37:32,493 - jobID_1_Batch::INFO -- [ProcessGenerator] : Allocate all of process based on job script!
+2023-09-06 16:37:32,493 - jobID_1_Batch::INFO -- [JobExecution] : ######### [jobID_1_Batch-HJ] Experiment 4 is running #########
+2023-09-06 16:37:32,524 - jobID_1_Batch::INFO -- [TaskScheduler] : check location: {'BatchSynthesis': {'Stirrer': ['?', '?', '?', '?', '?', '?', '?', '?'], 'vialHolder': ['?', '?', '?', '?', '?', '?', '?', '?']}, 'UV': {'vialHolder': ['?', '?', '?', '?', '?', '?', '?', '?']}}
+2023-09-06 16:37:32,534 - jobID_1_Batch::INFO -- [TaskScheduler] : BatchSynthesis is started, allocate location: {'Stirrer': [0, 1, 2, 3], 'vialHolder': [0, 1, 2, 3]}
+2023-09-06 16:37:32,544 - jobID_1_Batch::INFO -- [TaskScheduler] : check location after allocation: {'BatchSynthesis': {'Stirrer': [0, 0, 0, 0, '?', '?', '?', '?'], 'vialHolder': [0, 0, 0, 0, '?', '?', '?', '?']}, 'UV': {'vialHolder': ['?', '?', '?', '?', '?', '?', '?', '?']}}
+2023-09-06 16:37:35,645 - jobID_1_Batch::DEBUG -- [Batch] : storage_empty_to_stirrer is started.
+2023-09-06 16:37:35,656 - jobID_1_Batch::DEBUG -- [Batch] : vial_num_list: [0, 1, 2, 3]
+2023-09-06 16:37:35,666 - jobID_1_Batch::DEBUG -- [Batch] : line_num_list: [0, 0, 0, 0]
+2023-09-06 16:37:35,671 - jobID_1_Batch::DEBUG -- [Batch] : vialHolder_list: [0, 1, 2, 3]
+2023-09-06 16:37:35,671 - jobID_1_Batch::DEBUG -- [Batch] : Start Robot Queue : storage_empty_to_stirrer is started.
+2023-09-06 16:37:35,682 - jobID_1_Batch::DEBUG -- [LA] : move center-->Start!
+2023-09-06 16:37:36,757 - jobID_1_Batch::DEBUG -- [LA] : move center-->Done!
+2023-09-06 16:37:37,814 - jobID_1_Batch::DEBUG -- [STORAGE] : open-->Start!
+2023-09-06 16:37:41,093 - jobID_1_Batch::DEBUG -- [STORAGE] : open-->Done!
+2023-09-06 16:37:44,158 - jobID_1_Batch::DEBUG -- [DS_B] : prepare container-->Start!
+2023-09-06 16:37:46,455 - jobID_1_Batch::DEBUG -- [DS_B] : prepare container-->Done!
+2023-09-06 16:37:46,465 - jobID_1_Batch::DEBUG -- [Batch] : Finish Robot Queue : storage_empty_to_stirrer is done.
+2023-09-06 16:37:50,618 - jobID_1_Batch::DEBUG -- [Batch] : storage_empty_to_stirrer is started.
+2023-09-06 16:37:50,628 - jobID_1_Batch::DEBUG -- [Batch] : Start Robot Queue : storage_empty_to_stirrer is started.
+2023-09-06 16:37:50,639 - jobID_1_Batch::DEBUG -- [LA] : move center-->Start!
+2023-09-06 16:37:51,754 - jobID_1_Batch::DEBUG -- [LA] : move center-->Done!
+2023-09-06 16:37:52,811 - jobID_1_Batch::DEBUG -- [STORAGE] : open-->Start!
+2023-09-06 16:37:56,025 - jobID_1_Batch::DEBUG -- [STORAGE] : open-->Done!
+2023-09-06 16:37:59,090 - jobID_1_Batch::DEBUG -- [DS_B] : prepare container-->Start!
+2023-09-06 16:38:01,321 - jobID_1_Batch::DEBUG -- [DS_B] : prepare container-->Done!
+2023-09-06 16:38:01,327 - jobID_1_Batch::DEBUG -- [Batch] : Finish Robot Queue : storage_empty_to_stirrer is done.
+2023-09-06 16:38:05,449 - jobID_1_Batch::DEBUG -- [Batch] : storage_empty_to_stirrer is started.
+2023-09-06 16:38:05,459 - jobID_1_Batch::DEBUG -- [Batch] : Start Robot Queue : storage_empty_to_stirrer is started.
+2023-09-06 16:38:05,470 - jobID_1_Batch::DEBUG -- [LA] : move center-->Start!
+2023-09-06 16:38:06,588 - jobID_1_Batch::DEBUG -- [LA] : move center-->Done!
+2023-09-06 16:38:07,646 - jobID_1_Batch::DEBUG -- [STORAGE] : open-->Start!
+2023-09-06 16:38:10,765 - jobID_1_Batch::DEBUG -- [STORAGE] : open-->Done!
+2023-09-06 16:38:13,814 - jobID_1_Batch::DEBUG -- [DS_B] : prepare container-->Start!
+2023-09-06 16:38:16,165 - jobID_1_Batch::DEBUG -- [DS_B] : prepare container-->Done!
+2023-09-06 16:38:16,176 - jobID_1_Batch::DEBUG -- [Batch] : Finish Robot Queue : storage_empty_to_stirrer is done.
+2023-09-06 16:38:20,322 - jobID_1_Batch::DEBUG -- [Batch] : storage_empty_to_stirrer is started.
+2023-09-06 16:38:20,332 - jobID_1_Batch::DEBUG -- [Batch] : Start Robot Queue : storage_empty_to_stirrer is started.
+2023-09-06 16:38:20,342 - jobID_1_Batch::DEBUG -- [LA] : move center-->Start!
+2023-09-06 16:38:21,445 - jobID_1_Batch::DEBUG -- [LA] : move center-->Done!
+2023-09-06 16:38:22,503 - jobID_1_Batch::DEBUG -- [STORAGE] : open-->Start!
+2023-09-06 16:38:25,801 - jobID_1_Batch::DEBUG -- [STORAGE] : open-->Done!
+2023-09-06 16:38:28,866 - jobID_1_Batch::DEBUG -- [DS_B] : prepare container-->Start!
+2023-09-06 16:38:31,090 - jobID_1_Batch::DEBUG -- [DS_B] : prepare container-->Done!
+2023-09-06 16:38:31,100 - jobID_1_Batch::DEBUG -- [Batch] : Finish Robot Queue : storage_empty_to_stirrer is done.
+2023-09-06 16:38:35,233 - jobID_1_Batch::DEBUG -- [Batch] : Prepare Injection Queue --> Citrate,20mM,500uL,200uL/s
+2023-09-06 16:38:35,243 - jobID_1_Batch::DEBUG -- [PUMP] : prepare solution-->Start!
+2023-09-06 16:38:35,254 - jobID_1_Batch::DEBUG -- [PUMP] : prepare solution-->Done!
+2023-09-06 16:38:36,301 - jobID_1_Batch::DEBUG -- [LA] : move down-->Start!
+2023-09-06 16:38:37,502 - jobID_1_Batch::DEBUG -- [LA] : move down-->Done!
+2023-09-06 16:38:37,512 - jobID_1_Batch::DEBUG -- [Batch] : Start Injection Queue --> Citrate,20mM,1200μL,200μL/s
+2023-09-06 16:38:37,522 - jobID_1_Batch::DEBUG -- [PUMP] : prepare solution-->Start!
+2023-09-06 16:38:41,319 - jobID_1_Batch::DEBUG -- [PUMP] : prepare solution-->Done!
+2023-09-06 16:38:43,403 - jobID_1_Batch::DEBUG -- [LA] : move up-->Start!
+2023-09-06 16:38:44,480 - jobID_1_Batch::DEBUG -- [LA] : move up-->Done!
+2023-09-06 16:38:46,564 - jobID_1_Batch::DEBUG -- [LA] : move center-->Start!
+2023-09-06 16:38:47,715 - jobID_1_Batch::DEBUG -- [LA] : move center-->Done!
+2023-09-06 16:38:47,725 - jobID_1_Batch::DEBUG -- [Batch] : Finish Injection Queue
+2023-09-06 16:38:51,843 - jobID_1_Batch::DEBUG -- [Batch] : Prepare Injection Queue --> Citrate,20mM,500uL,200uL/s
+2023-09-06 16:38:51,853 - jobID_1_Batch::DEBUG -- [PUMP] : prepare solution-->Start!
+2023-09-06 16:38:51,863 - jobID_1_Batch::DEBUG -- [PUMP] : prepare solution-->Done!
+2023-09-06 16:38:52,910 - jobID_1_Batch::DEBUG -- [LA] : move down-->Start!
+2023-09-06 16:38:54,074 - jobID_1_Batch::DEBUG -- [LA] : move down-->Done!
+2023-09-06 16:38:54,085 - jobID_1_Batch::DEBUG -- [Batch] : Start Injection Queue --> Citrate,20mM,1200μL,200μL/s
+2023-09-06 16:38:54,095 - jobID_1_Batch::DEBUG -- [PUMP] : prepare solution-->Start!
+2023-09-06 16:38:57,943 - jobID_1_Batch::DEBUG -- [PUMP] : prepare solution-->Done!
+2023-09-06 16:39:00,012 - jobID_1_Batch::DEBUG -- [LA] : move up-->Start!
+2023-09-06 16:39:01,169 - jobID_1_Batch::DEBUG -- [LA] : move up-->Done!
+2023-09-06 16:39:03,243 - jobID_1_Batch::DEBUG -- [LA] : move center-->Start!
+2023-09-06 16:39:04,456 - jobID_1_Batch::DEBUG -- [LA] : move center-->Done!
+2023-09-06 16:39:04,466 - jobID_1_Batch::DEBUG -- [Batch] : Finish Injection Queue
+2023-09-06 16:39:08,588 - jobID_1_Batch::DEBUG -- [Batch] : Prepare Injection Queue --> Citrate,20mM,500uL,200uL/s
+2023-09-06 16:39:08,599 - jobID_1_Batch::DEBUG -- [PUMP] : prepare solution-->Start!
+2023-09-06 16:39:08,609 - jobID_1_Batch::DEBUG -- [PUMP] : prepare solution-->Done!
+2023-09-06 16:39:09,656 - jobID_1_Batch::DEBUG -- [LA] : move down-->Start!
+2023-09-06 16:39:10,786 - jobID_1_Batch::DEBUG -- [LA] : move down-->Done!
+2023-09-06 16:39:10,796 - jobID_1_Batch::DEBUG -- [Batch] : Start Injection Queue --> Citrate,20mM,1200μL,200μL/s
+2023-09-06 16:39:10,810 - jobID_1_Batch::DEBUG -- [PUMP] : prepare solution-->Start!
+2023-09-06 16:39:14,545 - jobID_1_Batch::DEBUG -- [PUMP] : prepare solution-->Done!
+2023-09-06 16:39:16,629 - jobID_1_Batch::DEBUG -- [LA] : move up-->Start!
+2023-09-06 16:39:17,848 - jobID_1_Batch::DEBUG -- [LA] : move up-->Done!
+2023-09-06 16:39:19,932 - jobID_1_Batch::DEBUG -- [LA] : move center-->Start!
+2023-09-06 16:39:20,989 - jobID_1_Batch::DEBUG -- [LA] : move center-->Done!
+2023-09-06 16:39:20,999 - jobID_1_Batch::DEBUG -- [Batch] : Finish Injection Queue
+2023-09-06 16:39:25,120 - jobID_1_Batch::DEBUG -- [Batch] : Prepare Injection Queue --> Citrate,20mM,500uL,200uL/s
+2023-09-06 16:39:25,130 - jobID_1_Batch::DEBUG -- [PUMP] : prepare solution-->Start!
+2023-09-06 16:39:25,140 - jobID_1_Batch::DEBUG -- [PUMP] : prepare solution-->Done!
+2023-09-06 16:39:26,187 - jobID_1_Batch::DEBUG -- [LA] : move down-->Start!
+2023-09-06 16:39:27,277 - jobID_1_Batch::DEBUG -- [LA] : move down-->Done!
+2023-09-06 16:39:27,288 - jobID_1_Batch::DEBUG -- [Batch] : Start Injection Queue --> Citrate,20mM,1200μL,200μL/s
+2023-09-06 16:39:27,298 - jobID_1_Batch::DEBUG -- [PUMP] : prepare solution-->Start!
+2023-09-06 16:39:31,073 - jobID_1_Batch::DEBUG -- [PUMP] : prepare solution-->Done!
+2023-09-06 16:39:33,142 - jobID_1_Batch::DEBUG -- [LA] : move up-->Start!
+2023-09-06 16:39:34,228 - jobID_1_Batch::DEBUG -- [LA] : move up-->Done!
+2023-09-06 16:39:36,312 - jobID_1_Batch::DEBUG -- [LA] : move center-->Start!
+2023-09-06 16:39:37,447 - jobID_1_Batch::DEBUG -- [LA] : move center-->Done!
+2023-09-06 16:39:37,452 - jobID_1_Batch::DEBUG -- [Batch] : Finish Injection Queue
+2023-09-06 16:39:41,553 - jobID_1_Batch::DEBUG -- [Batch] : Prepare Injection Queue --> H2O2,375mM,500uL,200uL/s
+2023-09-06 16:39:41,564 - jobID_1_Batch::DEBUG -- [PUMP] : prepare solution-->Start!
+2023-09-06 16:39:41,574 - jobID_1_Batch::DEBUG -- [PUMP] : prepare solution-->Done!
+2023-09-06 16:39:42,621 - jobID_1_Batch::DEBUG -- [LA] : move down-->Start!
+2023-09-06 16:39:43,803 - jobID_1_Batch::DEBUG -- [LA] : move down-->Done!
+2023-09-06 16:39:43,803 - jobID_1_Batch::DEBUG -- [Batch] : Start Injection Queue --> H2O2,375mM,1200μL,200μL/s
+2023-09-06 16:39:43,803 - jobID_1_Batch::DEBUG -- [PUMP] : prepare solution-->Start!
+2023-09-06 16:39:47,526 - jobID_1_Batch::DEBUG -- [PUMP] : prepare solution-->Done!
+2023-09-06 16:39:49,595 - jobID_1_Batch::DEBUG -- [LA] : move up-->Start!
+2023-09-06 16:39:50,737 - jobID_1_Batch::DEBUG -- [LA] : move up-->Done!
+2023-09-06 16:39:52,806 - jobID_1_Batch::DEBUG -- [LA] : move center-->Start!
+2023-09-06 16:39:53,951 - jobID_1_Batch::DEBUG -- [LA] : move center-->Done!
+2023-09-06 16:39:53,961 - jobID_1_Batch::DEBUG -- [Batch] : Finish Injection Queue
+2023-09-06 16:39:58,063 - jobID_1_Batch::DEBUG -- [Batch] : Prepare Injection Queue --> H2O2,375mM,500uL,200uL/s
+2023-09-06 16:39:58,073 - jobID_1_Batch::DEBUG -- [PUMP] : prepare solution-->Start!
+2023-09-06 16:39:58,084 - jobID_1_Batch::DEBUG -- [PUMP] : prepare solution-->Done!
+2023-09-06 16:39:59,131 - jobID_1_Batch::DEBUG -- [LA] : move down-->Start!
+2023-09-06 16:40:00,278 - jobID_1_Batch::DEBUG -- [LA] : move down-->Done!
+2023-09-06 16:40:00,289 - jobID_1_Batch::DEBUG -- [Batch] : Start Injection Queue --> H2O2,375mM,1200μL,200μL/s
+2023-09-06 16:40:00,299 - jobID_1_Batch::DEBUG -- [PUMP] : prepare solution-->Start!
+2023-09-06 16:40:04,078 - jobID_1_Batch::DEBUG -- [PUMP] : prepare solution-->Done!
+2023-09-06 16:40:06,161 - jobID_1_Batch::DEBUG -- [LA] : move up-->Start!
+2023-09-06 16:40:07,308 - jobID_1_Batch::DEBUG -- [LA] : move up-->Done!
+2023-09-06 16:40:09,387 - jobID_1_Batch::DEBUG -- [LA] : move center-->Start!
+2023-09-06 16:40:10,508 - jobID_1_Batch::DEBUG -- [LA] : move center-->Done!
+2023-09-06 16:40:10,519 - jobID_1_Batch::DEBUG -- [Batch] : Finish Injection Queue
+2023-09-06 16:40:14,616 - jobID_1_Batch::DEBUG -- [Batch] : Prepare Injection Queue --> H2O2,375mM,500uL,200uL/s
+2023-09-06 16:40:14,626 - jobID_1_Batch::DEBUG -- [PUMP] : prepare solution-->Start!
+2023-09-06 16:40:14,636 - jobID_1_Batch::DEBUG -- [PUMP] : prepare solution-->Done!
+2023-09-06 16:40:15,663 - jobID_1_Batch::DEBUG -- [LA] : move down-->Start!
+2023-09-06 16:40:16,918 - jobID_1_Batch::DEBUG -- [LA] : move down-->Done!
+2023-09-06 16:40:16,928 - jobID_1_Batch::DEBUG -- [Batch] : Start Injection Queue --> H2O2,375mM,1200μL,200μL/s
+2023-09-06 16:40:16,939 - jobID_1_Batch::DEBUG -- [PUMP] : prepare solution-->Start!
+2023-09-06 16:40:20,687 - jobID_1_Batch::DEBUG -- [PUMP] : prepare solution-->Done!
+2023-09-06 16:40:22,756 - jobID_1_Batch::DEBUG -- [LA] : move up-->Start!
+2023-09-06 16:40:23,823 - jobID_1_Batch::DEBUG -- [LA] : move up-->Done!
+2023-09-06 16:40:25,907 - jobID_1_Batch::DEBUG -- [LA] : move center-->Start!
+2023-09-06 16:40:27,136 - jobID_1_Batch::DEBUG -- [LA] : move center-->Done!
+2023-09-06 16:40:27,146 - jobID_1_Batch::DEBUG -- [Batch] : Finish Injection Queue
+2023-09-06 16:40:31,268 - jobID_1_Batch::DEBUG -- [Batch] : Prepare Injection Queue --> H2O2,375mM,500uL,200uL/s
+2023-09-06 16:40:31,279 - jobID_1_Batch::DEBUG -- [PUMP] : prepare solution-->Start!
+2023-09-06 16:40:31,289 - jobID_1_Batch::DEBUG -- [PUMP] : prepare solution-->Done!
+2023-09-06 16:40:32,336 - jobID_1_Batch::DEBUG -- [LA] : move down-->Start!
+2023-09-06 16:40:33,451 - jobID_1_Batch::DEBUG -- [LA] : move down-->Done!
+2023-09-06 16:40:33,462 - jobID_1_Batch::DEBUG -- [Batch] : Start Injection Queue --> H2O2,375mM,1200μL,200μL/s
+2023-09-06 16:40:33,472 - jobID_1_Batch::DEBUG -- [PUMP] : prepare solution-->Start!
+2023-09-06 16:40:37,279 - jobID_1_Batch::DEBUG -- [PUMP] : prepare solution-->Done!
+2023-09-06 16:40:39,343 - jobID_1_Batch::DEBUG -- [LA] : move up-->Start!
+2023-09-06 16:40:40,453 - jobID_1_Batch::DEBUG -- [LA] : move up-->Done!
+2023-09-06 16:40:42,537 - jobID_1_Batch::DEBUG -- [LA] : move center-->Start!
+2023-09-06 16:40:43,767 - jobID_1_Batch::DEBUG -- [LA] : move center-->Done!
+2023-09-06 16:40:43,778 - jobID_1_Batch::DEBUG -- [Batch] : Finish Injection Queue
+2023-09-06 16:40:47,905 - jobID_1_Batch::DEBUG -- [Batch] : Prepare Injection Queue --> NaBH4,10mM,500uL,200uL/s
+2023-09-06 16:40:47,915 - jobID_1_Batch::DEBUG -- [PUMP] : prepare solution-->Start!
+2023-09-06 16:40:47,926 - jobID_1_Batch::DEBUG -- [PUMP] : prepare solution-->Done!
+2023-09-06 16:40:48,973 - jobID_1_Batch::DEBUG -- [LA] : move down-->Start!
+2023-09-06 16:40:50,073 - jobID_1_Batch::DEBUG -- [LA] : move down-->Done!
+2023-09-06 16:40:50,084 - jobID_1_Batch::DEBUG -- [Batch] : Start Injection Queue --> NaBH4,10mM,3000μL,200μL/s
+2023-09-06 16:40:50,094 - jobID_1_Batch::DEBUG -- [PUMP] : prepare solution-->Start!
+2023-09-06 16:40:53,837 - jobID_1_Batch::DEBUG -- [PUMP] : prepare solution-->Done!
+2023-09-06 16:40:55,916 - jobID_1_Batch::DEBUG -- [LA] : move up-->Start!
+2023-09-06 16:40:57,042 - jobID_1_Batch::DEBUG -- [LA] : move up-->Done!
+2023-09-06 16:40:59,126 - jobID_1_Batch::DEBUG -- [LA] : move center-->Start!
+2023-09-06 16:41:00,273 - jobID_1_Batch::DEBUG -- [LA] : move center-->Done!
+2023-09-06 16:41:00,284 - jobID_1_Batch::DEBUG -- [Batch] : Finish Injection Queue
+2023-09-06 16:41:04,406 - jobID_1_Batch::DEBUG -- [Batch] : Prepare Injection Queue --> NaBH4,10mM,500uL,200uL/s
+2023-09-06 16:41:04,416 - jobID_1_Batch::DEBUG -- [PUMP] : prepare solution-->Start!
+2023-09-06 16:41:04,426 - jobID_1_Batch::DEBUG -- [PUMP] : prepare solution-->Done!
+2023-09-06 16:41:05,473 - jobID_1_Batch::DEBUG -- [LA] : move down-->Start!
+2023-09-06 16:41:06,603 - jobID_1_Batch::DEBUG -- [LA] : move down-->Done!
+2023-09-06 16:41:06,614 - jobID_1_Batch::DEBUG -- [Batch] : Start Injection Queue --> NaBH4,10mM,3000μL,200μL/s
+2023-09-06 16:41:06,624 - jobID_1_Batch::DEBUG -- [PUMP] : prepare solution-->Start!
+2023-09-06 16:41:10,435 - jobID_1_Batch::DEBUG -- [PUMP] : prepare solution-->Done!
+2023-09-06 16:41:12,519 - jobID_1_Batch::DEBUG -- [LA] : move up-->Start!
+2023-09-06 16:41:13,583 - jobID_1_Batch::DEBUG -- [LA] : move up-->Done!
+2023-09-06 16:41:15,657 - jobID_1_Batch::DEBUG -- [LA] : move center-->Start!
+2023-09-06 16:41:16,841 - jobID_1_Batch::DEBUG -- [LA] : move center-->Done!
+2023-09-06 16:41:16,851 - jobID_1_Batch::DEBUG -- [Batch] : Finish Injection Queue
+2023-09-06 16:41:20,968 - jobID_1_Batch::DEBUG -- [Batch] : Prepare Injection Queue --> NaBH4,10mM,500uL,200uL/s
+2023-09-06 16:41:20,978 - jobID_1_Batch::DEBUG -- [PUMP] : prepare solution-->Start!
+2023-09-06 16:41:20,989 - jobID_1_Batch::DEBUG -- [PUMP] : prepare solution-->Done!
+2023-09-06 16:41:22,036 - jobID_1_Batch::DEBUG -- [LA] : move down-->Start!
+2023-09-06 16:41:23,147 - jobID_1_Batch::DEBUG -- [LA] : move down-->Done!
+2023-09-06 16:41:23,157 - jobID_1_Batch::DEBUG -- [Batch] : Start Injection Queue --> NaBH4,10mM,3000μL,200μL/s
+2023-09-06 16:41:23,167 - jobID_1_Batch::DEBUG -- [PUMP] : prepare solution-->Start!
+2023-09-06 16:41:26,924 - jobID_1_Batch::DEBUG -- [PUMP] : prepare solution-->Done!
+2023-09-06 16:41:29,009 - jobID_1_Batch::DEBUG -- [LA] : move up-->Start!
+2023-09-06 16:41:30,213 - jobID_1_Batch::DEBUG -- [LA] : move up-->Done!
+2023-09-06 16:41:32,297 - jobID_1_Batch::DEBUG -- [LA] : move center-->Start!
+2023-09-06 16:41:33,463 - jobID_1_Batch::DEBUG -- [LA] : move center-->Done!
+2023-09-06 16:41:33,473 - jobID_1_Batch::DEBUG -- [Batch] : Finish Injection Queue
+2023-09-06 16:41:37,595 - jobID_1_Batch::DEBUG -- [Batch] : Prepare Injection Queue --> NaBH4,10mM,500uL,200uL/s
+2023-09-06 16:41:37,606 - jobID_1_Batch::DEBUG -- [PUMP] : prepare solution-->Start!
+2023-09-06 16:41:37,616 - jobID_1_Batch::DEBUG -- [PUMP] : prepare solution-->Done!
+2023-09-06 16:41:38,663 - jobID_1_Batch::DEBUG -- [LA] : move down-->Start!
+2023-09-06 16:41:39,854 - jobID_1_Batch::DEBUG -- [LA] : move down-->Done!
+2023-09-06 16:41:39,864 - jobID_1_Batch::DEBUG -- [Batch] : Start Injection Queue --> NaBH4,10mM,3000μL,200μL/s
+2023-09-06 16:41:39,874 - jobID_1_Batch::DEBUG -- [PUMP] : prepare solution-->Start!
+2023-09-06 16:41:43,578 - jobID_1_Batch::DEBUG -- [PUMP] : prepare solution-->Done!
+2023-09-06 16:41:45,637 - jobID_1_Batch::DEBUG -- [LA] : move up-->Start!
+2023-09-06 16:41:46,775 - jobID_1_Batch::DEBUG -- [LA] : move up-->Done!
+2023-09-06 16:41:48,843 - jobID_1_Batch::DEBUG -- [LA] : move center-->Start!
+2023-09-06 16:41:49,936 - jobID_1_Batch::DEBUG -- [LA] : move center-->Done!
+2023-09-06 16:41:49,947 - jobID_1_Batch::DEBUG -- [Batch] : Finish Injection Queue
+2023-09-06 16:41:50,989 - jobID_1_Batch::DEBUG -- [Batch] : Start Stir Queue 0 (Stirrer)
+2023-09-06 16:41:52,697 - jobID_1_Batch::DEBUG -- [Batch] : Start Stir Queue 1 (Stirrer)
+2023-09-06 16:41:54,468 - jobID_1_Batch::DEBUG -- [Batch] : Start Stir Queue 2 (Stirrer)
+2023-09-06 16:41:56,230 - jobID_1_Batch::DEBUG -- [Batch] : Start Stir Queue 3 (Stirrer)
+2023-09-06 16:41:57,972 - jobID_1_Batch::DEBUG -- [Batch] : Finish Stir Queue 0 (Stirrer)
+2023-09-06 16:41:57,982 - jobID_1_Batch::DEBUG -- [Batch] : Finish Stir Queue 1 (Stirrer)
+2023-09-06 16:41:57,993 - jobID_1_Batch::DEBUG -- [Batch] : Finish Stir Queue 2 (Stirrer)
+2023-09-06 16:41:58,003 - jobID_1_Batch::DEBUG -- [Batch] : Finish Stir Queue 3 (Stirrer)
+2023-09-06 16:41:58,013 - jobID_1_Batch::DEBUG -- [Batch] : Start Heat Queue 0 (Stirrer)
+2023-09-06 16:41:59,794 - jobID_1_Batch::DEBUG -- [Batch] : Start Heat Queue 1 (Stirrer)
+2023-09-06 16:42:01,333 - jobID_1_Batch::DEBUG -- [Batch] : Start Heat Queue 2 (Stirrer)
+2023-09-06 16:42:02,966 - jobID_1_Batch::DEBUG -- [Batch] : Start Heat Queue 3 (Stirrer)
+2023-09-06 16:42:04,579 - jobID_1_Batch::DEBUG -- [Batch] : Finish Heat Queue 0 (Stirrer)
+2023-09-06 16:42:04,590 - jobID_1_Batch::DEBUG -- [Batch] : Finish Heat Queue 1 (Stirrer)
+2023-09-06 16:42:04,600 - jobID_1_Batch::DEBUG -- [Batch] : Finish Heat Queue 2 (Stirrer)
+2023-09-06 16:42:04,610 - jobID_1_Batch::DEBUG -- [Batch] : Finish Heat Queue 3 (Stirrer)
+2023-09-06 16:42:04,631 - jobID_1_Batch::DEBUG -- [Batch] : Start Mix:300s
+2023-09-06 16:42:04,636 - jobID_1_Batch::DEBUG -- [Batch] : Start Mix:300s
+2023-09-06 16:42:04,636 - jobID_1_Batch::DEBUG -- [Batch] : check Mix:300s
+2023-09-06 16:42:04,641 - jobID_1_Batch::DEBUG -- [Batch] : Start Mix:300s
+2023-09-06 16:42:04,641 - jobID_1_Batch::DEBUG -- [Batch] : check Mix:300s
+2023-09-06 16:42:04,647 - jobID_1_Batch::DEBUG -- [Batch] : Finish Mix:300s
+2023-09-06 16:42:04,647 - jobID_1_Batch::DEBUG -- [Batch] : Start Mix:300s
+2023-09-06 16:42:04,657 - jobID_1_Batch::DEBUG -- [Batch] : check Mix:300s
+2023-09-06 16:42:04,662 - jobID_1_Batch::DEBUG -- [Batch] : Finish Mix:300s
+2023-09-06 16:42:04,693 - jobID_1_Batch::DEBUG -- [Batch] : check Mix:300s
+2023-09-06 16:42:04,703 - jobID_1_Batch::DEBUG -- [Batch] : Finish Mix:300s
+2023-09-06 16:42:04,724 - jobID_1_Batch::DEBUG -- [Batch] : Finish Mix:300s
+2023-09-06 16:42:07,830 - jobID_1_Batch::DEBUG -- [Batch] : Prepare Injection Queue --> AgNO3,1250mM,500uL,200uL/s
+2023-09-06 16:42:07,840 - jobID_1_Batch::DEBUG -- [PUMP] : prepare solution-->Start!
+2023-09-06 16:42:07,850 - jobID_1_Batch::DEBUG -- [PUMP] : prepare solution-->Done!
+2023-09-06 16:42:08,897 - jobID_1_Batch::DEBUG -- [LA] : move down-->Start!
+2023-09-06 16:42:10,055 - jobID_1_Batch::DEBUG -- [LA] : move down-->Done!
+2023-09-06 16:42:10,066 - jobID_1_Batch::DEBUG -- [Batch] : Start Injection Queue --> AgNO3,1250mM,2000μL,200μL/s
+2023-09-06 16:42:10,076 - jobID_1_Batch::DEBUG -- [PUMP] : prepare solution-->Start!
+2023-09-06 16:42:13,901 - jobID_1_Batch::DEBUG -- [PUMP] : prepare solution-->Done!
+2023-09-06 16:42:15,974 - jobID_1_Batch::DEBUG -- [LA] : move up-->Start!
+2023-09-06 16:42:17,100 - jobID_1_Batch::DEBUG -- [LA] : move up-->Done!
+2023-09-06 16:42:19,169 - jobID_1_Batch::DEBUG -- [LA] : move center-->Start!
+2023-09-06 16:42:20,342 - jobID_1_Batch::DEBUG -- [LA] : move center-->Done!
+2023-09-06 16:42:20,352 - jobID_1_Batch::DEBUG -- [Batch] : Finish Injection Queue
+2023-09-06 16:42:24,473 - jobID_1_Batch::DEBUG -- [Batch] : Prepare Injection Queue --> AgNO3,1250mM,500uL,200uL/s
+2023-09-06 16:42:24,484 - jobID_1_Batch::DEBUG -- [PUMP] : prepare solution-->Start!
+2023-09-06 16:42:24,494 - jobID_1_Batch::DEBUG -- [PUMP] : prepare solution-->Done!
+2023-09-06 16:42:25,540 - jobID_1_Batch::DEBUG -- [LA] : move down-->Start!
+2023-09-06 16:42:26,647 - jobID_1_Batch::DEBUG -- [LA] : move down-->Done!
+2023-09-06 16:42:26,657 - jobID_1_Batch::DEBUG -- [Batch] : Start Injection Queue --> AgNO3,1250mM,2000μL,200μL/s
+2023-09-06 16:42:26,667 - jobID_1_Batch::DEBUG -- [PUMP] : prepare solution-->Start!
+2023-09-06 16:42:30,469 - jobID_1_Batch::DEBUG -- [PUMP] : prepare solution-->Done!
+2023-09-06 16:42:32,559 - jobID_1_Batch::DEBUG -- [LA] : move up-->Start!
+2023-09-06 16:42:33,697 - jobID_1_Batch::DEBUG -- [LA] : move up-->Done!
+2023-09-06 16:42:35,781 - jobID_1_Batch::DEBUG -- [LA] : move center-->Start!
+2023-09-06 16:42:36,923 - jobID_1_Batch::DEBUG -- [LA] : move center-->Done!
+2023-09-06 16:42:36,933 - jobID_1_Batch::DEBUG -- [Batch] : Finish Injection Queue
+2023-09-06 16:42:41,053 - jobID_1_Batch::DEBUG -- [Batch] : Prepare Injection Queue --> AgNO3,1250mM,500uL,200uL/s
+2023-09-06 16:42:41,064 - jobID_1_Batch::DEBUG -- [PUMP] : prepare solution-->Start!
+2023-09-06 16:42:41,074 - jobID_1_Batch::DEBUG -- [PUMP] : prepare solution-->Done!
+2023-09-06 16:42:42,121 - jobID_1_Batch::DEBUG -- [LA] : move down-->Start!
+2023-09-06 16:42:43,215 - jobID_1_Batch::DEBUG -- [LA] : move down-->Done!
+2023-09-06 16:42:43,225 - jobID_1_Batch::DEBUG -- [Batch] : Start Injection Queue --> AgNO3,1250mM,2000μL,200μL/s
+2023-09-06 16:42:43,235 - jobID_1_Batch::DEBUG -- [PUMP] : prepare solution-->Start!
+2023-09-06 16:42:47,073 - jobID_1_Batch::DEBUG -- [PUMP] : prepare solution-->Done!
+2023-09-06 16:42:49,167 - jobID_1_Batch::DEBUG -- [LA] : move up-->Start!
+2023-09-06 16:42:50,395 - jobID_1_Batch::DEBUG -- [LA] : move up-->Done!
+2023-09-06 16:42:52,479 - jobID_1_Batch::DEBUG -- [LA] : move center-->Start!
+2023-09-06 16:42:53,533 - jobID_1_Batch::DEBUG -- [LA] : move center-->Done!
+2023-09-06 16:42:53,544 - jobID_1_Batch::DEBUG -- [Batch] : Finish Injection Queue
+2023-09-06 16:42:57,656 - jobID_1_Batch::DEBUG -- [Batch] : Prepare Injection Queue --> AgNO3,1250mM,500uL,200uL/s
+2023-09-06 16:42:57,666 - jobID_1_Batch::DEBUG -- [PUMP] : prepare solution-->Start!
+2023-09-06 16:42:57,676 - jobID_1_Batch::DEBUG -- [PUMP] : prepare solution-->Done!
+2023-09-06 16:42:58,718 - jobID_1_Batch::DEBUG -- [LA] : move down-->Start!
+2023-09-06 16:42:59,786 - jobID_1_Batch::DEBUG -- [LA] : move down-->Done!
+2023-09-06 16:42:59,796 - jobID_1_Batch::DEBUG -- [Batch] : Start Injection Queue --> AgNO3,1250mM,2000μL,200μL/s
+2023-09-06 16:42:59,806 - jobID_1_Batch::DEBUG -- [PUMP] : prepare solution-->Start!
+2023-09-06 16:43:03,579 - jobID_1_Batch::DEBUG -- [PUMP] : prepare solution-->Done!
+2023-09-06 16:43:05,664 - jobID_1_Batch::DEBUG -- [LA] : move up-->Start!
+2023-09-06 16:43:06,866 - jobID_1_Batch::DEBUG -- [LA] : move up-->Done!
+2023-09-06 16:43:08,951 - jobID_1_Batch::DEBUG -- [LA] : move center-->Start!
+2023-09-06 16:43:10,150 - jobID_1_Batch::DEBUG -- [LA] : move center-->Done!
+2023-09-06 16:43:10,161 - jobID_1_Batch::DEBUG -- [Batch] : Finish Injection Queue
+2023-09-06 16:43:11,208 - jobID_1_Batch::DEBUG -- [Batch] : Start React:2400s
+2023-09-06 16:43:11,218 - jobID_1_Batch::DEBUG -- [Batch] : Start React:2400s
+2023-09-06 16:43:11,239 - jobID_1_Batch::DEBUG -- [Batch] : Start React:2400s
+2023-09-06 16:43:11,249 - jobID_1_Batch::DEBUG -- [Batch] : Start React:2400s

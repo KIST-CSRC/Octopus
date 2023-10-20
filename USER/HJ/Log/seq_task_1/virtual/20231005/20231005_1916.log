@@ -1,0 +1,31 @@
+2023-10-05 19:16:08,221 - seq_task_1::INFO -- [JobExecution] : [jobID=1] Algorithm, model : Automatic
+2023-10-05 19:16:52,057 - seq_task_1::INFO -- [JobExecution] : ######### Cycle start #########
+2023-10-05 19:16:52,057 - seq_task_1::INFO -- [Automatic] : total experiments=1
+2023-10-05 19:16:52,058 - seq_task_1::INFO -- [Automatic [0]] : next_point 0: {'AddSolution=AgNO3_Concentration': 1250, 'AddSolution=AgNO3_Volume': 2000, 'AddSolution=AgNO3_Injectionrate': 200}
+2023-10-05 19:16:52,058 - seq_task_1::INFO -- [ProcessGenerator] : Allocate all of process based on job script!
+2023-10-05 19:16:52,058 - seq_task_1::INFO -- [JobExecution] : ######### [seq_task_1-HJ] Experiment 1 is running #########
+2023-10-05 19:16:52,059 - seq_task_1::INFO -- [TaskScheduler] : check location: {'BatchSynthesis': {'Stirrer': [0, '?', '?', '?', '?', '?', '?', '?'], 'vialHolder': [0, '?', '?', '?', '?', '?', '?', '?']}, 'UV': {'vialHolder': ['?', '?', '?', '?', '?', '?', '?', '?']}}
+2023-10-05 19:16:52,059 - seq_task_1::INFO -- [TaskScheduler] : BatchSynthesis is started, allocate location: {'Stirrer': [1], 'vialHolder': [1]}
+2023-10-05 19:16:52,059 - seq_task_1::INFO -- [TaskScheduler] : check location after allocation: {'BatchSynthesis': {'Stirrer': [0, 1, '?', '?', '?', '?', '?', '?'], 'vialHolder': [0, 1, '?', '?', '?', '?', '?', '?']}, 'UV': {'vialHolder': ['?', '?', '?', '?', '?', '?', '?', '?']}}
+2023-10-05 19:16:55,065 - seq_task_1::DEBUG -- [Batch] : storage_empty_to_stirrer is started.
+2023-10-05 19:16:55,065 - seq_task_1::DEBUG -- [Batch] : vial_num_list: [1]
+2023-10-05 19:16:55,065 - seq_task_1::DEBUG -- [Batch] : line_num_list: [0]
+2023-10-05 19:16:55,065 - seq_task_1::DEBUG -- [Batch] : vialHolder_list: [1]
+2023-10-05 19:16:55,065 - seq_task_1::DEBUG -- [Batch] : Start Robot Queue : storage_empty_to_stirrer is started.
+2023-10-05 19:16:55,066 - seq_task_1::DEBUG -- [LA] : move center-->Start!
+2023-10-05 19:16:56,096 - seq_task_1::DEBUG -- [LA] : move center-->Done!
+2023-10-05 19:16:57,098 - seq_task_1::DEBUG -- [STORAGE] : open-->Start!
+2023-10-05 19:17:00,162 - seq_task_1::DEBUG -- [STORAGE] : open-->Done!
+2023-10-05 19:17:03,167 - seq_task_1::DEBUG -- [DS_B] : prepare container-->Start!
+2023-10-05 19:17:05,263 - seq_task_1::DEBUG -- [DS_B] : prepare container-->Done!
+2023-10-05 19:17:05,264 - seq_task_1::DEBUG -- [Batch] : Finish Robot Queue : storage_empty_to_stirrer is done.
+2023-10-05 19:17:09,271 - seq_task_1::DEBUG -- [LA] : move down-->Start!
+2023-10-05 19:17:10,338 - seq_task_1::DEBUG -- [LA] : move down-->Done!
+2023-10-05 19:17:10,338 - seq_task_1::DEBUG -- [Batch] : Start Injection Queue --> NaBH4,10mM,3000μL,200μL/s
+2023-10-05 19:17:10,338 - seq_task_1::DEBUG -- [PUMP] : prepare solution-->Start!
+2023-10-05 19:17:14,044 - seq_task_1::DEBUG -- [PUMP] : prepare solution-->Done!
+2023-10-05 19:17:14,044 - seq_task_1::DEBUG -- [LA] : move up-->Start!
+2023-10-05 19:17:15,083 - seq_task_1::DEBUG -- [LA] : move up-->Done!
+2023-10-05 19:17:15,084 - seq_task_1::DEBUG -- [LA] : move center-->Start!
+2023-10-05 19:17:16,118 - seq_task_1::DEBUG -- [LA] : move center-->Done!
+2023-10-05 19:17:17,120 - seq_task_1::DEBUG -- [Batch] : Finish Injection Queue

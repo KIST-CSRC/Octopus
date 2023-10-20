@@ -1,0 +1,101 @@
+2023-09-11 18:09:00,175 - figure_5_add::INFO -- [JobExecution] : [jobID=0] Algorithm, model : Automatic
+2023-09-11 18:09:00,241 - figure_5_add::INFO -- [JobExecution] : ######### Cycle start #########
+2023-09-11 18:09:00,247 - figure_5_add::INFO -- [Automatic] : total experiments=2
+2023-09-11 18:09:00,252 - figure_5_add::INFO -- [Automatic [0]] : next_point 0: {'AddSolution=AgNO3_Concentration': 1250, 'AddSolution=AgNO3_Volume': 1000, 'AddSolution=AgNO3_Injectionrate': 100}
+2023-09-11 18:09:00,262 - figure_5_add::INFO -- [Automatic [1]] : next_point 1: {'AddSolution=AgNO3_Concentration': 1250, 'AddSolution=AgNO3_Volume': 1000, 'AddSolution=AgNO3_Injectionrate': 100}
+2023-09-11 18:09:00,320 - figure_5_add::INFO -- [ProcessGenerator] : Allocate all of process based on job script!
+2023-09-11 18:09:00,330 - figure_5_add::INFO -- [JobExecution] : ######### [figure_5_add-HJ] Experiment 2 is running #########
+2023-09-11 18:09:00,569 - figure_5_add::INFO -- [TaskScheduler] : check location: {'BatchSynthesis': {'Stirrer': ['?', '?', '?', '?', '?', '?', '?', '?'], 'vialHolder': ['?', '?', '?', '?', '?', '?', '?', '?']}, 'UV': {'vialHolder': ['?', '?', '?', '?', '?', '?', '?', '?']}}
+2023-09-11 18:09:00,579 - figure_5_add::INFO -- [TaskScheduler] : BatchSynthesis is started, allocate location: {'Stirrer': [0, 1], 'vialHolder': [0, 1]}
+2023-09-11 18:09:00,590 - figure_5_add::INFO -- [TaskScheduler] : check location after allocation: {'BatchSynthesis': {'Stirrer': [0, 0, '?', '?', '?', '?', '?', '?'], 'vialHolder': [0, 0, '?', '?', '?', '?', '?', '?']}, 'UV': {'vialHolder': ['?', '?', '?', '?', '?', '?', '?', '?']}}
+2023-09-11 18:09:03,675 - figure_5_add::DEBUG -- [Batch] : storage_empty_to_stirrer is started.
+2023-09-11 18:09:03,685 - figure_5_add::DEBUG -- [Batch] : vial_num_list: [0, 1]
+2023-09-11 18:09:03,696 - figure_5_add::DEBUG -- [Batch] : line_num_list: [0, 0]
+2023-09-11 18:09:03,706 - figure_5_add::DEBUG -- [Batch] : vialHolder_list: [0, 1]
+2023-09-11 18:09:03,711 - figure_5_add::DEBUG -- [Batch] : Start Robot Queue : storage_empty_to_stirrer is started.
+2023-09-11 18:09:03,721 - figure_5_add::DEBUG -- [LA] : move center-->Start!
+2023-09-11 18:09:13,222 - figure_5_add::DEBUG -- [LA] : move center-->Done!
+2023-09-11 18:09:14,269 - figure_5_add::DEBUG -- [STORAGE] : open-->Start!
+2023-09-11 18:09:25,584 - figure_5_add::DEBUG -- [STORAGE] : open-->Done!
+2023-09-11 18:09:28,649 - figure_5_add::DEBUG -- [DS_B] : prepare container-->Start!
+2023-09-11 18:10:00,750 - figure_5_add::DEBUG -- [DS_B] : prepare container-->Done!
+2023-09-11 18:10:00,750 - figure_5_add::DEBUG -- [Batch] : Finish Robot Queue : storage_empty_to_stirrer is done.
+2023-09-11 18:10:04,888 - figure_5_add::DEBUG -- [Batch] : storage_empty_to_stirrer is started.
+2023-09-11 18:10:04,898 - figure_5_add::DEBUG -- [Batch] : Start Robot Queue : storage_empty_to_stirrer is started.
+2023-09-11 18:10:04,908 - figure_5_add::DEBUG -- [LA] : move center-->Start!
+2023-09-11 18:10:07,156 - figure_5_add::DEBUG -- [LA] : move center-->Done!
+2023-09-11 18:10:08,204 - figure_5_add::DEBUG -- [STORAGE] : open-->Start!
+2023-09-11 18:10:19,588 - figure_5_add::DEBUG -- [STORAGE] : open-->Done!
+2023-09-11 18:10:22,638 - figure_5_add::DEBUG -- [DS_B] : prepare container-->Start!
+2023-09-11 18:10:53,194 - figure_5_add::DEBUG -- [DS_B] : prepare container-->Done!
+2023-09-11 18:10:53,199 - figure_5_add::DEBUG -- [Batch] : Finish Robot Queue : storage_empty_to_stirrer is done.
+2023-09-11 18:10:57,286 - figure_5_add::DEBUG -- [LA] : move down-->Start!
+2023-09-11 18:11:08,959 - figure_5_add::DEBUG -- [LA] : move down-->Done!
+2023-09-11 18:11:08,969 - figure_5_add::DEBUG -- [Batch] : Start Injection Queue --> Citrate,20mM,1100μL,100μL/s
+2023-09-11 18:11:08,980 - figure_5_add::DEBUG -- [PUMP] : prepare solution-->Start!
+2023-09-11 18:11:12,815 - figure_5_add::DEBUG -- [PUMP] : prepare solution-->Done!
+2023-09-11 18:11:12,815 - figure_5_add::DEBUG -- [LA] : move up-->Start!
+2023-09-11 18:11:16,203 - figure_5_add::DEBUG -- [LA] : move up-->Done!
+2023-09-11 18:11:16,203 - figure_5_add::DEBUG -- [LA] : move center-->Start!
+2023-09-11 18:11:26,485 - figure_5_add::DEBUG -- [LA] : move center-->Done!
+2023-09-11 18:11:27,487 - figure_5_add::DEBUG -- [Batch] : Finish Injection Queue
+2023-09-11 18:11:30,492 - figure_5_add::DEBUG -- [LA] : move down-->Start!
+2023-09-11 18:11:41,387 - figure_5_add::DEBUG -- [LA] : move down-->Done!
+2023-09-11 18:11:41,387 - figure_5_add::DEBUG -- [Batch] : Start Injection Queue --> Citrate,20mM,1100μL,100μL/s
+2023-09-11 18:11:41,387 - figure_5_add::DEBUG -- [PUMP] : prepare solution-->Start!
+2023-09-11 18:11:45,267 - figure_5_add::DEBUG -- [PUMP] : prepare solution-->Done!
+2023-09-11 18:11:45,267 - figure_5_add::DEBUG -- [LA] : move up-->Start!
+2023-09-11 18:11:48,592 - figure_5_add::DEBUG -- [LA] : move up-->Done!
+2023-09-11 18:11:48,592 - figure_5_add::DEBUG -- [LA] : move center-->Start!
+2023-09-11 18:11:58,331 - figure_5_add::DEBUG -- [LA] : move center-->Done!
+2023-09-11 18:11:59,333 - figure_5_add::DEBUG -- [Batch] : Finish Injection Queue
+2023-09-11 18:12:02,338 - figure_5_add::DEBUG -- [LA] : move down-->Start!
+2023-09-11 18:12:13,791 - figure_5_add::DEBUG -- [LA] : move down-->Done!
+2023-09-11 18:12:13,792 - figure_5_add::DEBUG -- [Batch] : Start Injection Queue --> H2O2,375mM,1100μL,100μL/s
+2023-09-11 18:12:13,792 - figure_5_add::DEBUG -- [PUMP] : prepare solution-->Start!
+2023-09-11 18:12:17,726 - figure_5_add::DEBUG -- [PUMP] : prepare solution-->Done!
+2023-09-11 18:12:17,726 - figure_5_add::DEBUG -- [LA] : move up-->Start!
+2023-09-11 18:12:21,054 - figure_5_add::DEBUG -- [LA] : move up-->Done!
+2023-09-11 18:12:21,054 - figure_5_add::DEBUG -- [LA] : move center-->Start!
+2023-09-11 18:12:31,489 - figure_5_add::DEBUG -- [LA] : move center-->Done!
+2023-09-11 18:12:32,491 - figure_5_add::DEBUG -- [Batch] : Finish Injection Queue
+2023-09-11 18:12:35,496 - figure_5_add::DEBUG -- [LA] : move down-->Start!
+2023-09-11 18:12:46,347 - figure_5_add::DEBUG -- [LA] : move down-->Done!
+2023-09-11 18:12:46,348 - figure_5_add::DEBUG -- [Batch] : Start Injection Queue --> H2O2,375mM,1100μL,100μL/s
+2023-09-11 18:12:46,348 - figure_5_add::DEBUG -- [PUMP] : prepare solution-->Start!
+2023-09-11 18:12:50,319 - figure_5_add::DEBUG -- [PUMP] : prepare solution-->Done!
+2023-09-11 18:12:50,320 - figure_5_add::DEBUG -- [LA] : move up-->Start!
+2023-09-11 18:12:53,657 - figure_5_add::DEBUG -- [LA] : move up-->Done!
+2023-09-11 18:12:53,658 - figure_5_add::DEBUG -- [LA] : move center-->Start!
+2023-09-11 18:13:03,573 - figure_5_add::DEBUG -- [LA] : move center-->Done!
+2023-09-11 18:13:04,575 - figure_5_add::DEBUG -- [Batch] : Finish Injection Queue
+2023-09-11 18:13:07,580 - figure_5_add::DEBUG -- [LA] : move down-->Start!
+2023-09-11 18:13:18,972 - figure_5_add::DEBUG -- [LA] : move down-->Done!
+2023-09-11 18:13:18,973 - figure_5_add::DEBUG -- [Batch] : Start Injection Queue --> NaBH4,10mM,3000μL,100μL/s
+2023-09-11 18:13:18,973 - figure_5_add::DEBUG -- [PUMP] : prepare solution-->Start!
+2023-09-11 18:13:22,916 - figure_5_add::DEBUG -- [PUMP] : prepare solution-->Done!
+2023-09-11 18:13:22,916 - figure_5_add::DEBUG -- [LA] : move up-->Start!
+2023-09-11 18:13:26,247 - figure_5_add::DEBUG -- [LA] : move up-->Done!
+2023-09-11 18:13:26,247 - figure_5_add::DEBUG -- [LA] : move center-->Start!
+2023-09-11 18:13:36,726 - figure_5_add::DEBUG -- [LA] : move center-->Done!
+2023-09-11 18:13:37,728 - figure_5_add::DEBUG -- [Batch] : Finish Injection Queue
+2023-09-11 18:13:40,733 - figure_5_add::DEBUG -- [LA] : move down-->Start!
+2023-09-11 18:13:51,639 - figure_5_add::DEBUG -- [LA] : move down-->Done!
+2023-09-11 18:13:51,639 - figure_5_add::DEBUG -- [Batch] : Start Injection Queue --> NaBH4,10mM,3000μL,100μL/s
+2023-09-11 18:13:51,640 - figure_5_add::DEBUG -- [PUMP] : prepare solution-->Start!
+2023-09-11 18:13:55,476 - figure_5_add::DEBUG -- [PUMP] : prepare solution-->Done!
+2023-09-11 18:13:55,476 - figure_5_add::DEBUG -- [LA] : move up-->Start!
+2023-09-11 18:13:58,981 - figure_5_add::DEBUG -- [LA] : move up-->Done!
+2023-09-11 18:13:58,981 - figure_5_add::DEBUG -- [LA] : move center-->Start!
+2023-09-11 18:14:08,812 - figure_5_add::DEBUG -- [LA] : move center-->Done!
+2023-09-11 18:14:09,814 - figure_5_add::DEBUG -- [Batch] : Finish Injection Queue
+2023-09-11 18:14:09,814 - figure_5_add::DEBUG -- [Batch] : Start Stir Queue 0 (Stirrer)
+2023-09-11 18:14:12,003 - figure_5_add::DEBUG -- [Batch] : Start Stir Queue 1 (Stirrer)
+2023-09-11 18:14:14,303 - figure_5_add::DEBUG -- [Batch] : Finish Stir Queue 0 (Stirrer)
+2023-09-11 18:14:14,303 - figure_5_add::DEBUG -- [Batch] : Finish Stir Queue 1 (Stirrer)
+2023-09-11 18:14:14,303 - figure_5_add::DEBUG -- [Batch] : Start Heat Queue 0 (Stirrer)
+2023-09-11 18:14:16,627 - figure_5_add::DEBUG -- [Batch] : Start Heat Queue 1 (Stirrer)
+2023-09-11 18:14:18,933 - figure_5_add::DEBUG -- [Batch] : Finish Heat Queue 0 (Stirrer)
+2023-09-11 18:14:18,934 - figure_5_add::DEBUG -- [Batch] : Finish Heat Queue 1 (Stirrer)
+2023-09-11 18:14:18,934 - figure_5_add::DEBUG -- [Batch] : Start Mix:300s
+2023-09-11 18:14:18,935 - figure_5_add::DEBUG -- [Batch] : Start Mix:300s

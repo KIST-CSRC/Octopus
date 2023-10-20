@@ -1,0 +1,11 @@
+2023-10-05 19:30:06,681 - Master::INFO -- [ResourceManager] : receive information of BatchSynthesis
+2023-10-05 19:30:12,694 - Master::INFO -- [ResourceManager] : receive information of UV-Vis
+2023-10-05 19:30:12,707 - Master::INFO -- [Master] : ('127.0.0.1', 34108) is connected.
+2023-10-05 19:30:15,793 - Master::INFO -- [Master] : login status:login success, username:HJ
+2023-10-05 19:30:32,137 - Master::INFO -- [ResourceManager] : receive information of BatchSynthesis
+2023-10-05 19:30:38,178 - Master::INFO -- [ResourceManager] : receive information of UV-Vis
+2023-10-05 19:30:38,178 - Master::INFO -- [Master] : HJ ('127.0.0.1', 34108): updateNode
+2023-10-05 19:42:45,851 - Master::INFO -- [Master] : Error commands: 
+2023-10-05 19:42:45,857 - Master::INFO -- [Master] : HJ ('127.0.0.1', 34108): 
+2023-10-05 19:42:48,794 - Master::INFO -- [Master] : ('127.0.0.1', 41186) is connected.
+2023-10-05 19:42:52,999 - Master::INFO -- [Master] : login status:login failure, username:HJ

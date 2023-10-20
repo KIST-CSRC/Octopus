@@ -1,0 +1,498 @@
+2023-09-04 20:06:55,704 - Automatic_synthesis_UV::INFO -- [JobExecution] : [jobID=1] Algorithm, model : Automatic
+2023-09-04 20:06:55,705 - Automatic_synthesis_UV::INFO -- [JobExecution] : ######### Cycle start #########
+2023-09-04 20:06:55,705 - Automatic_synthesis_UV::INFO -- [Automatic] : total experiments=2
+2023-09-04 20:06:55,710 - Automatic_synthesis_UV::INFO -- [Automatic [0]] : next_point 0: {'AddSolution=AgNO3_Concentration': 0.0125, 'AddSolution=AgNO3_Volume': 4000, 'AddSolution=AgNO3_Injectionrate': 100}
+2023-09-04 20:06:55,721 - Automatic_synthesis_UV::INFO -- [Automatic [1]] : next_point 1: {'AddSolution=AgNO3_Concentration': 0.0125, 'AddSolution=AgNO3_Volume': 4000, 'AddSolution=AgNO3_Injectionrate': 100}
+2023-09-04 20:06:55,788 - Automatic_synthesis_UV::INFO -- [ProcessGenerator] : Allocate all of process based on job script!
+2023-09-04 20:06:55,799 - Automatic_synthesis_UV::INFO -- [JobExecution] : ######### [Automatic_synthesis_UV-HJ] Experiment 2 is running #########
+2023-09-04 20:06:55,835 - Automatic_synthesis_UV::INFO -- [TaskScheduler] : check location: {'BatchSynthesis': {'Stirrer': ['?', '?', '?', '?', '?', '?', '?', '?'], 'vialHolder': ['?', '?', '?', '?', '?', '?', '?', '?']}, 'UV': {'vialHolder': ['?', '?', '?', '?', '?', '?', '?', '?']}}
+2023-09-04 20:06:55,845 - Automatic_synthesis_UV::INFO -- [TaskScheduler] : BatchSynthesis is started, allocate location: {'Stirrer': [0, 1], 'vialHolder': [0, 1]}
+2023-09-04 20:06:55,855 - Automatic_synthesis_UV::INFO -- [TaskScheduler] : check location after allocation: {'BatchSynthesis': {'Stirrer': [1, 1, '?', '?', '?', '?', '?', '?'], 'vialHolder': [1, 1, '?', '?', '?', '?', '?', '?']}, 'UV': {'vialHolder': ['?', '?', '?', '?', '?', '?', '?', '?']}}
+2023-09-04 20:06:57,955 - Automatic_synthesis_UV::DEBUG -- [Batch] : storage_empty_to_stirrer is started.
+2023-09-04 20:06:57,965 - Automatic_synthesis_UV::DEBUG -- [Batch] : vial_num_list: [1, 2]
+2023-09-04 20:06:57,975 - Automatic_synthesis_UV::DEBUG -- [Batch] : line_num_list: [0, 0]
+2023-09-04 20:06:57,980 - Automatic_synthesis_UV::DEBUG -- [Batch] : vialHolder_list: [0, 1]
+2023-09-04 20:06:57,991 - Automatic_synthesis_UV::DEBUG -- [Batch] : Start Robot Queue : storage_empty_to_stirrer is started.
+2023-09-04 20:06:58,001 - Automatic_synthesis_UV::DEBUG -- [LA] : move center-->Start!
+2023-09-04 20:06:59,063 - Automatic_synthesis_UV::DEBUG -- [LA] : move center-->Done!
+2023-09-04 20:06:59,125 - Automatic_synthesis_UV::DEBUG -- [STORAGE] : open-->Start!
+2023-09-04 20:07:02,289 - Automatic_synthesis_UV::DEBUG -- [STORAGE] : open-->Done!
+2023-09-04 20:07:04,347 - Automatic_synthesis_UV::DEBUG -- [DS_B] : prepare container-->Start!
+2023-09-04 20:07:06,488 - Automatic_synthesis_UV::DEBUG -- [DS_B] : prepare container-->Done!
+2023-09-04 20:07:06,498 - Automatic_synthesis_UV::DEBUG -- [Batch] : Finish Robot Queue : storage_empty_to_stirrer is done.
+2023-09-04 20:07:08,697 - Automatic_synthesis_UV::DEBUG -- [Batch] : storage_empty_to_stirrer is started.
+2023-09-04 20:07:08,707 - Automatic_synthesis_UV::DEBUG -- [Batch] : Start Robot Queue : storage_empty_to_stirrer is started.
+2023-09-04 20:07:08,713 - Automatic_synthesis_UV::DEBUG -- [LA] : move center-->Start!
+2023-09-04 20:07:09,796 - Automatic_synthesis_UV::DEBUG -- [LA] : move center-->Done!
+2023-09-04 20:07:09,853 - Automatic_synthesis_UV::DEBUG -- [STORAGE] : open-->Start!
+2023-09-04 20:07:13,112 - Automatic_synthesis_UV::DEBUG -- [STORAGE] : open-->Done!
+2023-09-04 20:07:15,171 - Automatic_synthesis_UV::DEBUG -- [DS_B] : prepare container-->Start!
+2023-09-04 20:07:17,375 - Automatic_synthesis_UV::DEBUG -- [DS_B] : prepare container-->Done!
+2023-09-04 20:07:17,385 - Automatic_synthesis_UV::DEBUG -- [Batch] : Finish Robot Queue : storage_empty_to_stirrer is done.
+2023-09-04 20:07:19,531 - Automatic_synthesis_UV::DEBUG -- [Batch] : Prepare Injection Queue --> NaBH4,0.01mM,500uL,200uL/s
+2023-09-04 20:07:19,541 - Automatic_synthesis_UV::DEBUG -- [PUMP] : prepare solution-->Start!
+2023-09-04 20:07:19,551 - Automatic_synthesis_UV::DEBUG -- [PUMP] : prepare solution-->Done!
+2023-09-04 20:07:19,597 - Automatic_synthesis_UV::DEBUG -- [LA] : move down-->Start!
+2023-09-04 20:07:20,741 - Automatic_synthesis_UV::DEBUG -- [LA] : move down-->Done!
+2023-09-04 20:07:20,787 - Automatic_synthesis_UV::DEBUG -- [Batch] : Start Injection Queue --> NaBH4,0.01mM,4000μL,100μL/s
+2023-09-04 20:07:20,798 - Automatic_synthesis_UV::DEBUG -- [PUMP] : prepare solution-->Start!
+2023-09-04 20:07:24,561 - Automatic_synthesis_UV::DEBUG -- [PUMP] : prepare solution-->Done!
+2023-09-04 20:07:24,618 - Automatic_synthesis_UV::DEBUG -- [LA] : move up-->Start!
+2023-09-04 20:07:25,710 - Automatic_synthesis_UV::DEBUG -- [LA] : move up-->Done!
+2023-09-04 20:07:25,772 - Automatic_synthesis_UV::DEBUG -- [LA] : move center-->Start!
+2023-09-04 20:07:26,871 - Automatic_synthesis_UV::DEBUG -- [LA] : move center-->Done!
+2023-09-04 20:07:26,881 - Automatic_synthesis_UV::DEBUG -- [Batch] : Finish Injection Queue
+2023-09-04 20:07:29,016 - Automatic_synthesis_UV::DEBUG -- [Batch] : Prepare Injection Queue --> NaBH4,0.01mM,500uL,200uL/s
+2023-09-04 20:07:29,026 - Automatic_synthesis_UV::DEBUG -- [PUMP] : prepare solution-->Start!
+2023-09-04 20:07:29,037 - Automatic_synthesis_UV::DEBUG -- [PUMP] : prepare solution-->Done!
+2023-09-04 20:07:29,108 - Automatic_synthesis_UV::DEBUG -- [LA] : move down-->Start!
+2023-09-04 20:07:30,171 - Automatic_synthesis_UV::DEBUG -- [LA] : move down-->Done!
+2023-09-04 20:07:30,223 - Automatic_synthesis_UV::DEBUG -- [Batch] : Start Injection Queue --> NaBH4,0.01mM,4000μL,100μL/s
+2023-09-04 20:07:30,228 - Automatic_synthesis_UV::DEBUG -- [PUMP] : prepare solution-->Start!
+2023-09-04 20:07:33,979 - Automatic_synthesis_UV::DEBUG -- [PUMP] : prepare solution-->Done!
+2023-09-04 20:07:34,040 - Automatic_synthesis_UV::DEBUG -- [LA] : move up-->Start!
+2023-09-04 20:07:35,282 - Automatic_synthesis_UV::DEBUG -- [LA] : move up-->Done!
+2023-09-04 20:07:35,348 - Automatic_synthesis_UV::DEBUG -- [LA] : move center-->Start!
+2023-09-04 20:07:36,567 - Automatic_synthesis_UV::DEBUG -- [LA] : move center-->Done!
+2023-09-04 20:07:36,578 - Automatic_synthesis_UV::DEBUG -- [Batch] : Finish Injection Queue
+2023-09-04 20:07:36,644 - Automatic_synthesis_UV::DEBUG -- [Batch] : Start Stir Queue 0 (Stirrer)
+2023-09-04 20:07:38,273 - Automatic_synthesis_UV::DEBUG -- [Batch] : Start Stir Queue 1 (Stirrer)
+2023-09-04 20:07:40,033 - Automatic_synthesis_UV::DEBUG -- [Batch] : Finish Stir Queue 0 (Stirrer)
+2023-09-04 20:07:40,043 - Automatic_synthesis_UV::DEBUG -- [Batch] : Finish Stir Queue 1 (Stirrer)
+2023-09-04 20:07:40,053 - Automatic_synthesis_UV::DEBUG -- [Batch] : Start Heat Queue 0 (Stirrer)
+2023-09-04 20:07:41,667 - Automatic_synthesis_UV::DEBUG -- [Batch] : Start Heat Queue 1 (Stirrer)
+2023-09-04 20:07:43,081 - Automatic_synthesis_UV::DEBUG -- [Batch] : Finish Heat Queue 0 (Stirrer)
+2023-09-04 20:07:43,092 - Automatic_synthesis_UV::DEBUG -- [Batch] : Finish Heat Queue 1 (Stirrer)
+2023-09-04 20:07:43,112 - Automatic_synthesis_UV::DEBUG -- [Batch] : Start Wait:1s
+2023-09-04 20:07:43,117 - Automatic_synthesis_UV::DEBUG -- [Batch] : Start Wait:1s
+2023-09-04 20:07:43,123 - Automatic_synthesis_UV::DEBUG -- [Batch] : check Wait:1s
+2023-09-04 20:07:43,128 - Automatic_synthesis_UV::DEBUG -- [Batch] : check Wait:1s
+2023-09-04 20:07:43,138 - Automatic_synthesis_UV::DEBUG -- [Batch] : Finish Wait:1s
+2023-09-04 20:07:43,149 - Automatic_synthesis_UV::DEBUG -- [Batch] : Finish Wait:1s
+2023-09-04 20:07:45,248 - Automatic_synthesis_UV::DEBUG -- [Batch] : Prepare Injection Queue --> AgNO3,0.0125mM,500uL,200uL/s
+2023-09-04 20:07:45,258 - Automatic_synthesis_UV::DEBUG -- [PUMP] : prepare solution-->Start!
+2023-09-04 20:07:45,263 - Automatic_synthesis_UV::DEBUG -- [PUMP] : prepare solution-->Done!
+2023-09-04 20:07:45,324 - Automatic_synthesis_UV::DEBUG -- [LA] : move down-->Start!
+2023-09-04 20:07:46,435 - Automatic_synthesis_UV::DEBUG -- [LA] : move down-->Done!
+2023-09-04 20:07:46,501 - Automatic_synthesis_UV::DEBUG -- [Batch] : Start Injection Queue --> AgNO3,0.0125mM,4000μL,100μL/s
+2023-09-04 20:07:46,517 - Automatic_synthesis_UV::DEBUG -- [PUMP] : prepare solution-->Start!
+2023-09-04 20:07:50,291 - Automatic_synthesis_UV::DEBUG -- [PUMP] : prepare solution-->Done!
+2023-09-04 20:07:50,337 - Automatic_synthesis_UV::DEBUG -- [LA] : move up-->Start!
+2023-09-04 20:07:51,503 - Automatic_synthesis_UV::DEBUG -- [LA] : move up-->Done!
+2023-09-04 20:07:51,545 - Automatic_synthesis_UV::DEBUG -- [LA] : move center-->Start!
+2023-09-04 20:07:52,788 - Automatic_synthesis_UV::DEBUG -- [LA] : move center-->Done!
+2023-09-04 20:07:52,798 - Automatic_synthesis_UV::DEBUG -- [Batch] : Finish Injection Queue
+2023-09-04 20:07:54,934 - Automatic_synthesis_UV::DEBUG -- [Batch] : Prepare Injection Queue --> AgNO3,0.0125mM,500uL,200uL/s
+2023-09-04 20:07:54,944 - Automatic_synthesis_UV::DEBUG -- [PUMP] : prepare solution-->Start!
+2023-09-04 20:07:54,954 - Automatic_synthesis_UV::DEBUG -- [PUMP] : prepare solution-->Done!
+2023-09-04 20:07:55,026 - Automatic_synthesis_UV::DEBUG -- [LA] : move down-->Start!
+2023-09-04 20:07:56,146 - Automatic_synthesis_UV::DEBUG -- [LA] : move down-->Done!
+2023-09-04 20:07:56,202 - Automatic_synthesis_UV::DEBUG -- [Batch] : Start Injection Queue --> AgNO3,0.0125mM,4000μL,100μL/s
+2023-09-04 20:07:56,212 - Automatic_synthesis_UV::DEBUG -- [PUMP] : prepare solution-->Start!
+2023-09-04 20:07:59,926 - Automatic_synthesis_UV::DEBUG -- [PUMP] : prepare solution-->Done!
+2023-09-04 20:07:59,988 - Automatic_synthesis_UV::DEBUG -- [LA] : move up-->Start!
+2023-09-04 20:08:01,056 - Automatic_synthesis_UV::DEBUG -- [LA] : move up-->Done!
+2023-09-04 20:08:01,118 - Automatic_synthesis_UV::DEBUG -- [LA] : move center-->Start!
+2023-09-04 20:08:02,332 - Automatic_synthesis_UV::DEBUG -- [LA] : move center-->Done!
+2023-09-04 20:08:02,342 - Automatic_synthesis_UV::DEBUG -- [Batch] : Finish Injection Queue
+2023-09-04 20:08:02,403 - Automatic_synthesis_UV::DEBUG -- [Batch] : Start React:30s
+2023-09-04 20:08:02,419 - Automatic_synthesis_UV::DEBUG -- [Batch] : Start React:30s
+2023-09-04 20:08:12,434 - Automatic_synthesis_UV::DEBUG -- [Batch] : check React:30s
+2023-09-04 20:08:12,439 - Automatic_synthesis_UV::DEBUG -- [Batch] : check React:30s
+2023-09-04 20:08:14,528 - Automatic_synthesis_UV::DEBUG -- [LA] : move center-->Start!
+2023-09-04 20:08:14,564 - Automatic_synthesis_UV::DEBUG -- [LA] : move center-->Start!
+2023-09-04 20:08:15,727 - Automatic_synthesis_UV::DEBUG -- [LA] : move center-->Done!
+2023-09-04 20:08:15,779 - Automatic_synthesis_UV::DEBUG -- [DS_B] : stirrer_to_holder-->Start!
+2023-09-04 20:08:15,932 - Automatic_synthesis_UV::DEBUG -- [LA] : move center-->Done!
+2023-09-04 20:08:15,998 - Automatic_synthesis_UV::DEBUG -- [DS_B] : stirrer_to_holder-->Start!
+2023-09-04 20:08:17,986 - Automatic_synthesis_UV::DEBUG -- [DS_B] : stirrer_to_holder-->Done!
+2023-09-04 20:08:17,996 - Automatic_synthesis_UV::DEBUG -- [Batch] : Finish React:30s
+2023-09-04 20:08:18,188 - Automatic_synthesis_UV::DEBUG -- [DS_B] : stirrer_to_holder-->Done!
+2023-09-04 20:08:18,199 - Automatic_synthesis_UV::DEBUG -- [Batch] : Finish React:30s
+2023-09-04 20:08:18,265 - Automatic_synthesis_UV::INFO -- [TaskScheduler] : BatchSynthesis is finished, location: {'Stirrer': ['?', '?', '?', '?', '?', '?', '?', '?'], 'vialHolder': ['?', '?', '?', '?', '?', '?', '?', '?']}
+2023-09-04 20:08:18,275 - Automatic_synthesis_UV::INFO -- [TaskScheduler] : UV is started, allocate location: {'vialHolder': [0, 1]}
+2023-09-04 20:08:18,286 - Automatic_synthesis_UV::INFO -- [TaskScheduler] : check location after allocation: {'BatchSynthesis': {'Stirrer': ['?', '?', '?', '?', '?', '?', '?', '?'], 'vialHolder': ['?', '?', '?', '?', '?', '?', '?', '?']}, 'UV': {'vialHolder': [1, 1, '?', '?', '?', '?', '?', '?']}}
+2023-09-04 20:08:20,375 - Automatic_synthesis_UV::DEBUG -- [UV-Vis] : Trasfer colloid NP to UV vialholder
+2023-09-04 20:08:20,386 - Automatic_synthesis_UV::DEBUG -- [DS_B] : vialholder_batchsynthesis_to_vialholder_UV-->Start!
+2023-09-04 20:08:22,538 - Automatic_synthesis_UV::DEBUG -- [DS_B] : vialholder_batchsynthesis_to_vialholder_UV-->Done!
+2023-09-04 20:08:22,548 - Automatic_synthesis_UV::DEBUG -- [UV-Vis] : Prepare UV-VIS container
+2023-09-04 20:08:22,559 - Automatic_synthesis_UV::DEBUG -- [DS_B] : cuvette_storage_to_cuvette_holder-->Start!
+2023-09-04 20:08:24,715 - Automatic_synthesis_UV::DEBUG -- [DS_B] : cuvette_storage_to_cuvette_holder-->Done!
+2023-09-04 20:08:24,786 - Automatic_synthesis_UV::DEBUG -- [DS_B] : cuvette_holder_to_UV-->Start!
+2023-09-04 20:08:26,972 - Automatic_synthesis_UV::DEBUG -- [DS_B] : cuvette_holder_to_UV-->Done!
+2023-09-04 20:08:27,044 - Automatic_synthesis_UV::DEBUG -- [DS_B] : UV-VIS Characterization-->Start!
+2023-09-04 20:08:33,764 - Automatic_synthesis_UV::DEBUG -- [DS_B] : UV-VIS Characterization-->Done!
+2023-09-04 20:08:33,815 - Automatic_synthesis_UV::DEBUG -- [DS_B] : Cuvette2ExtractSolution-->Start!
+2023-09-04 20:08:33,826 - Automatic_synthesis_UV::DEBUG -- [UV-Vis] : Start UV sample preparation
+2023-09-04 20:08:36,212 - Automatic_synthesis_UV::DEBUG -- [UV-Vis] : Finish UV sample preparation
+2023-09-04 20:08:36,223 - Automatic_synthesis_UV::DEBUG -- [DS_B] : Cuvette2ExtractSolution-->Done!
+2023-09-04 20:08:36,308 - Automatic_synthesis_UV::DEBUG -- [UV-Vis] : Start UV-VIS Characterization
+2023-09-04 20:08:36,318 - Automatic_synthesis_UV::DEBUG -- [DS_B] : UV-VIS Characterization-->Start!
+2023-09-04 20:08:43,046 - Automatic_synthesis_UV::DEBUG -- [DS_B] : UV-VIS Characterization-->Done!
+2023-09-04 20:08:43,112 - Automatic_synthesis_UV::DEBUG -- [DS_B] : UV_to_cuvette_storage-->Start!
+2023-09-04 20:08:45,315 - Automatic_synthesis_UV::DEBUG -- [DS_B] : UV_to_cuvette_storage-->Done!
+2023-09-04 20:08:45,379 - Automatic_synthesis_UV::DEBUG -- [UV-Vis] : 0 result : OrderedDict([('lambdamax', 403.332732), ('intensity', 0.01956481777803449), ('FWHM', 13.718654000000015)])
+2023-09-04 20:08:45,389 - Automatic_synthesis_UV::DEBUG -- [UV-Vis] : Finish UV-VIS Characterization
+2023-09-04 20:08:47,565 - Automatic_synthesis_UV::DEBUG -- [UV-Vis] : Trasfer colloid NP to UV vialholder
+2023-09-04 20:08:47,575 - Automatic_synthesis_UV::DEBUG -- [DS_B] : vialholder_batchsynthesis_to_vialholder_UV-->Start!
+2023-09-04 20:08:49,743 - Automatic_synthesis_UV::DEBUG -- [DS_B] : vialholder_batchsynthesis_to_vialholder_UV-->Done!
+2023-09-04 20:08:49,753 - Automatic_synthesis_UV::DEBUG -- [UV-Vis] : Prepare UV-VIS container
+2023-09-04 20:08:49,763 - Automatic_synthesis_UV::DEBUG -- [DS_B] : cuvette_storage_to_cuvette_holder-->Start!
+2023-09-04 20:08:51,993 - Automatic_synthesis_UV::DEBUG -- [DS_B] : cuvette_storage_to_cuvette_holder-->Done!
+2023-09-04 20:08:52,070 - Automatic_synthesis_UV::DEBUG -- [DS_B] : cuvette_holder_to_UV-->Start!
+2023-09-04 20:08:54,345 - Automatic_synthesis_UV::DEBUG -- [DS_B] : cuvette_holder_to_UV-->Done!
+2023-09-04 20:08:54,412 - Automatic_synthesis_UV::DEBUG -- [DS_B] : UV-VIS Characterization-->Start!
+2023-09-04 20:09:01,156 - Automatic_synthesis_UV::DEBUG -- [DS_B] : UV-VIS Characterization-->Done!
+2023-09-04 20:09:01,233 - Automatic_synthesis_UV::DEBUG -- [DS_B] : Cuvette2ExtractSolution-->Start!
+2023-09-04 20:09:01,243 - Automatic_synthesis_UV::DEBUG -- [UV-Vis] : Start UV sample preparation
+2023-09-04 20:09:03,332 - Automatic_synthesis_UV::DEBUG -- [UV-Vis] : Finish UV sample preparation
+2023-09-04 20:09:03,343 - Automatic_synthesis_UV::DEBUG -- [DS_B] : Cuvette2ExtractSolution-->Done!
+2023-09-04 20:09:03,419 - Automatic_synthesis_UV::DEBUG -- [UV-Vis] : Start UV-VIS Characterization
+2023-09-04 20:09:03,430 - Automatic_synthesis_UV::DEBUG -- [DS_B] : UV-VIS Characterization-->Start!
+2023-09-04 20:09:10,166 - Automatic_synthesis_UV::DEBUG -- [DS_B] : UV-VIS Characterization-->Done!
+2023-09-04 20:09:10,233 - Automatic_synthesis_UV::DEBUG -- [DS_B] : UV_to_cuvette_storage-->Start!
+2023-09-04 20:09:12,409 - Automatic_synthesis_UV::DEBUG -- [DS_B] : UV_to_cuvette_storage-->Done!
+2023-09-04 20:09:12,437 - Automatic_synthesis_UV::DEBUG -- [UV-Vis] : 1 result : OrderedDict([('lambdamax', 527.330318), ('intensity', 0.017125476744413715), ('FWHM', 28.020790000000034)])
+2023-09-04 20:09:12,442 - Automatic_synthesis_UV::DEBUG -- [UV-Vis] : Finish UV-VIS Characterization
+2023-09-04 20:09:14,608 - Automatic_synthesis_UV::DEBUG -- [RobotArm] : Start Robot Queue : Batch motion (vialholder_UV_to_storage_filled) is started.
+2023-09-04 20:09:14,618 - Automatic_synthesis_UV::DEBUG -- [RobotArm] : vial_num_list:[1, 2]
+2023-09-04 20:09:14,629 - Automatic_synthesis_UV::DEBUG -- [RobotArm] : line_num_list:[0, 0]
+2023-09-04 20:09:14,639 - Automatic_synthesis_UV::DEBUG -- [RobotArm] : vialHolder_list:[0, 1]
+2023-09-04 20:09:25,301 - Automatic_synthesis_UV::DEBUG -- [RobotArm] : Finish Robot Queue : Batch motion (vialholder_UV_to_storage_filled) is done.
+2023-09-04 20:09:25,306 - Automatic_synthesis_UV::DEBUG -- [RobotArm] : Start Robot Queue : Batch motion (vialholder_UV_to_storage_filled) is started.
+2023-09-04 20:09:33,892 - Automatic_synthesis_UV::DEBUG -- [RobotArm] : Finish Robot Queue : Batch motion (vialholder_UV_to_storage_filled) is done.
+2023-09-04 20:09:33,964 - Automatic_synthesis_UV::INFO -- [TaskScheduler] : UV is finished, location: {'vialHolder': ['?', '?', '?', '?', '?', '?', '?', '?']}
+2023-09-04 20:09:33,974 - Automatic_synthesis_UV::INFO -- [TaskScheduler] : refresh location: {'BatchSynthesis': {'Stirrer': ['?', '?', '?', '?', '?', '?', '?', '?'], 'vialHolder': ['?', '?', '?', '?', '?', '?', '?', '?']}, 'UV': {'vialHolder': ['?', '?', '?', '?', '?', '?', '?', '?']}}
+2023-09-04 20:09:34,140 - Automatic_synthesis_UV::INFO -- [JobExecution] : ######### [Automatic_synthesis_UV-HJ] Experiment 2 is done #########
+2023-09-04 20:10:14,533 - Automatic_synthesis_UV::INFO -- [JobExecution] : [jobID=2] Algorithm, model : Automatic
+2023-09-04 20:10:14,549 - Automatic_synthesis_UV::INFO -- [JobExecution] : ######### Cycle start #########
+2023-09-04 20:10:14,565 - Automatic_synthesis_UV::INFO -- [Automatic] : total experiments=2
+2023-09-04 20:10:14,580 - Automatic_synthesis_UV::INFO -- [Automatic [0]] : next_point 0: {'AddSolution=AgNO3_Concentration': 0.0125, 'AddSolution=AgNO3_Volume': 4000, 'AddSolution=AgNO3_Injectionrate': 100}
+2023-09-04 20:10:14,595 - Automatic_synthesis_UV::INFO -- [Automatic [1]] : next_point 1: {'AddSolution=AgNO3_Concentration': 0.0125, 'AddSolution=AgNO3_Volume': 4000, 'AddSolution=AgNO3_Injectionrate': 100}
+2023-09-04 20:10:14,668 - Automatic_synthesis_UV::INFO -- [ProcessGenerator] : Allocate all of process based on job script!
+2023-09-04 20:10:14,684 - Automatic_synthesis_UV::INFO -- [JobExecution] : ######### [Automatic_synthesis_UV-HJ] Experiment 2 is running #########
+2023-09-04 20:10:14,705 - Automatic_synthesis_UV::INFO -- [TaskScheduler] : check location: {'BatchSynthesis': {'Stirrer': ['?', '?', '?', '?', '?', '?', '?', '?'], 'vialHolder': ['?', '?', '?', '?', '?', '?', '?', '?']}, 'UV': {'vialHolder': ['?', '?', '?', '?', '?', '?', '?', '?']}}
+2023-09-04 20:10:14,720 - Automatic_synthesis_UV::INFO -- [TaskScheduler] : BatchSynthesis is started, allocate location: {'Stirrer': [0, 1], 'vialHolder': [0, 1]}
+2023-09-04 20:10:14,736 - Automatic_synthesis_UV::INFO -- [TaskScheduler] : check location after allocation: {'BatchSynthesis': {'Stirrer': [2, 2, '?', '?', '?', '?', '?', '?'], 'vialHolder': [2, 2, '?', '?', '?', '?', '?', '?']}, 'UV': {'vialHolder': ['?', '?', '?', '?', '?', '?', '?', '?']}}
+2023-09-04 20:10:16,811 - Automatic_synthesis_UV::INFO -- [JobExecution] : [jobID=3] Algorithm, model : Automatic
+2023-09-04 20:10:16,863 - Automatic_synthesis_UV::DEBUG -- [Batch] : storage_empty_to_stirrer is started.
+2023-09-04 20:10:16,883 - Automatic_synthesis_UV::DEBUG -- [Batch] : vial_num_list: [3, 4]
+2023-09-04 20:10:16,904 - Automatic_synthesis_UV::DEBUG -- [Batch] : line_num_list: [0, 0]
+2023-09-04 20:10:16,924 - Automatic_synthesis_UV::DEBUG -- [Batch] : vialHolder_list: [0, 1]
+2023-09-04 20:10:16,929 - Automatic_synthesis_UV::DEBUG -- [Batch] : Start Robot Queue : storage_empty_to_stirrer is started.
+2023-09-04 20:10:16,940 - Automatic_synthesis_UV::DEBUG -- [LA] : move center-->Start!
+2023-09-04 20:10:18,038 - Automatic_synthesis_UV::DEBUG -- [LA] : move center-->Done!
+2023-09-04 20:10:18,120 - Automatic_synthesis_UV::DEBUG -- [STORAGE] : open-->Start!
+2023-09-04 20:10:21,257 - Automatic_synthesis_UV::DEBUG -- [STORAGE] : open-->Done!
+2023-09-04 20:10:23,331 - Automatic_synthesis_UV::DEBUG -- [DS_B] : prepare container-->Start!
+2023-09-04 20:10:25,581 - Automatic_synthesis_UV::DEBUG -- [DS_B] : prepare container-->Done!
+2023-09-04 20:10:25,602 - Automatic_synthesis_UV::DEBUG -- [Batch] : Finish Robot Queue : storage_empty_to_stirrer is done.
+2023-09-04 20:10:27,819 - Automatic_synthesis_UV::DEBUG -- [Batch] : storage_empty_to_stirrer is started.
+2023-09-04 20:10:27,840 - Automatic_synthesis_UV::DEBUG -- [Batch] : Start Robot Queue : storage_empty_to_stirrer is started.
+2023-09-04 20:10:27,860 - Automatic_synthesis_UV::DEBUG -- [LA] : move center-->Start!
+2023-09-04 20:10:29,001 - Automatic_synthesis_UV::DEBUG -- [LA] : move center-->Done!
+2023-09-04 20:10:29,096 - Automatic_synthesis_UV::DEBUG -- [STORAGE] : open-->Start!
+2023-09-04 20:10:32,358 - Automatic_synthesis_UV::DEBUG -- [STORAGE] : open-->Done!
+2023-09-04 20:10:34,426 - Automatic_synthesis_UV::DEBUG -- [DS_B] : prepare container-->Start!
+2023-09-04 20:10:36,715 - Automatic_synthesis_UV::DEBUG -- [DS_B] : prepare container-->Done!
+2023-09-04 20:10:36,735 - Automatic_synthesis_UV::DEBUG -- [Batch] : Finish Robot Queue : storage_empty_to_stirrer is done.
+2023-09-04 20:10:38,891 - Automatic_synthesis_UV::DEBUG -- [Batch] : Prepare Injection Queue --> NaBH4,0.01mM,500uL,200uL/s
+2023-09-04 20:10:38,912 - Automatic_synthesis_UV::DEBUG -- [PUMP] : prepare solution-->Start!
+2023-09-04 20:10:38,917 - Automatic_synthesis_UV::DEBUG -- [PUMP] : prepare solution-->Done!
+2023-09-04 20:10:38,983 - Automatic_synthesis_UV::DEBUG -- [LA] : move down-->Start!
+2023-09-04 20:10:40,126 - Automatic_synthesis_UV::DEBUG -- [LA] : move down-->Done!
+2023-09-04 20:10:40,197 - Automatic_synthesis_UV::DEBUG -- [Batch] : Start Injection Queue --> NaBH4,0.01mM,4000μL,100μL/s
+2023-09-04 20:10:40,203 - Automatic_synthesis_UV::DEBUG -- [PUMP] : prepare solution-->Start!
+2023-09-04 20:10:43,931 - Automatic_synthesis_UV::DEBUG -- [PUMP] : prepare solution-->Done!
+2023-09-04 20:10:43,997 - Automatic_synthesis_UV::DEBUG -- [LA] : move up-->Start!
+2023-09-04 20:10:45,094 - Automatic_synthesis_UV::DEBUG -- [LA] : move up-->Done!
+2023-09-04 20:10:45,170 - Automatic_synthesis_UV::DEBUG -- [LA] : move center-->Start!
+2023-09-04 20:10:46,271 - Automatic_synthesis_UV::DEBUG -- [LA] : move center-->Done!
+2023-09-04 20:10:46,291 - Automatic_synthesis_UV::DEBUG -- [Batch] : Finish Injection Queue
+2023-09-04 20:10:48,431 - Automatic_synthesis_UV::DEBUG -- [Batch] : Prepare Injection Queue --> NaBH4,0.01mM,500uL,200uL/s
+2023-09-04 20:10:48,452 - Automatic_synthesis_UV::DEBUG -- [PUMP] : prepare solution-->Start!
+2023-09-04 20:10:48,472 - Automatic_synthesis_UV::DEBUG -- [PUMP] : prepare solution-->Done!
+2023-09-04 20:10:48,519 - Automatic_synthesis_UV::DEBUG -- [LA] : move down-->Start!
+2023-09-04 20:10:49,614 - Automatic_synthesis_UV::DEBUG -- [LA] : move down-->Done!
+2023-09-04 20:10:49,681 - Automatic_synthesis_UV::DEBUG -- [Batch] : Start Injection Queue --> NaBH4,0.01mM,4000μL,100μL/s
+2023-09-04 20:10:49,701 - Automatic_synthesis_UV::DEBUG -- [PUMP] : prepare solution-->Start!
+2023-09-04 20:10:53,519 - Automatic_synthesis_UV::DEBUG -- [PUMP] : prepare solution-->Done!
+2023-09-04 20:10:53,586 - Automatic_synthesis_UV::DEBUG -- [LA] : move up-->Start!
+2023-09-04 20:10:54,730 - Automatic_synthesis_UV::DEBUG -- [LA] : move up-->Done!
+2023-09-04 20:10:54,806 - Automatic_synthesis_UV::DEBUG -- [LA] : move center-->Start!
+2023-09-04 20:10:55,897 - Automatic_synthesis_UV::DEBUG -- [LA] : move center-->Done!
+2023-09-04 20:10:55,917 - Automatic_synthesis_UV::DEBUG -- [Batch] : Finish Injection Queue
+2023-09-04 20:10:55,995 - Automatic_synthesis_UV::DEBUG -- [Batch] : Start Stir Queue 0 (Stirrer)
+2023-09-04 20:10:57,615 - Automatic_synthesis_UV::DEBUG -- [Batch] : Start Stir Queue 1 (Stirrer)
+2023-09-04 20:10:59,327 - Automatic_synthesis_UV::DEBUG -- [Batch] : Finish Stir Queue 0 (Stirrer)
+2023-09-04 20:10:59,349 - Automatic_synthesis_UV::DEBUG -- [Batch] : Finish Stir Queue 1 (Stirrer)
+2023-09-04 20:10:59,369 - Automatic_synthesis_UV::DEBUG -- [Batch] : Start Heat Queue 0 (Stirrer)
+2023-09-04 20:11:01,007 - Automatic_synthesis_UV::DEBUG -- [Batch] : Start Heat Queue 1 (Stirrer)
+2023-09-04 20:11:02,694 - Automatic_synthesis_UV::DEBUG -- [Batch] : Finish Heat Queue 0 (Stirrer)
+2023-09-04 20:11:02,715 - Automatic_synthesis_UV::DEBUG -- [Batch] : Finish Heat Queue 1 (Stirrer)
+2023-09-04 20:11:02,746 - Automatic_synthesis_UV::DEBUG -- [Batch] : Start Wait:1s
+2023-09-04 20:11:02,761 - Automatic_synthesis_UV::DEBUG -- [Batch] : Start Wait:1s
+2023-09-04 20:11:02,776 - Automatic_synthesis_UV::DEBUG -- [Batch] : check Wait:1s
+2023-09-04 20:11:02,792 - Automatic_synthesis_UV::DEBUG -- [Batch] : check Wait:1s
+2023-09-04 20:11:02,807 - Automatic_synthesis_UV::DEBUG -- [Batch] : Finish Wait:1s
+2023-09-04 20:11:02,818 - Automatic_synthesis_UV::DEBUG -- [Batch] : Finish Wait:1s
+2023-09-04 20:11:04,912 - Automatic_synthesis_UV::DEBUG -- [Batch] : Prepare Injection Queue --> AgNO3,0.0125mM,500uL,200uL/s
+2023-09-04 20:11:04,933 - Automatic_synthesis_UV::DEBUG -- [PUMP] : prepare solution-->Start!
+2023-09-04 20:11:04,953 - Automatic_synthesis_UV::DEBUG -- [PUMP] : prepare solution-->Done!
+2023-09-04 20:11:05,030 - Automatic_synthesis_UV::DEBUG -- [LA] : move down-->Start!
+2023-09-04 20:11:06,165 - Automatic_synthesis_UV::DEBUG -- [LA] : move down-->Done!
+2023-09-04 20:11:06,236 - Automatic_synthesis_UV::DEBUG -- [Batch] : Start Injection Queue --> AgNO3,0.0125mM,4000μL,100μL/s
+2023-09-04 20:11:06,257 - Automatic_synthesis_UV::DEBUG -- [PUMP] : prepare solution-->Start!
+2023-09-04 20:11:10,019 - Automatic_synthesis_UV::DEBUG -- [PUMP] : prepare solution-->Done!
+2023-09-04 20:11:10,076 - Automatic_synthesis_UV::DEBUG -- [LA] : move up-->Start!
+2023-09-04 20:11:11,330 - Automatic_synthesis_UV::DEBUG -- [LA] : move up-->Done!
+2023-09-04 20:11:11,413 - Automatic_synthesis_UV::DEBUG -- [LA] : move center-->Start!
+2023-09-04 20:11:12,471 - Automatic_synthesis_UV::DEBUG -- [LA] : move center-->Done!
+2023-09-04 20:11:12,492 - Automatic_synthesis_UV::DEBUG -- [Batch] : Finish Injection Queue
+2023-09-04 20:11:14,642 - Automatic_synthesis_UV::DEBUG -- [Batch] : Prepare Injection Queue --> AgNO3,0.0125mM,500uL,200uL/s
+2023-09-04 20:11:14,663 - Automatic_synthesis_UV::DEBUG -- [PUMP] : prepare solution-->Start!
+2023-09-04 20:11:14,683 - Automatic_synthesis_UV::DEBUG -- [PUMP] : prepare solution-->Done!
+2023-09-04 20:11:14,745 - Automatic_synthesis_UV::DEBUG -- [LA] : move down-->Start!
+2023-09-04 20:11:15,853 - Automatic_synthesis_UV::DEBUG -- [LA] : move down-->Done!
+2023-09-04 20:11:15,929 - Automatic_synthesis_UV::DEBUG -- [Batch] : Start Injection Queue --> AgNO3,0.0125mM,4000μL,100μL/s
+2023-09-04 20:11:15,950 - Automatic_synthesis_UV::DEBUG -- [PUMP] : prepare solution-->Start!
+2023-09-04 20:11:19,851 - Automatic_synthesis_UV::DEBUG -- [PUMP] : prepare solution-->Done!
+2023-09-04 20:11:19,903 - Automatic_synthesis_UV::DEBUG -- [LA] : move up-->Start!
+2023-09-04 20:11:21,033 - Automatic_synthesis_UV::DEBUG -- [LA] : move up-->Done!
+2023-09-04 20:11:21,105 - Automatic_synthesis_UV::DEBUG -- [LA] : move center-->Start!
+2023-09-04 20:11:22,181 - Automatic_synthesis_UV::DEBUG -- [LA] : move center-->Done!
+2023-09-04 20:11:22,202 - Automatic_synthesis_UV::DEBUG -- [Batch] : Finish Injection Queue
+2023-09-04 20:11:22,283 - Automatic_synthesis_UV::DEBUG -- [Batch] : Start React:30s
+2023-09-04 20:11:22,298 - Automatic_synthesis_UV::DEBUG -- [Batch] : Start React:30s
+2023-09-04 20:11:32,318 - Automatic_synthesis_UV::DEBUG -- [Batch] : check React:30s
+2023-09-04 20:11:32,324 - Automatic_synthesis_UV::DEBUG -- [Batch] : check React:30s
+2023-09-04 20:11:34,392 - Automatic_synthesis_UV::DEBUG -- [LA] : move center-->Start!
+2023-09-04 20:11:34,397 - Automatic_synthesis_UV::DEBUG -- [LA] : move center-->Start!
+2023-09-04 20:11:35,526 - Automatic_synthesis_UV::DEBUG -- [LA] : move center-->Done!
+2023-09-04 20:11:35,536 - Automatic_synthesis_UV::DEBUG -- [LA] : move center-->Done!
+2023-09-04 20:11:35,588 - Automatic_synthesis_UV::DEBUG -- [DS_B] : stirrer_to_holder-->Start!
+2023-09-04 20:11:35,624 - Automatic_synthesis_UV::DEBUG -- [DS_B] : stirrer_to_holder-->Start!
+2023-09-04 20:11:37,783 - Automatic_synthesis_UV::DEBUG -- [DS_B] : stirrer_to_holder-->Done!
+2023-09-04 20:11:37,803 - Automatic_synthesis_UV::DEBUG -- [Batch] : Finish React:30s
+2023-09-04 20:11:37,849 - Automatic_synthesis_UV::DEBUG -- [DS_B] : stirrer_to_holder-->Done!
+2023-09-04 20:11:37,870 - Automatic_synthesis_UV::DEBUG -- [Batch] : Finish React:30s
+2023-09-04 20:11:37,937 - Automatic_synthesis_UV::INFO -- [TaskScheduler] : BatchSynthesis is finished, location: {'Stirrer': ['?', '?', '?', '?', '?', '?', '?', '?'], 'vialHolder': ['?', '?', '?', '?', '?', '?', '?', '?']}
+2023-09-04 20:11:37,937 - Automatic_synthesis_UV::INFO -- [TaskScheduler] : UV is started, allocate location: {'vialHolder': [0, 1]}
+2023-09-04 20:11:37,937 - Automatic_synthesis_UV::INFO -- [TaskScheduler] : check location after allocation: {'BatchSynthesis': {'Stirrer': ['?', '?', '?', '?', '?', '?', '?', '?'], 'vialHolder': ['?', '?', '?', '?', '?', '?', '?', '?']}, 'UV': {'vialHolder': [2, 2, '?', '?', '?', '?', '?', '?']}}
+2023-09-04 20:11:40,025 - Automatic_synthesis_UV::DEBUG -- [UV-Vis] : Trasfer colloid NP to UV vialholder
+2023-09-04 20:11:40,045 - Automatic_synthesis_UV::DEBUG -- [DS_B] : vialholder_batchsynthesis_to_vialholder_UV-->Start!
+2023-09-04 20:11:42,324 - Automatic_synthesis_UV::DEBUG -- [DS_B] : vialholder_batchsynthesis_to_vialholder_UV-->Done!
+2023-09-04 20:11:42,345 - Automatic_synthesis_UV::DEBUG -- [UV-Vis] : Prepare UV-VIS container
+2023-09-04 20:11:42,365 - Automatic_synthesis_UV::DEBUG -- [DS_B] : cuvette_storage_to_cuvette_holder-->Start!
+2023-09-04 20:11:44,599 - Automatic_synthesis_UV::DEBUG -- [DS_B] : cuvette_storage_to_cuvette_holder-->Done!
+2023-09-04 20:11:44,676 - Automatic_synthesis_UV::DEBUG -- [DS_B] : cuvette_holder_to_UV-->Start!
+2023-09-04 20:11:46,963 - Automatic_synthesis_UV::DEBUG -- [DS_B] : cuvette_holder_to_UV-->Done!
+2023-09-04 20:11:47,046 - Automatic_synthesis_UV::DEBUG -- [DS_B] : UV-VIS Characterization-->Start!
+2023-09-04 20:11:53,814 - Automatic_synthesis_UV::DEBUG -- [DS_B] : UV-VIS Characterization-->Done!
+2023-09-04 20:11:53,896 - Automatic_synthesis_UV::DEBUG -- [DS_B] : Cuvette2ExtractSolution-->Start!
+2023-09-04 20:11:53,916 - Automatic_synthesis_UV::DEBUG -- [UV-Vis] : Start UV sample preparation
+2023-09-04 20:11:56,096 - Automatic_synthesis_UV::DEBUG -- [UV-Vis] : Finish UV sample preparation
+2023-09-04 20:11:56,117 - Automatic_synthesis_UV::DEBUG -- [DS_B] : Cuvette2ExtractSolution-->Done!
+2023-09-04 20:11:56,199 - Automatic_synthesis_UV::DEBUG -- [UV-Vis] : Start UV-VIS Characterization
+2023-09-04 20:11:56,219 - Automatic_synthesis_UV::DEBUG -- [DS_B] : UV-VIS Characterization-->Start!
+2023-09-04 20:12:02,955 - Automatic_synthesis_UV::DEBUG -- [DS_B] : UV-VIS Characterization-->Done!
+2023-09-04 20:12:03,047 - Automatic_synthesis_UV::DEBUG -- [DS_B] : UV_to_cuvette_storage-->Start!
+2023-09-04 20:12:05,220 - Automatic_synthesis_UV::DEBUG -- [DS_B] : UV_to_cuvette_storage-->Done!
+2023-09-04 20:12:05,305 - Automatic_synthesis_UV::DEBUG -- [UV-Vis] : 0 result : OrderedDict([('lambdamax', 817.791309), ('intensity', 0.023274251315563217), ('FWHM', 10.36299699999995)])
+2023-09-04 20:12:05,326 - Automatic_synthesis_UV::DEBUG -- [UV-Vis] : Finish UV-VIS Characterization
+2023-09-04 20:12:07,502 - Automatic_synthesis_UV::DEBUG -- [UV-Vis] : Trasfer colloid NP to UV vialholder
+2023-09-04 20:12:07,522 - Automatic_synthesis_UV::DEBUG -- [DS_B] : vialholder_batchsynthesis_to_vialholder_UV-->Start!
+2023-09-04 20:12:09,807 - Automatic_synthesis_UV::DEBUG -- [DS_B] : vialholder_batchsynthesis_to_vialholder_UV-->Done!
+2023-09-04 20:12:09,812 - Automatic_synthesis_UV::DEBUG -- [UV-Vis] : Prepare UV-VIS container
+2023-09-04 20:12:09,817 - Automatic_synthesis_UV::DEBUG -- [DS_B] : cuvette_storage_to_cuvette_holder-->Start!
+2023-09-04 20:12:12,024 - Automatic_synthesis_UV::DEBUG -- [DS_B] : cuvette_storage_to_cuvette_holder-->Done!
+2023-09-04 20:12:12,109 - Automatic_synthesis_UV::DEBUG -- [DS_B] : cuvette_holder_to_UV-->Start!
+2023-09-04 20:12:14,216 - Automatic_synthesis_UV::DEBUG -- [DS_B] : cuvette_holder_to_UV-->Done!
+2023-09-04 20:12:14,303 - Automatic_synthesis_UV::DEBUG -- [DS_B] : UV-VIS Characterization-->Start!
+2023-09-04 20:12:21,061 - Automatic_synthesis_UV::DEBUG -- [DS_B] : UV-VIS Characterization-->Done!
+2023-09-04 20:12:21,124 - Automatic_synthesis_UV::DEBUG -- [DS_B] : Cuvette2ExtractSolution-->Start!
+2023-09-04 20:12:21,134 - Automatic_synthesis_UV::DEBUG -- [UV-Vis] : Start UV sample preparation
+2023-09-04 20:12:23,308 - Automatic_synthesis_UV::DEBUG -- [UV-Vis] : Finish UV sample preparation
+2023-09-04 20:12:23,329 - Automatic_synthesis_UV::DEBUG -- [DS_B] : Cuvette2ExtractSolution-->Done!
+2023-09-04 20:12:23,427 - Automatic_synthesis_UV::DEBUG -- [UV-Vis] : Start UV-VIS Characterization
+2023-09-04 20:12:23,448 - Automatic_synthesis_UV::DEBUG -- [DS_B] : UV-VIS Characterization-->Start!
+2023-09-04 20:12:30,203 - Automatic_synthesis_UV::DEBUG -- [DS_B] : UV-VIS Characterization-->Done!
+2023-09-04 20:12:30,269 - Automatic_synthesis_UV::DEBUG -- [DS_B] : UV_to_cuvette_storage-->Start!
+2023-09-04 20:12:32,457 - Automatic_synthesis_UV::DEBUG -- [DS_B] : UV_to_cuvette_storage-->Done!
+2023-09-04 20:12:32,516 - Automatic_synthesis_UV::DEBUG -- [UV-Vis] : 1 result : OrderedDict([('lambdamax', 648.375486), ('intensity', 0.02077618025800412), ('FWHM', 10.461354000000028)])
+2023-09-04 20:12:32,537 - Automatic_synthesis_UV::DEBUG -- [UV-Vis] : Finish UV-VIS Characterization
+2023-09-04 20:12:34,728 - Automatic_synthesis_UV::DEBUG -- [RobotArm] : Start Robot Queue : Batch motion (vialholder_UV_to_storage_filled) is started.
+2023-09-04 20:12:34,748 - Automatic_synthesis_UV::DEBUG -- [RobotArm] : vial_num_list:[3, 4]
+2023-09-04 20:12:34,769 - Automatic_synthesis_UV::DEBUG -- [RobotArm] : line_num_list:[0, 0]
+2023-09-04 20:12:34,789 - Automatic_synthesis_UV::DEBUG -- [RobotArm] : vialHolder_list:[0, 1]
+2023-09-04 20:12:45,716 - Automatic_synthesis_UV::DEBUG -- [RobotArm] : Finish Robot Queue : Batch motion (vialholder_UV_to_storage_filled) is done.
+2023-09-04 20:12:45,736 - Automatic_synthesis_UV::DEBUG -- [RobotArm] : Start Robot Queue : Batch motion (vialholder_UV_to_storage_filled) is started.
+2023-09-04 20:12:54,581 - Automatic_synthesis_UV::DEBUG -- [RobotArm] : Finish Robot Queue : Batch motion (vialholder_UV_to_storage_filled) is done.
+2023-09-04 20:12:54,663 - Automatic_synthesis_UV::INFO -- [TaskScheduler] : UV is finished, location: {'vialHolder': ['?', '?', '?', '?', '?', '?', '?', '?']}
+2023-09-04 20:12:54,683 - Automatic_synthesis_UV::INFO -- [TaskScheduler] : refresh location: {'BatchSynthesis': {'Stirrer': ['?', '?', '?', '?', '?', '?', '?', '?'], 'vialHolder': ['?', '?', '?', '?', '?', '?', '?', '?']}, 'UV': {'vialHolder': ['?', '?', '?', '?', '?', '?', '?', '?']}}
+2023-09-04 20:12:54,880 - Automatic_synthesis_UV::INFO -- [JobExecution] : ######### [Automatic_synthesis_UV-HJ] Experiment 2 is done #########
+2023-09-04 20:12:54,931 - Automatic_synthesis_UV::INFO -- [JobExecution] : ######### Cycle start #########
+2023-09-04 20:12:54,952 - Automatic_synthesis_UV::INFO -- [Automatic] : total experiments=2
+2023-09-04 20:12:54,972 - Automatic_synthesis_UV::INFO -- [Automatic [0]] : next_point 0: {'AddSolution=AgNO3_Concentration': 0.0125, 'AddSolution=AgNO3_Volume': 4000, 'AddSolution=AgNO3_Injectionrate': 100}
+2023-09-04 20:12:54,993 - Automatic_synthesis_UV::INFO -- [Automatic [1]] : next_point 1: {'AddSolution=AgNO3_Concentration': 0.0125, 'AddSolution=AgNO3_Volume': 4000, 'AddSolution=AgNO3_Injectionrate': 100}
+2023-09-04 20:12:55,066 - Automatic_synthesis_UV::INFO -- [ProcessGenerator] : Allocate all of process based on job script!
+2023-09-04 20:12:55,086 - Automatic_synthesis_UV::INFO -- [JobExecution] : ######### [Automatic_synthesis_UV-HJ] Experiment 2 is running #########
+2023-09-04 20:12:55,138 - Automatic_synthesis_UV::INFO -- [TaskScheduler] : check location: {'BatchSynthesis': {'Stirrer': ['?', '?', '?', '?', '?', '?', '?', '?'], 'vialHolder': ['?', '?', '?', '?', '?', '?', '?', '?']}, 'UV': {'vialHolder': ['?', '?', '?', '?', '?', '?', '?', '?']}}
+2023-09-04 20:12:55,158 - Automatic_synthesis_UV::INFO -- [TaskScheduler] : BatchSynthesis is started, allocate location: {'Stirrer': [0, 1], 'vialHolder': [0, 1]}
+2023-09-04 20:12:55,179 - Automatic_synthesis_UV::INFO -- [TaskScheduler] : check location after allocation: {'BatchSynthesis': {'Stirrer': [3, 3, '?', '?', '?', '?', '?', '?'], 'vialHolder': [3, 3, '?', '?', '?', '?', '?', '?']}, 'UV': {'vialHolder': ['?', '?', '?', '?', '?', '?', '?', '?']}}
+2023-09-04 20:12:57,289 - Automatic_synthesis_UV::DEBUG -- [Batch] : storage_empty_to_stirrer is started.
+2023-09-04 20:12:57,309 - Automatic_synthesis_UV::DEBUG -- [Batch] : vial_num_list: [5, 6]
+2023-09-04 20:12:57,330 - Automatic_synthesis_UV::DEBUG -- [Batch] : line_num_list: [0, 0]
+2023-09-04 20:12:57,350 - Automatic_synthesis_UV::DEBUG -- [Batch] : vialHolder_list: [0, 1]
+2023-09-04 20:12:57,371 - Automatic_synthesis_UV::DEBUG -- [Batch] : Start Robot Queue : storage_empty_to_stirrer is started.
+2023-09-04 20:12:57,391 - Automatic_synthesis_UV::DEBUG -- [LA] : move center-->Start!
+2023-09-04 20:12:58,504 - Automatic_synthesis_UV::DEBUG -- [LA] : move center-->Done!
+2023-09-04 20:12:58,576 - Automatic_synthesis_UV::DEBUG -- [STORAGE] : open-->Start!
+2023-09-04 20:13:01,746 - Automatic_synthesis_UV::DEBUG -- [STORAGE] : open-->Done!
+2023-09-04 20:13:03,814 - Automatic_synthesis_UV::DEBUG -- [DS_B] : prepare container-->Start!
+2023-09-04 20:13:06,037 - Automatic_synthesis_UV::DEBUG -- [DS_B] : prepare container-->Done!
+2023-09-04 20:13:06,058 - Automatic_synthesis_UV::DEBUG -- [Batch] : Finish Robot Queue : storage_empty_to_stirrer is done.
+2023-09-04 20:13:08,219 - Automatic_synthesis_UV::DEBUG -- [Batch] : storage_empty_to_stirrer is started.
+2023-09-04 20:13:08,239 - Automatic_synthesis_UV::DEBUG -- [Batch] : Start Robot Queue : storage_empty_to_stirrer is started.
+2023-09-04 20:13:08,260 - Automatic_synthesis_UV::DEBUG -- [LA] : move center-->Start!
+2023-09-04 20:13:09,401 - Automatic_synthesis_UV::DEBUG -- [LA] : move center-->Done!
+2023-09-04 20:13:09,468 - Automatic_synthesis_UV::DEBUG -- [STORAGE] : open-->Start!
+2023-09-04 20:13:12,756 - Automatic_synthesis_UV::DEBUG -- [STORAGE] : open-->Done!
+2023-09-04 20:13:14,818 - Automatic_synthesis_UV::DEBUG -- [DS_B] : prepare container-->Start!
+2023-09-04 20:13:17,033 - Automatic_synthesis_UV::DEBUG -- [DS_B] : prepare container-->Done!
+2023-09-04 20:13:17,054 - Automatic_synthesis_UV::DEBUG -- [Batch] : Finish Robot Queue : storage_empty_to_stirrer is done.
+2023-09-04 20:13:19,199 - Automatic_synthesis_UV::DEBUG -- [Batch] : Prepare Injection Queue --> NaBH4,0.01mM,500uL,200uL/s
+2023-09-04 20:13:19,220 - Automatic_synthesis_UV::DEBUG -- [PUMP] : prepare solution-->Start!
+2023-09-04 20:13:19,240 - Automatic_synthesis_UV::DEBUG -- [PUMP] : prepare solution-->Done!
+2023-09-04 20:13:19,307 - Automatic_synthesis_UV::DEBUG -- [LA] : move down-->Start!
+2023-09-04 20:13:20,409 - Automatic_synthesis_UV::DEBUG -- [LA] : move down-->Done!
+2023-09-04 20:13:20,461 - Automatic_synthesis_UV::DEBUG -- [Batch] : Start Injection Queue --> NaBH4,0.01mM,4000μL,100μL/s
+2023-09-04 20:13:20,481 - Automatic_synthesis_UV::DEBUG -- [PUMP] : prepare solution-->Start!
+2023-09-04 20:13:24,195 - Automatic_synthesis_UV::DEBUG -- [PUMP] : prepare solution-->Done!
+2023-09-04 20:13:24,252 - Automatic_synthesis_UV::DEBUG -- [LA] : move up-->Start!
+2023-09-04 20:13:25,379 - Automatic_synthesis_UV::DEBUG -- [LA] : move up-->Done!
+2023-09-04 20:13:25,446 - Automatic_synthesis_UV::DEBUG -- [LA] : move center-->Start!
+2023-09-04 20:13:26,566 - Automatic_synthesis_UV::DEBUG -- [LA] : move center-->Done!
+2023-09-04 20:13:26,586 - Automatic_synthesis_UV::DEBUG -- [Batch] : Finish Injection Queue
+2023-09-04 20:13:28,711 - Automatic_synthesis_UV::DEBUG -- [Batch] : Prepare Injection Queue --> NaBH4,0.01mM,500uL,200uL/s
+2023-09-04 20:13:28,732 - Automatic_synthesis_UV::DEBUG -- [PUMP] : prepare solution-->Start!
+2023-09-04 20:13:28,753 - Automatic_synthesis_UV::DEBUG -- [PUMP] : prepare solution-->Done!
+2023-09-04 20:13:28,824 - Automatic_synthesis_UV::DEBUG -- [LA] : move down-->Start!
+2023-09-04 20:13:29,970 - Automatic_synthesis_UV::DEBUG -- [LA] : move down-->Done!
+2023-09-04 20:13:30,031 - Automatic_synthesis_UV::DEBUG -- [Batch] : Start Injection Queue --> NaBH4,0.01mM,4000μL,100μL/s
+2023-09-04 20:13:30,052 - Automatic_synthesis_UV::DEBUG -- [PUMP] : prepare solution-->Start!
+2023-09-04 20:13:33,787 - Automatic_synthesis_UV::DEBUG -- [PUMP] : prepare solution-->Done!
+2023-09-04 20:13:33,847 - Automatic_synthesis_UV::DEBUG -- [LA] : move up-->Start!
+2023-09-04 20:13:34,925 - Automatic_synthesis_UV::DEBUG -- [LA] : move up-->Done!
+2023-09-04 20:13:34,991 - Automatic_synthesis_UV::DEBUG -- [LA] : move center-->Start!
+2023-09-04 20:13:36,087 - Automatic_synthesis_UV::DEBUG -- [LA] : move center-->Done!
+2023-09-04 20:13:36,107 - Automatic_synthesis_UV::DEBUG -- [Batch] : Finish Injection Queue
+2023-09-04 20:13:36,174 - Automatic_synthesis_UV::DEBUG -- [Batch] : Start Stir Queue 0 (Stirrer)
+2023-09-04 20:13:37,803 - Automatic_synthesis_UV::DEBUG -- [Batch] : Start Stir Queue 1 (Stirrer)
+2023-09-04 20:13:39,370 - Automatic_synthesis_UV::DEBUG -- [Batch] : Finish Stir Queue 0 (Stirrer)
+2023-09-04 20:13:39,390 - Automatic_synthesis_UV::DEBUG -- [Batch] : Finish Stir Queue 1 (Stirrer)
+2023-09-04 20:13:39,411 - Automatic_synthesis_UV::DEBUG -- [Batch] : Start Heat Queue 0 (Stirrer)
+2023-09-04 20:13:40,913 - Automatic_synthesis_UV::DEBUG -- [Batch] : Start Heat Queue 1 (Stirrer)
+2023-09-04 20:13:42,530 - Automatic_synthesis_UV::DEBUG -- [Batch] : Finish Heat Queue 0 (Stirrer)
+2023-09-04 20:13:42,536 - Automatic_synthesis_UV::DEBUG -- [Batch] : Finish Heat Queue 1 (Stirrer)
+2023-09-04 20:13:42,561 - Automatic_synthesis_UV::DEBUG -- [Batch] : Start Wait:1s
+2023-09-04 20:13:42,572 - Automatic_synthesis_UV::DEBUG -- [Batch] : Start Wait:1s
+2023-09-04 20:13:42,592 - Automatic_synthesis_UV::DEBUG -- [Batch] : check Wait:1s
+2023-09-04 20:13:42,608 - Automatic_synthesis_UV::DEBUG -- [Batch] : check Wait:1s
+2023-09-04 20:13:42,608 - Automatic_synthesis_UV::DEBUG -- [Batch] : Finish Wait:1s
+2023-09-04 20:13:42,608 - Automatic_synthesis_UV::DEBUG -- [Batch] : Finish Wait:1s
+2023-09-04 20:13:44,703 - Automatic_synthesis_UV::DEBUG -- [Batch] : Prepare Injection Queue --> AgNO3,0.0125mM,500uL,200uL/s
+2023-09-04 20:13:44,723 - Automatic_synthesis_UV::DEBUG -- [PUMP] : prepare solution-->Start!
+2023-09-04 20:13:44,744 - Automatic_synthesis_UV::DEBUG -- [PUMP] : prepare solution-->Done!
+2023-09-04 20:13:44,795 - Automatic_synthesis_UV::DEBUG -- [LA] : move down-->Start!
+2023-09-04 20:13:45,898 - Automatic_synthesis_UV::DEBUG -- [LA] : move down-->Done!
+2023-09-04 20:13:45,960 - Automatic_synthesis_UV::DEBUG -- [Batch] : Start Injection Queue --> AgNO3,0.0125mM,4000μL,100μL/s
+2023-09-04 20:13:45,980 - Automatic_synthesis_UV::DEBUG -- [PUMP] : prepare solution-->Start!
+2023-09-04 20:13:49,747 - Automatic_synthesis_UV::DEBUG -- [PUMP] : prepare solution-->Done!
+2023-09-04 20:13:49,808 - Automatic_synthesis_UV::DEBUG -- [LA] : move up-->Start!
+2023-09-04 20:13:51,009 - Automatic_synthesis_UV::DEBUG -- [LA] : move up-->Done!
+2023-09-04 20:13:51,056 - Automatic_synthesis_UV::DEBUG -- [LA] : move center-->Start!
+2023-09-04 20:13:52,182 - Automatic_synthesis_UV::DEBUG -- [LA] : move center-->Done!
+2023-09-04 20:13:52,203 - Automatic_synthesis_UV::DEBUG -- [Batch] : Finish Injection Queue
+2023-09-04 20:13:54,333 - Automatic_synthesis_UV::DEBUG -- [Batch] : Prepare Injection Queue --> AgNO3,0.0125mM,500uL,200uL/s
+2023-09-04 20:13:54,353 - Automatic_synthesis_UV::DEBUG -- [PUMP] : prepare solution-->Start!
+2023-09-04 20:13:54,374 - Automatic_synthesis_UV::DEBUG -- [PUMP] : prepare solution-->Done!
+2023-09-04 20:13:54,430 - Automatic_synthesis_UV::DEBUG -- [LA] : move down-->Start!
+2023-09-04 20:13:55,591 - Automatic_synthesis_UV::DEBUG -- [LA] : move down-->Done!
+2023-09-04 20:13:55,648 - Automatic_synthesis_UV::DEBUG -- [Batch] : Start Injection Queue --> AgNO3,0.0125mM,4000μL,100μL/s
+2023-09-04 20:13:55,669 - Automatic_synthesis_UV::DEBUG -- [PUMP] : prepare solution-->Start!
+2023-09-04 20:13:59,337 - Automatic_synthesis_UV::DEBUG -- [PUMP] : prepare solution-->Done!
+2023-09-04 20:13:59,399 - Automatic_synthesis_UV::DEBUG -- [LA] : move up-->Start!
+2023-09-04 20:14:00,510 - Automatic_synthesis_UV::DEBUG -- [LA] : move up-->Done!
+2023-09-04 20:14:00,562 - Automatic_synthesis_UV::DEBUG -- [LA] : move center-->Start!
+2023-09-04 20:14:01,694 - Automatic_synthesis_UV::DEBUG -- [LA] : move center-->Done!
+2023-09-04 20:14:01,714 - Automatic_synthesis_UV::DEBUG -- [Batch] : Finish Injection Queue
+2023-09-04 20:14:01,776 - Automatic_synthesis_UV::DEBUG -- [Batch] : Start React:30s
+2023-09-04 20:14:01,781 - Automatic_synthesis_UV::DEBUG -- [Batch] : Start React:30s
+2023-09-04 20:14:11,810 - Automatic_synthesis_UV::DEBUG -- [Batch] : check React:30s
+2023-09-04 20:14:11,837 - Automatic_synthesis_UV::DEBUG -- [Batch] : check React:30s
+2023-09-04 20:14:13,906 - Automatic_synthesis_UV::DEBUG -- [LA] : move center-->Start!
+2023-09-04 20:14:13,947 - Automatic_synthesis_UV::DEBUG -- [LA] : move center-->Start!
+2023-09-04 20:14:15,072 - Automatic_synthesis_UV::DEBUG -- [LA] : move center-->Done!
+2023-09-04 20:14:15,083 - Automatic_synthesis_UV::DEBUG -- [LA] : move center-->Done!
+2023-09-04 20:14:15,166 - Automatic_synthesis_UV::DEBUG -- [DS_B] : stirrer_to_holder-->Start!
+2023-09-04 20:14:15,176 - Automatic_synthesis_UV::DEBUG -- [DS_B] : stirrer_to_holder-->Start!
+2023-09-04 20:14:17,335 - Automatic_synthesis_UV::DEBUG -- [DS_B] : stirrer_to_holder-->Done!
+2023-09-04 20:14:17,340 - Automatic_synthesis_UV::DEBUG -- [Batch] : Finish React:30s
+2023-09-04 20:14:17,386 - Automatic_synthesis_UV::DEBUG -- [DS_B] : stirrer_to_holder-->Done!
+2023-09-04 20:14:17,412 - Automatic_synthesis_UV::DEBUG -- [Batch] : Finish React:30s
+2023-09-04 20:14:17,479 - Automatic_synthesis_UV::INFO -- [TaskScheduler] : BatchSynthesis is finished, location: {'Stirrer': ['?', '?', '?', '?', '?', '?', '?', '?'], 'vialHolder': ['?', '?', '?', '?', '?', '?', '?', '?']}
+2023-09-04 20:14:17,499 - Automatic_synthesis_UV::INFO -- [TaskScheduler] : UV is started, allocate location: {'vialHolder': [0, 1]}
+2023-09-04 20:14:17,520 - Automatic_synthesis_UV::INFO -- [TaskScheduler] : check location after allocation: {'BatchSynthesis': {'Stirrer': ['?', '?', '?', '?', '?', '?', '?', '?'], 'vialHolder': ['?', '?', '?', '?', '?', '?', '?', '?']}, 'UV': {'vialHolder': [3, 3, '?', '?', '?', '?', '?', '?']}}
+2023-09-04 20:14:19,620 - Automatic_synthesis_UV::DEBUG -- [UV-Vis] : Trasfer colloid NP to UV vialholder
+2023-09-04 20:14:19,640 - Automatic_synthesis_UV::DEBUG -- [DS_B] : vialholder_batchsynthesis_to_vialholder_UV-->Start!
+2023-09-04 20:14:21,843 - Automatic_synthesis_UV::DEBUG -- [DS_B] : vialholder_batchsynthesis_to_vialholder_UV-->Done!
+2023-09-04 20:14:21,859 - Automatic_synthesis_UV::DEBUG -- [UV-Vis] : Prepare UV-VIS container
+2023-09-04 20:14:21,859 - Automatic_synthesis_UV::DEBUG -- [DS_B] : cuvette_storage_to_cuvette_holder-->Start!
+2023-09-04 20:14:24,038 - Automatic_synthesis_UV::DEBUG -- [DS_B] : cuvette_storage_to_cuvette_holder-->Done!
+2023-09-04 20:14:24,110 - Automatic_synthesis_UV::DEBUG -- [DS_B] : cuvette_holder_to_UV-->Start!
+2023-09-04 20:14:26,273 - Automatic_synthesis_UV::DEBUG -- [DS_B] : cuvette_holder_to_UV-->Done!
+2023-09-04 20:14:26,345 - Automatic_synthesis_UV::DEBUG -- [DS_B] : UV-VIS Characterization-->Start!
+2023-09-04 20:14:33,112 - Automatic_synthesis_UV::DEBUG -- [DS_B] : UV-VIS Characterization-->Done!
+2023-09-04 20:14:33,189 - Automatic_synthesis_UV::DEBUG -- [DS_B] : Cuvette2ExtractSolution-->Start!
+2023-09-04 20:14:33,209 - Automatic_synthesis_UV::DEBUG -- [UV-Vis] : Start UV sample preparation
+2023-09-04 20:14:35,482 - Automatic_synthesis_UV::DEBUG -- [UV-Vis] : Finish UV sample preparation
+2023-09-04 20:14:35,503 - Automatic_synthesis_UV::DEBUG -- [DS_B] : Cuvette2ExtractSolution-->Done!
+2023-09-04 20:14:35,585 - Automatic_synthesis_UV::DEBUG -- [UV-Vis] : Start UV-VIS Characterization
+2023-09-04 20:14:35,605 - Automatic_synthesis_UV::DEBUG -- [DS_B] : UV-VIS Characterization-->Start!
+2023-09-04 20:14:42,334 - Automatic_synthesis_UV::DEBUG -- [DS_B] : UV-VIS Characterization-->Done!
+2023-09-04 20:14:42,411 - Automatic_synthesis_UV::DEBUG -- [DS_B] : UV_to_cuvette_storage-->Start!
+2023-09-04 20:14:44,561 - Automatic_synthesis_UV::DEBUG -- [DS_B] : UV_to_cuvette_storage-->Done!
+2023-09-04 20:14:44,630 - Automatic_synthesis_UV::DEBUG -- [UV-Vis] : 0 result : OrderedDict([('lambdamax', 609.422612), ('intensity', 0.017298667087774874), ('FWHM', 11.66335300000003)])
+2023-09-04 20:14:44,641 - Automatic_synthesis_UV::DEBUG -- [UV-Vis] : Finish UV-VIS Characterization
+2023-09-04 20:14:46,792 - Automatic_synthesis_UV::DEBUG -- [UV-Vis] : Trasfer colloid NP to UV vialholder
+2023-09-04 20:14:46,812 - Automatic_synthesis_UV::DEBUG -- [DS_B] : vialholder_batchsynthesis_to_vialholder_UV-->Start!
+2023-09-04 20:14:48,921 - Automatic_synthesis_UV::DEBUG -- [DS_B] : vialholder_batchsynthesis_to_vialholder_UV-->Done!
+2023-09-04 20:14:48,941 - Automatic_synthesis_UV::DEBUG -- [UV-Vis] : Prepare UV-VIS container
+2023-09-04 20:14:48,962 - Automatic_synthesis_UV::DEBUG -- [DS_B] : cuvette_storage_to_cuvette_holder-->Start!
+2023-09-04 20:14:51,203 - Automatic_synthesis_UV::DEBUG -- [DS_B] : cuvette_storage_to_cuvette_holder-->Done!
+2023-09-04 20:14:51,264 - Automatic_synthesis_UV::DEBUG -- [DS_B] : cuvette_holder_to_UV-->Start!
+2023-09-04 20:14:53,607 - Automatic_synthesis_UV::DEBUG -- [DS_B] : cuvette_holder_to_UV-->Done!
+2023-09-04 20:14:53,684 - Automatic_synthesis_UV::DEBUG -- [DS_B] : UV-VIS Characterization-->Start!
+2023-09-04 20:15:00,420 - Automatic_synthesis_UV::DEBUG -- [DS_B] : UV-VIS Characterization-->Done!
+2023-09-04 20:15:00,451 - Automatic_synthesis_UV::DEBUG -- [DS_B] : Cuvette2ExtractSolution-->Start!
+2023-09-04 20:15:00,462 - Automatic_synthesis_UV::DEBUG -- [UV-Vis] : Start UV sample preparation
+2023-09-04 20:15:02,759 - Automatic_synthesis_UV::DEBUG -- [UV-Vis] : Finish UV sample preparation
+2023-09-04 20:15:02,779 - Automatic_synthesis_UV::DEBUG -- [DS_B] : Cuvette2ExtractSolution-->Done!
+2023-09-04 20:15:02,846 - Automatic_synthesis_UV::DEBUG -- [UV-Vis] : Start UV-VIS Characterization
+2023-09-04 20:15:02,866 - Automatic_synthesis_UV::DEBUG -- [DS_B] : UV-VIS Characterization-->Start!
+2023-09-04 20:15:09,619 - Automatic_synthesis_UV::DEBUG -- [DS_B] : UV-VIS Characterization-->Done!
+2023-09-04 20:15:09,691 - Automatic_synthesis_UV::DEBUG -- [DS_B] : UV_to_cuvette_storage-->Start!
+2023-09-04 20:15:11,823 - Automatic_synthesis_UV::DEBUG -- [DS_B] : UV_to_cuvette_storage-->Done!
+2023-09-04 20:15:11,881 - Automatic_synthesis_UV::DEBUG -- [UV-Vis] : 1 result : OrderedDict([('lambdamax', 676.625057), ('intensity', 0.02089113455054612), ('FWHM', 25.8759)])
+2023-09-04 20:15:11,902 - Automatic_synthesis_UV::DEBUG -- [UV-Vis] : Finish UV-VIS Characterization
+2023-09-04 20:15:14,094 - Automatic_synthesis_UV::DEBUG -- [RobotArm] : Start Robot Queue : Batch motion (vialholder_UV_to_storage_filled) is started.
+2023-09-04 20:15:14,114 - Automatic_synthesis_UV::DEBUG -- [RobotArm] : vial_num_list:[5, 6]
+2023-09-04 20:15:14,135 - Automatic_synthesis_UV::DEBUG -- [RobotArm] : line_num_list:[0, 0]
+2023-09-04 20:15:14,156 - Automatic_synthesis_UV::DEBUG -- [RobotArm] : vialHolder_list:[0, 1]
+2023-09-04 20:15:24,660 - Automatic_synthesis_UV::DEBUG -- [RobotArm] : Finish Robot Queue : Batch motion (vialholder_UV_to_storage_filled) is done.
+2023-09-04 20:15:24,660 - Automatic_synthesis_UV::DEBUG -- [RobotArm] : Start Robot Queue : Batch motion (vialholder_UV_to_storage_filled) is started.
+2023-09-04 20:15:33,234 - Automatic_synthesis_UV::DEBUG -- [RobotArm] : Finish Robot Queue : Batch motion (vialholder_UV_to_storage_filled) is done.
+2023-09-04 20:15:33,306 - Automatic_synthesis_UV::INFO -- [TaskScheduler] : UV is finished, location: {'vialHolder': ['?', '?', '?', '?', '?', '?', '?', '?']}
+2023-09-04 20:15:33,326 - Automatic_synthesis_UV::INFO -- [TaskScheduler] : refresh location: {'BatchSynthesis': {'Stirrer': ['?', '?', '?', '?', '?', '?', '?', '?'], 'vialHolder': ['?', '?', '?', '?', '?', '?', '?', '?']}, 'UV': {'vialHolder': ['?', '?', '?', '?', '?', '?', '?', '?']}}
+2023-09-04 20:15:33,510 - Automatic_synthesis_UV::INFO -- [JobExecution] : ######### [Automatic_synthesis_UV-HJ] Experiment 2 is done #########
