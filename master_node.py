@@ -117,28 +117,6 @@ def executeJob(JobTrigger_obj, job_schedule_mode, job_wait_queue, job_exec_queue
         else:
             pass
 
-
-# def executeJob(JobTrigger_obj, job_schedule_mode, job_wait_queue, job_exec_queue, TaskScheduler_obj, TaskGenerator_obj, ResourceManager_obj):
-#     while True:
-#         # Scheduling algorithm에 맞는 job script pop
-#         popped_job_exec_obj=getattr(JobTrigger_obj, job_schedule_mode)(job_wait_queue, job_exec_queue, ResourceManager_obj)
-        
-#         # define Start jobExecution function
-#         def startExecution(input_job_exec_obj, input_job_exec_queue, input_TaskScheduler_obj, input_TaskGenerator_obj):
-#             input_job_exec_queue.append(input_job_exec_obj)
-#             input_job_exec_obj.execute(input_TaskScheduler_obj, input_TaskGenerator_obj)
-#             input_job_exec_queue.remove(input_job_exec_obj)
-#         # generate thread
-#         thread_list=[]
-#         thread = threading.Thread(target=startExecution, args=(popped_job_exec_obj, job_exec_queue, TaskScheduler_obj, TaskGenerator_obj))
-#         thread_list.append(thread)
-#         # start thread
-#         for thread in thread_list: 
-#             thread.start()
-#         # main thread wait thread termination
-#         for thread in thread_list:
-#             thread.join()
-
 def start_server():
     SERVER_HOST=''  # permit from all interfaces
     SERVER_PORT=5555 # if you want, can change
@@ -198,23 +176,3 @@ start_server()
 # python  96988 sdl-main    3u  IPv4 975995      0t0  TCP localhost:5555 (LISTEN)
 # python  96988 sdl-main    5u  IPv4 976000      0t0  TCP localhost:5555->localhost:57954 (CLOSE_WAIT)
 # >>> sudo kill -9 96988
-
-stirrer_list=[
-    posx(-251.000, 628.000, 315.300, 0, -180, 135),
-    posx(-217.500, 628.100, 315.500, 0, -180, 135),
-    posx(-171.100, 627.980, 316.010, 0, -180, 135),
-    posx(-135.700, 627.500, 316.010, 0, -180, 135),
-    posx(-252.800, 593.200, 316.010, 0, -180, 135),
-    posx(-217.800, 592.500, 316.010, 0, -180, 135),
-    posx(-172.000, 592.000, 316.010, 0, -180, 135),
-    posx(-136.700, 592.500, 316.030, 0, -180, 135),
-    posx(-253.000, 547.600, 316.000, 0, -180, 135),
-    posx(-218.300, 547.000, 316.010, 0, -180, 135),
-    posx(-172.990, 546.300, 316.020, 0, -180, 135),
-    posx(-137.400, 545.700, 316.010, 0, -180, 135),
-    posx(-253.300, 512.800, 316.010, 0, -180, 135),
-    posx(-218.400, 512.200, 316.020, 0, -180, 135),
-    posx(-172.490, 512.000, 316.020, 0, -180, 135),
-    posx(-138.000, 510.500, 316.000, 0, -180, 135)
-]
-
