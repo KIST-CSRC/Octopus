@@ -91,6 +91,16 @@ Master Node
 ├── client.py: activate client object
 └── master_node.py: activate master node after modules activation
 ```
+# How to work
+1. If you activate all modules, then exectue below command.
+```bash
+python master_node.py
+```
+2. activate client.py
+```bash
+python Client.py
+```
+3. input username, password in prompt.
 
 # Benefit
 Our study highlights both capabilities of the operating consolidation system with unsupervised schedulers to manage various experiments without human intervention and to obtain outstanding operational efficiency for automated or autonomous experimentations.
