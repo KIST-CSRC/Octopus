@@ -1,22 +1,22 @@
-# OCTOPUS (Operating Consolidation system for Task Optimization and Parallelization with Unsupervised Schedulers)
+# OCTOPUS (Operation Control system for Task Optimization and job Parallelization with User-optimal Schedulers)
 
 # Background
 The Materials Acceleration Platform (MAP) has been facilitated to material discovery through widespread exploration of the chemical space. However, severe problems in MAP.
 1. The development of operating system for MAP could inevitably face complex architecture to manipulate diverse experiments simultaneously. 
-2. As a number of experimentations execute, superposition challenges of experimental module or device could exponentially derive resource inefficiency from bottleneck of chemical process.
+2. As a number of experimentations execute, overlap challenges of experimental module or device could exponentially derive resource inefficiency from bottleneck of chemical process.
 
 Therefore, we report OCTOPUS for MAP; following two strategies below.
-1. Operating Consolidation system for materials acceleration platform (MAP)
-2. Unsupervised Schedulers for superposition issues and task allocation in realisitic platform
+1. Operation Control system for Materials Acceleration Platform (MAP)
+2. User-optimal Schedulers for overlapp issues and resource allocation in realisitic platform
 
 # System Architecture of OCTOPUS
 
 <p align="center">
-  <img src="paper_result\img\TOC.jpg" width="50%" height="50%" />
+  <img src="paper_result/TOC.jpg" width="50%" height="50%" />
 </p>
 
 
-## Operating consolidation system for MAP
+## Operation Control system for MAP
 
 ### 1. Concepts
 1. Homogeneity
@@ -28,17 +28,17 @@ Therefore, we report OCTOPUS for MAP; following two strategies below.
 1. client/server-based central management system to execute closed-loop experimentation as job for multiple clients
 2. network protocol-aided process modularization and utilization. OCTOPUS could truly four benefits of efficiency in MAP.
 
-## Unsupervised Schedulers for superposition issues and task allocation in realisitic platform
+## User-optimal Schedulers for overlap issues and resource allocation in realisitic platform
 
 ### 1. Concepts
-1. Module superposition due to task bottleneck times
-2. Device superposition due to multiple task in device intersection
+1. Module overlap due to device standby times
+2. Device overlap such as device collision or device sharing environments
 3. Job or task delay due to limitation of module resource
 
 ### 2. Technique
-1. Job parallelization using bottleneck times
+1. Job parallelization using device standby times
 2. Task optimization with masking table
-3. Closed-packing schedule for module resource efficiency in realistic platform
+3. The closed-packing schedule for optimizing module resource efficiency in realistic platform
 
 # User Manual
 ## Using conda
@@ -57,7 +57,7 @@ pip install -r requirements_pip.txt
 ```
 Master Node
 ├── Algorithm
-│   └── Automatic: Automated experimentation
+│   └── Automated: Automated experimentation
 │   └── Bayesian: Bayesian optimization
 │   └── Loss: loss function
 │   └── SaveModel: directory of model pickle
@@ -80,10 +80,11 @@ Master Node
 │                         (telegram, facebook, kakaotalk, line, mail, dooray)
 ├── Resource
 │   └── ResourceManager.py: update module information & manage module resource
-├── Task
+├── TaskAction
 │   └── TaskGenerator_Class.py: abstract experimental task considering job script information
-│   └── TaskScheduler_Class.py: digitalize abstracted task for each modules
-│   └── TCP.py: data encoding & decoding, transfer & receive action data
+│   └── TaskScheduler_Class.py: control task for each modules depending on scheduling modes
+│   └── ActionTranslator_Class.py: digitalize abstracted task for each modules
+│   └── ActionExecutor.py: data encoding & decoding, transfer & receive action data
 ├── USER
 ├── UserManager
 │   └── user.db: store user information (ex. username, password)
@@ -103,7 +104,7 @@ python Client.py
 3. input username, password in prompt.
 
 # Benefit
-Our study highlights both capabilities of the operating consolidation system with unsupervised schedulers to manage various experiments without human intervention and to obtain outstanding operational efficiency for automated or autonomous experimentations.
+Our study highlights both capabilities of the operation control system with user-optimal schedulers to manage various experiments without human intervention and to obtain outstanding operational efficiency for automated or autonomous experimentations.
 
 # Reference
-1. Yoo, H. J., Kim, N., Lee, H., Kim, D., Ow, L. T. C., Nam, H., ... & Han, S. S. (2023). Bespoke Nanoparticle Synthesis and Chemical Knowledge Discovery Via Autonomous Experimentations. arXiv preprint arXiv:2309.00349.
+1. H. J. Yoo, N. Kim, H. Lee, D. Kim, L. T. C. Ow, H. Nam, C. Kim, S. Y. Lee, K.-Y. Lee, D. Kim, S. S. Han, Bespoke Metal Nanoparticle Synthesis at Room Temperature and Discovery of Chemical Knowledge on Nanoparticle Growth via Autonomous Experimentations. Adv. Funct. Mater. 2024, 2312561. https://doi.org/10.1002/adfm.202312561
