@@ -7,7 +7,7 @@
     },
     "algorithm":
     {
-        "model":"Automated",
+        "model":"Manual",
         "totalExperimentNum":6,
         "inputParams":[]
     },

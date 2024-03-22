@@ -57,7 +57,7 @@ pip install -r requirements_pip.txt
 ```
 Master Node
 ├── Algorithm
-│   └── Automated: Automated experimentation
+│   └── Manual: Manual experimentation
 │   └── Bayesian: Bayesian optimization
 │   └── Loss: loss function
 │   └── SaveModel: directory of model pickle
@@ -104,7 +104,7 @@ python Client.py
 3. input username, password in prompt.
 
 # Benefit
-Our study highlights both capabilities of the operation control system with user-optimal schedulers to manage various experiments without human intervention and to obtain outstanding operational efficiency for automated or autonomous experimentations.
+Our study highlights both capabilities of the operation control system with user-optimal schedulers to manage various experiments without human intervention and to obtain outstanding operational efficiency for Manual or autonomous experimentations.
 
 # Reference
 1. H. J. Yoo, N. Kim, H. Lee, D. Kim, L. T. C. Ow, H. Nam, C. Kim, S. Y. Lee, K.-Y. Lee, D. Kim, S. S. Han, Bespoke Metal Nanoparticle Synthesis at Room Temperature and Discovery of Chemical Knowledge on Nanoparticle Growth via Autonomous Experimentations. Adv. Funct. Mater. 2024, 2312561. https://doi.org/10.1002/adfm.202312561

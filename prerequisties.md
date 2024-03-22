@@ -334,7 +334,7 @@ It depends on model selection, "Automated" or AI based models, such as "Bayesian
 ```json
     "algorithm":
     {
-        "model":"Automated",
+        "model":"Manual",
         "totalExperimentNum":4,
         "inputParams":[
             {

@@ -15,7 +15,7 @@ from queue import Queue
 
 from Algorithm.Bayesian.BOdiscreteTest import ASLdiscreteBayesianOptimization
 # from Algorithm.ReactionSpace.ReactionSpace import Reactionspace
-from Algorithm.Automatic.Automated import Automatic
+from Algorithm.Manual.Manual import Manual
 from Algorithm.Loss.UV_loss import Loss
 from Log.DigitalSecretary import AlertMessage
 from Log.Logging_Class import TaskLogger
@@ -69,8 +69,8 @@ class Job(object):
             self.Algorithm_obj=self.loadModel(self.algorithm_dict["modelPath"])
             message="[jobID={0}] Algorithm, model : {1}".format(self.metadata_dict["jobID"], self.algorithm_dict["model"])
             self.TaskLogger_obj.info(self.platform_name, message)
-        elif self.algorithm_dict["model"] == "Automatic":
-            self.Algorithm_obj=Automatic(self.algorithm_dict)
+        elif self.algorithm_dict["model"] == "Manual":
+            self.Algorithm_obj=Manual(self.algorithm_dict)
             message="[jobID={0}] Algorithm, model : {1}".format(self.metadata_dict["jobID"], self.algorithm_dict["model"])
             self.TaskLogger_obj.info(self.platform_name, message)
         else:
@@ -122,7 +122,7 @@ class Job(object):
         :param experiment_idx_queue (Queue) : 
         :param metadata_dict (dict) : metadata for explaining experiment's information ( ex). StartTime, Experiment, Element, Humidity, Temperature...etc)
         :param algorithm_dict={} (dict) : algorithm information, hyparameter
-            - if "Automatic" --> 
+            - if "Manual" --> 
             - if not "Autonmatic" --> 
         :param process_dict (dict) : process information included Synthesis, Preprocess, Characterization
         :param result (dict) : real_data information
@@ -131,7 +131,7 @@ class Job(object):
         
         all_data_template_list={
             "metadata":metadata_dict,
-            "algorithm":algorithm_dict, # depending on Automatic, or {AI-based ex) BayesianOptimization} func
+            "algorithm":algorithm_dict, # depending on Manual, or {AI-based ex) BayesianOptimization} func
             "process":process_dict,
             "result":result
             // [{'lambdamax': [300.214759], 'FWHM': [574.825725], 'intensity': [549.221933]]
@@ -155,7 +155,7 @@ class Job(object):
         #     self.algorithm_dict["totalCycleNum"]=1
         # else:
         #     pass
-        if self.algorithm_dict["model"] != "Automatic":
+        if self.algorithm_dict["model"] != "Manual":
             # calculate job start time, job waiting time
             start_date=time.time()
             jobStartTime=time.strftime("%Y-%m-%d %H:%M:%S")
@@ -279,7 +279,7 @@ class Job(object):
             AlertMessage(done_message, key_path="./Log", message_platform_list=["dooray"], mode_type=self.metadata_dict["modeType"])
             
 
-        elif self.algorithm_dict["model"]=="Automatic":
+        elif self.algorithm_dict["model"]=="Manual":
             # calculate job start time, job waiting time
             start_date=time.time()
             
