@@ -15,7 +15,7 @@ pip install -r requirements_pip.txt
 1. You should modularize by grouping by experimental process. You can see some code samples in [BatchSynthesisModule](https://github.com/KIST-CSRC/BatchSynthesisModule) and [UV-VisModule](https://github.com/KIST-CSRC/UV-VisModule)
 2. Set your module internal network IP address and port number in wireless router. Ex. "192.168.XXX.YYY"
 
-### 2. [Task/TCP.py](Task/TCP.py)
+### 2. [TaskAction/TCP.py](Task/TCP.py)
 1. You need to insert IP address and port number in `self.routing_table`.
 ```python
 class ParameterTCP:
@@ -29,14 +29,14 @@ class ParameterTCP:
             }
         }
 ```
-2. You need to define `callserver_{module_name}` in `TCP_Class`.
+2. You need to define `transferDeviceCommand` function in `ActionExecutor`.
 ```python
-class TCP_Class(ParameterTCP):
+class ActionExecutor(ParameterTCP):
     ...
-    def callServer_{module_name}(self, command_str="info/{module_name}/None/all/virtual"):
+    def transferDeviceCommand(self, module_name, command_str):
         command_bytes=str.encode(command_str)
         with socket.socket(socket.AF_INET, socket.SOCK_STREAM) as s:
-            s.connect((self.routing_table["{module_name}"]["HOST"], self.routing_table["{module_name}"]["PORT"]))
+            s.connect((self.routing_table[module_name]["HOST"], self.routing_table[module_name]["PORT"]))
             time.sleep(1)
             s.sendall(command_bytes)
             message_recv = b''
@@ -45,13 +45,13 @@ class TCP_Class(ParameterTCP):
                 if "finish" in part.decode("utf-8") or "success" in part.decode("utf-8"):
                     s.close()
                     break
-                elif "finish" not in part.decode("utf-8") or "success" not in part.decode("utf-8"):
+                elif "finish" not in part.decode("utf-8") or "success" in part.decode("utf-8"):
                     message_recv += part
                 else:
-                    raise ConnectionError("Wrong tcp message")
+                    raise ConnectionError("Wrong tcp message in {} module, ip:{},port:".format(module_name, self.routing_table[module_name]["HOST"], self.routing_table[module_name]["PORT"]))
             return message_recv.decode("utf-8")
 ```
-### 3. [Task/TaskGenerator_Class.py](Task/TaskGenerator_Class.py)
+### 3. [TaskAction/TaskGenerator_Class.py](TaskAction/TaskGenerator_Class.py)
 1. Define module template.
 ```python
 class Template:
@@ -68,86 +68,86 @@ class Template:
             "Data":[]  
         }
 ```
-2. Define task template of module. It depends on module
+2. Define task template of module. It depends on experimentla module.
 ```python
-        """
-        Process (bottom part: Task)
-        """
-        # BatchSynthesis
-        self.AddSolution_template={
-            "Task":"AddSolution",
-            "Data":{
-                # "To":"",
-                "Solution":"",
-                "Volume":{
-                    "Value":0,"Dimension":"μL"
-                    },
-                "Concentration":{
-                    "Value":0,"Dimension":"mM"
-                    },
-                "Injectionrate":{
-                    "Value":0,"Dimension":"μL/s"
-                    },
-                "Device":{}
-            } 
-        }
-        # Washing
-        self.Centrifugation_template={
-            "Task": "Centrifugation",
-            "Data": {
-                # "To": "",
-                "Power":{
-                    "Value": 0,
-                    "Dimension": "rpm"
+    """
+    Process (bottom part: Task)
+    """
+    # BatchSynthesis
+    self.AddSolution_template={
+        "Task":"AddSolution",
+        "Data":{
+            # "To":"",
+            "Solution":"",
+            "Volume":{
+                "Value":0,"Dimension":"μL"
                 },
-                "Time": {
-                    "Value": 0,
-                    "Dimension": "sec"
+            "Concentration":{
+                "Value":0,"Dimension":"mM"
                 },
-                "Device":{}
-            }
+            "Injectionrate":{
+                "Value":0,"Dimension":"μL/s"
+                },
+            "Device":{}
+        } 
+    }
+    # Washing
+    self.Centrifugation_template={
+        "Task": "Centrifugation",
+        "Data": {
+            # "To": "",
+            "Power":{
+                "Value": 0,
+                "Dimension": "rpm"
+            },
+            "Time": {
+                "Value": 0,
+                "Dimension": "sec"
+            },
+            "Device":{}
         }
+    }
 ```
 3. Define task template of evaluation or characterization module. This template need to register more details of experimental devices due to reliability of extracted material data. The contents of `"Device"` will be filled by resource manager. And, the contents of `"Hyperparameter"` value will be filled by job script. You just write only `"Hyperparameter"` in template before.
 ```python
-        # UV-VIS
-        self.GetAbs_template={
-            "Task":"GetAbs",
-            "Data":{
-                "Device":{},
-                "Hyperparameter":{
-                    "WavelengthMin":{
-                        "Description":"WavelengthMin (int): slice start point of wavlength",
-                        "Value": 0,
-                        "Dimension": "nm"
-                    },
-                    "WavelengthMax":{
-                        "Description":"WavelengthMax (int): slice final point of wavlength",
-                        "Value": 0,
-                        "Dimension": "nm"
-                    },
-                    "BoxCarSize":{
-                        "Description":"BoxCarSize (int): smooth strength",
-                        "Value": 0,
-                        "Dimension": "None"
-                    },
-                    "Prominence":{
-                        "Description":"Prominence (float): minimum peak intensity",
-                        "Value": 0,
-                        "Dimension":"None"
-                    },
-                    "PeakWidth":{
-                        "Description":"PeakWidth (int): minumum peak width",
-                        "Value": 0,
-                        "Dimension": "nm"
-                    }
+    # UV-VIS
+    self.GetAbs_template={
+        "Task":"GetAbs",
+        "Data":{
+            "Device":{},
+            "Hyperparameter":{
+                "WavelengthMin":{
+                    "Description":"WavelengthMin (int): slice start point of wavlength",
+                    "Value": 0,
+                    "Dimension": "nm"
+                },
+                "WavelengthMax":{
+                    "Description":"WavelengthMax (int): slice final point of wavlength",
+                    "Value": 0,
+                    "Dimension": "nm"
+                },
+                "BoxCarSize":{
+                    "Description":"BoxCarSize (int): smooth strength",
+                    "Value": 0,
+                    "Dimension": "None"
+                },
+                "Prominence":{
+                    "Description":"Prominence (float): minimum peak intensity",
+                    "Value": 0,
+                    "Dimension":"None"
+                },
+                "PeakWidth":{
+                    "Description":"PeakWidth (int): minumum peak width",
+                    "Value": 0,
+                    "Dimension": "nm"
                 }
-            },
-        }
+            }
+        },
+    }
 ```
-4. Register task type in `__allocateTaskSequence` function.
+4. Register task type in `__allocateTaskSequence` function. This function register specific value in empty template.
 ```python
-class TaskGenerator(Template,TCP_Class):
+class TaskGenerator(Template,ActionExecutor):
     ...
     def __allocateTaskSequence(self, task_type:str, integrated_parameter_dict:dict):
         if "AddSolution" in task_type:
@@ -164,13 +164,13 @@ class TaskGenerator(Template,TCP_Class):
 ### 4. [Task/TaskScheduler_Class.py](Task/TaskScheduler_Class.py)
 1. Define module class in TaskScheduler_Class.py. 
 - set module name
-- inherit TCP_Class
-- define consumable chemical vessels, such as vial, cuvette, tip, falcon tube, etc.
+- inherit ActionExecutor
+- define consumable chemical vessels, such as vial, cuvette, tip, falcon tube, etc. (Don't confused resource and consumalbe chemical vessels)
 ```python
-class RobotMovPlatform(TCP_Class):
-    def __init__(self, platform_name="{module_name}", ResourceManager_obj={}):
-        TCP_Class.__init__(self,)
-        self.batch_module_name= "{}".format(module_name)
+class BatchSynthesisModule(ActionExecutor):
+    def __init__(self, module_name="{module_name}", ResourceManager_obj={}):
+        ActionExecutor.__init__(self,)
+        self.module_name= "{}".format(module_name)
         self.vial_bottom_queue = Queue()
         self.the_number_of_vial = 80
         self.__initVialBottom()
@@ -204,18 +204,16 @@ class RobotMovPlatform(TCP_Class):
 ```python
     def __alertVialNum(self, TaskLogger_obj, mode_type="virtual"):
         text_content="[{}] vial number ({}) is not enough, please fill vial".format(self.robot_module_name, self.vial_bottom_queue.qsize())
-        if self.vial_bottom_queue.qsize() <=10:
+        if self.vial_bottom_queue.qsize()<=10:
             AlertMessage(text_content=text_content, key_path="./Log", message_module_list=["dooray"], mode_type=mode_type)
         else:
             pass
-
 ```
 4. Define task function to digitalize abstracted task
 ```python
     def AddSolution(self, task_info_list:list, jobID:int, location_dict:dict, TaskLogger_obj:object, mode_type="virtual"):
         res_msg=""
         current_func_name=sys._getframe().f_code.co_name
-        
         # execution for each task depending on batch size of cycle
         for vial_task_idx, pump_dict in enumerate(task_info_list): # for each vial
             # check & update status of device, report delay time in result
@@ -231,7 +229,7 @@ class RobotMovPlatform(TCP_Class):
             TaskLogger_obj.current_module_name="{}-->{}".format(self.batch_module_name, "AddSolution")
             TaskLogger_obj.status="{}_{}/{}:{}".format(len(task_info_list), vial_task_idx, TaskLogger_obj.totalExperimentNum, TaskLogger_obj.current_module_name) # in execution system
 
-            # execute real action to module using packeformatter and TCP_Class object
+            # execute real action to module using packeformatter and ActionExecutor object
             command_str=self.packetFormatter(jobID,"LA","down",location_dict["Stirrer"][vial_task_idx],mode_type)
             TaskLogger_obj.debug("LA", "move down-->Start!")
             res_msg=self.callServer_BATCH(command_str=command_str)
@@ -240,24 +238,22 @@ class RobotMovPlatform(TCP_Class):
 ```
 5. If you want to develop novel algorithm of task scheduling methods, then please define in `TaskScheduler.scheduleAllTask` function.
 ```python
-class TaskScheduler(RobotMovModule, BatchSynthesisModule, UVModule):
+class TaskScheduler(ActionTranslator):
     def scheduleAllTask(self, total_recipe_template_list:list, jobID:int, TaskLogger_obj:object, mode_type:str):
         if self.schedule_mode == "FCFS" or self.schedule_mode == "BackFill":
             ...
         elif self.schedule_mode=="ClosedPacking":
             ...
 ```
-### 5. [Resource.ResourceManager_Class.py](Resource.ResourceManager_Class.py)
+### 5. [Resource/ResourceManager_Class.py](Resource/ResourceManager_Class.py)
 1. Define device status table in `self.task_hardware_status_dict`
 ```python
-class ResourceManager(TCP_Class):
+class ResourceManager(ActionExecutor):
     """
     ResourceManager class check status of devices, and update device information from NodeManager
-    
-    # function
     """
     def __init__(self, serverLogger_obj:object):
-        TCP_Class.__init__(self,)
+        ActionExecutor.__init__(self,)
         self.task_hardware_status_dict={
             "Batch_RoboticArm":False,
             "Batch_VialStorage":False,
@@ -293,7 +289,7 @@ class ResourceManager(TCP_Class):
             "MoveContainer":["Batch_RoboticArm","Batch_VialStorage","Batch_LinearAcutator","UV_RoboticArm"],
         }
 ```
-4. Customize `allocationLocation` function depending on module settings. This function decide to allocate device location information to task schduler. Please refer [Resource.ResourceManager_Class.py](Resource.ResourceManager_Class.py)
+4. Customize `allocationLocation` function depending on module settings. This function decide to allocate device location information to task schduler. Please refer [Resource/ResourceManager_Class.py](Resource/ResourceManager_Class.py)
 ```python
     def allocateLocation(self, module_type:str, jobID:int, total_recipe_template_list:list):
         if module_type == "BatchSynthesis":
@@ -301,7 +297,7 @@ class ResourceManager(TCP_Class):
         elif module_type == "Washing":
             ...
 ```
-5. Customize `notifyNumbersOfTasks` function. This function notify to remaining device location information to task schduler. Please refer [Resource.ResourceManager_Class.py](Resource.ResourceManager_Class.py)
+5. Customize `notifyNumbersOfTasks` function. This function notify to remaining device location information to task schduler. Please refer [Resource/ResourceManager_Class.py](Resource/ResourceManager_Class.py)
 ```python
     def notifyNumbersOfTasks(self, total_recipe_template_list:list):
         if "BatchSynthesis"==module_seq_list[0]:
@@ -311,16 +307,17 @@ class ResourceManager(TCP_Class):
 ```
 ### 6. [Log](Log)
 Customize messenger information in [Log/Information.json](Log/Information.json). Please refer API for each SNS.
+
 ### 7. [USER](USER)
 Directory Structure
 ```
 USER
 ├── job_script: job script of client
-├── DB (automatic generation during progress): material data. It also store in MongoDB
-├── Log (automatic generation during progress): log file of all job progress 
-└── SaveModel (automatic generation during progress): model object based on sklearn. In future, we will upgrade until pytorch or tensorflow
+├── DB (automated generation during progress): material data. It also store in MongoDB
+├── Log (automated generation during progress): log file of all job progress 
+└── SaveModel (automated generation during progress): model object based on sklearn. In future, we will upgrade until pytorch or tensorflow
 ```
-Client should customize [Job script](USER\HJ\job_script).
+Client should customize [Job script](USER/HJ/job_script).
 
 1. metadata
 ```json
@@ -332,12 +329,12 @@ Client should customize [Job script](USER\HJ\job_script).
         }
 ```
 2. algorithm
-It depends on model selection, "Automatic" or AI based models, such as "BayesianOptimization"
-- "Automatic"
+It depends on model selection, "Automated" or AI based models, such as "BayesianOptimization"
+- "Automated"
 ```json
     "algorithm":
     {
-        "model":"Automatic",
+        "model":"Automated",
         "totalExperimentNum":4,
         "inputParams":[
             {
@@ -413,10 +410,9 @@ It depends on model selection, "Automatic" or AI based models, such as "Bayesian
     {
         "Synthesis":{
             "BatchSynthesis":{
+                "Sequence":["AddSolution_Citrate","AddSolution_H2O2", "AddSolution_NaBH4","Stir","Heat","Mix", "AddSolution_AgNO3", "React"],
                 "fixedParams":
                 {
-                    "BatchSynthesis=Sequence":["AddSolution_Citrate","AddSolution_H2O2", "AddSolution_NaBH4","Stir","Heat","Mix", "AddSolution_AgNO3", "React"],
-
                     "AddSolution=H2O2_Concentration" : 375,
                     "AddSolution=H2O2_Volume" : 1200,
                     "AddSolution=H2O2_Injectionrate" : 200,
