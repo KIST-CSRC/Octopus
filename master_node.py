@@ -5,8 +5,8 @@ from Log.Logging_Class import JobLogger
 from UserManager.UserManager_Class import UserManager
 from Job.JobScheduler_Class import JobScheduler
 from Job.JobTrigger import JobTrigger
-from Task.TaskGenerator_Class import TaskGenerator
-from Task.TaskScheduler_Class import TaskScheduler
+from TaskAction.TaskGenerator_Class import TaskGenerator
+from TaskAction.TaskScheduler_Class import TaskScheduler
 from Resource.ResourceManager_Class import ResourceManager
 
 def handle_client(client_socket, client_address, server_logger, JobScheduler_obj):
