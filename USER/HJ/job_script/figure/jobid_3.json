@@ -7,7 +7,7 @@
     },
     "algorithm":
     {
-        "model":"Automatic",
+        "model":"Automated",
         "totalExperimentNum":5,
         "inputParams":[]
     },
@@ -24,9 +24,9 @@
         "Characterization":{
             "UV":
             {
+                "Sequence":["GetAbs"],
                 "fixedParams":
                 {
-                    "UV=Sequence":["GetAbs"],
                     "UV=Hyperparameter_WavelengthMin":300, 
                     "UV=Hyperparameter_WavelengthMax":849, 
                     "UV=Hyperparameter_BoxCarSize":10, 

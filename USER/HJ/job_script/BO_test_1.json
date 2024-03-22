@@ -48,10 +48,9 @@
         "Synthesis":{
             "BatchSynthesis":
             {
+                "Sequence":["AddSolution_NaBH4","Stir","Heat","Mix", "AddSolution_AgNO3", "React"],
                 "fixedParams":
                 {
-                    "BatchSynthesis=Sequence":["AddSolution_NaBH4","Stir","Heat","Mix", "AddSolution_AgNO3", "React"],
-
                     "AddSolution=NaBH4_Concentration" : 0.01,
                     "AddSolution=NaBH4_Volume" : 100,
                     "AddSolution=NaBH4_Injectionrate" : 200,
@@ -71,9 +70,9 @@
         "Characterization":{
             "UV":
             {
+                "Sequence":["GetAbs"],
                 "fixedParams":
                 {
-                    "UV=Sequence":["GetAbs"],
                     "UV=Hyperparameter_WavelengthMin":300, 
                     "UV=Hyperparameter_WavelengthMax":849, 
                     "UV=Hyperparameter_BoxCarSize":10, 

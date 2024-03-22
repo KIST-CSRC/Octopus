@@ -7,7 +7,7 @@
     },
     "algorithm":
     {
-        "model":"Automatic",
+        "model":"Automated",
         "totalExperimentNum":4,
         "inputParams":[
             {
@@ -35,10 +35,9 @@
     "process":[
         {
             "BatchSynthesis":{
+                "Sequence":["AddSolution_NaBH4","Stir","Heat","Mix", "AddSolution_AgNO3", "React"],
                 "fixedParams":
                     {
-                        "BatchSynthesis=Sequence":["AddSolution_NaBH4","Stir","Heat","Mix", "AddSolution_AgNO3", "React"],
-
                         "AddSolution=NaBH4_Concentration" : 0.01,
                         "AddSolution=NaBH4_Volume" : 4000,
                         "AddSolution=NaBH4_Injectionrate" : 100,
@@ -61,8 +60,8 @@
         },
         {
             "UV":{
+                "Sequence":["GetAbs"],
                 "fixedParams":{
-                    "UV=Sequence":["GetAbs"],
                     "GetAbs=Hyperparameter_WavelengthMin":300, 
                     "GetAbs=Hyperparameter_WavelengthMax":849, 
                     "GetAbs=Hyperparameter_BoxCarSize":10, 

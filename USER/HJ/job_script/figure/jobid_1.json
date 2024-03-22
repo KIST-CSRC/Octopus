@@ -7,7 +7,7 @@
     },
     "algorithm":
     {
-        "model":"Automatic",
+        "model":"Automated",
         "totalExperimentNum":4,
         "inputParams":[
             {
@@ -36,10 +36,9 @@
     {
         "Synthesis":{
             "BatchSynthesis":{
+                "Sequence":["AddSolution_Citrate","AddSolution_H2O2", "AddSolution_NaBH4","Stir","Heat","Mix", "AddSolution_AgNO3", "React"],
                 "fixedParams":
                 {
-                    "BatchSynthesis=Sequence":["AddSolution_Citrate","AddSolution_H2O2", "AddSolution_NaBH4","Stir","Heat","Mix", "AddSolution_AgNO3", "React"],
-
                     "AddSolution=H2O2_Concentration" : 375,
                     "AddSolution=H2O2_Volume" : 1200,
                     "AddSolution=H2O2_Injectionrate" : 200,
