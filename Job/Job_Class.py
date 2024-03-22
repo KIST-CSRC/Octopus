@@ -15,12 +15,12 @@ from queue import Queue
 
 from Algorithm.Bayesian.BOdiscreteTest import ASLdiscreteBayesianOptimization
 # from Algorithm.ReactionSpace.ReactionSpace import Reactionspace
-from Algorithm.Automatic.Automatic import Automatic
+from Algorithm.Automatic.Automated import Automatic
 from Algorithm.Loss.UV_loss import Loss
 from Log.DigitalSecretary import AlertMessage
 from Log.Logging_Class import TaskLogger
 from DB.DB_Class import MongoDB_Class
-from Task.TCP import TCP_Class
+from TaskAction.ActionExecutor import ActionExecutor
 
 
 class Job(object):
@@ -40,7 +40,7 @@ class Job(object):
         self.metadata_dict["jobStatus"]="{}".format(self.TaskLogger_obj.current_platform_name) # in execution system
         # self.algorithm_dict["totalExperimentNum"]=0 # initialize
         # self.DB_obj = MongoDB_Class(self.TaskLogger_obj)
-        self.tcp_obj=TCP_Class()
+        self.tcp_obj=ActionExecutor()
         ### defintion of metadata ###
         self.platform_name="JobExecution"
         self.metadata_dict["jobStatus"]="Waiting..."

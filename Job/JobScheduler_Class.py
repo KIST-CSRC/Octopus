@@ -1,6 +1,6 @@
 from datetime import datetime
 from queue import Queue
-from Task.TCP import ParameterTCP, TCP_Class
+from TaskAction.ActionExecutor import ParameterTCP, ActionExecutor
 from Job.Job_Class import Job
 import paramiko
 
@@ -31,7 +31,7 @@ class JobScheduler(JobScriptError, ParameterTCP):
     def __init__(self, server_logger:object, job_wait_queue:list, job_exec_queue:list, job_hold_queue:list, ResourceManager_obj:object):
         JobScriptError.__init__(self)
         ParameterTCP.__init__(self)
-        self.tcp_obj=TCP_Class()
+        self.tcp_obj=ActionExecutor()
         self.BUFF_SIZE = 4096
         self.the_number_of_job=9999 # can change the CAPA of job_queue
         self.server_logger=server_logger
