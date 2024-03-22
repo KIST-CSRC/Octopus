@@ -15,7 +15,7 @@ pip install -r requirements_pip.txt
 1. You should modularize by grouping by experimental process. You can see some code samples in [BatchSynthesisModule](https://github.com/KIST-CSRC/BatchSynthesisModule) and [UV-VisModule](https://github.com/KIST-CSRC/UV-VisModule)
 2. Set your module internal network IP address and port number in wireless router. Ex. "192.168.XXX.YYY"
 
-### 2. [TaskAction/TCP.py](Task/TCP.py)
+### 2. [TaskAction/ActionExecutor.py](TaskAction/ActionExecutor.py)
 1. You need to insert IP address and port number in `self.routing_table`.
 ```python
 class ParameterTCP:
@@ -161,7 +161,7 @@ class TaskGenerator(Template,ActionExecutor):
             # uploaded by hardware Device from resource manager
             empty_template["Data"]["Device"]=self.task_hardware_info_dict["Washing"]["Centrifuge"] 
 ```
-### 4. [Task/TaskScheduler_Class.py](Task/TaskScheduler_Class.py)
+### 4. [TaskAction/TaskScheduler_Class.py](TaskAction/TaskScheduler_Class.py)
 1. Define module class in TaskScheduler_Class.py. 
 - set module name
 - inherit ActionExecutor
@@ -313,9 +313,9 @@ Directory Structure
 ```
 USER
 ├── job_script: job script of client
-├── DB (automated generation during progress): material data. It also store in MongoDB
-├── Log (automated generation during progress): log file of all job progress 
-└── SaveModel (automated generation during progress): model object based on sklearn. In future, we will upgrade until pytorch or tensorflow
+├── DB (automated generation during job progress): material data. It also store in MongoDB
+├── Log (automated generation during job progress): log file of all job progress 
+└── SaveModel (automated generation during job progress): model object based on sklearn. In future, we will upgrade until pytorch or tensorflow
 ```
 Client should customize [Job script](USER/HJ/job_script).
 
@@ -329,8 +329,8 @@ Client should customize [Job script](USER/HJ/job_script).
         }
 ```
 2. algorithm
-It depends on model selection, "Automated" or AI based models, such as "BayesianOptimization"
-- "Automated"
+It depends on model selection, "Manual" or AI based models, such as "BayesianOptimization"
+- "Manual"
 ```json
     "algorithm":
     {
