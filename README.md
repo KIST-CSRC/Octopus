@@ -1,4 +1,4 @@
-# OCTOPUS (Operation Control system for Task Optimization and job Parallelization with User-optimal Schedulers)
+# OCTOPUS (Operation Control System for Task Optimization and Job Parallelization via User-optimal Schedulers)
 
 # Background
 The Materials Acceleration Platform (MAP) has been facilitated to material discovery through widespread exploration of the chemical space. However, severe problems in MAP.
