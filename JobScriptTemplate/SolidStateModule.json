@@ -1,0 +1,47 @@
+{
+    "metadata": {
+        "subject": "",
+        "group": "",
+        "logLevel": ""
+    },
+    "algorithm": {
+        "model": "",
+        "totalExperimentNum": 0,
+        "inputParams": []
+    },
+    "process": {
+        "Synthesis": {
+            "SolidStateModule": {
+                "Sequence": [
+                    "SolidStateModule_LoadSample={Material}",
+                    "SolidStateModule_AddPowder={Material}",
+                    "SolidStateModule_MixPowders",
+                    "SolidStateModule_PressPowder",
+                    "SolidStateModule_Heat",
+                    "SolidStateModule_Cool",
+                    "SolidStateModule_Grind",
+                    "SolidStateModule_Pelletize",
+                    "SolidStateModule_Weigh",
+                    "SolidStateModule_Transfer",
+                    "SolidStateModule_Wash",
+                    "SolidStateModule_Dry"
+                ],
+                "fixedParams": {
+                    "SolidStateModule_AddPowder={Material}_Amount": 0,
+                    "SolidStateModule_MixPowders=Time": 0,
+                    "SolidStateModule_PressPowder=Pressure": 0,
+                    "SolidStateModule_Heat=Temperature": 0,
+                    "SolidStateModule_Cool=Temperature": 0,
+                    "SolidStateModule_Grind=Time": 0,
+                    "SolidStateModule_Pelletize=Pressure": 0,
+                    "SolidStateModule_Weigh=Method": "",
+                    "SolidStateModule_Transfer=FromTo": "",
+                    "SolidStateModule_Wash=Solvent": "",
+                    "SolidStateModule_Wash=Volume": 0,
+                    "SolidStateModule_Dry=Temperature": 0,
+                    "SolidStateModule_Dry=Time": 0
+                }
+            }
+        }
+    }
+}

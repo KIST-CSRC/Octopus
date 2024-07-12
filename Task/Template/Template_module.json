@@ -1,0 +1,44 @@
+{
+    "process": {
+        "Synthesis": [],
+        "Preprocess": [],
+        "Characterization": [],
+        "Evaluation": []
+    },
+    "BatchSynthesisModule": {
+        "Module": "BatchSynthesisModule",
+        "Data": []
+    },
+    "FlowSynthesisModule": {
+        "Module": "FlowSynthesisModule",
+        "Data": []
+    },
+    "WashingModule": {
+        "Module": "WashingModule",
+        "Data": []
+    },
+    "InkModule": {
+        "Module": "InkModule",
+        "Data": []
+    },
+    "RDEModule": {
+        "Module": "RDEModule",
+        "Data": []
+    },
+    "ElectrodeModule": {
+        "Module": "ElectrodeModule",
+        "Data": []
+    },
+    "UVModule": {
+        "Module": "UVModule",
+        "Data": []
+    },
+    "SolidStateModule": {
+        "Module": "SolidStateModule",
+        "Data": []
+    },
+    "ElectroChemicalRDEModule": {
+        "Module": "ElectroChemicalRDEModule",
+        "Data": []
+    }
+}

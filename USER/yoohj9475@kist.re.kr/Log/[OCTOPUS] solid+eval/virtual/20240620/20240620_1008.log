@@ -1,0 +1,137 @@
+2024-06-20 10:08:05,556 - [OCTOPUS] solid+eval::INFO -- [JobExecution] : [jobID=0] Algorithm, model : Manual
+2024-06-20 10:08:05,571 - [OCTOPUS] solid+eval::INFO -- [JobExecution] : ######### Cycle start #########
+2024-06-20 10:08:05,602 - [OCTOPUS] solid+eval::INFO -- [Manual] : total experiments=1
+2024-06-20 10:08:05,999 - [OCTOPUS] solid+eval::INFO -- [ProcessGenerator] : Allocate all of process based on job script!
+2024-06-20 10:08:06,010 - [OCTOPUS] solid+eval::INFO -- [JobExecution] : ######### [[OCTOPUS] solid+eval-yoohj9475@kist.re.kr] Experiment 1 is running #########
+2024-06-20 10:08:06,055 - [OCTOPUS] solid+eval::INFO -- [TaskScheduler] : check location: {'ElectroChemicalRDEModule': {'falcon': ['?', '?', '?', '?', '?', '?', '?', '?'], 'falconHolder': ['?', '?', '?', '?', '?', '?', '?', '?']}, 'SolidStateModule': {'vialHolder': ['?', '?', '?', '?', '?', '?', '?', '?'], 'heater': ['?', '?', '?', '?', '?', '?', '?', '?'], 'XRD': ['?', '?', '?', '?', '?', '?', '?', '?', '?', '?', '?', '?', '?', '?', '?', '?']}}
+2024-06-20 10:08:06,066 - [OCTOPUS] solid+eval::INFO -- [TaskScheduler] : SolidStateModule is started, allocate location: {'vialHolder': [0], 'heater': [0], 'XRD': [0]}
+2024-06-20 10:08:06,066 - [OCTOPUS] solid+eval::INFO -- [TaskScheduler] : check location after allocation: {'ElectroChemicalRDEModule': {'falcon': ['?', '?', '?', '?', '?', '?', '?', '?'], 'falconHolder': ['?', '?', '?', '?', '?', '?', '?', '?']}, 'SolidStateModule': {'vialHolder': [0, '?', '?', '?', '?', '?', '?', '?'], 'heater': [0, '?', '?', '?', '?', '?', '?', '?'], 'XRD': [0, '?', '?', '?', '?', '?', '?', '?', '?', '?', '?', '?', '?', '?', '?', '?']}}
+2024-06-20 10:08:06,066 - [OCTOPUS] solid+eval::DEBUG -- [SolidStateModule] : Start SolidStateModule_LoadPowder Queue
+2024-06-20 10:08:09,155 - [OCTOPUS] solid+eval::DEBUG -- [RobotArm] : Move-->Start!
+2024-06-20 10:08:11,194 - [OCTOPUS] solid+eval::DEBUG -- [RobotArm] : Move-->Done!
+2024-06-20 10:08:12,251 - [OCTOPUS] solid+eval::DEBUG -- [PowderDispenser] : Dispense-->Start!
+2024-06-20 10:08:13,287 - [OCTOPUS] solid+eval::DEBUG -- [PowderDispenser] : Dispense-->Done!
+2024-06-20 10:08:14,344 - [OCTOPUS] solid+eval::DEBUG -- [RobotArm] : Position-->Start!
+2024-06-20 10:08:16,382 - [OCTOPUS] solid+eval::DEBUG -- [RobotArm] : Position-->Done!
+2024-06-20 10:08:17,439 - [OCTOPUS] solid+eval::DEBUG -- [SolidStateModule] : Finish SolidStateModule_LoadPowder Queue
+2024-06-20 10:08:17,450 - [OCTOPUS] solid+eval::DEBUG -- [SolidStateModule] : Start SolidStateModule_AddPowder Queue
+2024-06-20 10:08:20,554 - [OCTOPUS] solid+eval::DEBUG -- [RobotArm] : Move-->Start!
+2024-06-20 10:08:22,593 - [OCTOPUS] solid+eval::DEBUG -- [RobotArm] : Move-->Done!
+2024-06-20 10:08:23,651 - [OCTOPUS] solid+eval::DEBUG -- [PowderDispenser] : Dispense-->Start!
+2024-06-20 10:08:24,688 - [OCTOPUS] solid+eval::DEBUG -- [PowderDispenser] : Dispense-->Done!
+2024-06-20 10:08:25,735 - [OCTOPUS] solid+eval::DEBUG -- [RobotArm] : Position-->Start!
+2024-06-20 10:08:27,773 - [OCTOPUS] solid+eval::DEBUG -- [RobotArm] : Position-->Done!
+2024-06-20 10:08:28,830 - [OCTOPUS] solid+eval::DEBUG -- [SolidStateModule] : Finish SolidStateModule_AddPowder Queue
+2024-06-20 10:08:28,840 - [OCTOPUS] solid+eval::DEBUG -- [SolidStateModule] : Start SolidStateModule_TareBalance Queue
+2024-06-20 10:08:31,904 - [OCTOPUS] solid+eval::DEBUG -- [WeighingMachine] : Tare-->Start!
+2024-06-20 10:08:32,946 - [OCTOPUS] solid+eval::DEBUG -- [WeighingMachine] : Tare-->Done!
+2024-06-20 10:08:33,978 - [OCTOPUS] solid+eval::DEBUG -- [SolidStateModule] : Finish SolidStateModule_TareBalance Queue
+2024-06-20 10:08:33,988 - [OCTOPUS] solid+eval::DEBUG -- [SolidStateModule] : Start SolidStateModule_WeighPowder Queue
+2024-06-20 10:08:37,091 - [OCTOPUS] solid+eval::DEBUG -- [RobotArm] : Move-->Start!
+2024-06-20 10:08:39,130 - [OCTOPUS] solid+eval::DEBUG -- [RobotArm] : Move-->Done!
+2024-06-20 10:08:40,183 - [OCTOPUS] solid+eval::DEBUG -- [RobotArm] : Grasp-->Start!
+2024-06-20 10:08:42,222 - [OCTOPUS] solid+eval::DEBUG -- [RobotArm] : Grasp-->Done!
+2024-06-20 10:08:43,279 - [OCTOPUS] solid+eval::DEBUG -- [RobotArm] : Move-->Start!
+2024-06-20 10:08:45,318 - [OCTOPUS] solid+eval::DEBUG -- [RobotArm] : Move-->Done!
+2024-06-20 10:08:46,374 - [OCTOPUS] solid+eval::DEBUG -- [RobotArm] : Release-->Start!
+2024-06-20 10:08:48,413 - [OCTOPUS] solid+eval::DEBUG -- [RobotArm] : Release-->Done!
+2024-06-20 10:08:49,470 - [OCTOPUS] solid+eval::DEBUG -- [WeighingMachine] : Weigh-->Start!
+2024-06-20 10:08:50,511 - [OCTOPUS] solid+eval::DEBUG -- [WeighingMachine] : Weigh-->Done!
+2024-06-20 10:08:51,567 - [OCTOPUS] solid+eval::DEBUG -- [SolidStateModule] : Finish SolidStateModule_WeighPowder Queue
+2024-06-20 10:08:51,578 - [OCTOPUS] solid+eval::DEBUG -- [SolidStateModule] : Start SolidStateModule_MixPowders Queue
+2024-06-20 10:08:54,642 - [OCTOPUS] solid+eval::DEBUG -- [Stirrer] : Stir-->Start!
+2024-06-20 10:08:55,682 - [OCTOPUS] solid+eval::DEBUG -- [Stirrer] : Stir-->Done!
+2024-06-20 10:08:56,719 - [OCTOPUS] solid+eval::DEBUG -- [SolidStateModule] : Finish SolidStateModule_MixPowders Queue
+2024-06-20 10:08:56,729 - [OCTOPUS] solid+eval::DEBUG -- [SolidStateModule] : Start SolidStateModule_PressPowder Queue
+2024-06-20 10:08:59,797 - [OCTOPUS] solid+eval::DEBUG -- [RobotArm] : Move-->Start!
+2024-06-20 10:09:01,836 - [OCTOPUS] solid+eval::DEBUG -- [RobotArm] : Move-->Done!
+2024-06-20 10:09:02,873 - [OCTOPUS] solid+eval::DEBUG -- [RobotArm] : Grasp-->Start!
+2024-06-20 10:09:04,912 - [OCTOPUS] solid+eval::DEBUG -- [RobotArm] : Grasp-->Done!
+2024-06-20 10:09:05,949 - [OCTOPUS] solid+eval::DEBUG -- [RobotArm] : Lower-->Start!
+2024-06-20 10:09:07,988 - [OCTOPUS] solid+eval::DEBUG -- [RobotArm] : Lower-->Done!
+2024-06-20 10:09:09,024 - [OCTOPUS] solid+eval::DEBUG -- [RobotArm] : Release-->Start!
+2024-06-20 10:09:11,064 - [OCTOPUS] solid+eval::DEBUG -- [RobotArm] : Release-->Done!
+2024-06-20 10:09:12,100 - [OCTOPUS] solid+eval::DEBUG -- [SolidStateModule] : Finish SolidStateModule_PressPowder Queue
+2024-06-20 10:09:12,110 - [OCTOPUS] solid+eval::DEBUG -- [SolidStateModule] : Start SolidStateModule_Sinter Queue
+2024-06-20 10:09:15,173 - [OCTOPUS] solid+eval::DEBUG -- [Heater] : Heat-->Start!
+2024-06-20 10:09:16,216 - [OCTOPUS] solid+eval::DEBUG -- [Heater] : Heat-->Done!
+2024-06-20 10:09:17,253 - [OCTOPUS] solid+eval::DEBUG -- [SolidStateModule] : Finish SolidStateModule_Sinter Queue
+2024-06-20 10:09:17,264 - [OCTOPUS] solid+eval::DEBUG -- [SolidStateModule] : Start SolidStateModule_CoolDown Queue
+2024-06-20 10:09:20,327 - [OCTOPUS] solid+eval::DEBUG -- [Heater] : Cool-->Start!
+2024-06-20 10:09:21,360 - [OCTOPUS] solid+eval::DEBUG -- [Heater] : Cool-->Done!
+2024-06-20 10:09:22,391 - [OCTOPUS] solid+eval::DEBUG -- [SolidStateModule] : Finish SolidStateModule_CoolDown Queue
+2024-06-20 10:09:22,401 - [OCTOPUS] solid+eval::DEBUG -- [SolidStateModule] : Start SolidStateModule_Transfer Queue
+2024-06-20 10:09:25,464 - [OCTOPUS] solid+eval::DEBUG -- [RobotArm] : Move-->Start!
+2024-06-20 10:09:27,504 - [OCTOPUS] solid+eval::DEBUG -- [RobotArm] : Move-->Done!
+2024-06-20 10:09:28,536 - [OCTOPUS] solid+eval::DEBUG -- [RobotArm] : Grasp-->Start!
+2024-06-20 10:09:30,576 - [OCTOPUS] solid+eval::DEBUG -- [RobotArm] : Grasp-->Done!
+2024-06-20 10:09:31,612 - [OCTOPUS] solid+eval::DEBUG -- [RobotArm] : Move-->Start!
+2024-06-20 10:09:33,635 - [OCTOPUS] solid+eval::DEBUG -- [RobotArm] : Move-->Done!
+2024-06-20 10:09:34,671 - [OCTOPUS] solid+eval::DEBUG -- [RobotArm] : Release-->Start!
+2024-06-20 10:09:36,714 - [OCTOPUS] solid+eval::DEBUG -- [RobotArm] : Release-->Done!
+2024-06-20 10:09:37,750 - [OCTOPUS] solid+eval::DEBUG -- [SolidStateModule] : Finish SolidStateModule_Transfer Queue
+2024-06-20 10:09:37,761 - [OCTOPUS] solid+eval::DEBUG -- [SolidStateModule] : Start SolidStateModule_Clean Queue
+2024-06-20 10:09:40,824 - [OCTOPUS] solid+eval::DEBUG -- [RobotArm] : Move-->Start!
+2024-06-20 10:09:42,863 - [OCTOPUS] solid+eval::DEBUG -- [RobotArm] : Move-->Done!
+2024-06-20 10:09:43,900 - [OCTOPUS] solid+eval::DEBUG -- [RobotArm] : Grasp-->Start!
+2024-06-20 10:09:45,925 - [OCTOPUS] solid+eval::DEBUG -- [RobotArm] : Grasp-->Done!
+2024-06-20 10:09:46,961 - [OCTOPUS] solid+eval::DEBUG -- [RobotArm] : Position-->Start!
+2024-06-20 10:09:49,000 - [OCTOPUS] solid+eval::DEBUG -- [RobotArm] : Position-->Done!
+2024-06-20 10:09:50,040 - [OCTOPUS] solid+eval::DEBUG -- [RobotArm] : Release-->Start!
+2024-06-20 10:09:52,084 - [OCTOPUS] solid+eval::DEBUG -- [RobotArm] : Release-->Done!
+2024-06-20 10:09:53,120 - [OCTOPUS] solid+eval::DEBUG -- [SolidStateModule] : Finish SolidStateModule_Clean Queue
+2024-06-20 10:09:53,130 - [OCTOPUS] solid+eval::DEBUG -- [SolidStateModule] : Start SolidStateModule_Calibrate Queue
+2024-06-20 10:09:56,195 - [OCTOPUS] solid+eval::DEBUG -- [Pipette] : Calibrate-->Start!
+2024-06-20 10:09:58,238 - [OCTOPUS] solid+eval::DEBUG -- [Pipette] : Calibrate-->Done!
+2024-06-20 10:09:59,275 - [OCTOPUS] solid+eval::DEBUG -- [SolidStateModule] : Finish SolidStateModule_Calibrate Queue
+2024-06-20 10:09:59,285 - [OCTOPUS] solid+eval::DEBUG -- [SolidStateModule] : Start SolidStateModule_XRDtest Queue
+2024-06-20 10:10:02,349 - [OCTOPUS] solid+eval::DEBUG -- [Xrd] : Scan-->Start!
+2024-06-20 10:10:03,390 - [OCTOPUS] solid+eval::DEBUG -- [Xrd] : Scan-->Done!
+2024-06-20 10:10:04,422 - [OCTOPUS] solid+eval::DEBUG -- [SolidStateModule] : Finish SolidStateModule_XRDtest Queue
+2024-06-20 10:10:04,432 - [OCTOPUS] solid+eval::DEBUG -- [SolidStateModule] : Start SolidStateModule_DensityTest Queue
+2024-06-20 10:10:07,495 - [OCTOPUS] solid+eval::DEBUG -- [WeighingMachine] : Weigh-->Start!
+2024-06-20 10:10:08,532 - [OCTOPUS] solid+eval::DEBUG -- [WeighingMachine] : Weigh-->Done!
+2024-06-20 10:10:09,568 - [OCTOPUS] solid+eval::DEBUG -- [SolidStateModule] : Finish SolidStateModule_DensityTest Queue
+2024-06-20 10:10:09,579 - [OCTOPUS] solid+eval::DEBUG -- [SolidStateModule] : Start SolidStateModule_PorosityTest Queue
+2024-06-20 10:10:12,643 - [OCTOPUS] solid+eval::DEBUG -- [RobotArm] : Move-->Start!
+2024-06-20 10:10:14,683 - [OCTOPUS] solid+eval::DEBUG -- [RobotArm] : Move-->Done!
+2024-06-20 10:10:15,719 - [OCTOPUS] solid+eval::DEBUG -- [RobotArm] : Grasp-->Start!
+2024-06-20 10:10:17,758 - [OCTOPUS] solid+eval::DEBUG -- [RobotArm] : Grasp-->Done!
+2024-06-20 10:10:18,790 - [OCTOPUS] solid+eval::DEBUG -- [RobotArm] : Release-->Start!
+2024-06-20 10:10:20,831 - [OCTOPUS] solid+eval::DEBUG -- [RobotArm] : Release-->Done!
+2024-06-20 10:10:21,867 - [OCTOPUS] solid+eval::DEBUG -- [SolidStateModule] : Finish SolidStateModule_PorosityTest Queue
+2024-06-20 10:10:21,877 - [OCTOPUS] solid+eval::DEBUG -- [SolidStateModule] : Start SolidStateModule_SurfaceAreaTest Queue
+2024-06-20 10:10:24,941 - [OCTOPUS] solid+eval::DEBUG -- [RobotArm] : Move-->Start!
+2024-06-20 10:10:26,975 - [OCTOPUS] solid+eval::DEBUG -- [RobotArm] : Move-->Done!
+2024-06-20 10:10:28,011 - [OCTOPUS] solid+eval::DEBUG -- [RobotArm] : Grasp-->Start!
+2024-06-20 10:10:30,051 - [OCTOPUS] solid+eval::DEBUG -- [RobotArm] : Grasp-->Done!
+2024-06-20 10:10:31,087 - [OCTOPUS] solid+eval::DEBUG -- [RobotArm] : Release-->Start!
+2024-06-20 10:10:33,128 - [OCTOPUS] solid+eval::DEBUG -- [RobotArm] : Release-->Done!
+2024-06-20 10:10:34,164 - [OCTOPUS] solid+eval::DEBUG -- [SolidStateModule] : Finish SolidStateModule_SurfaceAreaTest Queue
+2024-06-20 10:10:34,175 - [OCTOPUS] solid+eval::DEBUG -- [SolidStateModule] : Start SolidStateModule_MechanicalTest Queue
+2024-06-20 10:10:37,239 - [OCTOPUS] solid+eval::DEBUG -- [RobotArm] : Move-->Start!
+2024-06-20 10:10:39,278 - [OCTOPUS] solid+eval::DEBUG -- [RobotArm] : Move-->Done!
+2024-06-20 10:10:40,315 - [OCTOPUS] solid+eval::DEBUG -- [RobotArm] : Grasp-->Start!
+2024-06-20 10:10:42,355 - [OCTOPUS] solid+eval::DEBUG -- [RobotArm] : Grasp-->Done!
+2024-06-20 10:10:43,391 - [OCTOPUS] solid+eval::DEBUG -- [RobotArm] : Release-->Start!
+2024-06-20 10:10:45,431 - [OCTOPUS] solid+eval::DEBUG -- [RobotArm] : Release-->Done!
+2024-06-20 10:10:46,467 - [OCTOPUS] solid+eval::DEBUG -- [SolidStateModule] : Finish SolidStateModule_MechanicalTest Queue
+2024-06-20 10:10:46,478 - [OCTOPUS] solid+eval::DEBUG -- [SolidStateModule] : Start SolidStateModule_ThermalTest Queue
+2024-06-20 10:10:49,542 - [OCTOPUS] solid+eval::DEBUG -- [Heater] : Heat-->Start!
+2024-06-20 10:10:50,583 - [OCTOPUS] solid+eval::DEBUG -- [Heater] : Heat-->Done!
+2024-06-20 10:10:51,614 - [OCTOPUS] solid+eval::DEBUG -- [Heater] : Cool-->Start!
+2024-06-20 10:10:52,656 - [OCTOPUS] solid+eval::DEBUG -- [Heater] : Cool-->Done!
+2024-06-20 10:10:53,687 - [OCTOPUS] solid+eval::DEBUG -- [SolidStateModule] : Finish SolidStateModule_ThermalTest Queue
+2024-06-20 10:10:53,697 - [OCTOPUS] solid+eval::INFO -- [TaskScheduler] : SolidStateModule is finished, location: {'vialHolder': ['?', '?', '?', '?', '?', '?', '?', '?'], 'heater': ['?', '?', '?', '?', '?', '?', '?', '?'], 'XRD': ['?', '?', '?', '?', '?', '?', '?', '?', '?', '?', '?', '?', '?', '?', '?', '?']}
+2024-06-20 10:10:53,708 - [OCTOPUS] solid+eval::INFO -- [TaskScheduler] : ElectroChemicalRDEModule is started, allocate location: {'falcon': [0], 'falconHolder': [0]}
+2024-06-20 10:10:53,718 - [OCTOPUS] solid+eval::INFO -- [TaskScheduler] : check location after allocation: {'ElectroChemicalRDEModule': {'falcon': [0, '?', '?', '?', '?', '?', '?', '?'], 'falconHolder': [0, '?', '?', '?', '?', '?', '?', '?']}, 'SolidStateModule': {'vialHolder': ['?', '?', '?', '?', '?', '?', '?', '?'], 'heater': ['?', '?', '?', '?', '?', '?', '?', '?'], 'XRD': ['?', '?', '?', '?', '?', '?', '?', '?', '?', '?', '?', '?', '?', '?', '?', '?']}}
+2024-06-20 10:10:53,728 - [OCTOPUS] solid+eval::DEBUG -- [ElectroChemicalRDEModule] : Start ElectroChemicalRDEModule_SetupElectrode Queue
+2024-06-20 10:10:56,786 - [OCTOPUS] solid+eval::DEBUG -- [RobotArm] : Grasp-->Start!
+2024-06-20 10:10:58,825 - [OCTOPUS] solid+eval::DEBUG -- [RobotArm] : Grasp-->Done!
+2024-06-20 10:10:59,862 - [OCTOPUS] solid+eval::DEBUG -- [RobotArm] : Position-->Start!
+2024-06-20 10:11:01,902 - [OCTOPUS] solid+eval::DEBUG -- [RobotArm] : Position-->Done!
+2024-06-20 10:11:02,939 - [OCTOPUS] solid+eval::DEBUG -- [RobotArm] : Release-->Start!
+2024-06-20 10:11:04,977 - [OCTOPUS] solid+eval::DEBUG -- [RobotArm] : Release-->Done!
+2024-06-20 10:11:06,014 - [OCTOPUS] solid+eval::DEBUG -- [ElectroChemicalRDEModule] : Finish ElectroChemicalRDEModule_SetupElectrode Queue
+2024-06-20 10:11:06,024 - [OCTOPUS] solid+eval::DEBUG -- [ElectroChemicalRDEModule] : Start ElectroChemicalRDEModule_CalibrateEquipment Queue
+2024-06-20 10:11:09,124 - [OCTOPUS] solid+eval::DEBUG -- [Potentiostat] : Measure-->Start!

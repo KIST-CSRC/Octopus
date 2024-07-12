@@ -1,0 +1,58 @@
+{
+    "SolidStateModule_LoadSample": [
+        "RobotArm_Move",
+        "RobotArm_Grasp",
+        "RobotArm_Place"
+    ],
+    "SolidStateModule_AddPowder": [
+        "RobotArm_Move",
+        "RobotArm_Grasp",
+        "PowderDispenser_Dispense",
+        "RobotArm_Release"
+    ],
+    "SolidStateModule_MixPowders": [
+        "Stirrer_Stir"
+    ],
+    "SolidStateModule_PressPowder": [
+        "RobotArm_Move",
+        "RobotArm_Grasp",
+        "RobotArm_Position",
+        "RobotArm_Release"
+    ],
+    "SolidStateModule_Heat": [
+        "Heater_Heat"
+    ],
+    "SolidStateModule_Cool": [
+        "Heater_Cool"
+    ],
+    "SolidStateModule_Grind": [
+        "RobotArm_Move",
+        "RobotArm_Grasp",
+        "RobotArm_Position",
+        "RobotArm_Release"
+    ],
+    "SolidStateModule_Pelletize": [
+        "RobotArm_Move",
+        "RobotArm_Grasp",
+        "RobotArm_Position",
+        "RobotArm_Release"
+    ],
+    "SolidStateModule_Weigh": [
+        "WeighingMachine_Tare",
+        "WeighingMachine_Weigh"
+    ],
+    "SolidStateModule_Transfer": [
+        "RobotArm_Move",
+        "RobotArm_Grasp",
+        "RobotArm_Position",
+        "RobotArm_Release"
+    ],
+    "SolidStateModule_Wash": [
+        "Pipette_Aspirate",
+        "Pipette_Dispense",
+        "Pipette_Rinse"
+    ],
+    "SolidStateModule_Dry": [
+        "Heater_Heat"
+    ]
+}

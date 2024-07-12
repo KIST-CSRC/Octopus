@@ -1,0 +1,10 @@
+{
+    "SolidStateModule": {
+        "HOST": "192.168.1.13",
+        "PORT": 54009
+    },
+    "ElectroChemicalRDEModule": {
+        "HOST": "192.168.3.11",
+        "PORT": 54009
+    }
+}

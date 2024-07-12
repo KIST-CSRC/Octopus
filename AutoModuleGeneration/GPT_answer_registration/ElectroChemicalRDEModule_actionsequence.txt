@@ -1,0 +1,41 @@
+To create the `device_action_dictionary` for the ElectroChemicalRDEModule tasks, we need to map each task to the appropriate devices and their actions. Below is the dictionary with the task names as keys and the corresponding device actions as values:
+
+```json
+{
+    "ElectroChemicalRDEModule_SetupElectrode": ["RobotArm_Grasp", "RobotArm_Move", "RobotArm_Release", "Rde_ApplyVoltage"],
+    "ElectroChemicalRDEModule_Calibrate": ["Potentiostat_SetPotential", "RdeRotator_SetSpeed"],
+    "ElectroChemicalRDEModule_LoadSample": ["Pipette_Draw", "Pipette_Dispense"],
+    "ElectroChemicalRDEModule_AdjustRotation": ["RdeRotator_Start", "RdeRotator_SetSpeed", "RdeRotator_Stop"],
+    "ElectroChemicalRDEModule_ApplyPotential": ["Potentiostat_SetPotential"],
+    "ElectroChemicalRDEModule_RecordCurrent": ["Potentiostat_RunTest"],
+    "ElectroChemicalRDEModule_PerformCV": ["Potentiostat_RunTest"],
+    "ElectroChemicalRDEModule_PerformLPR": ["Potentiostat_RunTest"],
+    "ElectroChemicalRDEModule_PerformEIS": ["Potentiostat_RunTest"],
+    "ElectroChemicalRDEModule_ChangeSolution": ["Pump_Start", "Pump_Stop"],
+    "ElectroChemicalRDEModule_CleanElectrode": ["Sonication_Sonicate", "Sonication_Stop"],
+    "ElectroChemicalRDEModule_AnalyzeData": [],
+    "ElectroChemicalRDEModule_PerformanceTest": ["Potentiostat_RunTest"]
+}
+```
+
+Now, let's save this dictionary as a JSON file without any annotations:
+
+```json
+{
+    "ElectroChemicalRDEModule_SetupElectrode": ["RobotArm_Grasp", "RobotArm_Move", "RobotArm_Release", "Rde_ApplyVoltage"],
+    "ElectroChemicalRDEModule_Calibrate": ["Potentiostat_SetPotential", "RdeRotator_SetSpeed"],
+    "ElectroChemicalRDEModule_LoadSample": ["Pipette_Draw", "Pipette_Dispense"],
+    "ElectroChemicalRDEModule_AdjustRotation": ["RdeRotator_Start", "RdeRotator_SetSpeed", "RdeRotator_Stop"],
+    "ElectroChemicalRDEModule_ApplyPotential": ["Potentiostat_SetPotential"],
+    "ElectroChemicalRDEModule_RecordCurrent": ["Potentiostat_RunTest"],
+    "ElectroChemicalRDEModule_PerformCV": ["Potentiostat_RunTest"],
+    "ElectroChemicalRDEModule_PerformLPR": ["Potentiostat_RunTest"],
+    "ElectroChemicalRDEModule_PerformEIS": ["Potentiostat_RunTest"],
+    "ElectroChemicalRDEModule_ChangeSolution": ["Pump_Start", "Pump_Stop"],
+    "ElectroChemicalRDEModule_CleanElectrode": ["Sonication_Sonicate", "Sonication_Stop"],
+    "ElectroChemicalRDEModule_AnalyzeData": [],
+    "ElectroChemicalRDEModule_PerformanceTest": ["Potentiostat_RunTest"]
+}
+```
+
+Please note that the actual saving of the JSON file should be done using a programming language or a text editor, and the above representation is just a textual representation of what the JSON content should look like. If you need assistance with saving this to a file programmatically, please specify the programming language you are using.

@@ -1,0 +1,84 @@
+{
+    "SolidStateModule": {
+        "SolidStateModule_LoadSample": [
+            "SolidStateModule_RobotArm"
+        ],
+        "SolidStateModule_AddPowder": [
+            "SolidStateModule_PowderDispenser",
+            "SolidStateModule_RobotArm"
+        ],
+        "SolidStateModule_MixPowders": [
+            "SolidStateModule_Stirrer"
+        ],
+        "SolidStateModule_PressPowder": [
+            "SolidStateModule_RobotArm"
+        ],
+        "SolidStateModule_Heat": [
+            "SolidStateModule_Heater"
+        ],
+        "SolidStateModule_Cool": [
+            "SolidStateModule_Heater"
+        ],
+        "SolidStateModule_Grind": [
+            "SolidStateModule_RobotArm"
+        ],
+        "SolidStateModule_Pelletize": [
+            "SolidStateModule_RobotArm"
+        ],
+        "SolidStateModule_Weigh": [
+            "SolidStateModule_WeighingMachine"
+        ],
+        "SolidStateModule_Transfer": [
+            "SolidStateModule_RobotArm"
+        ],
+        "SolidStateModule_Wash": [
+            "SolidStateModule_Pipette"
+        ],
+        "SolidStateModule_Dry": [
+            "SolidStateModule_Heater"
+        ]
+    },
+    "ElectroChemicalRDEModule": {
+        "ElectroChemicalRDEModule_SetupElectrode": [
+            "ElectroChemicalRDEModule_RobotArm",
+            "ElectroChemicalRDEModule_Rde",
+            "SolidStateModule_RobotArm"
+        ],
+        "ElectroChemicalRDEModule_Calibrate": [
+            "ElectroChemicalRDEModule_Potentiostat",
+            "ElectroChemicalRDEModule_RdeRotator"
+        ],
+        "ElectroChemicalRDEModule_LoadSample": [
+            "ElectroChemicalRDEModule_Pipette",
+            "SolidStateModule_RobotArm"
+        ],
+        "ElectroChemicalRDEModule_AdjustRotation": [
+            "ElectroChemicalRDEModule_RdeRotator"
+        ],
+        "ElectroChemicalRDEModule_ApplyPotential": [
+            "ElectroChemicalRDEModule_Potentiostat"
+        ],
+        "ElectroChemicalRDEModule_RecordCurrent": [
+            "ElectroChemicalRDEModule_Potentiostat"
+        ],
+        "ElectroChemicalRDEModule_PerformCV": [
+            "ElectroChemicalRDEModule_Potentiostat"
+        ],
+        "ElectroChemicalRDEModule_PerformLPR": [
+            "ElectroChemicalRDEModule_Potentiostat"
+        ],
+        "ElectroChemicalRDEModule_PerformEIS": [
+            "ElectroChemicalRDEModule_Potentiostat"
+        ],
+        "ElectroChemicalRDEModule_ChangeSolution": [
+            "ElectroChemicalRDEModule_Pump"
+        ],
+        "ElectroChemicalRDEModule_CleanElectrode": [
+            "ElectroChemicalRDEModule_Sonication"
+        ],
+        "ElectroChemicalRDEModule_AnalyzeData": [],
+        "ElectroChemicalRDEModule_PerformanceTest": [
+            "ElectroChemicalRDEModule_Potentiostat"
+        ]
+    }
+}

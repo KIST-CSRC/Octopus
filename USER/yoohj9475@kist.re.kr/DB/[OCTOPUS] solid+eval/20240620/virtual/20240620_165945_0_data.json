@@ -1,0 +1,502 @@
+{
+     "metadata": {
+          "subject": "[OCTOPUS] solid+eval",
+          "group": "KIST_CSRC",
+          "logLevel": "DEBUG",
+          "userName": "yoohj9475@kist.re.kr",
+          "modeType": "virtual",
+          "jobID": 0,
+          "jobFileName": "all",
+          "jobStatus": "TaskScheduler-->schedule all task:1",
+          "temperature": 25,
+          "humidity": "68%",
+          "jobSubmitTime": "2024-06-20 16:56:05",
+          "jobStartTime": "2024-06-20 16:59:45",
+          "jobWaitingTime(sec)": 0.04,
+          "jobFinishTime": "2024-06-20 16:59:45",
+          "jobTurnAroundTime(sec)": 220.15,
+          "jobDelayTimeList": [],
+          "jobDelayTime(sec)": 0,
+          "experimentIdx": 0
+     },
+     "algorithm": {
+          "model": "Manual",
+          "totalExperimentNum": 1,
+          "inputParams": []
+     },
+     "process": {
+          "Synthesis": [
+               {
+                    "Module": "SolidStateModule",
+                    "Data": [
+                         {
+                              "Task": "SolidStateModule_LoadPowder",
+                              "Data": {
+                                   "Material": {
+                                        "Type": "IrCl3"
+                                   },
+                                   "Device": {
+                                        "RobotArm": {
+                                             "DeviceName": "RobotArm"
+                                        }
+                                   }
+                              }
+                         },
+                         {
+                              "Task": "SolidStateModule_AddPowder",
+                              "Data": {
+                                   "Material": {
+                                        "Type": "IrCl3"
+                                   },
+                                   "Amount": {
+                                        "Value": 0,
+                                        "Dimension": "g"
+                                   },
+                                   "Device": {
+                                        "RobotArm": {
+                                             "DeviceName": "RobotArm"
+                                        },
+                                        "PowderDispenser": {
+                                             "DeviceName": "PowderDispenser"
+                                        }
+                                   }
+                              }
+                         },
+                         {
+                              "Task": "SolidStateModule_WeighPowder",
+                              "Data": {
+                                   "Material": {
+                                        "Type": "IrCl3"
+                                   },
+                                   "Device": {
+                                        "RobotArm": {
+                                             "DeviceName": "RobotArm"
+                                        },
+                                        "WeighingMachine": {
+                                             "DeviceName": "WeighingMachine"
+                                        }
+                                   }
+                              }
+                         },
+                         {
+                              "Task": "SolidStateModule_GrindPowder",
+                              "Data": {
+                                   "Material": {
+                                        "Type": "IrCo"
+                                   },
+                                   "Time": {
+                                        "Value": 0,
+                                        "Dimension": "min"
+                                   },
+                                   "Device": {
+                                        "RobotArm": {
+                                             "DeviceName": "RobotArm"
+                                        }
+                                   }
+                              }
+                         },
+                         {
+                              "Task": "SolidStateModule_MixPowders",
+                              "Data": {
+                                   "Materials": {
+                                        "Type": "",
+                                        "Value": ""
+                                   },
+                                   "Time": {
+                                        "Value": 0,
+                                        "Dimension": "min"
+                                   },
+                                   "Device": {
+                                        "Stirrer": {
+                                             "DeviceName": "Stirrer"
+                                        }
+                                   }
+                              }
+                         },
+                         {
+                              "Task": "SolidStateModule_PressPowder",
+                              "Data": {
+                                   "Pressure": {
+                                        "Value": 0,
+                                        "Dimension": "MPa"
+                                   },
+                                   "Time": {
+                                        "Value": 0,
+                                        "Dimension": "min"
+                                   },
+                                   "Device": {
+                                        "RobotArm": {
+                                             "DeviceName": "RobotArm"
+                                        }
+                                   }
+                              }
+                         },
+                         {
+                              "Task": "SolidStateModule_Sinter",
+                              "Data": {
+                                   "Temperature": {
+                                        "Value": 0,
+                                        "Dimension": "\u00b0C"
+                                   },
+                                   "Time": {
+                                        "Value": 0,
+                                        "Dimension": "h"
+                                   },
+                                   "Atmosphere": {
+                                        "Type": "",
+                                        "Value": ""
+                                   },
+                                   "Device": {
+                                        "Heater": {
+                                             "DeviceName": "Heater"
+                                        }
+                                   }
+                              }
+                         },
+                         {
+                              "Task": "SolidStateModule_CoolDown",
+                              "Data": {
+                                   "Rate": {
+                                        "Value": 0,
+                                        "Dimension": "\u00b0C/min"
+                                   },
+                                   "Device": {
+                                        "Heater": {
+                                             "DeviceName": "Heater"
+                                        }
+                                   }
+                              }
+                         },
+                         {
+                              "Task": "SolidStateModule_Characterize",
+                              "Data": {
+                                   "Method": {
+                                        "Type": "",
+                                        "Value": ""
+                                   },
+                                   "Device": {}
+                              }
+                         },
+                         {
+                              "Task": "SolidStateModule_XRayDiffractionTest",
+                              "Data": {
+                                   "Method": {
+                                        "Type": "",
+                                        "Value": ""
+                                   },
+                                   "Device": {
+                                        "Xrd": {
+                                             "DeviceName": "Xrd"
+                                        }
+                                   }
+                              }
+                         },
+                         {
+                              "Task": "SolidStateModule_ScanningElectronMicroscopyTest",
+                              "Data": {
+                                   "Method": {
+                                        "Type": "",
+                                        "Value": ""
+                                   },
+                                   "Device": {}
+                              }
+                         },
+                         {
+                              "Task": "SolidStateModule_DensityMeasurementTest",
+                              "Data": {
+                                   "Method": {
+                                        "Type": "",
+                                        "Value": ""
+                                   },
+                                   "Device": {}
+                              }
+                         },
+                         {
+                              "Task": "SolidStateModule_PorosityTest",
+                              "Data": {
+                                   "Method": {
+                                        "Type": "",
+                                        "Value": ""
+                                   },
+                                   "Device": {}
+                              }
+                         },
+                         {
+                              "Task": "SolidStateModule_ThermalAnalysisTest",
+                              "Data": {
+                                   "Method": {
+                                        "Type": "",
+                                        "Value": ""
+                                   },
+                                   "Device": {
+                                        "Heater": {
+                                             "DeviceName": "Heater"
+                                        }
+                                   }
+                              }
+                         },
+                         {
+                              "Task": "SolidStateModule_ElectricalConductivityTest",
+                              "Data": {
+                                   "Method": {
+                                        "Type": "",
+                                        "Value": ""
+                                   },
+                                   "Device": {}
+                              }
+                         },
+                         {
+                              "Task": "SolidStateModule_MagneticPropertyTest",
+                              "Data": {
+                                   "Method": {
+                                        "Type": "",
+                                        "Value": ""
+                                   },
+                                   "Device": {}
+                              }
+                         }
+                    ]
+               }
+          ],
+          "Preprocess": [],
+          "Characterization": [],
+          "Evaluation": [
+               {
+                    "Module": "ElectroChemicalRDEModule",
+                    "Data": [
+                         {
+                              "Task": "ElectroChemicalRDEModule_SetupElectrode",
+                              "Data": {
+                                   "ElectrodeType": {
+                                        "Type": "",
+                                        "Value": ""
+                                   },
+                                   "Device": {
+                                        "RobotArm": {
+                                             "DeviceName": "RobotArm"
+                                        },
+                                        "Cell": {
+                                             "DeviceName": "Cell"
+                                        }
+                                   }
+                              }
+                         },
+                         {
+                              "Task": "ElectroChemicalRDEModule_Calibrate",
+                              "Data": {
+                                   "CalibrationStandard": {
+                                        "Type": "",
+                                        "Value": ""
+                                   },
+                                   "Device": {
+                                        "Potentiostat": {
+                                             "DeviceName": "Potentiostat"
+                                        }
+                                   }
+                              }
+                         },
+                         {
+                              "Task": "ElectroChemicalRDEModule_AdjustRotationSpeed",
+                              "Data": {
+                                   "RotationSpeed": {
+                                        "Value": 0,
+                                        "Dimension": "rpm"
+                                   },
+                                   "Device": {
+                                        "RdeRotator": {
+                                             "DeviceName": "RdeRotator"
+                                        }
+                                   }
+                              }
+                         },
+                         {
+                              "Task": "ElectroChemicalRDEModule_PurgeSolution",
+                              "Data": {
+                                   "PurgeTime": {
+                                        "Value": 0,
+                                        "Dimension": "sec"
+                                   },
+                                   "Device": {
+                                        "Pump": {
+                                             "DeviceName": "Pump"
+                                        }
+                                   }
+                              }
+                         },
+                         {
+                              "Task": "ElectroChemicalRDEModule_AddElectrolyte",
+                              "Data": {
+                                   "Material": {
+                                        "Type": "HClO4"
+                                   },
+                                   "Volume": {
+                                        "Value": 0,
+                                        "Dimension": "mL"
+                                   },
+                                   "Device": {
+                                        "Pipette": {
+                                             "DeviceName": "Pipette"
+                                        }
+                                   }
+                              }
+                         },
+                         {
+                              "Task": "ElectroChemicalRDEModule_ApplyPotential",
+                              "Data": {
+                                   "Potential": {
+                                        "Value": 0,
+                                        "Dimension": "V"
+                                   },
+                                   "Device": {
+                                        "Potentiostat": {
+                                             "DeviceName": "Potentiostat"
+                                        }
+                                   }
+                              }
+                         },
+                         {
+                              "Task": "ElectroChemicalRDEModule_RecordCurrent",
+                              "Data": {
+                                   "Method": {
+                                        "Type": "",
+                                        "Value": ""
+                                   },
+                                   "Device": {
+                                        "Potentiostat": {
+                                             "DeviceName": "Potentiostat"
+                                        },
+                                        "Rde": {
+                                             "DeviceName": "Rde"
+                                        }
+                                   },
+                                   "Data": {}
+                              }
+                         },
+                         {
+                              "Task": "ElectroChemicalRDEModule_SweepPotential",
+                              "Data": {
+                                   "StartPotential": {
+                                        "Value": 0,
+                                        "Dimension": "V"
+                                   },
+                                   "EndPotential": {
+                                        "Value": 0,
+                                        "Dimension": "V"
+                                   },
+                                   "ScanRate": {
+                                        "Value": 0,
+                                        "Dimension": "V/s"
+                                   },
+                                   "Device": {
+                                        "Potentiostat": {
+                                             "DeviceName": "Potentiostat"
+                                        }
+                                   }
+                              }
+                         },
+                         {
+                              "Task": "ElectroChemicalRDEModule_MeasureImpedance",
+                              "Data": {
+                                   "FrequencyRange": {
+                                        "Value": 0,
+                                        "Dimension": "Hz"
+                                   },
+                                   "Device": {
+                                        "Potentiostat": {
+                                             "DeviceName": "Potentiostat"
+                                        }
+                                   }
+                              }
+                         },
+                         {
+                              "Task": "ElectroChemicalRDEModule_CollectData",
+                              "Data": {
+                                   "Method": {
+                                        "Type": "",
+                                        "Value": ""
+                                   },
+                                   "Device": {}
+                              }
+                         },
+                         {
+                              "Task": "ElectroChemicalRDEModule_AnalyzeData",
+                              "Data": {
+                                   "Method": {
+                                        "Type": "",
+                                        "Value": ""
+                                   },
+                                   "Device": {},
+                                   "Data": {}
+                              }
+                         },
+                         {
+                              "Task": "ElectroChemicalRDEModule_CleanElectrode",
+                              "Data": {
+                                   "CleaningMethod": {
+                                        "Type": "",
+                                        "Value": ""
+                                   },
+                                   "Device": {
+                                        "Cell": {
+                                             "DeviceName": "Cell"
+                                        }
+                                   }
+                              }
+                         },
+                         {
+                              "Task": "ElectroChemicalRDEModule_PerformanceTest",
+                              "Data": {
+                                   "TestType": {
+                                        "Type": "",
+                                        "Value": ""
+                                   },
+                                   "Device": {
+                                        "Potentiostat": {
+                                             "DeviceName": "Potentiostat"
+                                        }
+                                   },
+                                   "Data": {}
+                              }
+                         }
+                    ]
+               }
+          ]
+     },
+     "result": {
+          "ElectroChemicalRDEModule_RecordCurrent": {
+               "Method": {
+                    "Type": "",
+                    "Value": ""
+               },
+               "Device": {
+                    "Potentiostat": {
+                         "DeviceName": "Potentiostat"
+                    },
+                    "Rde": {
+                         "DeviceName": "Rde"
+                    }
+               },
+               "Data": {}
+          },
+          "ElectroChemicalRDEModule_AnalyzeData": {
+               "Method": {
+                    "Type": "",
+                    "Value": ""
+               },
+               "Device": {},
+               "Data": {}
+          },
+          "ElectroChemicalRDEModule_PerformanceTest": {
+               "TestType": {
+                    "Type": "",
+                    "Value": ""
+               },
+               "Device": {
+                    "Potentiostat": {
+                         "DeviceName": "Potentiostat"
+                    }
+               },
+               "Data": {}
+          }
+     }
+}

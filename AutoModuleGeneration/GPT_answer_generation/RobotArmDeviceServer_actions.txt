@@ -1,0 +1,6 @@
+```json
+{
+    "RobotArm": ["Move", "Rotate", "Lift", "Lower", "Grasp", "Release", "Position", "Retrieve", "Place"],
+    "Pipette": ["Aspirate", "Dispense", "Rinse", "Mix", "Eject", "Calibrate"]
+}
+```

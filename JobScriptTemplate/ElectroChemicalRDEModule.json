@@ -1,0 +1,48 @@
+{
+    "metadata": {
+        "subject": "",
+        "group": "",
+        "logLevel": ""
+    },
+    "algorithm": {
+        "model": "",
+        "totalExperimentNum": 0,
+        "inputParams": []
+    },
+    "process": {
+        "Evaluation": {
+            "ElectroChemicalRDEModule": {
+                "Sequence": [
+                    "ElectroChemicalRDEModule_SetupElectrode",
+                    "ElectroChemicalRDEModule_Calibrate",
+                    "ElectroChemicalRDEModule_LoadSample",
+                    "ElectroChemicalRDEModule_AdjustRotation",
+                    "ElectroChemicalRDEModule_ApplyPotential",
+                    "ElectroChemicalRDEModule_RecordCurrent",
+                    "ElectroChemicalRDEModule_PerformCV",
+                    "ElectroChemicalRDEModule_PerformLPR",
+                    "ElectroChemicalRDEModule_PerformEIS",
+                    "ElectroChemicalRDEModule_ChangeSolution",
+                    "ElectroChemicalRDEModule_CleanElectrode",
+                    "ElectroChemicalRDEModule_AnalyzeData",
+                    "ElectroChemicalRDEModule_PerformanceTest"
+                ],
+                "fixedParams": {
+                    "ElectroChemicalRDEModule_SetupElectrode=ElectrodeType": "",
+                    "ElectroChemicalRDEModule_Calibrate=CalibrationStandard": "",
+                    "ElectroChemicalRDEModule_LoadSample=SampleVolume": 0,
+                    "ElectroChemicalRDEModule_AdjustRotation=RotationSpeed": 0,
+                    "ElectroChemicalRDEModule_ApplyPotential=Potential": 0,
+                    "ElectroChemicalRDEModule_RecordCurrent=Duration": 0,
+                    "ElectroChemicalRDEModule_PerformCV=ScanRate": 0,
+                    "ElectroChemicalRDEModule_PerformLPR=ScanRate": 0,
+                    "ElectroChemicalRDEModule_PerformEIS=FrequencyRange": 0,
+                    "ElectroChemicalRDEModule_ChangeSolution=NewSolution": "",
+                    "ElectroChemicalRDEModule_CleanElectrode=CleaningMethod": "",
+                    "ElectroChemicalRDEModule_AnalyzeData=Method": "",
+                    "ElectroChemicalRDEModule_PerformanceTest=TestType": ""
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,8 @@
+```json
+{
+    "Stirrer": ["Stir", "Stop"],
+    "PowderDispenser": ["Dispense", "Stop"],
+    "WeighingMachine": ["Weigh", "Tare", "Stop"],
+    "Heater": ["Heat", "Cool", "Stop"]
+}
+```

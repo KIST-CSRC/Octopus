@@ -1,0 +1,5 @@
+```json
+{
+    "Pump": ["Start", "Stop", "Increase", "Decrease", "Reverse"]
+}
+```

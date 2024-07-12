@@ -1,0 +1,129 @@
+{
+    "SolidStateModule_LoadSample": {
+        "Task": "SolidStateModule_LoadSample",
+        "Data": {
+            "Device": {},
+            "Material": {
+                "Type": ""
+            }
+        }
+    },
+    "SolidStateModule_AddPowder": {
+        "Task": "SolidStateModule_AddPowder",
+        "Data": {
+            "Material": {
+                "Type": ""
+            },
+            "Amount": {
+                "Value": 0,
+                "Dimension": "g"
+            },
+            "Device": {}
+        }
+    },
+    "SolidStateModule_MixPowders": {
+        "Task": "SolidStateModule_MixPowders",
+        "Data": {
+            "Time": {
+                "Value": 0,
+                "Dimension": "sec"
+            },
+            "Device": {}
+        }
+    },
+    "SolidStateModule_PressPowder": {
+        "Task": "SolidStateModule_PressPowder",
+        "Data": {
+            "Pressure": {
+                "Value": 0,
+                "Dimension": "Pa"
+            },
+            "Device": {}
+        }
+    },
+    "SolidStateModule_Heat": {
+        "Task": "SolidStateModule_Heat",
+        "Data": {
+            "Temperature": {
+                "Value": 0,
+                "Dimension": "\u00baC"
+            },
+            "Device": {}
+        }
+    },
+    "SolidStateModule_Cool": {
+        "Task": "SolidStateModule_Cool",
+        "Data": {
+            "Temperature": {
+                "Value": 0,
+                "Dimension": "\u00baC"
+            },
+            "Device": {}
+        }
+    },
+    "SolidStateModule_Grind": {
+        "Task": "SolidStateModule_Grind",
+        "Data": {
+            "Time": {
+                "Value": 0,
+                "Dimension": "sec"
+            },
+            "Device": {}
+        }
+    },
+    "SolidStateModule_Pelletize": {
+        "Task": "SolidStateModule_Pelletize",
+        "Data": {
+            "Pressure": {
+                "Value": 0,
+                "Dimension": "Pa"
+            },
+            "Device": {}
+        }
+    },
+    "SolidStateModule_Weigh": {
+        "Task": "SolidStateModule_Weigh",
+        "Data": {
+            "Method": {
+                "Type": ""
+            },
+            "Device": {}
+        }
+    },
+    "SolidStateModule_Transfer": {
+        "Task": "SolidStateModule_Transfer",
+        "Data": {
+            "FromTo": {
+                "Type": ""
+            },
+            "Device": {}
+        }
+    },
+    "SolidStateModule_Wash": {
+        "Task": "SolidStateModule_Wash",
+        "Data": {
+            "Solvent": {
+                "Type": ""
+            },
+            "Volume": {
+                "Value": 0,
+                "Dimension": "mL"
+            },
+            "Device": {}
+        }
+    },
+    "SolidStateModule_Dry": {
+        "Task": "SolidStateModule_Dry",
+        "Data": {
+            "Temperature": {
+                "Value": 0,
+                "Dimension": "\u00baC"
+            },
+            "Time": {
+                "Value": 0,
+                "Dimension": "sec"
+            },
+            "Device": {}
+        }
+    }
+}

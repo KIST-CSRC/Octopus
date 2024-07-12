@@ -1,0 +1,48 @@
+{
+    "ElectroChemicalRDEModule_SetupElectrode": [
+        "RobotArm_Grasp",
+        "RobotArm_Move",
+        "RobotArm_Release",
+        "Rde_ApplyVoltage"
+    ],
+    "ElectroChemicalRDEModule_Calibrate": [
+        "Potentiostat_SetPotential",
+        "RdeRotator_SetSpeed"
+    ],
+    "ElectroChemicalRDEModule_LoadSample": [
+        "Pipette_Draw",
+        "Pipette_Dispense"
+    ],
+    "ElectroChemicalRDEModule_AdjustRotation": [
+        "RdeRotator_Start",
+        "RdeRotator_SetSpeed",
+        "RdeRotator_Stop"
+    ],
+    "ElectroChemicalRDEModule_ApplyPotential": [
+        "Potentiostat_SetPotential"
+    ],
+    "ElectroChemicalRDEModule_RecordCurrent": [
+        "Potentiostat_RunTest"
+    ],
+    "ElectroChemicalRDEModule_PerformCV": [
+        "Potentiostat_RunTest"
+    ],
+    "ElectroChemicalRDEModule_PerformLPR": [
+        "Potentiostat_RunTest"
+    ],
+    "ElectroChemicalRDEModule_PerformEIS": [
+        "Potentiostat_RunTest"
+    ],
+    "ElectroChemicalRDEModule_ChangeSolution": [
+        "Pump_Start",
+        "Pump_Stop"
+    ],
+    "ElectroChemicalRDEModule_CleanElectrode": [
+        "Sonication_Sonicate",
+        "Sonication_Stop"
+    ],
+    "ElectroChemicalRDEModule_AnalyzeData": [],
+    "ElectroChemicalRDEModule_PerformanceTest": [
+        "Potentiostat_RunTest"
+    ]
+}

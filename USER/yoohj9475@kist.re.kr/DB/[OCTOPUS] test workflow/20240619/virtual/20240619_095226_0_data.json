@@ -1,0 +1,131 @@
+{
+     "metadata": {
+          "subject": "[OCTOPUS] test workflow",
+          "group": "KIST_CSRC",
+          "logLevel": "DEBUG",
+          "userName": "yoohj9475@kist.re.kr",
+          "modeType": "virtual",
+          "jobID": 0,
+          "jobFileName": "oer_test",
+          "jobStatus": "TaskScheduler-->schedule all task:1",
+          "temperature": 25,
+          "humidity": "68%",
+          "jobSubmitTime": "2024-06-19 09:51:20",
+          "jobStartTime": "2024-06-19 09:52:26",
+          "jobWaitingTime(sec)": 0.05,
+          "jobFinishTime": "2024-06-19 09:52:26",
+          "jobTurnAroundTime(sec)": 65.18,
+          "jobDelayTimeList": [],
+          "jobDelayTime(sec)": 0,
+          "experimentIdx": 0
+     },
+     "algorithm": {
+          "model": "Manual",
+          "totalExperimentNum": 1,
+          "inputParams": []
+     },
+     "process": {
+          "Synthesis": [
+               {
+                    "Module": "SolidStateModule",
+                    "Data": [
+                         {
+                              "Task": "SolidStateModule_LoadSample",
+                              "Data": {
+                                   "Material": {
+                                        "Type": "IrCl3"
+                                   },
+                                   "Device": {
+                                        "DeviceName": "RobotArm"
+                                   }
+                              }
+                         },
+                         {
+                              "Task": "SolidStateModule_AddPowder",
+                              "Data": {
+                                   "Material": {
+                                        "Type": "IrCl3"
+                                   },
+                                   "Amount": {
+                                        "Value": 1,
+                                        "Dimension": "g"
+                                   },
+                                   "Device": {
+                                        "DeviceName": "PowderDispenser"
+                                   }
+                              }
+                         },
+                         {
+                              "Task": "SolidStateModule_Weigh",
+                              "Data": {
+                                   "Weight": {
+                                        "Value": 1,
+                                        "Dimension": "g"
+                                   },
+                                   "Device": {
+                                        "DeviceName": "WeighingMachine"
+                                   }
+                              }
+                         },
+                         {
+                              "Task": "SolidStateModule_Mix",
+                              "Data": {
+                                   "Time": {
+                                        "Value": 1,
+                                        "Dimension": "min"
+                                   },
+                                   "Device": {
+                                        "DeviceName": "Stirrer"
+                                   }
+                              }
+                         },
+                         {
+                              "Task": "SolidStateModule_Press",
+                              "Data": {
+                                   "Pressure": {
+                                        "Value": 1,
+                                        "Dimension": "Pa"
+                                   },
+                                   "Device": {
+                                        "DeviceName": "RobotArm"
+                                   }
+                              }
+                         },
+                         {
+                              "Task": "SolidStateModule_Sinter",
+                              "Data": {
+                                   "Temperature": {
+                                        "Value": 1,
+                                        "Dimension": "\u00baC"
+                                   },
+                                   "Time": {
+                                        "Value": 1,
+                                        "Dimension": "h"
+                                   },
+                                   "Device": {
+                                        "DeviceName": "Heater"
+                                   }
+                              }
+                         },
+                         {
+                              "Task": "SolidStateModule_Cool",
+                              "Data": {
+                                   "Temperature": {
+                                        "Value": 1,
+                                        "Dimension": "\u00baC"
+                                   },
+                                   "Time": {
+                                        "Value": 1,
+                                        "Dimension": "h"
+                                   },
+                                   "Device": {
+                                        "DeviceName": "Heater"
+                                   }
+                              }
+                         }
+                    ]
+               }
+          ]
+     },
+     "result": {}
+}

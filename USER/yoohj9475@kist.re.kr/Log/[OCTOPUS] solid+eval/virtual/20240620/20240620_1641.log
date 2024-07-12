@@ -1,0 +1,9 @@
+2024-06-20 16:41:21,792 - [OCTOPUS] solid+eval::INFO -- [JobExecution] : [jobID=0] Algorithm, model : Manual
+2024-06-20 16:41:21,823 - [OCTOPUS] solid+eval::INFO -- [JobExecution] : ######### Cycle start #########
+2024-06-20 16:41:21,829 - [OCTOPUS] solid+eval::INFO -- [Manual] : total experiments=1
+2024-06-20 16:41:22,008 - [OCTOPUS] solid+eval::INFO -- [ProcessGenerator] : Allocate all of process based on job script!
+2024-06-20 16:41:22,018 - [OCTOPUS] solid+eval::INFO -- [JobExecution] : ######### [[OCTOPUS] solid+eval-yoohj9475@kist.re.kr] Experiment 1 is running #########
+2024-06-20 16:41:22,043 - [OCTOPUS] solid+eval::INFO -- [TaskScheduler] : check location: {'ElectroChemicalRDEModule': {'falcon': ['?', '?', '?', '?', '?', '?', '?', '?'], 'falconHolder': ['?', '?', '?', '?', '?', '?', '?', '?']}, 'SolidStateModule': {'vialHolder': ['?', '?', '?', '?', '?', '?', '?', '?'], 'heater': ['?', '?', '?', '?', '?', '?', '?', '?'], 'XRD': ['?', '?', '?', '?', '?', '?', '?', '?', '?', '?', '?', '?', '?', '?', '?', '?']}}
+2024-06-20 16:41:22,054 - [OCTOPUS] solid+eval::INFO -- [TaskScheduler] : SolidStateModule is started, allocate location: {'vialHolder': [0], 'heater': [0], 'XRD': [0]}
+2024-06-20 16:41:22,064 - [OCTOPUS] solid+eval::INFO -- [TaskScheduler] : check location after allocation: {'ElectroChemicalRDEModule': {'falcon': ['?', '?', '?', '?', '?', '?', '?', '?'], 'falconHolder': ['?', '?', '?', '?', '?', '?', '?', '?']}, 'SolidStateModule': {'vialHolder': [0, '?', '?', '?', '?', '?', '?', '?'], 'heater': [0, '?', '?', '?', '?', '?', '?', '?'], 'XRD': [0, '?', '?', '?', '?', '?', '?', '?', '?', '?', '?', '?', '?', '?', '?', '?']}}
+2024-06-20 16:41:22,074 - [OCTOPUS] solid+eval::DEBUG -- [SolidStateModule] : Start SolidStateModule_LoadPowder Queue

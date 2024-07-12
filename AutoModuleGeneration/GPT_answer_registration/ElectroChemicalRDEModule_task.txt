@@ -1,0 +1,21 @@
+Certainly! For the ElectroChemicalRDEModule, which is focused on electrochemical evaluation using a rotating disk electrode (RDE), the tasks might involve setting up the electrode system, performing electrochemical measurements, and analyzing the results. Here's a list of potential tasks in Python list format:
+
+```python
+ElectroChemicalRDEModule_tasks = [
+    'ElectroChemicalRDEModule_SetupElectrode',  # Preparing the RDE for the experiment
+    'ElectroChemicalRDEModule_Calibrate',       # Calibrating the RDE system before measurements
+    'ElectroChemicalRDEModule_LoadSample',      # Loading the sample onto the RDE
+    'ElectroChemicalRDEModule_AdjustRotation',  # Adjusting the rotation speed of the RDE
+    'ElectroChemicalRDEModule_ApplyPotential',  # Applying a specific potential to the electrode
+    'ElectroChemicalRDEModule_RecordCurrent',   # Recording the current during the experiment
+    'ElectroChemicalRDEModule_PerformCV',       # Performing cyclic voltammetry
+    'ElectroChemicalRDEModule_PerformLPR',      # Performing linear polarization resistance measurements
+    'ElectroChemicalRDEModule_PerformEIS',      # Performing electrochemical impedance spectroscopy
+    'ElectroChemicalRDEModule_ChangeSolution',  # Changing the solution in contact with the RDE
+    'ElectroChemicalRDEModule_CleanElectrode',  # Cleaning the electrode after the experiment
+    'ElectroChemicalRDEModule_AnalyzeData',     # Analyzing the collected data
+    'ElectroChemicalRDEModule_PerformanceTest', # Loading and evaluating performance data
+]
+```
+
+Each task is prefixed with the module name and followed by a verb that describes the specific action to be taken. The 'PerformanceTest' task is designed to end with "test" as it involves the evaluation of performance data.

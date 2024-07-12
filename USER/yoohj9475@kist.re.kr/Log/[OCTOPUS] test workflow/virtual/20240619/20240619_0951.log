@@ -1,0 +1,59 @@
+2024-06-19 09:51:20,918 - [OCTOPUS] test workflow::INFO -- [JobExecution] : [jobID=0] Algorithm, model : Manual
+2024-06-19 09:51:20,934 - [OCTOPUS] test workflow::INFO -- [JobExecution] : ######### Cycle start #########
+2024-06-19 09:51:20,964 - [OCTOPUS] test workflow::INFO -- [Manual] : total experiments=1
+2024-06-19 09:51:21,244 - [OCTOPUS] test workflow::INFO -- [ProcessGenerator] : Allocate all of process based on job script!
+2024-06-19 09:51:21,254 - [OCTOPUS] test workflow::INFO -- [JobExecution] : ######### [[OCTOPUS] test workflow-yoohj9475@kist.re.kr] Experiment 1 is running #########
+2024-06-19 09:51:21,295 - [OCTOPUS] test workflow::INFO -- [TaskScheduler] : check location: {'BatchSynthesisModule': {'Stirrer_0': ['?', '?', '?', '?', '?', '?', '?', '?'], 'Stirrer_1': ['?', '?', '?', '?', '?', '?'], 'vialHolder': ['?', '?', '?', '?', '?', '?', '?', '?', '?', '?', '?', '?', '?', '?', '?', '?']}, 'UVVisModule': {'vialHolder': ['?', '?', '?', '?', '?', '?', '?', '?', '?', '?', '?', '?', '?', '?', '?', '?']}, 'SolidStateModule': {'vialHolder': ['?', '?', '?', '?', '?', '?', '?', '?'], 'heater': ['?', '?', '?', '?', '?', '?', '?', '?'], 'XRD': ['?', '?', '?', '?', '?', '?', '?', '?', '?', '?', '?', '?', '?', '?', '?', '?']}}
+2024-06-19 09:51:21,305 - [OCTOPUS] test workflow::INFO -- [TaskScheduler] : SolidStateModule is started, allocate location: {'vialHolder': [0], 'heater': [0], 'XRD': [0]}
+2024-06-19 09:51:21,315 - [OCTOPUS] test workflow::INFO -- [TaskScheduler] : check location after allocation: {'BatchSynthesisModule': {'Stirrer_0': ['?', '?', '?', '?', '?', '?', '?', '?'], 'Stirrer_1': ['?', '?', '?', '?', '?', '?'], 'vialHolder': ['?', '?', '?', '?', '?', '?', '?', '?', '?', '?', '?', '?', '?', '?', '?', '?']}, 'UVVisModule': {'vialHolder': ['?', '?', '?', '?', '?', '?', '?', '?', '?', '?', '?', '?', '?', '?', '?', '?']}, 'SolidStateModule': {'vialHolder': [0, '?', '?', '?', '?', '?', '?', '?'], 'heater': [0, '?', '?', '?', '?', '?', '?', '?'], 'XRD': [0, '?', '?', '?', '?', '?', '?', '?', '?', '?', '?', '?', '?', '?', '?', '?']}}
+2024-06-19 09:51:21,326 - [OCTOPUS] test workflow::DEBUG -- [SolidStateModule] : Start SolidStateModule_LoadSample Queue
+2024-06-19 09:51:24,385 - [OCTOPUS] test workflow::DEBUG -- [RobotArm] : Move-->Start!
+2024-06-19 09:51:26,423 - [OCTOPUS] test workflow::DEBUG -- [RobotArm] : Move-->Done!
+2024-06-19 09:51:27,459 - [OCTOPUS] test workflow::DEBUG -- [RobotArm] : Grasp-->Start!
+2024-06-19 09:51:29,498 - [OCTOPUS] test workflow::DEBUG -- [RobotArm] : Grasp-->Done!
+2024-06-19 09:51:30,535 - [OCTOPUS] test workflow::DEBUG -- [RobotArm] : Position-->Start!
+2024-06-19 09:51:32,574 - [OCTOPUS] test workflow::DEBUG -- [RobotArm] : Position-->Done!
+2024-06-19 09:51:33,611 - [OCTOPUS] test workflow::DEBUG -- [RobotArm] : Release-->Start!
+2024-06-19 09:51:35,649 - [OCTOPUS] test workflow::DEBUG -- [RobotArm] : Release-->Done!
+2024-06-19 09:51:36,685 - [OCTOPUS] test workflow::DEBUG -- [SolidStateModule] : Finish SolidStateModule_LoadSample Queue
+2024-06-19 09:51:36,695 - [OCTOPUS] test workflow::DEBUG -- [SolidStateModule] : Start SolidStateModule_AddPowder Queue
+2024-06-19 09:51:39,757 - [OCTOPUS] test workflow::DEBUG -- [PowderDispenser] : Dispense-->Start!
+2024-06-19 09:51:40,799 - [OCTOPUS] test workflow::DEBUG -- [PowderDispenser] : Dispense-->Done!
+2024-06-19 09:51:41,836 - [OCTOPUS] test workflow::DEBUG -- [SolidStateModule] : Finish SolidStateModule_AddPowder Queue
+2024-06-19 09:51:41,846 - [OCTOPUS] test workflow::DEBUG -- [SolidStateModule] : Start SolidStateModule_Weigh Queue
+2024-06-19 09:51:44,910 - [OCTOPUS] test workflow::DEBUG -- [WeighingMachine] : Tare-->Start!
+2024-06-19 09:51:45,951 - [OCTOPUS] test workflow::DEBUG -- [WeighingMachine] : Tare-->Done!
+2024-06-19 09:51:46,987 - [OCTOPUS] test workflow::DEBUG -- [WeighingMachine] : Weigh-->Start!
+2024-06-19 09:51:48,029 - [OCTOPUS] test workflow::DEBUG -- [WeighingMachine] : Weigh-->Done!
+2024-06-19 09:51:49,066 - [OCTOPUS] test workflow::DEBUG -- [SolidStateModule] : Finish SolidStateModule_Weigh Queue
+2024-06-19 09:51:49,076 - [OCTOPUS] test workflow::DEBUG -- [SolidStateModule] : Start SolidStateModule_Mix Queue
+2024-06-19 09:51:52,139 - [OCTOPUS] test workflow::DEBUG -- [Stirrer] : Stir-->Start!
+2024-06-19 09:51:53,176 - [OCTOPUS] test workflow::DEBUG -- [Stirrer] : Stir-->Done!
+2024-06-19 09:51:54,213 - [OCTOPUS] test workflow::DEBUG -- [Stirrer] : Stop-->Start!
+2024-06-19 09:51:55,254 - [OCTOPUS] test workflow::DEBUG -- [Stirrer] : Stop-->Done!
+2024-06-19 09:51:56,286 - [OCTOPUS] test workflow::DEBUG -- [SolidStateModule] : Finish SolidStateModule_Mix Queue
+2024-06-19 09:51:56,296 - [OCTOPUS] test workflow::DEBUG -- [SolidStateModule] : Start SolidStateModule_Press Queue
+2024-06-19 09:51:59,359 - [OCTOPUS] test workflow::DEBUG -- [RobotArm] : Move-->Start!
+2024-06-19 09:52:01,399 - [OCTOPUS] test workflow::DEBUG -- [RobotArm] : Move-->Done!
+2024-06-19 09:52:02,435 - [OCTOPUS] test workflow::DEBUG -- [RobotArm] : Grasp-->Start!
+2024-06-19 09:52:04,473 - [OCTOPUS] test workflow::DEBUG -- [RobotArm] : Grasp-->Done!
+2024-06-19 09:52:05,510 - [OCTOPUS] test workflow::DEBUG -- [RobotArm] : Position-->Start!
+2024-06-19 09:52:07,549 - [OCTOPUS] test workflow::DEBUG -- [RobotArm] : Position-->Done!
+2024-06-19 09:52:08,585 - [OCTOPUS] test workflow::DEBUG -- [RobotArm] : Release-->Start!
+2024-06-19 09:52:10,624 - [OCTOPUS] test workflow::DEBUG -- [RobotArm] : Release-->Done!
+2024-06-19 09:52:11,661 - [OCTOPUS] test workflow::DEBUG -- [SolidStateModule] : Finish SolidStateModule_Press Queue
+2024-06-19 09:52:11,671 - [OCTOPUS] test workflow::DEBUG -- [SolidStateModule] : Start SolidStateModule_Sinter Queue
+2024-06-19 09:52:14,733 - [OCTOPUS] test workflow::DEBUG -- [Heater] : Heat-->Start!
+2024-06-19 09:52:15,774 - [OCTOPUS] test workflow::DEBUG -- [Heater] : Heat-->Done!
+2024-06-19 09:52:16,811 - [OCTOPUS] test workflow::DEBUG -- [Heater] : Stop-->Start!
+2024-06-19 09:52:17,852 - [OCTOPUS] test workflow::DEBUG -- [Heater] : Stop-->Done!
+2024-06-19 09:52:18,889 - [OCTOPUS] test workflow::DEBUG -- [SolidStateModule] : Finish SolidStateModule_Sinter Queue
+2024-06-19 09:52:18,899 - [OCTOPUS] test workflow::DEBUG -- [SolidStateModule] : Start SolidStateModule_Cool Queue
+2024-06-19 09:52:21,961 - [OCTOPUS] test workflow::DEBUG -- [Heater] : Cool-->Start!
+2024-06-19 09:52:22,997 - [OCTOPUS] test workflow::DEBUG -- [Heater] : Cool-->Done!
+2024-06-19 09:52:24,034 - [OCTOPUS] test workflow::DEBUG -- [Heater] : Stop-->Start!
+2024-06-19 09:52:25,075 - [OCTOPUS] test workflow::DEBUG -- [Heater] : Stop-->Done!
+2024-06-19 09:52:26,111 - [OCTOPUS] test workflow::DEBUG -- [SolidStateModule] : Finish SolidStateModule_Cool Queue
+2024-06-19 09:52:26,122 - [OCTOPUS] test workflow::INFO -- [TaskScheduler] : SolidStateModule is finished, location: {'vialHolder': ['?', '?', '?', '?', '?', '?', '?', '?'], 'heater': ['?', '?', '?', '?', '?', '?', '?', '?'], 'XRD': ['?', '?', '?', '?', '?', '?', '?', '?', '?', '?', '?', '?', '?', '?', '?', '?']}
+2024-06-19 09:52:26,132 - [OCTOPUS] test workflow::INFO -- [TaskScheduler] : refresh location: {'BatchSynthesisModule': {'Stirrer_0': ['?', '?', '?', '?', '?', '?', '?', '?'], 'Stirrer_1': ['?', '?', '?', '?', '?', '?'], 'vialHolder': ['?', '?', '?', '?', '?', '?', '?', '?', '?', '?', '?', '?', '?', '?', '?', '?']}, 'UVVisModule': {'vialHolder': ['?', '?', '?', '?', '?', '?', '?', '?', '?', '?', '?', '?', '?', '?', '?', '?']}, 'SolidStateModule': {'vialHolder': ['?', '?', '?', '?', '?', '?', '?', '?'], 'heater': ['?', '?', '?', '?', '?', '?', '?', '?'], 'XRD': ['?', '?', '?', '?', '?', '?', '?', '?', '?', '?', '?', '?', '?', '?', '?', '?']}}
+2024-06-19 09:52:26,193 - [OCTOPUS] test workflow::INFO -- [JobExecution] : ######### [[OCTOPUS] test workflow-yoohj9475@kist.re.kr] Experiment 1 is done #########

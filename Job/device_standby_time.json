@@ -1,0 +1,11 @@
+{
+    "ElectroChemicalRDEModule": [
+        "ElectroChemicalRDEModule_PerformCV",
+        "ElectroChemicalRDEModule_PerformLPR"
+    ],
+    "SolidStateModule": [
+        "SolidStateModule_Heat",
+        "SolidStateModule_Cool",
+        "SolidStateModule_MixPowders"
+    ]
+}

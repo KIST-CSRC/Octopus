@@ -1,0 +1,26 @@
+{
+    "ElectroChemicalRDEModule": {
+        "ElectroChemicalRDEModule_RobotArm": false,
+        "ElectroChemicalRDEModule_LinearActuator": false,
+        "ElectroChemicalRDEModule_Pump": false,
+        "ElectroChemicalRDEModule_Pipette": false,
+        "ElectroChemicalRDEModule_Rde": false,
+        "ElectroChemicalRDEModule_RdeRotator": false,
+        "ElectroChemicalRDEModule_Sonication": false,
+        "ElectroChemicalRDEModule_Humidifier": false,
+        "ElectroChemicalRDEModule_Potentiostat": false,
+        "ElectroChemicalRDEModule_Cell": false,
+        "ElectroChemicalRDEModule_IrRamp": false,
+        "ElectroChemicalRDEModule_MillingMachine": false,
+        "ElectroChemicalRDEModule_GasRegulator": false
+    },
+    "SolidStateModule": {
+        "SolidStateModule_RobotArm": false,
+        "SolidStateModule_Pipette": false,
+        "SolidStateModule_Pump": false,
+        "SolidStateModule_Stirrer": false,
+        "SolidStateModule_PowderDispenser": false,
+        "SolidStateModule_WeighingMachine": false,
+        "SolidStateModule_Heater": false
+    }
+}

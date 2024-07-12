@@ -1,0 +1,3 @@
+2024-06-19 16:58:25,028 - [OCTOPUS] test workflow::INFO -- [JobExecution] : [jobID=1] Algorithm, model : Manual
+2024-06-19 16:58:25,044 - [OCTOPUS] test workflow::INFO -- [JobExecution] : ######### Cycle start #########
+2024-06-19 16:58:25,100 - [OCTOPUS] test workflow::INFO -- [Manual] : total experiments=1

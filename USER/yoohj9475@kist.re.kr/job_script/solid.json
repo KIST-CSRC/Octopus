@@ -1,0 +1,54 @@
+{
+    "metadata" : 
+    {
+        "subject":"[OCTOPUS] test workflow",
+        "group":"KIST_CSRC",
+        "logLevel":"DEBUG"
+    },
+    "algorithm":
+    {
+        "model":"Manual",
+        "totalExperimentNum":1,
+        "inputParams":[]
+    },
+    "process":
+    {
+        "Synthesis":{
+            "SolidStateModuleModule":{},
+            "FlowSynthesisModule":{},
+            "SolidStateModule":{
+                "Sequence":[
+                    "SolidStateModule_LoadSample=IrCl3",
+                    "SolidStateModule_AddPowder=IrCl3",
+                    "SolidStateModule_Weigh",
+                    "SolidStateModule_Mix",
+                    "SolidStateModule_Press",
+                    "SolidStateModule_Sinter",
+                    "SolidStateModule_Cool"
+                ],
+                "fixedParams":
+                {
+                    "SolidStateModule_AddPowder=IrCl3_Amount":1,
+                    "SolidStateModule_Weigh=Weight":1,
+                    "SolidStateModule_Mix=Time":1,
+                    "SolidStateModule_Press=Pressure":1,
+                    "SolidStateModule_Sinter=Temperature":1,
+                    "SolidStateModule_Sinter=Time":1,
+                    "SolidStateModule_Cool=Temperature":1,
+                    "SolidStateModule_Cool=Time":1
+                }
+            }
+        },
+        "Preprocess":{
+            "WashingModule":{},
+            "InkModule":{}
+        },
+        "Characterization":{
+            "UVModule":{}
+        },
+        "Evaluation":{
+            "RDEModule":{},
+            "ElectrodeModule":{}
+        }
+    }
+}

@@ -1,0 +1,126 @@
+{
+    "ElectroChemicalRDEModule_SetupElectrode": {
+        "Task": "ElectroChemicalRDEModule_SetupElectrode",
+        "Data": {
+            "ElectrodeType": {
+                "Type": ""
+            },
+            "Device": {}
+        }
+    },
+    "ElectroChemicalRDEModule_Calibrate": {
+        "Task": "ElectroChemicalRDEModule_Calibrate",
+        "Data": {
+            "CalibrationStandard": {
+                "Type": ""
+            },
+            "Device": {}
+        }
+    },
+    "ElectroChemicalRDEModule_LoadSample": {
+        "Task": "ElectroChemicalRDEModule_LoadSample",
+        "Data": {
+            "SampleVolume": {
+                "Value": 0,
+                "Dimension": "\u03bcL"
+            },
+            "Device": {}
+        }
+    },
+    "ElectroChemicalRDEModule_AdjustRotation": {
+        "Task": "ElectroChemicalRDEModule_AdjustRotation",
+        "Data": {
+            "RotationSpeed": {
+                "Value": 0,
+                "Dimension": "rpm"
+            },
+            "Device": {}
+        }
+    },
+    "ElectroChemicalRDEModule_ApplyPotential": {
+        "Task": "ElectroChemicalRDEModule_ApplyPotential",
+        "Data": {
+            "Potential": {
+                "Value": 0,
+                "Dimension": "V"
+            },
+            "Device": {}
+        }
+    },
+    "ElectroChemicalRDEModule_RecordCurrent": {
+        "Task": "ElectroChemicalRDEModule_RecordCurrent",
+        "Data": {
+            "Duration": {
+                "Value": 0,
+                "Dimension": "sec"
+            },
+            "Device": {}
+        }
+    },
+    "ElectroChemicalRDEModule_PerformCV": {
+        "Task": "ElectroChemicalRDEModule_PerformCV",
+        "Data": {
+            "ScanRate": {
+                "Value": 0,
+                "Dimension": "V/s"
+            },
+            "Device": {}
+        }
+    },
+    "ElectroChemicalRDEModule_PerformLPR": {
+        "Task": "ElectroChemicalRDEModule_PerformLPR",
+        "Data": {
+            "ScanRate": {
+                "Value": 0,
+                "Dimension": "V/s"
+            },
+            "Device": {}
+        }
+    },
+    "ElectroChemicalRDEModule_PerformEIS": {
+        "Task": "ElectroChemicalRDEModule_PerformEIS",
+        "Data": {
+            "FrequencyRange": {
+                "Value": 0,
+                "Dimension": "Hz"
+            },
+            "Device": {}
+        }
+    },
+    "ElectroChemicalRDEModule_ChangeSolution": {
+        "Task": "ElectroChemicalRDEModule_ChangeSolution",
+        "Data": {
+            "NewSolution": {
+                "Type": ""
+            },
+            "Device": {}
+        }
+    },
+    "ElectroChemicalRDEModule_CleanElectrode": {
+        "Task": "ElectroChemicalRDEModule_CleanElectrode",
+        "Data": {
+            "CleaningMethod": {
+                "Type": ""
+            },
+            "Device": {}
+        }
+    },
+    "ElectroChemicalRDEModule_AnalyzeData": {
+        "Task": "ElectroChemicalRDEModule_AnalyzeData",
+        "Data": {
+            "Method": {
+                "Type": ""
+            },
+            "Device": {}
+        }
+    },
+    "ElectroChemicalRDEModule_PerformanceTest": {
+        "Task": "ElectroChemicalRDEModule_PerformanceTest",
+        "Data": {
+            "TestType": {
+                "Type": ""
+            },
+            "Device": {}
+        }
+    }
+}

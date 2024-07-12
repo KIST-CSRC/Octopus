@@ -1,0 +1,186 @@
+Based on the provided instructions and the task list for the SolidStateModule, I will create a JSON template for each task and define a corresponding Pydantic class. Below is the JSON template file named `SolidStateModule.json` and the Pydantic classes for each task.
+
+**SolidStateModule.json**
+```json
+{
+    "SolidStateModule_LoadSample": {
+        "Task": "SolidStateModule_LoadSample",
+        "Data": {
+            "SampleID": {"Type": ""},
+            "Device": {}
+        }
+    },
+    "SolidStateModule_AddPowder": {
+        "Task": "SolidStateModule_AddPowder",
+        "Data": {
+            "Material": {"Type": ""},
+            "Amount": {
+                "Value": 0,
+                "Dimension": "g"
+            },
+            "Device": {}
+        }
+    },
+    "SolidStateModule_MixPowders": {
+        "Task": "SolidStateModule_MixPowders",
+        "Data": {
+            "Time": {
+                "Value": 0,
+                "Dimension": "sec"
+            },
+            "Device": {}
+        }
+    },
+    "SolidStateModule_PressPowder": {
+        "Task": "SolidStateModule_PressPowder",
+        "Data": {
+            "Pressure": {
+                "Value": 0,
+                "Dimension": "Pa"
+            },
+            "Device": {}
+        }
+    },
+    "SolidStateModule_Heat": {
+        "Task": "SolidStateModule_Heat",
+        "Data": {
+            "Temperature": {
+                "Value": 0,
+                "Dimension": "ºC"
+            },
+            "Device": {}
+        }
+    },
+    "SolidStateModule_Cool": {
+        "Task": "SolidStateModule_Cool",
+        "Data": {
+            "Temperature": {
+                "Value": 0,
+                "Dimension": "ºC"
+            },
+            "Device": {}
+        }
+    },
+    "SolidStateModule_Grind": {
+        "Task": "SolidStateModule_Grind",
+        "Data": {
+            "Time": {
+                "Value": 0,
+                "Dimension": "sec"
+            },
+            "Device": {}
+        }
+    },
+    "SolidStateModule_Pelletize": {
+        "Task": "SolidStateModule_Pelletize",
+        "Data": {
+            "Pressure": {
+                "Value": 0,
+                "Dimension": "Pa"
+            },
+            "Device": {}
+        }
+    },
+    "SolidStateModule_Weigh": {
+        "Task": "SolidStateModule_Weigh",
+        "Data": {
+            "Method": {
+                "Type": ""
+            },
+            "Device": {}
+        }
+    },
+    "SolidStateModule_Transfer": {
+        "Task": "SolidStateModule_Transfer",
+        "Data": {
+            "FromTo": {"Type": ""},
+            "Device": {}
+        }
+    },
+    "SolidStateModule_Wash": {
+        "Task": "SolidStateModule_Wash",
+        "Data": {
+            "Solvent": {"Type": ""},
+            "Volume": {
+                "Value": 0,
+                "Dimension": "mL"
+            },
+            "Device": {}
+        }
+    },
+    "SolidStateModule_Dry": {
+        "Task": "SolidStateModule_Dry",
+        "Data": {
+            "Temperature": {
+                "Value": 0,
+                "Dimension": "ºC"
+            },
+            "Time": {
+                "Value": 0,
+                "Dimension": "sec"
+            },
+            "Device": {}
+        }
+    }
+}
+```
+
+Now, let's define the Pydantic classes for each task:
+
+**SolidStateModule.py**
+```python
+from pydantic import BaseModel, Field
+
+class LoadSample(BaseModel):
+    SampleID: str
+    Device: dict
+
+class AddPowder(BaseModel):
+    Material: str
+    Amount: dict = Field(default_factory=lambda: {"Value": 0, "Dimension": "g"})
+    Device: dict
+
+class MixPowders(BaseModel):
+    Time: dict = Field(default_factory=lambda: {"Value": 0, "Dimension": "sec"})
+    Device: dict
+
+class PressPowder(BaseModel):
+    Pressure: dict = Field(default_factory=lambda: {"Value": 0, "Dimension": "Pa"})
+    Device: dict
+
+class Heat(BaseModel):
+    Temperature: dict = Field(default_factory=lambda: {"Value": 0, "Dimension": "ºC"})
+    Device: dict
+
+class Cool(BaseModel):
+    Temperature: dict = Field(default_factory=lambda: {"Value": 0, "Dimension": "ºC"})
+    Device: dict
+
+class Grind(BaseModel):
+    Time: dict = Field(default_factory=lambda: {"Value": 0, "Dimension": "sec"})
+    Device: dict
+
+class Pelletize(BaseModel):
+    Pressure: dict = Field(default_factory=lambda: {"Value": 0, "Dimension": "Pa"})
+    Device: dict
+
+class Weigh(BaseModel):
+    Method: str
+    Device: dict
+
+class Transfer(BaseModel):
+    FromTo: str
+    Device: dict
+
+class Wash(BaseModel):
+    Solvent: str
+    Volume: dict = Field(default_factory=lambda: {"Value": 0, "Dimension": "mL"})
+    Device: dict
+
+class Dry(BaseModel):
+    Temperature: dict = Field(default_factory=lambda: {"Value": 0, "Dimension": "ºC"})
+    Time: dict = Field(default_factory=lambda: {"Value": 0, "Dimension": "sec"})
+    Device: dict
+```
+
+Each Pydantic class corresponds to a task in the SolidStateModule, with attributes matching the keys in the JSON template. The `Field` function from Pydantic is used to provide default values for the dictionary fields that require a "Value" and "Dimension".
