@@ -1,7 +1,0 @@
-2023-09-05 15:11:29,397 - Automatic_synthesis_UV::INFO -- [JobExecution] : [jobID=0] Algorithm, model : Automatic
-2023-09-05 15:11:29,402 - Automatic_synthesis_UV::INFO -- [JobExecution] : ######### Cycle start #########
-2023-09-05 15:11:29,412 - Automatic_synthesis_UV::INFO -- [Automatic] : total experiments=4
-2023-09-05 15:11:29,422 - Automatic_synthesis_UV::INFO -- [Automatic [0]] : next_point 0: {'AddSolution=AgNO3_Concentration': 0.0125, 'AddSolution=AgNO3_Volume': 4000, 'AddSolution=AgNO3_Injectionrate': 100}
-2023-09-05 15:11:29,433 - Automatic_synthesis_UV::INFO -- [Automatic [1]] : next_point 1: {'AddSolution=AgNO3_Concentration': 0.0125, 'AddSolution=AgNO3_Volume': 4000, 'AddSolution=AgNO3_Injectionrate': 100}
-2023-09-05 15:11:29,443 - Automatic_synthesis_UV::INFO -- [Automatic [2]] : next_point 2: {'AddSolution=AgNO3_Concentration': 0.0125, 'AddSolution=AgNO3_Volume': 4000, 'AddSolution=AgNO3_Injectionrate': 100}
-2023-09-05 15:11:29,453 - Automatic_synthesis_UV::INFO -- [Automatic [3]] : next_point 3: {'AddSolution=AgNO3_Concentration': 0.0125, 'AddSolution=AgNO3_Volume': 4000, 'AddSolution=AgNO3_Injectionrate': 100}

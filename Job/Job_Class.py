@@ -1,8 +1,10 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 # @brief    [Execution file] 
-# @version  1_1
-# @version  2_1: author  Hyuk Jun Yoo (yoohj9475@kist.re.kr) // TEST    2023-09-05
+# @version  1_1: 
+#   author  Nayeon Kim (kny@kist.re.kr) // TEST    2023-04-01
+# @version  2_1: 
+#   author  Hyuk Jun Yoo (yoohj9475@kist.re.kr) // TEST    2023-xx-xx
 
 import os, sys
 import json
@@ -13,19 +15,22 @@ import pandas as pd
 import copy
 from queue import Queue
 
+script_directory = os.path.dirname(os.path.realpath(__file__))
+parent_directory = os.path.abspath(os.path.join(script_directory, '..'))
+sys.path.append(parent_directory)
+
 from Algorithm.Bayesian.BOdiscreteTest import ASLdiscreteBayesianOptimization
 # from Algorithm.ReactionSpace.ReactionSpace import Reactionspace
-from Algorithm.Manual.Manual import Manual
-from Algorithm.Loss.UV_loss import Loss
+from Algorithm.Manual.Manual_Class import Manual
+from Loss.UV_loss import LossFunction
 from Log.DigitalSecretary import AlertMessage
 from Log.Logging_Class import TaskLogger
 from DB.DB_Class import MongoDB_Class
-from TaskAction.ActionExecutor import ActionExecutor
+from Action.ActionExecutor_Class import ActionExecutor
 
 
 class Job(object):
-    '''
-    '''
+
     def __init__(self, jobScript):
         # generate class variable
         self.jobScript = jobScript
@@ -50,31 +55,16 @@ class Job(object):
         self.metadata_dict["jobSubmitTime"]=time.strftime("%Y-%m-%d %H:%M:%S")
         self.jobSubmissionTime=time.time()
 
-        # Algorithm
-
         # Make each model
-        # Autonomous:BayesianOptimization
-        if self.algorithm_dict["model"] == "BayesianOptimization": #YOO -> 이름 
-            self.Algorithm_obj=ASLdiscreteBayesianOptimization(self.algorithm_dict)
-            message="[jobID={0}] Algorithm, model : {1}".format(self.metadata_dict["jobID"], self.algorithm_dict["model"])
+        # Dynamically find and instantiate the class based on the model_name
+        model_name = self.algorithm_dict["model"]
+        try:
+            AlgorithmClass = globals()[model_name]
+            self.Algorithm_obj = AlgorithmClass(self.algorithm_dict)
+            message = "[jobID={0}] Algorithm, model : {1}".format(self.metadata_dict["jobID"], model_name)
             self.TaskLogger_obj.info(self.platform_name, message)
-        # Autonomous:ReactionSpace
-        # elif self.algorithm_dict["model"] == "ReactionSpace":
-        #     RS_obj = Reactionspace(self.algorithm_dict)
-        #     self.Algorithm_obj=RS_obj
-        #     message="[jobID={0}] Algorithm, model : {1}".format(self.metadata_dict["jobID"], self.algorithm_dict["model"])
-        #     self.TaskLogger_obj.info(self.platform_name, message)
-        # load previous model
-        elif self.algorithm_dict["model"] == "PreviousModel":
-            self.Algorithm_obj=self.loadModel(self.algorithm_dict["modelPath"])
-            message="[jobID={0}] Algorithm, model : {1}".format(self.metadata_dict["jobID"], self.algorithm_dict["model"])
-            self.TaskLogger_obj.info(self.platform_name, message)
-        elif self.algorithm_dict["model"] == "Manual":
-            self.Algorithm_obj=Manual(self.algorithm_dict)
-            message="[jobID={0}] Algorithm, model : {1}".format(self.metadata_dict["jobID"], self.algorithm_dict["model"])
-            self.TaskLogger_obj.info(self.platform_name, message)
-        else:
-            raise ValueError("job script file error")
+        except KeyError:
+            raise KeyError(f"import list: {globals()} --> our model name {model_name}. You should match model name")
 
     def __openJsonFile(self, json_path:str):
         """
@@ -111,7 +101,6 @@ class Job(object):
             os.makedirs(TOTAL_DATA_FOLDER)
         with open(TOTAL_DATA_FOLDER+"/"+file_name+".json", 'w') as outfile:
             json.dump(dict_obj, outfile, indent=5)
-        print(TOTAL_DATA_FOLDER)
 
         return TOTAL_DATA_FOLDER
 
@@ -122,7 +111,7 @@ class Job(object):
         :param experiment_idx_queue (Queue) : 
         :param metadata_dict (dict) : metadata for explaining experiment's information ( ex). StartTime, Experiment, Element, Humidity, Temperature...etc)
         :param algorithm_dict={} (dict) : algorithm information, hyparameter
-            - if "Manual" --> 
+            - if "Automatic" --> 
             - if not "Autonmatic" --> 
         :param process_dict (dict) : process information included Synthesis, Preprocess, Characterization
         :param result (dict) : real_data information
@@ -131,7 +120,7 @@ class Job(object):
         
         all_data_template_list={
             "metadata":metadata_dict,
-            "algorithm":algorithm_dict, # depending on Manual, or {AI-based ex) BayesianOptimization} func
+            "algorithm":algorithm_dict, # depending on Automatic, or {AI-based ex) BayesianOptimization} func
             "process":process_dict,
             "result":result
             // [{'lambdamax': [300.214759], 'FWHM': [574.825725], 'intensity': [549.221933]]
@@ -215,7 +204,7 @@ class Job(object):
                 self.metadata_dict["jobStatus"]="{}/{}:{}".format(self.TaskLogger_obj.currentExperimentNum, self.TaskLogger_obj.totalExperimentNum, self.TaskLogger_obj.current_platform_name) # in execution system
                 
                 for batch_idx, result_dict in enumerate(return_result_list_to_db):
-                    Loss_obj=Loss(result_dict, self.Algorithm_obj.lossTarget)
+                    Loss_obj=LossFunction(result_dict, self.Algorithm_obj.lossTarget)
                     optimal_value, property_dict = getattr(Loss_obj, self.Algorithm_obj.lossMethod)()
                     optimal_value_list.append(optimal_value)
                     property_dict_list.append(property_dict)
@@ -226,7 +215,6 @@ class Job(object):
                 self.Algorithm_obj.registerPoint(input_next_points=total_next_points, norm_input_next_points=total_norm_next_points, property_list=property_dict_list, input_result_list=optimal_value_list)
                 self.Algorithm_obj.output_space(dirname+"/loss_norm", filename)
                 self.Algorithm_obj.output_space_realCondition(dirname+"/loss_real", filename)
-                self.Algorithm_obj.output_space_property(dirname+"/property", filename)
 
                 done_message="######### [{}-{}] Cycle {}/{} is done #########".format(self.metadata_dict["subject"], self.metadata_dict["userName"], iter_num+1, self.algorithm_dict["totalCycleNum"])
                 self.TaskLogger_obj.info(self.platform_name, info_msg=done_message)
@@ -367,26 +355,26 @@ class Job(object):
     # @alertError
     def delete(self):
         command_str ="qdel/{}".format(self.metadata_dict["jobID"])
-        res_msg=self.tcp_obj.callServer_qcommand(command_str)
+        res_msg=self.tcp_obj.transfer_qcommand(command_str)
         
         return res_msg
 
     # @alertError
     def hold(self):
         command_str ="qhold/{}".format(self.metadata_dict["jobID"])
-        res_msg=self.tcp_obj.callServer_qcommand(command_str)
+        res_msg=self.tcp_obj.transfer_qcommand(command_str)
         
         return res_msg
     
     # @alertError
     def restart(self):
         command_str ="qrestart/{}".format(self.metadata_dict["jobID"])
-        res_msg=self.tcp_obj.callServer_qcommand(command_str)
+        res_msg=self.tcp_obj.transfer_qcommand(command_str)
         
         return res_msg
 
     # @alertError
-    def savedModel(self, directory_path, filename='bo_obj'):
+    def savedModel(self, model, directory_path, filename='bo_obj'):
         """
         save ML model to use already fitted model later.
         
@@ -400,14 +388,14 @@ class Job(object):
         -------
         return None
         """
+        fname = os.path.join(directory_path, filename+".pickle")
         if os.path.isdir(directory_path) == False:
             os.makedirs(directory_path)
-        fname = os.path.join(directory_path, filename+".pickle")
         with open(fname, 'wb') as f:
-            pickle.dump(self.Algorithm_obj, f)
+            pickle.dump(model, f)
 
     # @alertError
-    def loadModel(self, path):
+    def loadAIModel(self, path):
         """
         load ML model to use already fitted model later depending on filename.
         

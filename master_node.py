@@ -1,41 +1,53 @@
-import socket
+import os, socket, time
 import threading
 import json
 from Log.Logging_Class import JobLogger
-from UserManager.UserManager_Class import UserManager
+from UserManager.UserManager_Class import authenticate_user
 from Job.JobScheduler_Class import JobScheduler
 from Job.JobTrigger import JobTrigger
-from TaskAction.TaskGenerator_Class import TaskGenerator
-from TaskAction.TaskScheduler_Class import TaskScheduler
+from Task.TaskGenerator_Class import TaskGenerator
+from Task.TaskScheduler_Class import TaskScheduler
 from Resource.ResourceManager_Class import ResourceManager
+from Algorithm.Bayesian.BOdiscreteTest import ASLdiscreteBayesianOptimization
 
 def handle_client(client_socket, client_address, server_logger, JobScheduler_obj):
     try:
         server_logger.info("Master", f"{client_address} is connected.")
-        user_manager_obj=UserManager() # include user information
         
         # connect with Client
         while True:
             # input id
-            client_socket.sendall(str.encode('Please enter your id: '))
-            username = client_socket.recv(4096).decode()
+            client_socket.sendall(str.encode('Please enter your email: '))
+            username = client_socket.recv(8192).decode()
 
             # input password
             client_socket.sendall(str.encode('Please enter your password: '))
-            password = client_socket.recv(4096).decode()
+            password = client_socket.recv(8192).decode()
             
             # verify id, password
-            login_status=user_manager_obj.matchPassword(username, password)
-            if login_status == "login success":
-                client_socket.sendall(login_status.encode('utf-8'))
-                server_logger.info("Master", "login status:{}, username:{}".format(login_status, username))
+            login_status=authenticate_user(username, password)
+            if login_status is True:
+                
+                if os.path.isdir(f"USER/{username}") == False:
+                    os.makedirs(f"USER/{username}")
+                    time.sleep(2)
+                    os.makedirs(f"USER/{username}/DB")
+                    os.makedirs(f"USER/{username}/job_script")
+                    os.makedirs(f"USER/{username}/Log")
+                    os.makedirs(f"USER/{username}/sampling")
+                    os.makedirs(f"USER/{username}/SaveModel")
+
+                login_message = "login success"
+                client_socket.sendall(login_message.encode('utf-8'))
+                server_logger.info("Master", "login status:{}, username:{}".format(login_message, username))
                 break
             else:
-                client_socket.sendall(login_status.encode('utf-8'))
-                server_logger.info("Master", "login status:{}, username:{}".format(login_status, username))
+                login_message = "login failure"
+                client_socket.sendall(login_message.encode('utf-8'))
+                server_logger.info("Master", "login status:{}, username:{}".format(login_message, username))
         
         while True:
-            command_byte = client_socket.recv(4096).decode('utf-8')
+            command_byte = client_socket.recv(8192).decode('utf-8')
             if "qstat" in command_byte:
                 JobScheduler_obj.qstat(client_socket)
             elif "qhold" in command_byte:
@@ -51,6 +63,7 @@ def handle_client(client_socket, client_address, server_logger, JobScheduler_obj
                 job_id=int(job_id)
                 JobScheduler_obj.qrestart(client_socket, username, job_id)
             elif "qsub" in command_byte:
+                print(command_byte)
                 _, user_name, job_script_filename, job_script_str, mode_type= command_byte.split("?", maxsplit=4)
                 json_acceptable_string = job_script_str.replace("'", "\"") # if job script has ` or " in path-->need to modify
                 job_script_dict=json.loads(json_acceptable_string)
@@ -101,6 +114,8 @@ def executeJob(JobTrigger_obj, job_schedule_mode, job_wait_queue, job_exec_queue
                 input_job_exec_queue.append(input_job_exec_obj)
                 input_job_exec_obj.execute(input_TaskScheduler_obj, input_TaskGenerator_obj)
                 input_job_exec_queue.remove(input_job_exec_obj)
+                
+                del input_job_exec_obj
             
             # generate thread
             thread_list=[]
@@ -117,9 +132,31 @@ def executeJob(JobTrigger_obj, job_schedule_mode, job_wait_queue, job_exec_queue
         else:
             pass
 
+
+# def executeJob(JobTrigger_obj, job_schedule_mode, job_wait_queue, job_exec_queue, TaskScheduler_obj, TaskGenerator_obj, ResourceManager_obj):
+#     while True:
+#         # Scheduling algorithm에 맞는 job script pop
+#         popped_job_exec_obj=getattr(JobTrigger_obj, job_schedule_mode)(job_wait_queue, job_exec_queue, ResourceManager_obj)
+        
+#         # define Start jobExecution function
+#         def startExecution(input_job_exec_obj, input_job_exec_queue, input_TaskScheduler_obj, input_TaskGenerator_obj):
+#             input_job_exec_queue.append(input_job_exec_obj)
+#             input_job_exec_obj.execute(input_TaskScheduler_obj, input_TaskGenerator_obj)
+#             input_job_exec_queue.remove(input_job_exec_obj)
+#         # generate thread
+#         thread_list=[]
+#         thread = threading.Thread(target=startExecution, args=(popped_job_exec_obj, job_exec_queue, TaskScheduler_obj, TaskGenerator_obj))
+#         thread_list.append(thread)
+#         # start thread
+#         for thread in thread_list: 
+#             thread.start()
+#         # main thread wait thread termination
+#         for thread in thread_list:
+#             thread.join()
+
 def start_server():
     SERVER_HOST=''  # permit from all interfaces
-    SERVER_PORT=5555 # if you want, can change
+    SERVER_PORT=5553 # if you want, can change
     SERVER_ACCESS_NUM=100 # permit to accept the number of maximum client
     
     server_socket = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
@@ -137,17 +174,20 @@ def start_server():
     job_exec_queue = [] # job script file --> JobExecution object in list
     job_hold_queue = [] # holded JobExecution object in list
     
+    # 연결된 module 적기
+    module_list=["SolidStateModule", "ElectroChemicalRDEModule"]
+    
     ##################################
     # mode type of scheduling system #
     ##################################
-    # schedule_mode="FCFS"
+    schedule_mode="FCFS"
     # schedule_mode="Backfill"
-    schedule_mode="ClosedPacking" 
+    # schedule_mode="ClosedPacking" 
 
     ###################
     # generate object #
     ###################
-    ResourceManager_obj=ResourceManager(server_logger)
+    ResourceManager_obj=ResourceManager(module_list, server_logger)
     TaskGenerator_obj=TaskGenerator(server_logger, ResourceManager_obj)
     TaskScheduler_obj=TaskScheduler(server_logger, ResourceManager_obj, schedule_mode)
     JobScheduler_obj=JobScheduler(server_logger, job_wait_queue, job_exec_queue, job_hold_queue, ResourceManager_obj)
@@ -176,3 +216,23 @@ start_server()
 # python  96988 sdl-main    3u  IPv4 975995      0t0  TCP localhost:5555 (LISTEN)
 # python  96988 sdl-main    5u  IPv4 976000      0t0  TCP localhost:5555->localhost:57954 (CLOSE_WAIT)
 # >>> sudo kill -9 96988
+
+# stirrer_list=[
+#     posx(-251.000, 628.000, 315.300, 0, -180, 135),
+#     posx(-217.500, 628.100, 315.500, 0, -180, 135),
+#     posx(-171.100, 627.980, 316.010, 0, -180, 135),
+#     posx(-135.700, 627.500, 316.010, 0, -180, 135),
+#     posx(-252.800, 593.200, 316.010, 0, -180, 135),
+#     posx(-217.800, 592.500, 316.010, 0, -180, 135),
+#     posx(-172.000, 592.000, 316.010, 0, -180, 135),
+#     posx(-136.700, 592.500, 316.030, 0, -180, 135),
+#     posx(-253.000, 547.600, 316.000, 0, -180, 135),
+#     posx(-218.300, 547.000, 316.010, 0, -180, 135),
+#     posx(-172.990, 546.300, 316.020, 0, -180, 135),
+#     posx(-137.400, 545.700, 316.010, 0, -180, 135),
+#     posx(-253.300, 512.800, 316.010, 0, -180, 135),
+#     posx(-218.400, 512.200, 316.020, 0, -180, 135),
+#     posx(-172.490, 512.000, 316.020, 0, -180, 135),
+#     posx(-138.000, 510.500, 316.000, 0, -180, 135)
+# ]
+

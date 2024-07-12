@@ -1,6 +1,6 @@
 from datetime import datetime
 from queue import Queue
-from TaskAction.ActionExecutor import ParameterTCP, ActionExecutor
+from Action.ActionExecutor_Class import ActionExecutor
 from Job.Job_Class import Job
 import paramiko
 
@@ -16,7 +16,7 @@ class JobScriptError:
     def checkJobScript(self, job_script_dict):
         pass
 
-class JobScheduler(JobScriptError, ParameterTCP):
+class JobScheduler(JobScriptError):
     """
     [JobScheduler] JobScheduler Class for scheduling job
 
@@ -30,7 +30,6 @@ class JobScheduler(JobScriptError, ParameterTCP):
 
     def __init__(self, server_logger:object, job_wait_queue:list, job_exec_queue:list, job_hold_queue:list, ResourceManager_obj:object):
         JobScriptError.__init__(self)
-        ParameterTCP.__init__(self)
         self.tcp_obj=ActionExecutor()
         self.BUFF_SIZE = 4096
         self.the_number_of_job=9999 # can change the CAPA of job_queue
@@ -42,9 +41,9 @@ class JobScheduler(JobScriptError, ParameterTCP):
         self.job_hold_queue=job_hold_queue
         # hardware status
         self.ResourceManager_obj=ResourceManager_obj
-        self.task_hardware_status_dict=self.ResourceManager_obj.task_hardware_status_dict
-        # print("self.task_hardware_status_dict",id(self.task_hardware_status_dict))
-        # print("self.ResourceManager_obj.task_hardware_status_dict",id(self.ResourceManager_obj.task_hardware_status_dict))
+        self.task_device_status_dict=self.ResourceManager_obj.task_device_status_dict
+        # print("self.task_device_status_dict",id(self.task_device_status_dict))
+        # print("self.ResourceManager_obj.task_device_status_dict",id(self.ResourceManager_obj.task_device_status_dict))
 
     def updateNode(self, client_socket):
         """
@@ -53,8 +52,8 @@ class JobScheduler(JobScriptError, ParameterTCP):
         :param client_socket (object) : socket object
         :param user_name (str) : userName ex) HJ, NY...
         """
-        self.ResourceManager_obj.task_hardware_info_dict=self.ResourceManager_obj.requestHardwareInfo()
-        command_byte="succeed to update module node information:{}".format(self.ResourceManager_obj.task_hardware_info_dict)
+        self.ResourceManager_obj.task_device_info_dict=self.ResourceManager_obj.requestDeviceInfo()
+        command_byte="succeed to update module node information:{}".format(self.ResourceManager_obj.task_device_info_dict)
         client_socket.sendall(command_byte.encode('utf-8'))
 
     def qsub(self, client_socket, user_name, job_script_filename, job_script, mode_type):
@@ -243,7 +242,7 @@ class JobScheduler(JobScriptError, ParameterTCP):
     def ashutdown(self, client_socket, platform_name):
         """
         a --> "a" means admin function
-          --> "shutdown" means shutdown platform_name ex) ashutdown batchsyntehsis --> shutdown batchsynthesis
+        --> "shutdown" means shutdown platform_name ex) ashutdown batchsyntehsis --> shutdown batchsynthesis
 
         :param client_socket (object) : socket object
         :param platform_name (str) : batch, flow, washing, mobile, 
@@ -251,7 +250,7 @@ class JobScheduler(JobScriptError, ParameterTCP):
         # SSHClient Instance
         try:
             command_bytes =str.encode("ashutdown/{}".format(platform_name))
-            res_msg=self.tcp_obj.callServer_acommand(command_bytes, platform_name)
+            res_msg=self.tcp_obj.transfer_acommand(command_bytes, platform_name)
             client_socket.sendall(str("ashutdown platform_name").encode('utf-8'))
         except Exception as e:
             client_socket.sendall(str("ashutdown {} error, {}".format(platform_name, e)).encode('utf-8'))
@@ -259,7 +258,7 @@ class JobScheduler(JobScriptError, ParameterTCP):
     def areboot(self, client_socket, platform_name):
         """
         a --> "a" means admin function
-          --> "reboot" means reboot platform_name ex) areboot batchsyntehsis --> reboot batchsynthesis
+        --> "reboot" means reboot platform_name ex) areboot batchsyntehsis --> reboot batchsynthesis
 
         :param client_socket (object) : socket object
         :param platform_name (str) : please check in ["BATCH", "UV", "MOBILE", "FLOW", "WASHING", "INK", "RDE"]
@@ -274,9 +273,9 @@ class JobScheduler(JobScriptError, ParameterTCP):
             else:
                 ssh = paramiko.SSHClient()
                 ssh.set_missing_host_key_policy(paramiko.AutoAddPolicy)
-                PLATFORM_HOST=self.routing_table[platform_name]["HOST"]
-                PLATFORM_USERNAME=self.routing_table[platform_name]["NAME"]
-                PLATFORM_PWD=self.routing_table[platform_name]["PWD"]
+                PLATFORM_HOST=self.tcp_obj.routing_table[platform_name]["HOST"]
+                PLATFORM_USERNAME=self.tcp_obj.routing_table[platform_name]["NAME"]
+                PLATFORM_PWD=self.tcp_obj.routing_table[platform_name]["PWD"]
                 ssh.connect(PLATFORM_HOST, PLATFORM_USERNAME, PLATFORM_PWD)
                 print(f"{datetime.datetime.now().strftime('%Y-%m-%d %H:%M')} : SSH CONNECTED")
                 stdin, stdout, stderr = ssh.exec_command("sh reboot_node_manager.sh") # sh --> windows, bash --> ubuntu

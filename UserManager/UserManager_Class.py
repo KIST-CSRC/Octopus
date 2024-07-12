@@ -2,107 +2,72 @@
 # -*- coding: utf-8 -*-
 # @brief    [UserManager] UserManager Class for managing user information during login process
 # @author   Hyuk Jun Yoo (yoohj9475@kist.re.kr)
-# @version  1_1    
-# TEST 2023-10-19
+# @version  2_1    
+# TEST 2024-06-05
 
-import hashlib
-import sqlite3
-import time
+from auth0.authentication import GetToken
+from auth0.management import Auth0
+from UserManager import auth0_config
+import requests, json
 
-class UserManager(object):
+def get_management_token():
+    token_url = f"https://{auth0_config.AUTH0_DOMAIN}/oauth/token"
+    headers = {'content-type': 'application/json'}
+    payload = {
+        'grant_type': 'client_credentials',
+        'client_id': auth0_config.AUTH0_CLIENT_ID,
+        'client_secret': auth0_config.AUTH0_CLIENT_SECRET,
+        'audience': auth0_config.AUTH0_AUDIENCE
+    }
+    response = requests.post(token_url, headers=headers, json=payload)
+    response.raise_for_status()
+    return response.json()['access_token']
 
-    def __init__(self):
-        self.conn = sqlite3.connect("UserManager/user.db")
-        self.cursor = self.conn.cursor()
-        try:
-            self.cursor.execute("SELECT * FROM your_table")
-        except sqlite3.OperationalError as e:
-            self.db_create_table()
-        self.__covert_num=40
+def authenticate_user(username, password):
+    token_url = f"https://{auth0_config.AUTH0_DOMAIN}/oauth/token"
+    headers = {'content-type': 'application/json'}
+    payload = {
+        'grant_type': 'http://auth0.com/oauth/grant-type/password-realm',
+        'client_id': auth0_config.AUTH0_CLIENT_ID,
+        'client_secret': auth0_config.AUTH0_CLIENT_SECRET,
+        'username': username,
+        'password': password,
+        'realm': auth0_config.AUTH0_CONNECTION,
+        'scope': 'openid'
+    }
+    response = requests.post(token_url, headers=headers, json=payload)
+    if response.status_code == 200:
+        return True
+        # return response.json()
+    else:
+        return False
+        # return None
+    
+def get_users(mgmt_api_token):
+    users_url = f"https://{auth0_config.AUTH0_DOMAIN}/api/v2/users"
+    headers = {
+        'authorization': f'Bearer {mgmt_api_token}',
+        'content-type': 'application/json'
+    }
+    response = requests.get(users_url, headers=headers)
+    response.raise_for_status()
+    return response.json()
 
-    def __convertPassword(self, password):
-        for i in range(self.__covert_num):
-            # 비밀번호를 해시화하기 위한 해시 함수 선택 (여기서는 SHA256 사용)
-            hash_func = hashlib.sha256()
+def main():
+    username = "kny@kist.re.kr"
+    password = "123123kk!"
+    user_info = authenticate_user(username, password)
+    
+    if user_info:
+        print("Authentication successful!")
+        print("User info:", json.dumps(user_info, indent=2))
 
-            # 비밀번호를 바이트로 변환하여 해시 함수에 업데이트
-            hash_func.update(password.encode())
-
-            # 해시된 비밀번호 출력
-            password = hash_func.hexdigest()
-        return password
-
-    def db_create_table(self):
-        self.cursor.execute('''
-            CREATE TABLE IF NOT EXISTS users (
-                id INTEGER PRIMARY KEY,
-                username TEXT,
-                password TEXT
-            )
-        ''')
-        self.conn.commit()
-
-    def db_insert_user(self, username, password):
-        convert_password=self.__convertPassword(password=username+password)
-        self.cursor.execute('INSERT INTO users (username, password) VALUES (?, ?)', (username, convert_password))
-        self.conn.commit()
-
-    def db_update_user_password(self, username, new_password):
-        convert_password=self.__convertPassword(password=username+new_password)
-        self.cursor.execute('UPDATE users SET password = ? WHERE username = ?', (convert_password, username))
-        self.conn.commit()
-
-    def db_delete_user(self, username):
-        self.cursor.execute('DELETE FROM users WHERE username = ?', (username,))
-        self.conn.commit()
-
-    def db_get_user_info(self, username):
-        cursor = self.conn.cursor()
-        cursor.execute("SELECT * FROM users WHERE username = ?", (username,))
-        user_info = cursor.fetchone()
-        if user_info:
-            return {"username": user_info[1], "password": user_info[2]}
-            # return {"id": user_info[0], "username": user_info[1], "password": user_info[2]}
-        else:
-            None
-
-    def db_close(self):
-        self.conn.close()
-
-    def matchPassword(self, input_user_name, input_user_password):
-
-        stored_user_info=self.db_get_user_info(input_user_name)
-
-        password=input_user_name+input_user_password
-        converted_password=self.__convertPassword(password)
-
-        converted_user_info= {
-            "username": input_user_name,
-            "password": converted_password
-        }
-
-        # print("converted_user_info:", converted_user_info)
-        # print("stored_user_info:",stored_user_info)
-        if stored_user_info==None:
-            login_status="login failure: no user information. Please register your username, password via admin"
-        else:
-            if converted_user_info == stored_user_info:
-                login_status = 'login success'
-            else:
-                if converted_user_info["username"]==stored_user_info["username"]:
-                    login_status = 'login failure: wrong password'
-                else:
-                    login_status = 'login failure: wrong username'
-
-        return login_status
+        # Get management API token and fetch user list
+        mgmt_api_token = get_management_token()
+        users = get_users(mgmt_api_token)
+        print("Users in the system:", json.dumps(users, indent=2))
+    else:
+        print("Authentication failed. Please check your username and password.")
 
 if __name__ == "__main__":
-    user_manager_obj=UserManager()
-    # user_manager_obj.db_create_table()
-    user_manager_obj.db_insert_user("admin", "selfdriving!")
-    user_manager_obj.db_insert_user("HJ", "123123")
-    user_manager_obj.db_insert_user("NY", "123123")
-    user_manager_obj.db_insert_user("HS", "123123")
-    user_manager_obj.db_insert_user("Daeho", "123123")
-    result=user_manager_obj.matchPassword("HJ","123123")
-    print(result)
+    main()

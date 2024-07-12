@@ -1,2 +1,0 @@
-2023-09-04 19:43:54,927 - BO_format_1::INFO -- [JobExecution] : [jobID=0] Algorithm, model : BayesianOptimization
-2023-09-04 19:43:54,932 - BO_format_1::INFO -- [JobExecution] : ######### Cycle start #########

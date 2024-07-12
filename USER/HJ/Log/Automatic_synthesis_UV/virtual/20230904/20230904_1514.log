@@ -1,4 +1,0 @@
-2023-09-04 15:14:42,650 - Automatic_synthesis_UV::INFO -- [JobExecution] : [jobID=0] Algorithm, model : Automatic
-2023-09-04 15:14:42,660 - Automatic_synthesis_UV::INFO -- [JobExecution] : ######### Cycle start #########
-2023-09-04 15:14:42,676 - Automatic_synthesis_UV::INFO -- [Automatic] : total experiments=1
-2023-09-04 15:14:42,686 - Automatic_synthesis_UV::INFO -- [Automatic [0]] : next_point 0: {'AddSolution=AgNO3_Concentration': 0.0125, 'AddSolution=AgNO3_Volume': 4000, 'AddSolution=AgNO3_Injectionrate': 100}

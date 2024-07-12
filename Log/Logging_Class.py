@@ -1,6 +1,8 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 # ##
+# @brief    [TaskLogger] Logging Class for controlling our command and log file in Autonomous System Laboratory
+# @brief    [ClientLogger] Logging Class for controlling our command and log file in Autonomous System Laboratory
 # @author   Hyuk Jun Yoo (yoohj9475@kist.re.kr)   
 # @version  1_2   
 # TEST 2021-09-28
@@ -213,7 +215,7 @@ class TaskLogger(Logger):
         time_str=time.strftime("%Y%m%d_%H%M")
         self.__currentExperimentNum=0
         self.__totalExperimentNum=0
-        self.__current_platform_name=""
+        self.__current_module_name=""
         self.delayTimeList=[]
         
         self.delayTime=0
@@ -230,7 +232,7 @@ class TaskLogger(Logger):
         formatter_string = '%(asctime)s - %(name)s::%(levelname)s -- %(message)s'
         self._setFileHandler(formatter_string, total_path=self.__TOTAL_LOG_FILE)
         self._setStreamHandler(formatter_string)
-        # self.status="{}/{}:{}".format(self.currentExperimentNum, self.totalExperimentNum, self.current_platform_name) # in execution system
+        # self.status="{}/{}:{}".format(self.currentExperimentNum, self.totalExperimentNum, self.current_module_name) # in execution system
         self.status=""
         
     @property
@@ -250,12 +252,12 @@ class TaskLogger(Logger):
         self.__totalExperimentNum=input_totalExperimentNum
     
     @property
-    def current_platform_name(self):
-        return self.__current_platform_name
+    def current_module_name(self):
+        return self.__current_module_name
     
-    @current_platform_name.setter
-    def current_platform_name(self, input_current_platform_name):
-        self.__current_platform_name=input_current_platform_name
+    @current_module_name.setter
+    def current_module_name(self, input_current_module_name):
+        self.__current_module_name=input_current_module_name
     
     def appendDelayTime(self, delay_time_str, delay_time):
         if int(delay_time) !=0:

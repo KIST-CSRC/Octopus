@@ -7,111 +7,50 @@ import threading
 sys.path.append(
     os.path.abspath(os.path.join(os.path.dirname(__file__), "..")))
 from more_itertools import locate
-from TaskAction.ActionExecutor import ActionExecutor
+from Action.ActionExecutor_Class import ActionExecutor
+from Resource.ResourceAllocator_Class import ResourceAllocator
 
-class ResourceManager(ActionExecutor):
+class ResourceManager(ActionExecutor, ResourceAllocator):
     """
     ResourceManager class check status of devices, and update device information from NodeManager
     
     # function
+    def requestDeviceInfo():
+    def notifyNumbersOfTasks(total_recipe_template_list:list):
+    def refreshDeviceLocation(module_type:str, device_type:str, jobID:int):
+    def refreshModuleLocation(module_type:str, jobID:int):
+    def refreshTotalLocation(jobID:int):
+    def updateStatus(task_name:str, status:bool):
+    def checkStatus(task_name:str):
+    def allocateLocation(module_idx:int, module_type:str, jobID:int, total_recipe_template_list:list):
     """
     def __init__(self, module_list:list, serverLogger_obj:object):
         ActionExecutor.__init__(self,)
+        ResourceAllocator.__init__(self,)
         self.serverLogger_obj=serverLogger_obj
         self.module_list=module_list
         self.component_name="ResourceManager"
         ################################
-        # module로부터 매번 받도록 하기 #
-        # 특정 job에서 module 실행한다고 하면, 아예 처음부터 지정해버리기
+        # upload device location
         ################################
-        self.task_device_location_dict={
-            "AMR":{ 
-                "vialHolder":["?"]*1,
-                "falconHolder":["?"]*1
-            },
-            "BatchSynthesis":{
-                "Stirrer":["?"]*1,
-                "vialHolder":["?"]*1
-            },
-            "UV":{ 
-                "vialHolder":["?"]*8
-            },
-            "Preprocess":{ 
-                "vial":["?"]*6,
-                "falcon":["?"]*6,
-                "vialHolder":["?"]*1,
-                "falconHolder":["?"]*1,
-                "Centrifuge":["?"]*6,
-                "PreprocessSonic":["?"]*6
-            },
-            "RDE":{ 
-                "falconHolder":["?"]*1,
-                "falcon" : ["?"]*1
-            }
-        }
+        with open(f"Resource/device_location.json", 'r', encoding='utf-8') as f:
+            self.task_device_location_dict=json.load(f)
         ################################
-        # module로부터 매번 받도록 하기 #
+        # upload device status
         ################################
-        self.task_device_status_dict={
-            "AMR_RoboticArm":False,
-            "BatchSynthesis_RoboticArm":False,
-            "BatchSynthesis_VialStorage":False,
-            "BatchSynthesis_LinearAcutator":False,
-            "BatchSynthesis_Pump":False,
-            "UV_RoboticArm":False,
-            "UV_Pipette":False,
-            "UV_Spectroscopy":False,
-            "Preprocess_RoboticArm":False,
-            "Preprocess_Centrifuge":False,
-            "Preprocess_Pump":False,
-            "Preprocess_Sonic":False,
-            "Preprocess_Piepette":False,
-            "Preprocess_DispenserLA":False,
-            "Preprocess_DeskLA":False,
-            "Preprocess_Weighing":False,            
-            "Washing_Centrifuge":False,
-            
-            "RDE_RoboticArm":False,
-            "RDE_Module":False,
-        }
-        #########################################
-        # module로부터 처음 연결할 때 받도록 하기 #
-        #########################################
-        # task_device_info_dict 받을 때 같이 
-        #########################################
-        # protect for collision between each devices
-        self.task_device_mask_dict={
-            "BatchSynthesis_PrepareContainer":["BatchSynthesis_RoboticArm","BatchSynthesis_VialStorage","BatchSynthesis_LinearAcutator","UV_RoboticArm"],
-            "BatchSynthesis_AddSolution":["BatchSynthesis_LinearAcutator","BatchSynthesis_Pump"],
-            "BatchSynthesis_React":["BatchSynthesis_RoboticArm","BatchSynthesis_LinearAcutator","UV_RoboticArm"],
-            "UV_PrepareCuvette":["BatchSynthesis_RoboticArm", "UV_RoboticArm", "UV_Pipette"],
-            "UV_GetAbs":["UV_RoboticArm", "UV_Pipette", "UV_Spectroscopy"],
-            "UV_StoreCuvette":["BatchSynthesis_RoboticArm", "UV_RoboticArm", "UV_Pipette"],
-            "AMR_MoveContainer":["BatchSynthesis_RoboticArm","BatchSynthesis_VialStorage","BatchSynthesis_LinearAcutator","UV_RoboticArm"],
-            
-            "Preprocess_TransferLiquid": ["Preprocess_RoboticArm","Preprocess_DeskLA","Preprocess_DispenserLA","Preprocess_Pump"],
-            "Preprocess_Centrifugation": ["Preprocess_RoboticArm","Preprocess_Centrifuge"],
-            "Preprocess_WashingAddSolution": ["Preprocess_RoboticArm","Preprocess_DeskLA","Preprocess_DispenserLA","Preprocess_Pump"],
-            "Preprocess_Weighing": ["Preprocess_RoboticArm","Preprocess_Weighing"],
-            "Preprocess_InkAddSolution": ["Preprocess_RoboticArm","Preprocess_Piepette"],
-            "Preprocess_Washing_RemoveLiquid": ["Preprocess_RoboticArm","Preprocess_DeskLA","Preprocess_DispenserLA","Preprocess_Pump"],
-            "Preprocess_Diffuse": ["Preprocess_RoboticArm","Preprocess_Sonic"],
-            "Preprocess_Mix": ["Preprocess_RoboticArm","Preprocess_Sonic"],          
-            
-            "RDE_PrepareSample":["RDE_RoboticArm"],
-            "RDE_SetupEvaluation": ["RDE_Module"],
-            "RDE_Dropcasting": ["RDE_RoboticArm"],
-            "RDE_PrepareElectrode": ["RDE_Module"],
-            "RDE_StartEvaluation": ["RDE_Module"],
-            "RDE_ReturnSample": ["RDE_RoboticArm"],
-            "RDE_CleanUp": ["RDE_Module"],      
-        }
-        self.task_device_info_dict = self.requestHardwareInfo()
+        with open(f"Resource/device_status.json", 'r', encoding='utf-8') as f:
+            self.task_device_status_dict=json.load(f)
+        ##############################################################
+        # upload masking table --> protect for collision between each devices
+        ##############################################################
+        with open(f"Resource/device_masking_table.json", 'r', encoding='utf-8') as f:
+            self.task_device_mask_dict=json.load(f)
+        ##############################################################
+        # download device information (setting) and all devices action from module node
+        ##############################################################
+        self.task_device_info_dict, self.total_module_device_action_dict= self.requestDeviceInfo()
 
-    ##################################################
-    # callServer를 하나로 만들어서 paramater에서 받기  #
-    ##################################################
-    def requestHardwareInfo(self):
+    def requestDeviceInfo(self):
         """
         request to all of platform to get detailed information about each devices.
         We use this function to map recipe based on config file. 
@@ -205,13 +144,15 @@ class ResourceManager(ActionExecutor):
         """
         try:
             total_device_info_dict={}
+            total_module_device_action_dict={}
             for module_name in self.module_list:
-                total_device_info_dict[module_name] = json.loads(self.transferDeviceCommand(module_name, "info/{}/None/all/virtual".format(module_name)))
+                total_device_info_dict[module_name] = json.loads(self.transferDeviceCommand(module_name, "None/{}/INFO/None/virtual".format(module_name)))
+                total_module_device_action_dict[module_name] = json.loads(self.transferDeviceCommand(module_name, "None/{}/ACTION/None/virtual".format(module_name)))
                 self.serverLogger_obj.info(self.component_name,"receive information of {}".format(module_name))
         except Exception as e:
             raise ConnectionError("Each module node cannot connect each device --> error message : {}".format(e))
         
-        return total_device_info_dict
+        return total_device_info_dict, total_module_device_action_dict
     
     ##################################################
     # module로 옮기기  #
@@ -230,280 +171,18 @@ class ResourceManager(ActionExecutor):
         """
         return list(locate(lst, lambda x: x == value))
     
-    ##################################################
-    # callServer로 받아오는걸로 바꾸고, 해당 함수는 각 모듈로 옮기기  #
-    ##################################################
-    def allocateLocation(self, module_idx:int, module_type:str, jobID:int, total_recipe_template_list:list):
-        """
-        :param module_type: "BatchSynthesis", "FlowSynthesis", "UV" ... 
-        :param jobID: allocate jobID in location_dict
-        :param total_recipe_template_list: reflect recipe information in hardware location
-        
-        self.task_device_location_dict (dict)
-
-        ex) self.task_device_location_dict={
-                "Stirrer":["?","?","?","?","?","?","?","?"], # "?"==empty
-                "vialHolder":["?","?","?","?","?","?","?","?"]
-            }
-        }
-        """
-        # allocate location information in self.location_dict depending on temperature 
-        if module_type == "BatchSynthesis":
-
-            Stirrer_set_temperature_list=[]
-            for stirrer_value in list(self.task_device_info_dict[module_type]["Stirrer"].values()): # upload tempearture setting of stirrer
-                Stirrer_set_temperature_list.append(stirrer_value["Temperature"])
-
-            # search each temperature and stirrate setting in total_recipe_template_list
-            temperature_in_recipe_list=[]
-            # stirrate_list=[] # if we control stir, activate this
-            for recipe in total_recipe_template_list:
-                task_dict_list=[]
-                for process_info in recipe["Synthesis"]:
-                    if process_info["Module"]=="BatchSynthesis": # if locate BatchSynthesis in first
-                        task_dict_list=process_info["Data"]
-                for task_dict in task_dict_list:
-                    if task_dict["Task"]=="BatchSynthesis_Heat": # we split depending on temperature (differenet temperature --> different stirrer)
-                        temperature_in_recipe_list.append(task_dict["Data"]["Temperature"]["Value"])
-                    # if task_dict["Task"]!="Stir": # if we control stir, activate this
-                    #     stirrate_list.append(task_dict["Data"]["StirRate"]["Value"])
-                    else: # exclude AddSolution, Wait, React, Pipette...
-                        pass
-            if 50 in temperature_in_recipe_list: # mix some temperature include 50
-                empty_stirrer_0_hole_index=[]
-                # empty_stirrer_1_hole_index=[]
-                empty_vialHolder_index=[]
-                while True: # while satisfy "if" condition
-                    empty_stirrer_0_hole_index=self.__find_indexes(self.task_device_location_dict[module_type]["Stirrer"][:8], "?") # "?" == empty, calculate "?" or not
-                    # empty_stirrer_1_hole_index=self.__find_indexes(self.task_device_location_dict[module_type]["Stirrer"][8:], "?") # "?" == empty, calculate "?" or not
-                    empty_vialHolder_index=self.__find_indexes(self.task_device_location_dict[module_type]["vialHolder"],"?") # "?" == empty
-                    # match recipe information with spare location of stirrer
-                    if temperature_in_recipe_list.count(50) <= len(empty_stirrer_0_hole_index) and \
-                        len(temperature_in_recipe_list) <= len(empty_vialHolder_index):
-                        break
-                popped_stirrer_hole_index_list=[]
-                popped_vialHolder_index_list=[]
-                for idx, temperature in enumerate(temperature_in_recipe_list):
-                    if temperature == 50:
-                        popped_stirrer_hole_index=empty_stirrer_0_hole_index.pop(0) # pop first element in list
-                        self.task_device_location_dict[module_type]["Stirrer"][popped_stirrer_hole_index]=jobID
-                        popped_stirrer_hole_index_list.append(popped_stirrer_hole_index)
-                    # elif temperature == 50:
-                    #     popped_stirrer_hole_index=empty_stirrer_1_hole_index.pop(0) # pop first element in list
-                    #     self.task_device_location_dict[module_type]["Stirrer"][popped_stirrer_hole_index]=jobID
-                    #     popped_stirrer_hole_index_list.append(popped_stirrer_hole_index) 
-                    popped_vialHolder_index=empty_vialHolder_index.pop(0) # pop first element in list
-                    self.task_device_location_dict[module_type]["vialHolder"][popped_vialHolder_index]=jobID
-                    popped_vialHolder_index_list.append(popped_vialHolder_index)
-            
-            else: # all temperature set 25 (RT)
-                empty_stirrer_hole_index=[]
-                empty_vialHolder_index=[]
-                while True: # while satisfy "if" condition
-                    empty_vialHolder_index=self.__find_indexes(self.task_device_location_dict[module_type]["vialHolder"],jobID) # "?" == empty
-                    empty_stirrer_hole_index=self.__find_indexes(self.task_device_location_dict[module_type]["Stirrer"], "?") # "?" == empty
-                    if temperature_in_recipe_list.count(25) <= len(empty_stirrer_hole_index) and len(temperature_in_recipe_list) <= len(empty_vialHolder_index):
-                        break
-                # print(empty_stirrer_hole_index)
-                # print(empty_vialHolder_index)
-                popped_stirrer_hole_index_list=[]
-                popped_vialHolder_index_list=[]
-                for idx in range(len(temperature_in_recipe_list)):
-
-                    popped_stirrer_hole_index=empty_stirrer_hole_index.pop(0) # pop first element in list
-                    self.task_device_location_dict[module_type]["Stirrer"][popped_stirrer_hole_index]=jobID
-                    popped_stirrer_hole_index_list.append(popped_stirrer_hole_index)
-
-                    popped_vialHolder_index=empty_vialHolder_index.pop(0) # pop first element in list
-                    self.task_device_location_dict[module_type]["vialHolder"][popped_vialHolder_index]=jobID
-                    popped_vialHolder_index_list.append(popped_vialHolder_index)
-            
-            task_location_dict={
-                "Stirrer":popped_stirrer_hole_index_list,
-                "vialHolder":popped_vialHolder_index_list
-            }
-
-        elif module_type=="UV": # 
-            popped_vialHolder_index_list=[]
-            while True: # while satisfy "if" condition
-                empty_vialHolder_index_list=self.__find_indexes(self.task_device_location_dict[module_type]["vialHolder"], "?")
-                if len(total_recipe_template_list) <= len(empty_vialHolder_index_list):
-                    break
-            for idx in range(len(total_recipe_template_list)):
-                popped_vialHolder_index=empty_vialHolder_index_list.pop(0) # pop first element in list
-                self.task_device_location_dict[module_type]["vialHolder"][popped_vialHolder_index]=jobID
-                popped_vialHolder_index_list.append(popped_vialHolder_index)
-            task_location_dict={
-                "vialHolder":popped_vialHolder_index_list
-            }
-
-        elif module_type=="Preprocess": # 
-            empty_Centrifuge_index = []
-            empty_falcon_index = []
-            empty_falconHolder_index= []
-            empty_vialHolder_index= []
-            empty_PreprocessSonic_index = []
-
-            while True: 
-                empty_Centrifuge_index = self.__find_indexes(self.task_device_location_dict[module_type]["Centrifuge"], "?")
-                empty_falcon_index = self.__find_indexes(self.task_device_location_dict[module_type]["falcon"], "?")
-                empty_falconHolder_index = self.__find_indexes(self.task_device_location_dict[module_type]["falconHolder"], jobID)
-                print("empty_falconHolder_index",empty_falconHolder_index)
-                empty_vialHolder_index = self.__find_indexes(self.task_device_location_dict[module_type]["vialHolder"], jobID)
-                empty_PreprocessSonic_index = self.__find_indexes(self.task_device_location_dict[module_type]["PreprocessSonic"], "?")
-                
-                if len(total_recipe_template_list) <= len(empty_Centrifuge_index) <= len(empty_falcon_index):
-                    break
-
-            popped_Centrifuge_index_list = []
-            popped_falcon_index_list = []
-            popped_falconHolder_index_list = []
-            popped_vialHolder_index_list = []
-            popped_PreprocessSonic_index_list = []
-
-            for idx in range(len(total_recipe_template_list)):
-                popped_Centrifuge_index = empty_Centrifuge_index.pop(0)
-                self.task_device_location_dict[module_type]["Centrifuge"][popped_Centrifuge_index] = jobID
-                popped_Centrifuge_index_list.append(popped_Centrifuge_index)
-
-                popped_falcon_index = empty_falcon_index.pop(0)
-                self.task_device_location_dict[module_type]["falcon"][popped_falcon_index] = jobID
-                popped_falcon_index_list.append(popped_falcon_index)
-                
-                popped_PreprocessSonic_index = empty_PreprocessSonic_index.pop(0)
-                self.task_device_location_dict[module_type]["PreprocessSonic"][popped_PreprocessSonic_index] = jobID
-                popped_PreprocessSonic_index_list.append(popped_PreprocessSonic_index)                
-
-            task_location_dict = {
-                "Centrifuge": popped_Centrifuge_index_list,
-                "falcon": popped_falcon_index_list,
-                "falconHolder": self.task_device_location_dict[module_type]["falconHolder"],
-                "vialHolder": popped_vialHolder_index_list,
-                "PreprocessSonic": popped_PreprocessSonic_index_list
-            }
-            return task_location_dict
-                    
-        elif module_type=="AMR": # 
-            total_task_list=[]
-            for key, values in total_recipe_template_list[0].items(): 
-                # key -> Synthesis, Preprocess, Evaluation, Characterization
-                # values -> {"Module":[...]},{"Module":[...]},...
-                for value in values:
-                    task_dict_list=[]
-                    if "Module" in value:
-                        for task_dict in value["Data"]:
-                            task_dict_list.append(task_dict)
-                    total_task_list.append(task_dict_list)
-            
-            amr_task_dict=total_task_list[module_idx][0]["Data"]
-            PLACE_A=amr_task_dict["From"]
-            PLACE_B=amr_task_dict["To"]
-            print("PLACE_A, PLACE_B", PLACE_A, PLACE_B)
-            CONTAINER_NAME=amr_task_dict["Container"]
-            AMR_HOLDER_NAME=amr_task_dict["Container"]+"Holder"
-            popped_AMR_holder_index_list=[]
-            popped_PLACE_A_index_list=[]
-            popped_PLACE_B_index_list=[]
-            empty_AMR_index_list=[]
-            empty_PLACE_A_index_list=[]
-            empty_PLACE_B_index_list=[]
-            if PLACE_A  == "Storage" or PLACE_B == "Storage":
-                if PLACE_A  == "Storage":
-                    while True: # while satisfy "if" condition
-                        empty_AMR_index_list=self.__find_indexes(self.task_device_location_dict["AMR"][AMR_HOLDER_NAME], "?")
-                        empty_PLACE_B_index_list=self.__find_indexes(self.task_device_location_dict[PLACE_B][AMR_HOLDER_NAME], "?")
-                        if len(total_recipe_template_list) <= len(empty_AMR_index_list) and len(total_recipe_template_list) <= len(empty_PLACE_B_index_list) :
-                            break
-                    for idx in range(len(total_recipe_template_list)):
-                        popped_AMR_holder_index=empty_AMR_index_list.pop(0) # pop first element in list
-                        popped_PLACE_B_index=empty_PLACE_B_index_list.pop(0) # pop first element in list
-                        self.task_device_location_dict["AMR"][AMR_HOLDER_NAME][popped_AMR_holder_index]=jobID
-                        self.task_device_location_dict[PLACE_B][AMR_HOLDER_NAME][popped_PLACE_B_index]=jobID # reset
-                        popped_AMR_holder_index_list.append(popped_AMR_holder_index)
-                        popped_PLACE_B_index_list.append(popped_PLACE_B_index)
-                    task_location_dict={
-                        module_type:{CONTAINER_NAME:popped_AMR_holder_index_list},
-                        PLACE_B:{CONTAINER_NAME:popped_PLACE_B_index_list}
-                    }
-                elif PLACE_B == "Storage":
-                    while True: # while satisfy "if" condition
-                        empty_AMR_index_list=self.__find_indexes(self.task_device_location_dict["AMR"][AMR_HOLDER_NAME], "?")
-                        empty_PLACE_A_index_list=self.__find_indexes(self.task_device_location_dict[PLACE_A][AMR_HOLDER_NAME], jobID)
-                        if len(total_recipe_template_list) <= len(empty_AMR_index_list) and len(total_recipe_template_list) <= len(empty_PLACE_A_index_list) :
-                            break
-                    for idx in range(len(total_recipe_template_list)):
-                        popped_AMR_holder_index=empty_AMR_index_list.pop(0) # pop first element in list
-                        popped_PLACE_A_index=empty_PLACE_A_index_list.pop(0) # pop first element in list
-                        self.task_device_location_dict["AMR"][AMR_HOLDER_NAME][popped_AMR_holder_index]=jobID
-                        self.task_device_location_dict[PLACE_A][AMR_HOLDER_NAME][popped_PLACE_A_index]=jobID # reset
-                        popped_AMR_holder_index_list.append(popped_AMR_holder_index)
-                        empty_PLACE_A_index_list.append(popped_PLACE_A_index)
-                    task_location_dict={
-                        module_type:{CONTAINER_NAME:popped_AMR_holder_index_list},
-                        PLACE_A:{CONTAINER_NAME:empty_PLACE_A_index_list}
-                    }
-            else:
-                while True: # while satisfy "if" condition
-                    empty_PLACE_A_index_list=self.__find_indexes(self.task_device_location_dict[PLACE_A][AMR_HOLDER_NAME], jobID)
-                    empty_AMR_index_list=self.__find_indexes(self.task_device_location_dict["AMR"][AMR_HOLDER_NAME], "?")
-                    empty_PLACE_B_index_list=self.__find_indexes(self.task_device_location_dict[PLACE_B][AMR_HOLDER_NAME], "?")
-                    if len(total_recipe_template_list) <= len(empty_PLACE_A_index_list) and len(total_recipe_template_list) <= len(empty_PLACE_B_index_list):
-                        break
-                for idx in range(len(total_recipe_template_list)):
-                    popped_PLACE_A_index=empty_PLACE_A_index_list.pop(0) # pop first element in list
-                    popped_AMR_holder_index=empty_AMR_index_list.pop(0) # pop first element in list
-                    popped_PLACE_B_index=empty_PLACE_B_index_list.pop(0) # pop first element in list
-                    self.task_device_location_dict[PLACE_A][AMR_HOLDER_NAME][popped_PLACE_A_index]="?" # reset
-                    self.task_device_location_dict["AMR"][AMR_HOLDER_NAME][popped_AMR_holder_index]=jobID
-                    self.task_device_location_dict[PLACE_B][AMR_HOLDER_NAME][popped_PLACE_B_index]=jobID
-                    popped_AMR_holder_index_list.append(popped_AMR_holder_index)
-                    popped_PLACE_A_index_list.append(popped_PLACE_A_index)
-                    popped_PLACE_B_index_list.append(popped_PLACE_B_index)
-                task_location_dict={
-                    module_type:{CONTAINER_NAME:popped_AMR_holder_index_list},
-                    PLACE_A:{CONTAINER_NAME:popped_PLACE_A_index_list},
-                    PLACE_B:{CONTAINER_NAME:popped_PLACE_B_index_list}
-                }
-
-        elif module_type=="RDE": # 
-            popped_falcon_index_list=[]
-            popped_falconHolder_index_list=[]
-
-            while True: # while satisfy "if" condition
-                empty_falcon_index_list=self.__find_indexes(self.task_device_location_dict[module_type]["falcon"], "?")
-                empty_falconHolder_index_list=self.__find_indexes(self.task_device_location_dict[module_type]["falconHolder"], jobID)
-                if len(total_recipe_template_list) <= len(empty_falcon_index_list) and len(total_recipe_template_list) <= len(empty_falconHolder_index_list):
-                    break
-            for idx in range(len(total_recipe_template_list)):
-                popped_falcon_index=empty_falcon_index_list.pop(0) # pop first element in list
-                popped_falconHolder_index=empty_falconHolder_index_list.pop(0) # pop first element in list
-
-                self.task_device_location_dict[module_type]["falcon"][popped_falcon_index]=jobID
-                self.task_device_location_dict[module_type]["falconHolder"][popped_falcon_index]=jobID
-                popped_falcon_index_list.append(popped_falcon_index)
-                popped_falconHolder_index_list.append(popped_falconHolder_index)
-                
-            task_location_dict={
-                "falcon":popped_falcon_index_list,
-                "falconHolder":popped_falconHolder_index_list,
-            }
-            
-        return task_location_dict
-    
     def notifyNumbersOfTasks(self, total_recipe_template_list:list):
         """
-        :param total_recipe_template_list: reflect recipe information in hardware location
+        :param total_recipe_template_list: reflect recipe information in device location
 
         :return iter_num (int) : return minmum iter_num due to ClosedPacking scheduling
         """
         module_seq_list = [] # need this var to implement in location_dict
         iter_num=0
-        for key, values in total_recipe_template_list[0].items():
+        for values in total_recipe_template_list[0].values():
             for value in values:
                 if "Module" in value:
                     module_seq_list.append(value["Module"])
-        # module_seq_list[0]을 보는 이유 : 뒤에 있는 공정들은 어차피 나중에 할거니깐. 
-        # 지금 당장 시작해야하는 공정이 비어있으면 일단 실행.
         remained_resource_dict={}
         remained_resource_len_list=[]
         while True: # while satisfy "if" condition
@@ -518,11 +197,11 @@ class ResourceManager(ActionExecutor):
         return iter_num
     
     ##################################################
-    # callServer를 하나로 만들어서 paramater에서 받기  #
+    # transfer를 하나로 만들어서 paramater에서 받기  #
     ##################################################
     def refreshDeviceLocation(self, module_type:str, device_type:str, jobID:int):
         """
-        :param module_type (str): reflect process information of hardware location in module (BatchSynthesis, UV)
+        :param module_type (str): reflect process information of device location in module (BatchSynthesis, UV)
         :param jobID (int) : return job id
 
         :return self.task_device_location_dict[module_type] (dict)
@@ -535,7 +214,7 @@ class ResourceManager(ActionExecutor):
     
     def refreshModuleLocation(self, module_type:str, jobID:int):
         """
-        :param module_type (str): reflect process information of hardware location in module (BatchSynthesis, UV)
+        :param module_type (str): reflect process information of device location in module (BatchSynthesis, UV)
         :param jobID (int) : return job id
 
         :return self.task_device_location_dict[module_type] (dict)
@@ -547,7 +226,7 @@ class ResourceManager(ActionExecutor):
         return self.task_device_location_dict[module_type]
 
     ##################################################
-    # callServer를 하나로 만들어서 paramater에서 받기  #
+    # transfer를 하나로 만들어서 paramater에서 받기  #
     ##################################################
     def refreshTotalLocation(self, jobID:int):
         """
@@ -576,29 +255,38 @@ class ResourceManager(ActionExecutor):
 
         ex) 
         self.task_device_status_dict={
-            "BatchSynthesis_RoboticArm":False,
-            "BatchSynthesis_VialStorage":False,
-            "BatchSynthesis_LinearAcutator":True,
-            "BatchSynthesis_Pump":False,
-            "UV_RoboticArm":False,
-            "UV_Pipette":False,
-            "UV_Spectroscopy":False
+            "BatchSynthesisModule":{
+                "BatchSynthesisModule_RoboticArm":False,
+                "BatchSynthesisModule_VialStorage":False,
+                "BatchSynthesisModule_LinearAcutator":True,
+                "BatchSynthesisModule_Pump":False
+            },
+            "UVVisModule":{
+                "UVVisModule_RoboticArm":False,
+                "UVVisModule_Pipette":False,
+                "UVVisModule_Spectroscopy":False
+            }
         }
         self.task_device_mask_dict={
-            "PrepareContainer":["BatchSynthesis_RoboticArm","BatchSynthesis_VialStorage","BatchSynthesis_LinearAcutator","UV_RoboticArm"],
-            "AddSolution":["BatchSynthesis_RoboticArm","BatchSynthesis_LinearAcutator","BatchSynthesis_Pump"],
-            "React":["BatchSynthesis_RoboticArm","BatchSynthesis_LinearAcutator","UV_RoboticArm"],
-            "GetAbs":["BatchSynthesis_RoboticArm", "UV_RoboticArm", "UV_Pipette", "UV_Spectroscopy"],
-            "MoveContainer":["BatchSynthesis_RoboticArm","BatchSynthesis_VialStorage","BatchSynthesis_LinearAcutator","UV_RoboticArm"],
+            "BatchSynthesisModule":{
+                "BatchSynthesisModule_PrepareContainer":["BatchSynthesisModule_RoboticArm","BatchSynthesisModule_VialStorage","BatchSynthesisModule_LinearAcutator","UVVisModule_RoboticArm"],
+                "BatchSynthesisModule_AddSolution":["BatchSynthesisModule_RoboticArm","BatchSynthesisModule_LinearAcutator","BatchSynthesisModule_Pump"],
+                "BatchSynthesisModule_React":["BatchSynthesisModule_RoboticArm","BatchSynthesisModule_LinearAcutator","UVVisModule_RoboticArm"],
+                "BatchSynthesisModule_MoveContainer":["BatchSynthesisModule_RoboticArm","BatchSynthesisModule_VialStorage","BatchSynthesisModule_LinearAcutator","UVVisModule_RoboticArm"],
+            }
+            "UVVisModule":{
+                "UVVisModule_GetAbs":["BatchSynthesisModule_RoboticArm", "UVVisModule_RoboticArm", "UVVisModule_Pipette", "UVVisModule_Spectroscopy"],
+            }
         }
         """
         # self.serverLogger_obj.debug(self.component_name,"start to update status")
         time.sleep(1)
-        device_criterion_list=self.task_device_mask_dict[task_name]
-        
+        module_name, _=task_name.split("_")
+        device_criterion_list=self.task_device_mask_dict[module_name][task_name]
         # thread function
         def update_status_each(input_device_name, input_status):
-            self.task_device_status_dict[input_device_name]=input_status # UV_RoboticArm is okay. (not disturb in AddSolution task)
+            split_module_name, _=input_device_name.split("_")
+            self.task_device_status_dict[split_module_name][input_device_name]=input_status # UV_RoboticArm is okay. (not disturb in AddSolution task)
         # define thread
         thread_list=[]
         for device_name in device_criterion_list:
@@ -627,10 +315,12 @@ class ResourceManager(ActionExecutor):
         while True:
             time.sleep(2)
             criterion_count_list=[]
-            device_criterion_list=self.task_device_mask_dict[task_name]
+            module_name, _=task_name.split("_")
+            device_criterion_list=self.task_device_mask_dict[module_name][task_name]
             # thread function
-            def countCriterion(device_name):
-                criterion_count_list.append(self.task_device_status_dict[device_name])
+            def countCriterion(input_device_name):
+                split_module_name, _=input_device_name.split("_")
+                criterion_count_list.append(self.task_device_status_dict[split_module_name][input_device_name])
             # define thread
             thread_list=[]
             for device_name in device_criterion_list:
@@ -651,3 +341,47 @@ class ResourceManager(ActionExecutor):
         else:
             delay_time=round(finish_wait_time-start_wait_time, 2)
         return delay_time
+    
+    def allocateLocation(self, module_name:str, jobID:int, total_recipe_template_list:list):
+        """
+        :param module_name: "BatchSynthesisModule", "FlowSynthesisModule", "UVVisModule" ... 
+        :param jobID: allocate jobID in location_dict
+        :param total_recipe_template_list: reflect recipe information in device location
+        
+        self.task_device_location_dict (dict)
+
+        ex) self.task_device_location_dict={
+                "Stirrer":["?","?","?","?","?","?","?","?"], # "?"==empty
+                "vialHolder":["?","?","?","?","?","?","?","?"]
+            }
+        }
+        """
+        # allocate location information in self.location_dict depending on temperature 
+        return_task_device_location_dict, self.task_device_location_dict = getattr(self, f"get{module_name}Resource")(module_name, jobID, total_recipe_template_list, self.task_device_location_dict)
+        
+        return return_task_device_location_dict
+    
+
+if __name__ == "__main__":
+    ################################
+    # upload device location
+    ################################
+    with open(f"Resource/device_location.json", 'r', encoding='utf-8') as f:
+        task_device_location_dict=json.load(f)
+    ################################
+    # upload device status
+    ################################
+    with open(f"Resource/device_status.json", 'r', encoding='utf-8') as f:
+        task_device_status_dict=json.load(f)
+    ##############################################################
+    # upload masking table --> protect for collision between each devices
+    ##############################################################
+    with open(f"Resource/device_masking_table.json", 'r', encoding='utf-8') as f:
+        task_device_mask_dict=json.load(f)
+
+    print(task_device_location_dict)
+    print(task_device_status_dict)
+    print(task_device_mask_dict)
+
+    test=ResourceManager([], object)
+    print(dir(test))

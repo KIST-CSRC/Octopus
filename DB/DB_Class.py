@@ -7,12 +7,14 @@
 # TEST 2021-11-01
 # TEST 2022-04-11
 
-import os
+import socket, json
 import os,sys
 import time
 import json  
 from pymongo import MongoClient, MongoReplicaSetClient, WriteConcern, read_concern, ReadPreference
-from TaskAction.ActionExecutor import ParameterTCP
+
+sys.path.append(
+    os.path.abspath(os.path.join(os.path.dirname(__file__), "../TCP_Connection")))
 
 """
 - Basically Avaliable
@@ -26,7 +28,7 @@ from TaskAction.ActionExecutor import ParameterTCP
     장애 발생시 일관성을 유지하기 위한 이벤트를 발생시킨다.
 """
 
-class MongoDB_Class(ParameterTCP):
+class MongoDB_Class:
     """
     MongoDB Class treat MongoDB instances, methods.
     
@@ -36,7 +38,9 @@ class MongoDB_Class(ParameterTCP):
     - sendDocument(db_name, collection_name, document)
     """
     def __init__(self, MasterLogger_obj, mode_type="virtual"):
-        super().__init__()
+
+        with open("Action/routing_table.json", 'r', encoding='utf-8') as file:
+            self.routing_table = json.load(file)
 
         self.MasterLogger_obj=MasterLogger_obj
         self.platform_name="MongoDB ({})".format(mode_type)
@@ -117,9 +121,9 @@ class MongoDB_Class(ParameterTCP):
         """
         if self.mode_type=="virtual":
             self.MasterLogger_obj.info(self.platform_name, "Start to insert data into DB")
-            # db_name="mydb1"
-            # collection_name="foo"
-            # document=[{"sku": "abc123", "qty": 100}, {"abc": "xyz123", "dldl": 100}, {"Time":time.strftime("%Y%m%d_%H%M%S")}]
+            db_name="mydb1"
+            collection_name="foo"
+            document=[{"sku": "abc123", "qty": 100}, {"abc": "xyz123", "dldl": 100}, {"Time":time.strftime("%Y%m%d_%H%M%S")}]
             collections = self.__mongo_client[db_name][collection_name]
             def callback(session):
                 collections = session.client[db_name][collection_name]
@@ -153,3 +157,40 @@ class MongoDB_Class(ParameterTCP):
             self.MasterLogger_obj.info(self.platform_name, "Finish to insert data into DB")
 
         return True
+
+
+if __name__ == "__main__":
+
+    import os, sys
+    sys.path.append(
+        os.path.abspath(os.path.join(os.path.dirname(__file__), "../")))  # get import path : Logging_Class.py
+    from Log.Logging_Class_previous import MasterLogger
+    log_obj=MasterLogger()
+    DB_obj=MongoDB_Class(log_obj, mode_type="real")
+    DB_obj.sendDocument(db_name="mydb1", collection_name="foo", document=[{"sku": "abc123", "qty": 100}, {"abc": "xyz123", "dldl": 100}, {"Time":1, "test":0}])
+    print(DB_obj.getDatabaseNameList())
+    print(DB_obj.getDocument(db_name="mydb1", collection_name="foo"))
+
+    # client = MongoClient('mongodb://161.122.22.146:27017,161.122.22.146:27017/?replicaSet=myRepl')
+    # client = MongoClient('mongodb://161.122.22.146:27017/')
+    # wc_majority = WriteConcern("majority", wtimeout=1000)
+    # # Prereq: Create collections.
+    # client.get_database(
+    #     "mydb1", write_concern=wc_majority).foo.insert_one({'abc': 0})
+    # client.get_database(
+    #     "mydb2", write_concern=wc_majority).bar.insert_one({'xyz': 0})
+    # # Step 1: Define the callback that specifies the sequence of operations to perform inside the transactions.
+    # def callback(session):
+    #     collection_one = session.client.mydb1.foo
+    #     collection_two = session.client.mydb2.bar
+    #     # Important:: You must pass the session to the operations.
+    #     collection_one.insert_one({'abc': 1}, session=session)
+    #     collection_two.insert_one({'xyz': 999}, session=session)
+    #     print("Hello!!!")
+    # # Step 2: Start a client session.
+    # with client.start_session() as session:
+    #     # Step 3: Use with_transaction to start a transaction, execute the callback, and commit (or abort on error).
+    #     session.with_transaction(
+    #         callback, read_concern=read_concern.ReadConcern('local'),
+    #         write_concern=wc_majority,
+    #         read_preference=ReadPreference.PRIMARY)

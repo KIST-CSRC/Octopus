@@ -1,15 +1,19 @@
 from more_itertools import locate
+import json
+
 
 class JobTrigger:
     
     def __init__(self) -> None:
-        self.bottleneck_dict={
-            "BatchSynthesis":"React",
-            "Drying":"Oven",
-            "Washing":"Centrifugation",
-            "UV":"" # "" --> no bottleneck
-            # add later
-        }
+
+        with open(f"Job/device_standby_time.json", 'r', encoding='utf-8') as f:
+            self.device_standby_time_dict=json.load(f)
+        
+        # self.device_standby_time_dict={
+        #     "BatchSynthesisModule":["React"],
+        #     "WashingModule":["Oven", "Centrifugation"],
+        #     "UVVisModule":"" 
+        # }
 
     def __find_indexes(self, lst:list, value:int):
         """
@@ -34,16 +38,13 @@ class JobTrigger:
         """
         [FCFS = First-Come,First-Served]
         
-        job_execution_queue가 비어있다면?
-            or
-        특정 플랫폼이 비어있는데, 비어있는 플랫폼만 쓰겠다고 한다면?
+        If the job_execution_queue is empty:
+        or
+        if a specific platform is empty but only wants to use the empty platform:
         
-        return 값은 항상 Job script file가 담겨있는 list
-        
+        The return value should always be a list containing Job script files.
+
         return (list)
-        """
-        """
-        이 부분은 time table 기반으로 하도록 유도하자
         """
         if len(job_wait_queue)==0:
             return []
@@ -58,7 +59,7 @@ class JobTrigger:
 
     def Backfill(self, job_wait_queue:list, job_exec_queue:list, ResourceManager_obj:object):
         """
-        ResourceManager_obj.task_hardware_location_dict
+        ResourceManager_obj.task_device_location_dict
         =>
         {
             "BatchSynthesis":{ 
@@ -79,15 +80,17 @@ class JobTrigger:
             return [popped_job_wait]
         else:
             # update bottleneck timeline for each module
-            module_bottleneck_status_list=[]
+            module_device_standby_time_status_list=[]
             for job_exec in job_exec_queue:
-                for module_name, module_bottleneck in self.bottleneck_dict.items():
-                    if module_bottleneck in job_exec.TaskLogger_obj.status: # Synthesis, Preprocess, Characterizatin, Evaluation
-                        module_bottleneck_status_list.append(module_name)
+                for module_name, module_device_standby_time_list in self.device_standby_time_dict.items():
+                    for module_device_standby_time in module_device_standby_time_list:
+                        if module_device_standby_time in job_exec.TaskLogger_obj.status: # Synthesis, Preprocess, Characterizatin, Evaluation
+                            module_device_standby_time_status_list.append(module_name)
+                            break
                         
-            # update hardware resource
+            # update device resource
             resource_dict={}
-            for module_name, module_resource_dict in ResourceManager_obj.task_hardware_location_dict.items():
+            for module_name, module_resource_dict in ResourceManager_obj.task_device_location_dict.items():
                 for device_name, device_resource_list in module_resource_dict.items():
                     empty_location_list=self.__find_indexes(device_resource_list, "?")
                     resource_dict[module_name]=len(empty_location_list)
@@ -97,8 +100,8 @@ class JobTrigger:
             for job_wait in job_wait_queue:
                 for process_dict in job_wait.process_dict.values(): # "Synthesis":{}, "Preprocess":{}, "Characterization":{}, "Evaluation":{}
                     for module_name, module_dict in process_dict.items(): # BatchSynthesis, UV ...
-                        if len(module_dict)!=0 and module_name in module_bottleneck_status_list:
-                            if job_wait.algorithm_dict["model"]=="Automatic":
+                        if len(module_dict)!=0 and module_name in module_device_standby_time_status_list:
+                            if job_wait.algorithm_dict["model"]=="Manual":
                                 if job_wait.algorithm_dict["inputParams"] <= resource_dict[module_name]:
                                     job_wait_index=job_wait_queue.index(job_wait)
                                     popped_job_wait=job_wait_queue.pop(job_wait_index)
@@ -113,7 +116,7 @@ class JobTrigger:
     
     def ClosedPacking(self, job_wait_queue:list, job_exec_queue:list, ResourceManager_obj:object):
         """
-        ResourceManager_obj.task_hardware_location_dict
+        ResourceManager_obj.task_device_location_dict
         =>
         {
             "BatchSynthesis":{ 
@@ -135,29 +138,30 @@ class JobTrigger:
             popped_job_wait=job_wait_queue.pop(0)
             return [popped_job_wait]
         elif len(job_wait_queue)!=0 and len(job_exec_queue)!=0:
-            # update hardware resource
+            # update device resource
             resource_dict={}
-            for module_name, module_resource_dict in ResourceManager_obj.task_hardware_location_dict.items():
+            for module_name, module_resource_dict in ResourceManager_obj.task_device_location_dict.items():
                 for device_name, device_resource_list in module_resource_dict.items():
                     empty_location_list=self.__find_indexes(device_resource_list, "?")
                     resource_dict[module_name]=len(empty_location_list)
                     
             # update bottleneck timeline for each module
-            module_bottleneck_status_list=[]
+            module_device_standby_time_status_list=[]
             for job_exec in job_exec_queue:
-                for module_name, module_bottleneck in self.bottleneck_dict.items():
-                    if module_bottleneck in job_exec.TaskLogger_obj.status: # Synthesis, Preprocess, Characterizatin, Evaluation
-                        module_bottleneck_status_list.append(module_name)
+                for module_name, module_device_standby_time_list in self.device_standby_time_dict.items():
+                    for module_device_standby_time in module_device_standby_time_list:
+                        if module_device_standby_time in job_exec.TaskLogger_obj.status: # Synthesis, Preprocess, Characterizatin, Evaluation
+                            module_device_standby_time_status_list.append(module_name)
             
             # extract best job
             for job_wait in job_wait_queue:
                 for process_dict in job_wait.process_dict.values(): # "Synthesis":{}, "Preprocess":{}, "Characterization":{}, "Evaluation":{}
                     for module_name, module_dict in process_dict.items(): # BatchSynthesis, UV ...
-                        if len(module_dict)!=0 and module_name in module_bottleneck_status_list and resource_dict[module_name]!=0:
+                        if len(module_dict)!=0 and module_name in module_device_standby_time_status_list and len(resource_dict[module_name])!=0:
                             job_wait_index=job_wait_queue.index(job_wait)
                             popped_job_wait=job_wait_queue.pop(job_wait_index)
                             return [popped_job_wait]
-            return []
+            return [] 
 
     def SJF(self, job_wait_queue:list, job_exec_queue:list):
         """

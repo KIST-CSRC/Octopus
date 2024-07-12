@@ -1,8 +1,0 @@
-2023-07-02 20:41:24,038 - BO_format_1::INFO -- [JobExecution] : [jobID=0] Algorithm, model : BayesianOptimization, batchSize : 4
-2023-07-02 20:41:24,059 - BO_format_1::INFO -- [JobExecution] : ######### Cycle start #########
-2023-07-02 20:41:24,059 - BO_format_1::INFO -- [Algorithm] : utility_type=ucb, iter_num=0, batchSize=4
-2023-07-02 20:41:24,074 - BO_format_1::INFO -- [Algorithm [0]] : next_point 0: {'AddSolution=AgNO3_Concentration': 0, 'AddSolution=AgNO3_Volume': 750, 'AddSolution=AgNO3_Injectionrate': 150}
-2023-07-02 20:41:24,084 - BO_format_1::INFO -- [Algorithm [1]] : next_point 1: {'AddSolution=AgNO3_Concentration': 0, 'AddSolution=AgNO3_Volume': 800, 'AddSolution=AgNO3_Injectionrate': 100}
-2023-07-02 20:41:24,095 - BO_format_1::INFO -- [Algorithm [2]] : next_point 2: {'AddSolution=AgNO3_Concentration': 0, 'AddSolution=AgNO3_Volume': 1150, 'AddSolution=AgNO3_Injectionrate': 150}
-2023-07-02 20:41:24,105 - BO_format_1::INFO -- [Algorithm [3]] : next_point 3: {'AddSolution=AgNO3_Concentration': 0, 'AddSolution=AgNO3_Volume': 650, 'AddSolution=AgNO3_Injectionrate': 150}
-2023-07-02 20:41:24,230 - BO_format_1::INFO -- [JobExecution] : ######### Cycle 1/1 is running #########

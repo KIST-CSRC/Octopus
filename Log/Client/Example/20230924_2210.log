@@ -1,6 +1,0 @@
-2023-09-24 22:10:22,254 - JobClient::INFO -- [HJ] : request to submit job : USER/HJ/job_script/figure/jobid_0.json
-2023-09-24 22:10:22,330 - JobClient::INFO -- [HJ] : succeed to submit job, userName:HJ, jobID:0
-2023-09-24 22:11:19,267 - JobClient::INFO -- [HJ] : request to check job status
-2023-09-24 22:11:19,272 - JobClient::INFO -- [HJ] : succeed to check job status
-2023-09-24 22:11:27,723 - JobClient::INFO -- [HJ] : request to hold job (jobID:0)
-2023-09-24 22:16:32,620 - JobClient::INFO -- [HJ] : 
