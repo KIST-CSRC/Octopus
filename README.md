@@ -15,7 +15,6 @@ Therefore, we report OCTOPUS for MAP; following two strategies below.
   <img src="paper_result/TOC.jpg" width="50%" height="50%" />
 </p>
 
-
 ## Operation Control system for MAP
 
 ### 1. Concepts
@@ -40,71 +39,183 @@ Therefore, we report OCTOPUS for MAP; following two strategies below.
 2. Task optimization with masking table
 3. The closed-packing schedule for optimizing module resource efficiency in realistic platform
 
-# User Manual
-## Using conda
-```
-conda env create -f requirements_conda.txt
-```
-
-## Using pip
-```
-pip install -r requirements_pip.txt
-```
 # Prerequisites
 [Prerequisties information is reported here.](prerequisties.md)
 
-# Script architecture
-```
-Master Node
-├── Algorithm
-│   └── Manual: Manual experimentation
-│   └── Bayesian: Bayesian optimization
-│   └── Loss: loss function
-│   └── SaveModel: directory of model pickle
-├── Analysis
-│   └── AnalysisUV.py: extract property from raw spectrum
-├── DB
-│   └── DB_Class.py: link master node with MongoDB
-├── Job
-│   └── Job_Class.py: realize closed-loop experimentation
-│   └── JobSchduler_Class.py: control & manage jobs
-│   └── JobTrigger.py: criteria of next job execution
-└── Log
-│   └── Client: include log file of client
-│   └── Master: include log file of master
-│   └── MessageAPI: consists of individual messenger 
-│                   (telegram, facebook, kakaotalk, line, mail, dooray)
-│   └── DigitalSecretary.py: integrated MessageAPI
-│   └── Logging_Class.py: report all progress of client and all components of master node
-│   └── Information.json: include user information about popular messenger 
-│                         (telegram, facebook, kakaotalk, line, mail, dooray)
-├── Resource
-│   └── ResourceManager.py: update module information & manage module resource
-├── TaskAction
-│   └── TaskGenerator_Class.py: abstract experimental task considering job script information
-│   └── TaskScheduler_Class.py: control task for each modules depending on scheduling modes
-│   └── ActionTranslator_Class.py: digitalize abstracted task for each modules
-│   └── ActionExecutor.py: data encoding & decoding, transfer & receive action data
-├── USER
-├── UserManager
-│   └── user.db: store user information (ex. username, password)
-│   └── UserManager_Class.py: manage user information
-├── client.py: activate client object
-└── master_node.py: activate master node after modules activation
-```
+# Description of architecture
+[Description of architecture is reported here.](paper_result/architecture_description.png)
+
 # How to work
-1. If you activate all modules, then exectue below command.
+## 1. Activate all modules which connect to master node
+```bash
+python module_node.py
+```
+## 2. Activate master node
+If you activate all modules, then activate master node.
 ```bash
 python master_node.py
 ```
-2. activate client.py
+## 3. Generate job script 
+### 3-1. Job script template for each module
+Client should customize [template of job script](JobScriptTemplate/template.json). Below json format represents template of job script.
+```json
+{
+    "metadata" : 
+    {
+        "subject":"[OCTOPUS] template of job script",
+        "group":"",
+        "logLevel":"DEBUG"
+    },
+    "algorithm":
+    {
+        "model":"Manual",
+        "totalExperimentNum":0,
+        "inputParams":[]
+    },
+    "process": {}
+}
+```
+In key of algorithm, it depends on model selection, "Manual" or AI based models, such as "BayesianOptimization" or "DecisionTree".
+
+`Manual`
+```json
+    "algorithm":
+    {
+        "model":"Manual",
+        "totalExperimentNum":4,
+        "inputParams":[
+            {
+                "AddSolution=AgNO3_Concentration" : 1250,
+                "AddSolution=AgNO3_Volume" : 2000,
+                "AddSolution=AgNO3_Injectionrate" : 200
+            },
+            {
+                "AddSolution=AgNO3_Concentration" : 1250,
+                "AddSolution=AgNO3_Volume" : 2000,
+                "AddSolution=AgNO3_Injectionrate" : 200
+            },
+            {
+                "AddSolution=AgNO3_Concentration" : 1250,
+                "AddSolution=AgNO3_Volume" : 2000,
+                "AddSolution=AgNO3_Injectionrate" : 200
+            },
+            {
+                "AddSolution=AgNO3_Concentration" : 1250,
+                "AddSolution=AgNO3_Volume" : 2000,
+                "AddSolution=AgNO3_Injectionrate" : 200
+            }
+        ]
+    }
+```
+`BayesianOptimization`
+```json
+    "algorithm":
+        {
+            "model":"BayesianOptimization",
+            "batchSize":6,
+            "totalCycleNum":3,
+            "verbose":0,
+            "randomState":0,
+            "sampling":{
+                "samplingMethod":"latin",
+                "samplingNum":20
+            },
+            "acq":{
+                "acqMethod":"ucb",
+                "acqSampler":"greedy",
+                "acqHyperparameter":{
+                    "kappa":10.0
+                }
+            },
+            "loss":{
+                "lossMethod":"lambdamaxFWHMintensityLoss",
+                "lossTarget":{
+                    "GetAbs":{
+                        "Property":{
+                            "lambdamax":573
+                        },
+                        "Ratio":{
+                            "lambdamax":0.9,
+                            "FWHM":0.03, 
+                            "intensity":0.07
+                        }
+                    }
+                }
+            }, 
+            "prange":{
+                "AddSolution=AgNO3_Concentration" : [25, 375, 25],
+                "AddSolution=AgNO3_Volume" : [100, 1200, 50],
+                "AddSolution=AgNO3_Injectionrate" : [50, 200, 50]
+            },
+            "initParameterList":[],
+            "constraints":[]
+        }
+```
+### 3-2. Customize value of `process` key using [JobScriptTemplate/{ModuleName}.json](JobScriptTemplate)
+Once client execute Copilot of OCTOPUS, job script template of each module should generate in [JobScriptTemplate](JobScriptTemplate) directory. 
+
+For example, `BatchSynthesis`
+```json
+    "process":
+    {
+        "Synthesis":{
+            "BatchSynthesis":{
+                "Sequence":[
+                  "BatchSynthesis_AddSolution=Citrate",
+                  "BatchSynthesis_AddSolution=H2O2", 
+                  "BatchSynthesis_AddSolution=NaBH4",
+                  "BatchSynthesis_Stir",
+                  "BatchSynthesis_Heat",
+                  "BatchSynthesis_Mix", 
+                  "BatchSynthesis_AddSolution=AgNO3", 
+                  "BatchSynthesis_React"
+                ],
+                "fixedParams":
+                {
+                    "BatchSynthesis_AddSolution=H2O2_Concentration" : 375,
+                    "BatchSynthesis_AddSolution=H2O2_Volume" : 1200,
+                    "BatchSynthesis_AddSolution=H2O2_Injectionrate" : 200,
+                    "BatchSynthesis_AddSolution=Citrate_Concentration" : 20,
+                    "BatchSynthesis_AddSolution=Citrate_Volume" : 1200,
+                    "BatchSynthesis_AddSolution=Citrate_Injectionrate" : 200,
+                    "BatchSynthesis_AddSolution=NaBH4_Concentration" : 10,
+                    "BatchSynthesis_AddSolution=NaBH4_Volume" : 3000,
+                    "BatchSynthesis_AddSolution=NaBH4_Injectionrate" : 200,
+
+                    "BatchSynthesis_Stir=StirRate":1000,
+                    "BatchSynthesis_Heat=Temperature":25,
+                    "BatchSynthesis_Mix=Time":300,
+                    "BatchSynthesis_React=Time":2400
+                }
+            }
+        }
+    }
+```
+
+More detailed examples of job script in [USER/yoohj9475@kist.re.kr/job_script/test.json](USER/yoohj9475@kist.re.kr/job_script/test.json)
+
+### cf) *USER directory structure*
+```
+USER
+├── job_script: job script of client
+├── DB (automated generation during job progress): material data. It also store in MongoDB
+└── Log (automated generation during job progress): log file of all job progress 
+```
+
+## 4. Activate client.py
 ```bash
 python Client.py
 ```
-3. input username, password in prompt.
+
+## 5. Input client ID, password in prompt.
+In Copilot of OCTOPUS, OCTOPUS implement [Auth0 API for login process](paper_result/login_process.PNG). Therefore, you need to input client ID (email format) and password, addressed in Auth0.
+
+## 6. Input commands and submit job
+[Please refer command table.](paper_result/command_table.PNG)
 
 # Benefit
 Our study highlights both capabilities of the operation control system with user-optimal schedulers to manage various experiments without human intervention and to obtain outstanding operational efficiency for Manual or autonomous experimentations.
 
 # Reference
-1. H. J. Yoo, N. Kim, H. Lee, D. Kim, L. T. C. Ow, H. Nam, C. Kim, S. Y. Lee, K.-Y. Lee, D. Kim, S. S. Han, Bespoke Metal Nanoparticle Synthesis at Room Temperature and Discovery of Chemical Knowledge on Nanoparticle Growth via Autonomous Experimentations. Adv. Funct. Mater. 2024, 2312561. https://doi.org/10.1002/adfm.202312561
+
+- H. J. Yoo, N. Kim, H. Lee, D. Kim, L. T. C. Ow, H. Nam, C. Kim, S. Y. Lee, K.-Y. Lee, D. Kim, S. S. Han, Bespoke Metal Nanoparticle Synthesis at Room Temperature and Discovery of Chemical Knowledge on Nanoparticle Growth via Autonomous Experimentations. Adv. Funct. Mater. 2024, 2312561. https://doi.org/10.1002/adfm.202312561
