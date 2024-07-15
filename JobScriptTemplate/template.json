@@ -1,0 +1,15 @@
+{
+    "metadata" : 
+    {
+        "subject":"[OCTOPUS] template of job script",
+        "group":"",
+        "logLevel":"DEBUG"
+    },
+    "algorithm":
+    {
+        "model":"Manual",
+        "totalExperimentNum":0,
+        "inputParams":[]
+    },
+    "process": {}
+}
