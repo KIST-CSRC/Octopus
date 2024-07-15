@@ -5,12 +5,11 @@ pip install -r requirements.txt
 ```
 
 ## Copilot of OCTOPUS
-Please refer this [Supplementary Guidelines for OCTOPUS]().
+Please refer this [Supplementary Guidelines for OCTOPUS](Supplementary_Guidelines.pdf).
 
-You should modularize by grouping by experimental process. You can see some code samples in [BatchSynthesisModule](https://github.com/KIST-CSRC/BatchSynthesisModule) and [UV-VisModule](https://github.com/KIST-CSRC/UV-VisModule)
+You should modularize by grouping by experimental process. You can see some code samples in [SolidStateModule](AutoModuleGeneration/SolidStateModule) and [ElectroChemicalRDEModule](AutoModuleGeneration/ElectroChemicalRDEModule)
 
 ## (Optional) Example of code modification
-
 ### 1. Additional function for consumable chemical vessel storage in [Action/Module/{ModuleName}.py](Action/Module)
 If you want to utilize the `location index` of consumable chemical vessels storage (e.g. vial, cuvette, tip, falcon tube, etc) in `ActionTranslator`, define function to return location index of consumable chemical vessel storage. (Don't confused resource and consumable chemical vessels)
 ```python
