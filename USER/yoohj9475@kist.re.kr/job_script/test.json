@@ -1,0 +1,71 @@
+{
+    "metadata" : 
+    {
+        "subject":"[OCTOPUS] test workflow",
+        "group":"KIST_CSRC",
+        "logLevel":"DEBUG"
+    },
+    "algorithm":
+    {
+        "model":"Manual",
+        "totalExperimentNum":1,
+        "inputParams":[]
+    },
+    "process":
+    {
+        "Synthesis":{
+            "SolidStateModule":{
+                "Sequence":[
+                    "SolidStateModule_LoadSample=IrCl3",
+                    "SolidStateModule_AddPowder=IrCl3",
+                    "SolidStateModule_Weigh",
+                    "SolidStateModule_Mix",
+                    "SolidStateModule_Press",
+                    "SolidStateModule_Sinter",
+                    "SolidStateModule_Cool"
+                ],
+                "fixedParams":
+                {
+                    "SolidStateModule_AddPowder=IrCl3_Amount":100,
+                    "SolidStateModule_Weigh=Weight":100,
+                    "SolidStateModule_Mix=Time":360,
+                    "SolidStateModule_Press=Pressure":100,
+                    "SolidStateModule_Sinter=Temperature":50,
+                    "SolidStateModule_Sinter=Time":720,
+                    "SolidStateModule_Cool=Temperature":25,
+                    "SolidStateModule_Cool=Time":720
+                }
+            }
+        },
+        "Evaluation": {
+            "ElectroChemicalRDEModule": {
+                "Sequence": [
+                    "ElectroChemicalRDEModule_SetupElectrode",
+                    "ElectroChemicalRDEModule_Calibrate",
+                    "ElectroChemicalRDEModule_LoadSample",
+                    "ElectroChemicalRDEModule_AdjustRotation",
+                    "ElectroChemicalRDEModule_ApplyPotential",
+                    "ElectroChemicalRDEModule_RecordCurrent",
+                    "ElectroChemicalRDEModule_PerformCV",
+                    "ElectroChemicalRDEModule_PerformLPR",
+                    "ElectroChemicalRDEModule_PerformEIS",
+                    "ElectroChemicalRDEModule_ChangeSolution",
+                    "ElectroChemicalRDEModule_CleanElectrode"
+                ],
+                "fixedParams": {
+                    "ElectroChemicalRDEModule_SetupElectrode=ElectrodeType": "Pt",
+                    "ElectroChemicalRDEModule_Calibrate=CalibrationStandard": "Start",
+                    "ElectroChemicalRDEModule_LoadSample=SampleVolume": 15,
+                    "ElectroChemicalRDEModule_AdjustRotation=RotationSpeed": 1500,
+                    "ElectroChemicalRDEModule_ApplyPotential=Potential": 1.5,
+                    "ElectroChemicalRDEModule_RecordCurrent=Duration": 300,
+                    "ElectroChemicalRDEModule_PerformCV=ScanRate": 20,
+                    "ElectroChemicalRDEModule_PerformLPR=ScanRate": 20,
+                    "ElectroChemicalRDEModule_PerformEIS=FrequencyRange": 100,
+                    "ElectroChemicalRDEModule_ChangeSolution=NewSolution": "H2O",
+                    "ElectroChemicalRDEModule_CleanElectrode=CleaningMethod": "AcidCleaning"
+                }
+            }
+        }
+    }
+}
