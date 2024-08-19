@@ -214,7 +214,7 @@ def GPT_generate_task_template(input_module_name:str, task_list:list, api_key:st
             "BatchSynthesisModule_MoveContainer":{
                 "Task":"BatchSynthesisModule_MoveContainer",
                 "Data":{
-                        "FromTo":{"Type":""},
+                        "Fromto":{"Type":""},
                         "Container":{"Type":""},
                         "Device":{}
                     }
@@ -384,7 +384,7 @@ def GPT_generate_task_pydantic(input_module_name:str, task_list:list, input_answ
             "BatchSynthesisModule_MoveContainer":{
                 "Task":"BatchSynthesisModule_MoveContainer",
                 "Data":{
-                        "FromTo":{"Type":""},
+                        "Fromto":{"Type":""},
                         "Container":{"Type":""},
                         "Device":{}
                     }
@@ -493,7 +493,7 @@ def GPT_generate_task_pydantic(input_module_name:str, task_list:list, input_answ
         from pydantic import BaseModel, Field
         from typing import Dict, Any, Optional, Union
 
-        class BatchSynthesisModule_MoveContainer_FromTo(BaseModel):
+        class BatchSynthesisModule_MoveContainer_Fromto(BaseModel):
             Type: str = ""
 
         class BatchSynthesisModule_MoveContainer_Container(BaseModel):
@@ -539,7 +539,7 @@ def GPT_generate_task_pydantic(input_module_name:str, task_list:list, input_answ
             Dimension: str = "sec"
             
         class BatchSynthesisModule_MoveContainer_Data(BaseModel):
-            FromTo: BatchSynthesisModule_MoveContainer_FromTo
+            Fromto: BatchSynthesisModule_MoveContainer_Fromto
             Container: BatchSynthesisModule_MoveContainer_Container
             Device: Dict[str, Any]
 

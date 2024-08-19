@@ -209,7 +209,7 @@ save_to_files_task_template(module_node_config["module_name"], task_template)
 ##########################
 # generate task Pydantic #
 ##########################
-answer_task_pydantic=GPT_generate_task_pydantic(module_node_config["module_name"], task_list, task_template_str, 
+answer_task_pydantic=GPT_generate_task_pydantic(module_node_config["module_name"], task_list, json.dumps(task_template), 
                                                 module_node_config["gpt_api_key"], module_node_config["gpt_on"])
 task_pydantic_str=extract_code_task_pydantic(answer_task_pydantic)
 save_to_files_pydantic(module_node_config["module_name"],task_pydantic_str)
