@@ -795,7 +795,7 @@ def startModuleNode():
 # Emergency Stop via Broadcast
 def emergencyStop():
     udp_socket = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
-    udp_socket.bind((MODULE_HOST, 54010)) # 54010 --> fixed port number of emergency stop 
+    udp_socket.bind((MODULE_HOST, {emergency_port})) # {emergency_port} --> fixed port number of emergency stop 
     print(f"[Emergency Stop] Waiting...")
     
     while True:
@@ -822,7 +822,7 @@ if __name__ == "__main__":
     base_tcp_node_obj = BaseTCPNode()
 
     # Wihtout device server : direct connection with module node
-""".format(input_module_name=input_module_name, ip=ip, port=port)
+""".format(input_module_name=input_module_name, ip=ip, port=port, emergency_port=port-1)
     
     # device (in module) object generation
     object_generation_lines=""
